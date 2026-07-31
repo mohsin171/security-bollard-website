@@ -1,0 +1,132 @@
+import { products } from "@/content/products";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd, breadcrumbSchema } from "@/components/JsonLd";
+import { capabilityStatement } from "@/content/site";
+import {
+  PageHeader, Section, SectionHeading, LinkCard,
+  CtaBand, CapabilityNote, Button, SpecTable,
+} from "@/components/ui";
+
+export const metadata = buildMetadata({
+  title: "Commercial Products",
+  description:
+    "Commercial-grade bollards, bollard covers, bike racks and traffic barriers supplied across Toronto, the GTA and Ontario. Full dimensional and material specifications.",
+  path: "/products",
+});
+
+export default function ProductsPage() {
+  const crumbs = [
+    { name: "Home", path: "/" },
+    { name: "Products", path: "/products" },
+  ];
+
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema(crumbs)} />
+      <PageHeader
+        eyebrow="Commercial product portfolio"
+        title="Products built for commercial sites and Canadian winters"
+        intro="Four categories, specified properly. Every product page carries dimensions, material grade, finish and mounting method — the information a facilities manager or an estimator actually needs before deciding."
+        breadcrumbs={crumbs}
+      />
+
+      <Section>
+        <div className="grid gap-5 sm:grid-cols-2">
+          {products.map((p) => (
+            <article key={p.slug} className="flex flex-col border border-hairline bg-white">
+              <div className="h-1 w-full bg-sbd-red" />
+              <div className="flex flex-1 flex-col p-7">
+                <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
+                  {p.eyebrow}
+                </p>
+                <h2 className="mt-2 font-display text-2xl font-bold text-charcoal">{p.name}</h2>
+                <p className="mt-3 flex-1 text-slate-grey">{p.intro}</p>
+                <ul className="mt-5 space-y-1.5 border-t border-hairline pt-5">
+                  {p.variants.slice(0, 4).map((v) => (
+                    <li key={v.name} className="flex gap-2.5 text-sm text-charcoal">
+                      <span aria-hidden className="mt-[0.5rem] h-1 w-2.5 shrink-0 bg-sbd-red" />
+                      {v.name}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6">
+                  <Button href={`/products/${p.slug}`} variant="outline">
+                    View specifications
+                  </Button>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section tone="fog">
+        <SectionHeading
+          eyebrow="Quick reference"
+          title="Common commercial specifications"
+          intro="The figures asked for most often. Full data sits on each product page."
+        />
+        <div className="grid gap-6 md:grid-cols-2">
+          <div>
+            <h3 className="mb-3 font-display text-base font-bold text-charcoal">
+              Bike racks — Square U and Round
+            </h3>
+            <SpecTable
+              rows={[
+                { label: "Width", value: "33.46 in" },
+                { label: "Height", value: "31.5 in" },
+                { label: "Tube diameter", value: "1.89 in" },
+                { label: "Surface", value: "Hot-dip galvanized (HDG)" },
+                { label: "Capacity", value: "1 to 2 bikes" },
+              ]}
+            />
+          </div>
+          <div>
+            <h3 className="mb-3 font-display text-base font-bold text-charcoal">
+              Stainless bike rack — SBD-BR2042
+            </h3>
+            <SpecTable
+              rows={[
+                { label: "Overall height", value: "42 in" },
+                { label: "Base diameter", value: "12 in" },
+                { label: "Base plate thickness", value: "0.500 in" },
+                { label: "Mounting holes", value: "1/2 in" },
+                { label: "Material", value: "Grade 304 stainless (316 optional)" },
+              ]}
+            />
+          </div>
+        </div>
+        <div className="mt-8">
+          <Button href="/products/spec-downloads">Spec sheets &amp; downloads</Button>
+        </div>
+      </Section>
+
+      <Section>
+        <CapabilityNote text={capabilityStatement} />
+      </Section>
+
+      <Section tone="fog">
+        <SectionHeading title="Also available" />
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <LinkCard
+            href="/services/replacement-upgrades"
+            title="Replacement & upgrade programs"
+            blurb="Bent, rusted or missing hardware replaced on a schedule instead of as an emergency."
+          />
+          <LinkCard
+            href="/services/portfolio-programs"
+            title="Custom & project-specific"
+            blurb="Sizing, finishes, mounting styles, quantities and layouts matched to the application."
+          />
+          <LinkCard
+            href="/products/spec-downloads"
+            title="Specification support"
+            blurb="Dimensional data and mounting details for estimating, procurement and submittals."
+          />
+        </div>
+      </Section>
+
+      <CtaBand />
+    </>
+  );
+}
