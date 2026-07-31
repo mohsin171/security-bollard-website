@@ -6,7 +6,14 @@
       "Bash(gh auth *)",
       "Bash(git ls-remote *)",
       "Bash(echo \"EXIT: $?\")",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -q -m 'Initial commit: security bollard website *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Read(//Users/kulsoomirshad/**)",
+      "Bash(ssh -T git@github.com -o StrictHostKeyChecking=no -o ConnectTimeout=5)",
+      "Bash(git config *)",
+      "Bash(echo \"credential helper set: $\\(git config --global credential.helper\\)\")"
     ]
   }
 }
