@@ -113,7 +113,7 @@ export function LinkCard({
   return (
     <Link
       href={href}
-      className="group flex h-full flex-col border border-hairline bg-white p-6 transition-all duration-150 hover:border-sbd-red hover:shadow-[0_2px_20px_rgba(0,0,0,0.06)]"
+      className="group flex h-full flex-col border border-hairline bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-sbd-red hover:shadow-[0_12px_32px_rgba(200,16,46,0.1)]"
     >
       {eyebrow && (
         <p className="mb-2 font-display text-[0.65rem] font-bold uppercase tracking-[0.18em] text-slate-grey">
@@ -124,8 +124,9 @@ export function LinkCard({
         {title}
       </h3>
       {blurb && <p className="mt-2 flex-1 text-[0.95rem] text-slate-grey">{blurb}</p>}
-      <span className="mt-4 font-display text-xs font-bold uppercase tracking-wider text-sbd-red">
-        View &rarr;
+      <span className="mt-4 inline-flex items-center gap-1 font-display text-xs font-bold uppercase tracking-wider text-sbd-red">
+        View
+        <span aria-hidden className="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
       </span>
     </Link>
   );
@@ -239,7 +240,14 @@ export function PageHeader({
   breadcrumbs?: { name: string; path: string }[];
 }) {
   return (
-    <header className="border-b border-hairline bg-fog pb-12 pt-10 md:pb-16 md:pt-14">
+    <header className="ambient border-b border-hairline bg-fog pb-12 pt-10 md:pb-16 md:pt-14">
+      <div
+        className="glow-orb glow-orb-red"
+        aria-hidden
+        style={{ width: 380, height: 380, top: -190, right: -110, opacity: 0.2 }}
+      />
+      <div className="ring-circle" aria-hidden style={{ width: 240, height: 240, top: -60, right: "10%" }} />
+      <div className="glow-line" aria-hidden style={{ bottom: 0, left: 0, right: 0 }} />
       <div className="container-sbd">
         {breadcrumbs && (
           <nav aria-label="Breadcrumb" className="mb-6">
@@ -279,7 +287,15 @@ export function CtaBand({
   primary?: { label: string; href: string };
 }) {
   return (
-    <section className="bg-charcoal py-14 md:py-16">
+    <section className="ambient bg-charcoal py-14 md:py-16">
+      <div className="blueprint-grid blueprint-grid-dark" aria-hidden />
+      <div
+        className="glow-orb glow-orb-red"
+        aria-hidden
+        style={{ width: 420, height: 420, top: -160, right: -100, opacity: 0.45 }}
+      />
+      <div className="ring-circle ring-circle-light" aria-hidden style={{ width: 220, height: 220, bottom: -70, left: "8%" }} />
+      <div className="glow-line" aria-hidden style={{ top: 0, left: "15%", right: "15%" }} />
       <div className="container-sbd">
         <div className="grid items-center gap-8 md:grid-cols-[1fr_auto]">
           <div className="max-w-2xl">
@@ -287,7 +303,7 @@ export function CtaBand({
             <p className="mt-4 text-white/70">{body}</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row md:flex-col lg:flex-row">
-            <Button href={primary.href} variant="primary">
+            <Button href={primary.href} variant="primary" className="btn-sheen">
               {primary.label}
             </Button>
             <a

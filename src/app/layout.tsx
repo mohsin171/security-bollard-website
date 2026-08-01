@@ -22,10 +22,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} | Commercial Bollards, Bike Racks & Site Protection`,
+    default: `${site.name} | Commercial Bollards, Bike Racks & Site Protection — GTA & Ontario`,
     template: `%s | ${site.name}`,
   },
-  description: site.description,
+  description:
+    "Commercial-grade safety bollards, bike racks, bollard covers and traffic barriers supplied across Toronto, the GTA and Ontario. Written quotes within 24 hours. Built for Safety. Made to Last.",
   applicationName: site.name,
   keywords: [
     "commercial bollards Toronto",
@@ -36,7 +37,12 @@ export const metadata: Metadata = {
     "warehouse safety bollards",
     "storefront protection bollards",
     "traffic barriers commercial",
+    "removable bollards Toronto",
+    "stainless steel bollards",
+    "parking lot bollards GTA",
+    "bollard installation Mississauga",
   ],
+  category: "Commercial site protection",
   authors: [{ name: site.name }],
   creator: site.name,
   publisher: site.name,
@@ -49,6 +55,20 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: `${site.name} | Commercial Bollards, Bike Racks & Site Protection`,
     description: site.description,
+    images: [
+      {
+        url: `${site.url}/logos/sbd-logo-full.png`,
+        width: 1568,
+        height: 700,
+        alt: `${site.name} — ${site.tagline}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} | Commercial Bollards & Site Protection`,
+    description: site.description,
+    images: [`${site.url}/logos/sbd-logo-full.png`],
   },
   robots: {
     index: true,

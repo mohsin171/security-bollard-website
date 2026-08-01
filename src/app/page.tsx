@@ -4,6 +4,7 @@ import { products } from "@/content/products";
 import { services } from "@/content/services";
 import { segments } from "@/content/segments";
 import { site, capabilityStatement } from "@/content/site";
+import Reveal from "@/components/Reveal";
 import {
   Section,
   SectionHeading,
@@ -40,27 +41,41 @@ export default function HomePage() {
   return (
     <>
       {/* ---------- Hero ---------- */}
-      <section className="border-b border-hairline bg-white">
+      <section className="ambient border-b border-hairline bg-white">
+        <div className="blueprint-grid" aria-hidden />
+        <div
+          className="glow-orb glow-orb-red"
+          aria-hidden
+          style={{ width: 520, height: 520, top: -220, right: -160, opacity: 0.32 }}
+        />
+        <div
+          className="glow-orb glow-orb-yellow"
+          aria-hidden
+          style={{ width: 380, height: 380, bottom: -190, left: -120, opacity: 0.22 }}
+        />
+        <div className="ring-circle" aria-hidden style={{ width: 340, height: 340, top: -90, right: "16%" }} />
+        <div className="ring-circle" aria-hidden style={{ width: 190, height: 190, top: 30, right: "24%", animationDelay: "2.5s" }} />
+        <div className="glow-line" aria-hidden style={{ bottom: 0, left: "5%", right: "5%" }} />
         <div className="container-sbd grid items-center gap-12 py-14 md:py-20 lg:grid-cols-[1.15fr_1fr]">
           <div>
-            <Eyebrow>Commercial safety &amp; streetscape solutions</Eyebrow>
-            <h1 className="mt-4 text-[length:var(--text-hero)] text-charcoal">
+            <div className="hero-in"><Eyebrow>Commercial safety &amp; streetscape solutions</Eyebrow></div>
+            <h1 className="hero-in hero-in-d1 mt-4 text-[length:var(--text-hero)] text-charcoal">
               Every commercial site has{" "}
               <span className="block text-sbd-red">the same weak points.</span>
             </h1>
-            <div className="mt-6 h-1 w-24 bg-sbd-red" />
-            <p className="mt-7 max-w-xl text-lg text-slate-grey">
+            <div className="hero-in hero-in-d1 mt-6 h-1 w-24 bg-sbd-red" />
+            <p className="hero-in hero-in-d2 mt-7 max-w-xl text-lg text-slate-grey">
               We supply the hardware that protects them — bollards, bike racks, barriers and covers
               — to commercial properties across the GTA and Ontario. Send us a photo of the problem
               and you will have a written quote within 24 hours.
             </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <Button href="/request-a-quote">Send a photo, get a quote</Button>
+            <div className="hero-in hero-in-d3 mt-9 flex flex-wrap gap-3">
+              <Button href="/request-a-quote" className="btn-sheen">Send a photo, get a quote</Button>
               <Button href="/products" variant="outline">
                 Browse products
               </Button>
             </div>
-            <p className="mt-6 text-sm text-slate-grey">
+            <p className="hero-in hero-in-d4 mt-6 text-sm text-slate-grey">
               Or call{" "}
               <a href={site.phoneHref} className="font-display font-bold text-sbd-red">
                 {site.phone}
@@ -70,7 +85,7 @@ export default function HomePage() {
           </div>
 
           {/* Signature: the vulnerable points list, as a numbered ledger */}
-          <div className="border border-hairline bg-fog">
+          <div className="hero-in hero-in-d2 border border-hairline bg-fog shadow-[0_0_60px_rgba(200,16,46,0.08)]">
             <div className="h-1 w-full bg-sbd-red" />
             <div className="p-6 md:p-8">
               <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
@@ -118,22 +133,27 @@ export default function HomePage() {
 
       {/* ---------- Products ---------- */}
       <Section>
-        <SectionHeading
-          eyebrow="What we supply"
-          title="Commercial-grade product, specified properly"
-          intro="Real dimensions, real material grades, real mounting details. If a spec sheet says stainless, the specification table says stainless."
-        />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {products.map((p) => (
-            <LinkCard
-              key={p.slug}
-              href={`/products/${p.slug}`}
-              eyebrow={p.eyebrow}
-              title={p.name}
-              blurb={p.intro.split(". ").slice(0, 2).join(". ") + "."}
+        <Reveal>
+          <div className="reveal">
+            <SectionHeading
+              eyebrow="What we supply"
+              title="Commercial-grade product, specified properly"
+              intro="Real dimensions, real material grades, real mounting details. If a spec sheet says stainless, the specification table says stainless."
             />
-          ))}
-        </div>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {products.map((p, i) => (
+              <div key={p.slug} className={`reveal reveal-d${Math.min(i + 1, 4)} hover-lift`}>
+                <LinkCard
+                  href={`/products/${p.slug}`}
+                  eyebrow={p.eyebrow}
+                  title={p.name}
+                  blurb={p.intro.split(". ").slice(0, 2).join(". ") + "."}
+                />
+              </div>
+            ))}
+          </div>
+        </Reveal>
         <div className="mt-8">
           <Button href="/products/spec-downloads" variant="outline">
             Spec sheets &amp; downloads
@@ -143,47 +163,57 @@ export default function HomePage() {
 
       {/* ---------- Services ---------- */}
       <Section tone="fog">
-        <SectionHeading
-          eyebrow="How we work"
-          title="The supplier a facilities manager keeps on file"
-          intro="National catalogues ship boxes. Local crews install driveway posts. We do the part in between: a full commercial range, from someone close enough to come and look at the problem."
-        />
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((s) => (
-            <LinkCard
-              key={s.slug}
-              href={`/services/${s.slug}`}
-              eyebrow={s.eyebrow}
-              title={s.name}
-              blurb={s.headline}
+        <Reveal>
+          <div className="reveal">
+            <SectionHeading
+              eyebrow="How we work"
+              title="The supplier a facilities manager keeps on file"
+              intro="National catalogues ship boxes. Local crews install driveway posts. We do the part in between: a full commercial range, from someone close enough to come and look at the problem."
             />
-          ))}
-        </div>
+          </div>
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {services.map((s, i) => (
+              <div key={s.slug} className={`reveal reveal-d${Math.min(i + 1, 4)} hover-lift`}>
+                <LinkCard
+                  href={`/services/${s.slug}`}
+                  eyebrow={s.eyebrow}
+                  title={s.name}
+                  blurb={s.headline}
+                />
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </Section>
 
       {/* ---------- Who we serve ---------- */}
       <Section>
-        <SectionHeading
-          eyebrow="Who we serve"
-          title="Different sites, different language, same hardware"
-          intro="A property manager and an EHS manager are solving different problems with overlapping products. Pick the one that sounds like your week."
-        />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {segments.map((s) => (
-            <LinkCard
-              key={s.slug}
-              href={`/who-we-serve/${s.slug}`}
-              title={s.navLabel}
-              blurb={s.headline}
+        <Reveal>
+          <div className="reveal">
+            <SectionHeading
+              eyebrow="Who we serve"
+              title="Different sites, different language, same hardware"
+              intro="A property manager and an EHS manager are solving different problems with overlapping products. Pick the one that sounds like your week."
             />
-          ))}
-        </div>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {segments.map((s, i) => (
+              <div key={s.slug} className={`reveal reveal-d${Math.min(i + 1, 4)} hover-lift`}>
+                <LinkCard
+                  href={`/who-we-serve/${s.slug}`}
+                  title={s.navLabel}
+                  blurb={s.headline}
+                />
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </Section>
 
       {/* ---------- Why us ---------- */}
       <Section tone="fog">
-        <div className="grid gap-12 lg:grid-cols-2">
-          <div>
+        <Reveal className="grid gap-12 lg:grid-cols-2">
+          <div className="reveal">
             <SectionHeading
               eyebrow="Why buy from us"
               title="Local, specific and honest about capability"
@@ -205,8 +235,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="space-y-6">
-            <div className="border-l-4 border-sbd-red bg-white p-6">
+          <div className="reveal reveal-d2 space-y-6">
+            <div className="border-l-4 border-sbd-red bg-white p-6 shadow-[0_0_36px_rgba(200,16,46,0.07)]">
               <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-sbd-red">
                 Straight answer
               </p>
@@ -233,20 +263,20 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-        </div>
+        </Reveal>
       </Section>
 
       {/* ---------- Service area ---------- */}
       <Section>
-        <div className="grid items-center gap-10 md:grid-cols-[auto_1fr]">
+        <Reveal className="grid items-center gap-10 md:grid-cols-[auto_1fr]">
           <Image
             src="/logos/sbd-shield.png"
             alt=""
             width={952}
             height={1260}
-            className="hidden h-32 w-auto md:block"
+            className="reveal hidden h-36 w-auto md:block"
           />
-          <div>
+          <div className="reveal reveal-d1">
             <SectionHeading
               eyebrow="Service area"
               title="GTA and Ontario, with freight across Canada"
@@ -267,7 +297,7 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-        </div>
+        </Reveal>
       </Section>
 
       <CtaBand />

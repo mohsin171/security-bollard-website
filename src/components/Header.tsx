@@ -43,7 +43,7 @@ export default function Header() {
       </div>
 
       <header className="sticky top-0 z-50 border-b border-hairline bg-white/95 backdrop-blur-sm">
-        <div className="container-sbd flex items-center justify-between gap-4 py-3">
+        <div className="container-sbd flex items-center justify-between gap-4 py-2.5">
           <Link href="/" className="shrink-0" aria-label={`${site.name} — home`}>
             <Image
               src="/logos/sbd-logo-full.png"
@@ -51,7 +51,7 @@ export default function Header() {
               width={1568}
               height={700}
               priority
-              className="h-11 w-auto md:h-12"
+              className="h-14 w-auto md:h-16"
             />
           </Link>
 
@@ -108,7 +108,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="/request-a-quote"
-              className="hidden bg-sbd-red px-5 py-3 font-display text-[0.78rem] font-bold uppercase tracking-wider text-white transition-colors hover:bg-sbd-red-dark sm:inline-block"
+              className="btn-sheen hidden bg-sbd-red px-5 py-3 font-display text-[0.78rem] font-bold uppercase tracking-wider text-white transition-colors hover:bg-sbd-red-dark sm:inline-block"
             >
               Request a Quote
             </Link>
