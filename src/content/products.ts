@@ -343,6 +343,10 @@ export const products: Product[] = [
     name: "Traffic & Access Barriers",
     navLabel: "Traffic & Access Barriers",
     eyebrow: "Access management",
+    hero: {
+      src: "/products/traffic-access-barriers-hero.webp",
+      alt: "Red and white barrier arms across a vehicle entrance, closing the route to general traffic",
+    },
     headline: "Traffic and access barriers",
     intro:
       "Bollards protect a point. Barriers organise a whole area — where vehicles go, where people walk, and where the two are not allowed to meet. Used to define parking, protect equipment and staging areas, and separate pedestrian routes from operating traffic.",
