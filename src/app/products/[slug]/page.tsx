@@ -6,6 +6,7 @@ import { getSegment } from "@/content/segments";
 import { capabilityStatement } from "@/content/site";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, productSchema, faqSchema, breadcrumbSchema } from "@/components/JsonLd";
+import Reveal from "@/components/Reveal";
 import {
   PageHeader, Section, SectionHeading, SpecTable, CheckList,
   FaqList, CtaBand, LinkCard, CapabilityNote, Button,
@@ -128,129 +129,156 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       )}
 
       <Section>
-        <SectionHeading title="Where it is used" />
-        <div className="grid items-stretch gap-8 lg:grid-cols-[1.2fr_1fr]">
-          <CheckList items={product.applications} />
-          <div className="relative flex">
-            {/* Glow halo behind the card */}
-            <div className="relative flex h-full w-full flex-col justify-center rounded-3xl border-2 border-sbd-red/60 bg-fog px-8 py-10 shadow-[0_0_14px_rgba(200,16,46,0.16),0_10px_30px_rgba(26,26,26,0.08)]">
-              <div aria-hidden className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-charcoal/10" />
-              <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-sbd-red">
-                Not sure which option fits?
-              </p>
-              <p className="mt-4 text-lg text-charcoal">
-                Send a photo of the location and tell us what you are protecting. We will specify it
-                and quote it within 24 hours — including the cheaper option if that is the right one.
-              </p>
-              <div className="mt-7">
-                <Button href="/request-a-quote" className="btn-sheen">Send a photo</Button>
+        <Reveal>
+          <div className="reveal">
+            <SectionHeading title="Where it is used" />
+          </div>
+          <div className="grid items-stretch gap-8 lg:grid-cols-[1.2fr_1fr]">
+            <div className="reveal reveal-d1">
+              <CheckList items={product.applications} />
+            </div>
+            <div className="reveal reveal-d2 relative flex">
+              {/* Glow halo behind the card */}
+              <div className="relative flex h-full w-full flex-col justify-center rounded-3xl border-2 border-sbd-red/60 bg-fog px-8 py-10 shadow-[0_0_14px_rgba(200,16,46,0.16),0_10px_30px_rgba(26,26,26,0.08)] transition-shadow duration-500 hover:shadow-[0_0_22px_rgba(200,16,46,0.24),0_14px_36px_rgba(26,26,26,0.12)]">
+                <div aria-hidden className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-charcoal/10" />
+                <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-sbd-red">
+                  Not sure which option fits?
+                </p>
+                <p className="mt-4 text-lg text-charcoal">
+                  Send a photo of the location and tell us what you are protecting. We will specify it
+                  and quote it within 24 hours — including the cheaper option if that is the right one.
+                </p>
+                <div className="mt-7">
+                  <Button href="/request-a-quote" className="btn-sheen">Send a photo</Button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </Section>
 
       <Section tone="fog">
-        <SectionHeading eyebrow="Specifications" title="Options and technical data" />
-        <div className="space-y-8">
-          {product.variants.map((v) => (
-            <article key={v.name} className="hover-lift border border-hairline bg-white">
-              <div className="h-1 w-full bg-sbd-red" />
-              <div
-                className={`grid gap-8 p-6 md:p-8 ${
-                  v.image ? "lg:grid-cols-[300px_1fr_1.05fr]" : "lg:grid-cols-[1fr_1.1fr]"
-                }`}
+        <Reveal>
+          <div className="reveal">
+            <SectionHeading eyebrow="Specifications" title="Options and technical data" />
+          </div>
+          <div className="space-y-10 md:space-y-14">
+            {product.variants.map((v) => (
+              <article
+                key={v.name}
+                className="reveal hover-lift border border-hairline bg-white shadow-[0_1px_2px_rgba(26,26,26,0.04)]"
               >
-                {v.image && (
-                  <div className="relative mx-auto w-full max-w-[300px] self-center">
-                    <div
-                      aria-hidden
-                      className="absolute inset-4 rounded-full bg-[radial-gradient(circle,rgba(200,16,46,0.1),transparent_70%)]"
-                    />
-                    <Image
-                      src={v.image.src}
-                      alt={v.image.alt}
-                      width={900}
-                      height={900}
-                      className="relative w-full transition-transform duration-500 hover:scale-[1.04]"
-                      sizes="(max-width: 1024px) 300px, 300px"
-                    />
-                    {v.model && (
-                      <p className="mt-2 text-center font-mono text-[0.7rem] uppercase tracking-wider text-slate-grey">
-                        {v.model}
-                      </p>
-                    )}
-                  </div>
-                )}
-                <div className="self-center">
-                  {v.model && (
-                    <p className="font-mono text-xs font-semibold uppercase tracking-wider text-sbd-red">
-                      Product code: {v.model}
-                    </p>
-                  )}
-                  <h3 className="mt-1 font-display text-xl font-bold text-charcoal">{v.name}</h3>
-                  <p className="mt-3 text-slate-grey">{v.summary}</p>
-                  {v.notes && (
-                    <p className="mt-4 border-l-2 border-stainless pl-4 text-sm italic text-slate-grey">
-                      {v.notes}
-                    </p>
-                  )}
-                  {v.datasheet && (
-                    <div className="mt-6 flex flex-wrap items-center gap-3">
-                      <a
-                        href={v.datasheet}
-                        target="_blank"
-                        rel="noopener"
-                        className="btn-sheen inline-flex items-center gap-2 bg-sbd-red px-5 py-2.5 font-display text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-sbd-red-dark"
-                      >
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
-                          <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
-                          <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2.2" />
-                        </svg>
-                        View PDF
-                      </a>
+                <div className="h-1 w-full bg-sbd-red" />
+                <div
+                  className={`grid gap-8 p-6 md:gap-10 md:p-10 ${
+                    v.image ? "lg:grid-cols-[300px_1fr_1.05fr]" : "lg:grid-cols-[1fr_1.1fr]"
+                  }`}
+                >
+                  {v.image && (
+                    <div className="relative mx-auto w-full max-w-[300px] self-center">
+                      <div
+                        aria-hidden
+                        className="absolute inset-4 rounded-full bg-[radial-gradient(circle,rgba(200,16,46,0.1),transparent_70%)]"
+                      />
+                      <Image
+                        src={v.image.src}
+                        alt={v.image.alt}
+                        width={900}
+                        height={900}
+                        className="relative w-full transition-transform duration-500 ease-out hover:scale-[1.06]"
+                        sizes="(max-width: 1024px) 300px, 300px"
+                      />
+                      {v.model && (
+                        <p className="mt-2 text-center font-mono text-[0.7rem] uppercase tracking-wider text-slate-grey">
+                          {v.model}
+                        </p>
+                      )}
                     </div>
                   )}
+                  <div className="self-center">
+                    {v.model && (
+                      <p className="font-mono text-xs font-semibold uppercase tracking-wider text-sbd-red">
+                        Product code: {v.model}
+                      </p>
+                    )}
+                    <h3 className="mt-1 font-display text-xl font-bold text-charcoal">{v.name}</h3>
+                    <p className="mt-3 text-slate-grey">{v.summary}</p>
+                    {v.notes && (
+                      <p className="mt-4 border-l-2 border-stainless pl-4 text-sm italic text-slate-grey">
+                        {v.notes}
+                      </p>
+                    )}
+                    {v.datasheet && (
+                      <div className="mt-6 flex flex-wrap items-center gap-3">
+                        <a
+                          href={v.datasheet}
+                          target="_blank"
+                          rel="noopener"
+                          className="btn-sheen inline-flex items-center gap-2 bg-sbd-red px-5 py-2.5 font-display text-xs font-bold uppercase tracking-wider text-white transition-all duration-300 hover:bg-sbd-red-dark hover:shadow-[0_6px_18px_rgba(200,16,46,0.3)]"
+                        >
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
+                            <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2.2" />
+                          </svg>
+                          View PDF
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                  <div className="self-center">
+                    <SpecTable rows={v.specs} />
+                  </div>
                 </div>
-                <div className="self-center">
-                  <SpecTable rows={v.specs} />
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+              </article>
+            ))}
+          </div>
+        </Reveal>
       </Section>
 
       <Section>
-        <SectionHeading eyebrow="Before you order" title="Choosing the right option" />
-        <FaqList faqs={product.choosing.map((c) => ({ q: c.question, a: c.answer }))} />
-        <div className="mt-10">
-          <CapabilityNote text={capabilityStatement} />
-        </div>
+        <Reveal>
+          <div className="reveal">
+            <SectionHeading eyebrow="Before you order" title="Choosing the right option" />
+          </div>
+          <div className="reveal reveal-d1">
+            <FaqList faqs={product.choosing.map((c) => ({ q: c.question, a: c.answer }))} />
+          </div>
+          <div className="reveal reveal-d2 mt-10">
+            <CapabilityNote text={capabilityStatement} />
+          </div>
+        </Reveal>
       </Section>
 
       <Section tone="fog">
-        <SectionHeading title="Commonly bought by" />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {product.relatedSegments.map((s) => {
-            const seg = getSegment(s);
-            if (!seg) return null;
-            return (
-              <LinkCard
-                key={seg.slug}
-                href={`/who-we-serve/${seg.slug}`}
-                title={seg.navLabel}
-                blurb={seg.headline}
-              />
-            );
-          })}
-        </div>
-        <p className="mt-8 text-sm text-slate-grey">
-          Looking for dimensional data to attach to a submittal?{" "}
-          <Link href="/products/spec-downloads" className="font-semibold text-sbd-red underline underline-offset-4">
-            Spec sheets and downloads
-          </Link>
-        </p>
+        <Reveal>
+          <div className="reveal">
+            <SectionHeading title="Commonly bought by" />
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {product.relatedSegments.map((s, i) => {
+              const seg = getSegment(s);
+              if (!seg) return null;
+              return (
+                <div
+                  key={seg.slug}
+                  className={`reveal reveal-d${Math.min(i + 1, 4)} hover-lift`}
+                >
+                  <LinkCard
+                    href={`/who-we-serve/${seg.slug}`}
+                    title={seg.navLabel}
+                    blurb={seg.headline}
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <p className="reveal reveal-d4 mt-8 text-sm text-slate-grey">
+            Looking for dimensional data to attach to a submittal?{" "}
+            <Link href="/products/spec-downloads" className="font-semibold text-sbd-red underline underline-offset-4">
+              Spec sheets and downloads
+            </Link>
+          </p>
+        </Reveal>
       </Section>
 
       <CtaBand />
