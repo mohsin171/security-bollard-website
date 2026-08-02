@@ -28,6 +28,10 @@ export default function ProductsPage() {
         title="Products built for commercial sites and Canadian winters"
         intro="Four categories, specified properly. Every product page carries dimensions, material grade, finish and mounting method — the information a facilities manager or an estimator actually needs before deciding."
         breadcrumbs={crumbs}
+        background={{
+          src: "/products/products-header.webp",
+          alt: "Bollards, a bike rack and a barrier arm outside a commercial building on an icy winter day",
+        }}
       />
 
       <Section>
