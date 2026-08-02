@@ -241,16 +241,21 @@ export function PageHeader({
   title: string;
   intro?: string;
   breadcrumbs?: { name: string; path: string }[];
-  background?: { src: string; alt?: string };
+  background?: { src: string; alt?: string; tone?: "dark" | "light" };
   actions?: ReactNode;
 }) {
   const onPhoto = Boolean(background);
+  const lightPhoto = background?.tone === "light";
+  // Light-toned photos keep the default charcoal type; dark ones flip to white.
+  const invert = onPhoto && !lightPhoto;
 
   return (
     <header
       className={`ambient border-b pb-12 pt-10 md:pb-16 md:pt-14 ${
         onPhoto
-          ? "flex min-h-[calc(100svh-4.6rem)] items-center border-charcoal/20 bg-charcoal lg:min-h-[calc(100svh-7.4rem)]"
+          ? `flex min-h-[calc(100svh-4.6rem)] items-center lg:min-h-[calc(100svh-7.4rem)] ${
+              lightPhoto ? "border-hairline bg-white" : "border-charcoal/20 bg-charcoal"
+            }`
           : "border-hairline bg-fog"
       }`}
     >
@@ -267,18 +272,25 @@ export function PageHeader({
           {/* Scrim — keeps the copy legible over the photo */}
           <div
             aria-hidden
-            className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/80 to-charcoal/40"
+            className={
+              lightPhoto
+                ? "absolute inset-0 bg-gradient-to-r from-white/95 via-white/75 to-white/20"
+                : "absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/80 to-charcoal/40"
+            }
           />
-          <div aria-hidden className="absolute inset-0 bg-charcoal/15" />
+          <div
+            aria-hidden
+            className={lightPhoto ? "absolute inset-0 bg-white/10" : "absolute inset-0 bg-charcoal/15"}
+          />
         </>
       )}
       <div
         className="glow-orb glow-orb-red"
         aria-hidden
-        style={{ width: 380, height: 380, top: -190, right: -110, opacity: onPhoto ? 0.35 : 0.2 }}
+        style={{ width: 380, height: 380, top: -190, right: -110, opacity: invert ? 0.35 : 0.2 }}
       />
       <div
-        className={`ring-circle ${onPhoto ? "ring-circle-light" : ""}`}
+        className={`ring-circle ${invert ? "ring-circle-light" : ""}`}
         aria-hidden
         style={{ width: 240, height: 240, top: -60, right: "10%" }}
       />
@@ -288,14 +300,14 @@ export function PageHeader({
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol
               className={`flex flex-wrap items-center gap-x-2 text-xs ${
-                onPhoto ? "text-white/60" : "text-slate-grey"
+                invert ? "text-white/60" : "text-slate-grey"
               }`}
             >
               {breadcrumbs.map((b, i) => (
                 <li key={b.path} className="flex items-center gap-2">
                   {i > 0 && <span aria-hidden>/</span>}
                   {i === breadcrumbs.length - 1 ? (
-                    <span className={onPhoto ? "text-white" : "text-charcoal"}>{b.name}</span>
+                    <span className={invert ? "text-white" : "text-charcoal"}>{b.name}</span>
                   ) : (
                     <Link href={b.path} className="hover:text-sbd-red">
                       {b.name}
@@ -308,19 +320,19 @@ export function PageHeader({
         )}
         {eyebrow && (
           <div className="mb-3">
-            <Eyebrow light={onPhoto}>{eyebrow}</Eyebrow>
+            <Eyebrow light={invert}>{eyebrow}</Eyebrow>
           </div>
         )}
         <h1
           className={`red-rule max-w-4xl text-[length:var(--text-h1)] ${
-            onPhoto ? "text-white" : "text-charcoal"
+            invert ? "text-white" : "text-charcoal"
           }`}
         >
           {title}
         </h1>
         {intro && (
           <p
-            className={`mt-7 max-w-3xl text-lg ${onPhoto ? "text-white/75" : "text-slate-grey"}`}
+            className={`mt-7 max-w-3xl text-lg ${invert ? "text-white/75" : "text-slate-grey"}`}
           >
             {intro}
           </p>
