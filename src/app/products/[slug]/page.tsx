@@ -43,12 +43,64 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <JsonLd data={faqSchema(product.choosing.map((c) => ({ q: c.question, a: c.answer })))} />
       <JsonLd data={breadcrumbSchema(crumbs)} />
 
-      <PageHeader
-        eyebrow={product.eyebrow}
-        title={product.headline}
-        intro={product.intro}
-        breadcrumbs={crumbs}
-      />
+      {product.hero ? (
+        <header className="relative overflow-hidden border-b border-hairline bg-charcoal">
+          <Image
+            src={product.hero.src}
+            alt={product.hero.alt}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          {/* Legibility scrim: charcoal from the left, red glow line at base */}
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/65 to-charcoal/25"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-charcoal/85 to-transparent"
+          />
+          <div className="glow-line" aria-hidden style={{ bottom: 0, left: 0, right: 0 }} />
+
+          <div className="container-sbd relative py-20 md:py-28">
+            <nav aria-label="Breadcrumb" className="mb-6">
+              <ol className="flex flex-wrap items-center gap-x-2 text-xs text-white/60">
+                {crumbs.map((b, i) => (
+                  <li key={b.path} className="flex items-center gap-2">
+                    {i > 0 && <span aria-hidden>/</span>}
+                    {i === crumbs.length - 1 ? (
+                      <span className="text-white">{b.name}</span>
+                    ) : (
+                      <Link href={b.path} className="transition-colors hover:text-safety-yellow">
+                        {b.name}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </nav>
+            <p className="hero-in font-display text-xs font-bold uppercase tracking-[0.18em] text-safety-yellow">
+              {product.eyebrow}
+            </p>
+            <h1 className="hero-in hero-in-d1 mt-4 max-w-3xl text-[length:var(--text-h1)] text-white">
+              {product.headline}
+            </h1>
+            <div className="hero-in hero-in-d1 mt-6 h-1 w-24 bg-sbd-red" />
+            <p className="hero-in hero-in-d2 mt-7 max-w-2xl text-lg text-white/80">
+              {product.intro}
+            </p>
+          </div>
+        </header>
+      ) : (
+        <PageHeader
+          eyebrow={product.eyebrow}
+          title={product.headline}
+          intro={product.intro}
+          breadcrumbs={crumbs}
+        />
+      )}
 
       <Section>
         <SectionHeading title="Where it is used" />

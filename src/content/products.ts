@@ -18,6 +18,7 @@ export type Product = {
   intro: string;
   metaTitle: string;
   metaDescription: string;
+  hero?: { src: string; alt: string };
   applications: string[];
   variants: Variant[];
   choosing: { question: string; answer: string }[];
@@ -191,6 +192,10 @@ export const products: Product[] = [
     name: "Bike Racks",
     navLabel: "Bike Racks",
     eyebrow: "Bicycle parking",
+    hero: {
+      src: "/products/bike-racks-hero.webp",
+      alt: "Steel bicycle rack hoops on a rain-soaked city sidewalk with autumn leaves",
+    },
     headline: "Commercial and public bike racks",
     intro:
       "In Toronto, bicycle parking is a code requirement rather than an amenity. Chapter 230 of Zoning By-law 569-2013 sets bicycle parking rates, short-term spaces must be visible and publicly accessible at grade, and the Toronto Green Standard applies to new mid-to-high-rise residential and all ICI development. If you are filing a Site Plan Approval application, there is a bike rack line item in your project.",
