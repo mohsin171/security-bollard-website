@@ -196,7 +196,7 @@ export const products: Product[] = [
       "In Toronto, bicycle parking is a code requirement rather than an amenity. Chapter 230 of Zoning By-law 569-2013 sets bicycle parking rates, short-term spaces must be visible and publicly accessible at grade, and the Toronto Green Standard applies to new mid-to-high-rise residential and all ICI development. If you are filing a Site Plan Approval application, there is a bike rack line item in your project.",
     metaTitle: "Commercial Bike Racks Toronto",
     metaDescription:
-      "Stainless (SBD-SSBR01), Round, Square U, Double Moon and 4-Way bike racks for commercial, condo and public properties in Toronto and the GTA. Submittal-ready specifications.",
+      "Stainless (SBD-SSBR01), Round, Double Moon and 4-Way bike racks for commercial, condo and public properties in Toronto and the GTA. Submittal-ready specifications.",
     applications: [
       "New ICI and mid/high-rise development under Site Plan Approval",
       "Condominium visitor and resident short-term bicycle parking",
@@ -243,20 +243,6 @@ export const products: Product[] = [
           "Hot-dip galvanizing gives long service life against road salt. Polished stainless available on request for design-led frontages.",
       },
       {
-        name: "Square U Bike Rack",
-        model: "Square U",
-        summary:
-          "The standard inverted-U form in a squared profile — the configuration most often called for in Toronto site plan submissions. Two points of contact, U-lock compatible, and easy to lay out in rows at code spacing.",
-        specs: [
-          { label: "Width", value: "33.46 in" },
-          { label: "Height", value: "31.5 in" },
-          { label: "Tube diameter", value: "1.89 in" },
-          { label: "Surface", value: "Hot-dip galvanized (HDG)" },
-          { label: "Mounting", value: "Surface mount, flanged base plates" },
-          { label: "Capacity", value: "1 to 2 bikes" },
-        ],
-      },
-      {
         name: "Double Moon Bike Rack Bollard",
         model: "SBD-BRBM01",
         summary:
@@ -301,7 +287,7 @@ export const products: Product[] = [
       {
         question: "Galvanized or stainless?",
         answer:
-          "Hot-dip galvanized is the value choice and performs well through Ontario winters — it is what most ICI and streetscape projects use. Stainless is specified where the rack is a visible part of the design at a building entrance or high-end frontage. The Square U and Round (SBD-UBRSS01) racks are HDG; the SBD-SSBR01 is stainless steel.",
+          "Hot-dip galvanized is the value choice and performs well through Ontario winters — it is what most ICI and streetscape projects use. Stainless is specified where the rack is a visible part of the design at a building entrance or high-end frontage. The Round rack (SBD-UBRSS01) is HDG; the SBD-SSBR01 is stainless steel.",
       },
       {
         question: "What about AODA clearances?",

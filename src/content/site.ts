@@ -48,7 +48,7 @@ export const nav: NavItem[] = [
       {
         label: "Bike Racks",
         href: "/products/bike-racks",
-        blurb: "Stainless, Round, Square U, Double Moon and 4-Way",
+        blurb: "Stainless, Round, Double Moon and 4-Way",
       },
       {
         label: "Traffic & Access Barriers",

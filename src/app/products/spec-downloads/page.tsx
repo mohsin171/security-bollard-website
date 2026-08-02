@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
 
 const CSI = [
   { section: "32 39 13", title: "Manufactured Metal Bollards", note: "Fixed, removable and decorative bollards" },
-  { section: "12 93 13", title: "Bicycle Racks", note: "Square U, Round and stainless post-and-loop racks" },
+  { section: "12 93 13", title: "Bicycle Racks", note: "Round hoop, stainless post-and-loop, Double Moon and 4-Way racks" },
   { section: "34 71 13", title: "Vehicle Barriers", note: "Traffic and access barrier products" },
 ];
 
@@ -90,7 +90,7 @@ export default function SpecDownloadsPage() {
 
           <div>
             <h3 className="mb-4 font-display text-lg font-bold text-charcoal">
-              Round (SBD-UBRSS01) &amp; Square U Bike Racks
+              Round Bike Rack — SBD-UBRSS01
             </h3>
             <div className="grid gap-6 lg:grid-cols-2">
               <SpecTable

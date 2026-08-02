@@ -69,7 +69,7 @@ export default function ProductsPage() {
         <div className="grid gap-6 md:grid-cols-2">
           <div>
             <h3 className="mb-3 font-display text-base font-bold text-charcoal">
-              Bike racks — Square U and Round
+              Round bike rack — SBD-UBRSS01
             </h3>
             <SpecTable
               rows={[
