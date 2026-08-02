@@ -58,7 +58,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           />
           <div className="glow-line" aria-hidden style={{ bottom: 0, left: 0, right: 0 }} />
 
-          <div className="container-sbd grid items-center gap-12 py-16 md:py-20 lg:grid-cols-[1.1fr_1fr]">
+          <div className="container-sbd grid min-h-[calc(100svh-4.6rem)] items-center gap-10 py-10 md:py-12 lg:min-h-[calc(100svh-7.4rem)] lg:grid-cols-[1.1fr_1fr]">
             {/* Text — left */}
             <div>
               <nav aria-label="Breadcrumb" className="mb-6">
@@ -89,24 +89,22 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               </p>
             </div>
 
-            {/* Photo card — right, glowing red border */}
-            <div className="hero-in hero-in-d2 relative mx-auto w-full max-w-md lg:max-w-full">
+            {/* Photo card — right, glowing red border, sized to the viewport */}
+            <div className="hero-in hero-in-d2 relative mx-auto aspect-[4/5] w-full max-w-[24rem] lg:mx-0 lg:h-[min(70vh,37rem)] lg:w-auto lg:max-w-none lg:justify-self-end">
               {/* Outer glow halo */}
               <div
                 aria-hidden
                 className="absolute -inset-3 rounded-[1.75rem] bg-[radial-gradient(ellipse_at_center,rgba(200,16,46,0.35),transparent_70%)] blur-xl"
               />
-              <div className="relative overflow-hidden rounded-3xl border-2 border-sbd-red/70 shadow-[0_0_28px_rgba(200,16,46,0.45),0_0_70px_rgba(200,16,46,0.2),inset_0_0_24px_rgba(0,0,0,0.35)]">
+              <div className="relative h-full w-full overflow-hidden rounded-3xl border-2 border-sbd-red/70 shadow-[0_0_28px_rgba(200,16,46,0.45),0_0_70px_rgba(200,16,46,0.2),inset_0_0_24px_rgba(0,0,0,0.35)]">
                 <Image
                   src={product.hero.src}
                   alt={product.hero.alt}
-                  width={1000}
-                  height={1250}
+                  fill
                   priority
-                  sizes="(max-width: 1024px) 28rem, 40vw"
-                  className="aspect-[4/5] w-full object-cover transition-transform duration-700 hover:scale-[1.03]"
+                  sizes="(max-width: 1024px) 24rem, 30rem"
+                  className="object-cover transition-transform duration-700 hover:scale-[1.03]"
                 />
-                {/* Corner glow accents */}
                 <div
                   aria-hidden
                   className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/10"
