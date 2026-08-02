@@ -44,15 +44,15 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <JsonLd data={breadcrumbSchema(crumbs)} />
 
       {product.hero ? (
-        <header className="ambient border-b border-hairline bg-charcoal">
-          <div className="blueprint-grid blueprint-grid-dark" aria-hidden />
+        <header className="ambient border-b border-hairline bg-white">
+          <div className="blueprint-grid" aria-hidden />
           <div
             className="glow-orb glow-orb-red"
             aria-hidden
-            style={{ width: 460, height: 460, top: -180, left: -120, opacity: 0.4 }}
+            style={{ width: 460, height: 460, top: -180, left: -120, opacity: 0.22 }}
           />
           <div
-            className="ring-circle ring-circle-light"
+            className="ring-circle"
             aria-hidden
             style={{ width: 260, height: 260, bottom: -80, left: "34%" }}
           />
@@ -62,14 +62,14 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             {/* Text — left */}
             <div>
               <nav aria-label="Breadcrumb" className="mb-6">
-                <ol className="flex flex-wrap items-center gap-x-2 text-xs text-white/55">
+                <ol className="flex flex-wrap items-center gap-x-2 text-xs text-slate-grey">
                   {crumbs.map((b, i) => (
                     <li key={b.path} className="flex items-center gap-2">
                       {i > 0 && <span aria-hidden>/</span>}
                       {i === crumbs.length - 1 ? (
-                        <span className="text-white">{b.name}</span>
+                        <span className="text-charcoal">{b.name}</span>
                       ) : (
-                        <Link href={b.path} className="transition-colors hover:text-safety-yellow">
+                        <Link href={b.path} className="transition-colors hover:text-sbd-red">
                           {b.name}
                         </Link>
                       )}
@@ -77,14 +77,14 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                   ))}
                 </ol>
               </nav>
-              <p className="hero-in font-display text-xs font-bold uppercase tracking-[0.18em] text-safety-yellow">
+              <p className="hero-in font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
                 {product.eyebrow}
               </p>
-              <h1 className="hero-in hero-in-d1 mt-4 text-[length:var(--text-h1)] text-white">
+              <h1 className="hero-in hero-in-d1 mt-4 text-[length:var(--text-h1)] text-charcoal">
                 {product.headline}
               </h1>
               <div className="hero-in hero-in-d1 mt-6 h-1 w-24 bg-sbd-red" />
-              <p className="hero-in hero-in-d2 mt-7 max-w-xl text-lg text-white/75">
+              <p className="hero-in hero-in-d2 mt-7 max-w-xl text-lg text-slate-grey">
                 {product.intro}
               </p>
             </div>
@@ -94,9 +94,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               {/* Outer glow halo */}
               <div
                 aria-hidden
-                className="absolute -inset-3 rounded-[1.75rem] bg-[radial-gradient(ellipse_at_center,rgba(200,16,46,0.35),transparent_70%)] blur-xl"
+                className="absolute -inset-3 rounded-[1.75rem] bg-[radial-gradient(ellipse_at_center,rgba(200,16,46,0.3),transparent_70%)] blur-xl"
               />
-              <div className="relative h-full w-full overflow-hidden rounded-3xl border-2 border-sbd-red/70 shadow-[0_0_28px_rgba(200,16,46,0.45),0_0_70px_rgba(200,16,46,0.2),inset_0_0_24px_rgba(0,0,0,0.35)]">
+              <div className="relative h-full w-full overflow-hidden rounded-3xl border-2 border-sbd-red/70 shadow-[0_0_26px_rgba(200,16,46,0.35),0_14px_50px_rgba(26,26,26,0.18)]">
                 <Image
                   src={product.hero.src}
                   alt={product.hero.alt}
@@ -107,7 +107,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 />
                 <div
                   aria-hidden
-                  className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/10"
+                  className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-charcoal/10"
                 />
               </div>
             </div>
