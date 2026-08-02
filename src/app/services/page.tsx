@@ -26,8 +26,8 @@ export default function ServicesPage() {
         intro="Anyone can sell you a bollard. What makes a difference on a commercial site is how fast you get a quote, whether the product is right for the application, and whether the same supplier is still there when the same corner gets hit next winter."
         breadcrumbs={crumbs}
         background={{
-          src: "/products/products-header.webp",
-          alt: "Bollards, a bike rack and a barrier arm outside a commercial building on an icy winter day",
+          src: "/services/services-header.webp",
+          alt: "Two people in high-visibility vests reviewing a loading dock while a third checks a bollard at the door",
         }}
         actions={
           <>
