@@ -273,7 +273,7 @@ export const segments: Segment[] = [
       "Clear statement of what we do not supply, so nothing is assumed",
     ],
     products: [
-      { label: "Bike racks — Square U, Round, SBD-BR2042", href: "/products/bike-racks" },
+      { label: "Bike racks — SBD-SSBR01, Round, Square U, 4-Way", href: "/products/bike-racks" },
       { label: "Manufactured metal bollards", href: "/products/safety-bollards" },
       { label: "Traffic and access barriers", href: "/products/traffic-access-barriers" },
       { label: "Spec sheets and downloads", href: "/products/spec-downloads" },

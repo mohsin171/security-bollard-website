@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { products, getProduct } from "@/content/products";
 import { getSegment } from "@/content/segments";
 import { capabilityStatement } from "@/content/site";
@@ -72,13 +73,38 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <SectionHeading eyebrow="Specifications" title="Options and technical data" />
         <div className="space-y-8">
           {product.variants.map((v) => (
-            <article key={v.name} className="border border-hairline bg-white">
+            <article key={v.name} className="hover-lift border border-hairline bg-white">
               <div className="h-1 w-full bg-sbd-red" />
-              <div className="grid gap-8 p-6 md:p-8 lg:grid-cols-[1fr_1.1fr]">
-                <div>
+              <div
+                className={`grid gap-8 p-6 md:p-8 ${
+                  v.image ? "lg:grid-cols-[300px_1fr_1.05fr]" : "lg:grid-cols-[1fr_1.1fr]"
+                }`}
+              >
+                {v.image && (
+                  <div className="relative mx-auto w-full max-w-[300px] self-center">
+                    <div
+                      aria-hidden
+                      className="absolute inset-4 rounded-full bg-[radial-gradient(circle,rgba(200,16,46,0.1),transparent_70%)]"
+                    />
+                    <Image
+                      src={v.image.src}
+                      alt={v.image.alt}
+                      width={900}
+                      height={900}
+                      className="relative w-full transition-transform duration-500 hover:scale-[1.04]"
+                      sizes="(max-width: 1024px) 300px, 300px"
+                    />
+                    {v.model && (
+                      <p className="mt-2 text-center font-mono text-[0.7rem] uppercase tracking-wider text-slate-grey">
+                        {v.model}
+                      </p>
+                    )}
+                  </div>
+                )}
+                <div className="self-center">
                   {v.model && (
                     <p className="font-mono text-xs font-semibold uppercase tracking-wider text-sbd-red">
-                      Model {v.model}
+                      Product code: {v.model}
                     </p>
                   )}
                   <h3 className="mt-1 font-display text-xl font-bold text-charcoal">{v.name}</h3>
@@ -89,7 +115,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                     </p>
                   )}
                 </div>
-                <SpecTable rows={v.specs} />
+                <div className="self-center">
+                  <SpecTable rows={v.specs} />
+                </div>
               </div>
             </article>
           ))}

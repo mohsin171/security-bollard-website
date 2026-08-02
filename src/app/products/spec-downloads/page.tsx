@@ -64,24 +64,24 @@ export default function SpecDownloadsPage() {
         <div className="space-y-10">
           <div>
             <h3 className="mb-4 font-display text-lg font-bold text-charcoal">
-              SBD-BR2042 — Stainless Steel Bike Rack
+              SBD-SSBR01 — Stainless Steel Bike Rack
             </h3>
             <div className="grid gap-6 lg:grid-cols-2">
               <SpecTable
                 rows={[
-                  { label: "Model", value: "SBD-BR2042" },
+                  { label: "Product code", value: "SBD-SSBR01" },
                   { label: "Overall height", value: "42 in" },
-                  { label: "Base diameter", value: "12 in" },
-                  { label: "Base plate thickness", value: "0.500 in" },
-                  { label: "Mounting holes", value: "1/2 in" },
+                  { label: "Loop height", value: "23 in" },
+                  { label: "Overall width", value: "33.46 in" },
+                  { label: "Tube diameter", value: "1.89 in" },
                 ]}
               />
               <SpecTable
                 rows={[
-                  { label: "Material", value: "Grade 304 stainless steel" },
-                  { label: "Optional material", value: "Grade 316 stainless steel" },
-                  { label: "Standard finish", value: "Satin / brushed stainless" },
-                  { label: "Reflective bands", value: "Optional" },
+                  { label: "Base diameter", value: "12 in" },
+                  { label: "Mounting holes", value: "4 \u00d7 \u00d81/2 in" },
+                  { label: "Surface", value: "Stainless steel" },
+                  { label: "Capacity", value: "1 to 2 bikes" },
                   { label: "Mounting", value: "Surface mount, round base plate" },
                 ]}
               />
@@ -90,7 +90,7 @@ export default function SpecDownloadsPage() {
 
           <div>
             <h3 className="mb-4 font-display text-lg font-bold text-charcoal">
-              Square U &amp; Round Bike Racks
+              Round (SBD-UBRSS01) &amp; Square U Bike Racks
             </h3>
             <div className="grid gap-6 lg:grid-cols-2">
               <SpecTable
@@ -105,6 +105,32 @@ export default function SpecDownloadsPage() {
                   { label: "Surface / finish", value: "Hot-dip galvanized (HDG)" },
                   { label: "Capacity", value: "1 to 2 bikes" },
                   { label: "Mounting", value: "Surface mount, flanged base plates" },
+                ]}
+              />
+            </div>
+          </div>
+
+          <div>
+            <h3 className="mb-4 font-display text-lg font-bold text-charcoal">
+              SBD-BRBM01 Double Moon &amp; SBD-CBS4W01 4-Way
+            </h3>
+            <div className="grid gap-6 lg:grid-cols-2">
+              <SpecTable
+                rows={[
+                  { label: "Double Moon post", value: "60 mm" },
+                  { label: "Double Moon height", value: "853 mm" },
+                  { label: "Double Moon width", value: "338 mm" },
+                  { label: "Base plate", value: "120 mm" },
+                  { label: "Capacity", value: "2 bikes" },
+                ]}
+              />
+              <SpecTable
+                rows={[
+                  { label: "4-Way height", value: "35.25 in" },
+                  { label: "4-Way width", value: "28.25 in" },
+                  { label: "Post diameter", value: "4.5 in" },
+                  { label: "U-tube diameter", value: "1.5 in" },
+                  { label: "Capacity", value: "Up to 8 bikes" },
                 ]}
               />
             </div>

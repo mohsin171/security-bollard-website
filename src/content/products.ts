@@ -6,6 +6,7 @@ export type Variant = {
   summary: string;
   specs: SpecRow[];
   notes?: string;
+  image?: { src: string; alt: string };
 };
 
 export type Product = {
@@ -195,7 +196,7 @@ export const products: Product[] = [
       "In Toronto, bicycle parking is a code requirement rather than an amenity. Chapter 230 of Zoning By-law 569-2013 sets bicycle parking rates, short-term spaces must be visible and publicly accessible at grade, and the Toronto Green Standard applies to new mid-to-high-rise residential and all ICI development. If you are filing a Site Plan Approval application, there is a bike rack line item in your project.",
     metaTitle: "Commercial Bike Racks Toronto",
     metaDescription:
-      "Square U, Round and SBD-BR2042 stainless bike racks for commercial, condo and public properties in Toronto and the GTA. Submittal-ready specifications.",
+      "Stainless (SBD-SSBR01), Round, Square U, Double Moon and 4-Way bike racks for commercial, condo and public properties in Toronto and the GTA. Submittal-ready specifications.",
     applications: [
       "New ICI and mid/high-rise development under Site Plan Approval",
       "Condominium visitor and resident short-term bicycle parking",
@@ -206,52 +207,89 @@ export const products: Product[] = [
     ],
     variants: [
       {
-        name: "Square U Bike Rack",
-        model: "Square U",
+        name: "Stainless Steel Bike Rack",
+        model: "SBD-SSBR01",
         summary:
-          "The standard inverted-U form, in a squared profile. Two points of contact and U-lock compatibility — the configuration cyclists actually trust. Clean lines that sit comfortably in architectural and landscape designs.",
+          "Built for durability, security and style. Integrated side loops give U-lock compatibility at two heights, and the heavy-duty 12-inch base plate provides exceptional stability. Specified for urban streets, parks, schools, businesses and public spaces where finish quality is part of the design intent.",
+        image: { src: "/products/sbd-ssbr01-stainless.webp", alt: "SBD-SSBR01 stainless steel bike rack with integrated side loops" },
         specs: [
-          { label: "Width", value: "33.46 in" },
-          { label: "Height", value: "31.5 in" },
+          { label: "Overall height", value: "42 in" },
+          { label: "Loop height", value: "23 in" },
+          { label: "Overall width", value: "33.46 in" },
           { label: "Tube diameter", value: "1.89 in" },
-          { label: "Material & finish", value: "Steel, hot-dip galvanized (HDG)" },
+          { label: "Base diameter", value: "12 in" },
+          { label: "Mounting holes", value: "4 \u00d7 \u00d81/2 in" },
+          { label: "Surface", value: "Stainless steel" },
           { label: "Capacity", value: "1 to 2 bikes" },
-          { label: "Mounting", value: "Surface mount on flanged base plates" },
         ],
         notes:
-          "Hot-dip galvanizing gives a long service life in Canadian winter conditions including road salt exposure.",
+          "Round base plate with four pre-drilled mounting holes for secure surface installation. Corrosion-resistant through Ontario winters.",
       },
       {
         name: "Round Bike Rack",
-        model: "Round",
+        model: "SBD-UBRSS01",
         summary:
-          "The same two-point contact and U-lock capability in a circular form. Suits streetscape and public realm settings where a softer profile is preferred.",
+          "Simple, sturdy and secure. The classic hoop offers the two points of contact and U-lock capability cyclists trust, with clean lines and all-steel construction that sits comfortably in architectural and landscape designs.",
+        image: { src: "/products/sbd-ubrss01-round.webp", alt: "SBD-UBRSS01 round hoop bike rack with flanged base plates" },
         specs: [
           { label: "Width", value: "33.46 in" },
           { label: "Height", value: "31.5 in" },
           { label: "Tube diameter", value: "1.89 in" },
-          { label: "Material & finish", value: "Steel, hot-dip galvanized (HDG)" },
+          { label: "Surface", value: "Hot-dip galvanized (HDG)" },
+          { label: "Mounting", value: "Surface mount, flanged base plates" },
           { label: "Capacity", value: "1 to 2 bikes" },
-          { label: "Mounting", value: "Surface mount on flanged base plates" },
+        ],
+        notes:
+          "Hot-dip galvanizing gives long service life against road salt. Polished stainless available on request for design-led frontages.",
+      },
+      {
+        name: "Square U Bike Rack",
+        model: "Square U",
+        summary:
+          "The standard inverted-U form in a squared profile — the configuration most often called for in Toronto site plan submissions. Two points of contact, U-lock compatible, and easy to lay out in rows at code spacing.",
+        specs: [
+          { label: "Width", value: "33.46 in" },
+          { label: "Height", value: "31.5 in" },
+          { label: "Tube diameter", value: "1.89 in" },
+          { label: "Surface", value: "Hot-dip galvanized (HDG)" },
+          { label: "Mounting", value: "Surface mount, flanged base plates" },
+          { label: "Capacity", value: "1 to 2 bikes" },
         ],
       },
       {
-        name: "Stainless Steel Bike Rack",
-        model: "SBD-BR2042",
+        name: "Double Moon Bike Rack Bollard",
+        model: "SBD-BRBM01",
         summary:
-          "A post-and-loop rack in Grade 304 stainless. Integrated side loops give convenient locking points, and the round base plate supports secure surface mounting. Specified where finish quality is part of the design intent.",
+          "A bollard and a bike rack in one footprint. The circular locking loops park two bicycles while the post itself works as vehicle access control \u2014 useful where a site needs both jobs done in a tight frontage. Assembles on site and mounts to a compact 120 mm base plate.",
+        image: { src: "/products/sbd-brbm01-double-moon.webp", alt: "SBD-BRBM01 Double Moon bike rack bollard in powder-coated black" },
         specs: [
-          { label: "Overall height", value: "42 in" },
-          { label: "Base diameter", value: "12 in" },
-          { label: "Base plate thickness", value: "0.500 in" },
-          { label: "Mounting holes", value: "1/2 in" },
-          { label: "Material", value: "Grade 304 stainless steel" },
-          { label: "Grade 316", value: "Optional" },
-          { label: "Standard finish", value: "Satin / brushed stainless steel" },
-          { label: "Reflective bands", value: "Optional" },
+          { label: "Post size", value: "60 mm" },
+          { label: "Height", value: "853 mm" },
+          { label: "Width", value: "338 mm" },
+          { label: "Base plate", value: "120 mm" },
+          { label: "Mounting style", value: "Surface mount" },
+          { label: "Finish", value: "Powder-coated black" },
+          { label: "Capacity", value: "2 bikes" },
         ],
         notes:
-          "Custom finishes and configurations available. Grade 316 is worth specifying where de-icing salt exposure is heavy.",
+          "Also available in-ground for installation into a concrete footing where the site allows.",
+      },
+      {
+        name: "4-Way Bike Rack",
+        model: "SBD-CBS4W01",
+        summary:
+          "The highest-capacity unit in the range: four U-shaped locking tubes around a heavy central post park up to eight bicycles in a single compact footprint. The efficient answer where a site plan calls for numbers, not just presence.",
+        image: { src: "/products/sbd-cbs4w01-4way.webp", alt: "SBD-CBS4W01 4-Way bike rack with four U-shaped locking tubes" },
+        specs: [
+          { label: "Overall height", value: "35.25 in" },
+          { label: "Overall width", value: "28.25 in" },
+          { label: "Post diameter", value: "4.5 in" },
+          { label: "U-shaped tubes", value: "1.5 in diameter" },
+          { label: "Bike capacity", value: "Up to 8 bikes" },
+          { label: "Finish", value: "Powder-coated black" },
+        ],
+        notes:
+          "One 4-Way replaces a row of four hoops \u2014 worth pricing against multiple single racks when space is tight.",
       },
     ],
     choosing: [
@@ -263,7 +301,7 @@ export const products: Product[] = [
       {
         question: "Galvanized or stainless?",
         answer:
-          "Hot-dip galvanized is the value choice and performs well through Ontario winters — it is what most ICI and streetscape projects use. Stainless is specified where the rack is a visible part of the design at a building entrance or high-end frontage. The Square U and Round racks are HDG; the SBD-BR2042 is Grade 304 stainless.",
+          "Hot-dip galvanized is the value choice and performs well through Ontario winters — it is what most ICI and streetscape projects use. Stainless is specified where the rack is a visible part of the design at a building entrance or high-end frontage. The Square U and Round (SBD-UBRSS01) racks are HDG; the SBD-SSBR01 is stainless steel.",
       },
       {
         question: "What about AODA clearances?",

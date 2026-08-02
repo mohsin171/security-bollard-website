@@ -130,7 +130,7 @@ export default function ProjectsPage() {
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           <LinkCard href="/products/safety-bollards" title="Safety bollards" blurb="Fixed, removable, stainless and decorative" />
           <LinkCard href="/products/bollard-covers" title="Bollard covers" blurb="Restore visibility without repainting" />
-          <LinkCard href="/products/bike-racks" title="Bike racks" blurb="Square U, Round and SBD-BR2042" />
+          <LinkCard href="/products/bike-racks" title="Bike racks" blurb="Stainless, Round, Square U, Double Moon and 4-Way" />
           <LinkCard href="/products/traffic-access-barriers" title="Barriers" blurb="Define vehicle and pedestrian zones" />
         </div>
       </Section>

@@ -83,15 +83,15 @@ export default function ProductsPage() {
           </div>
           <div>
             <h3 className="mb-3 font-display text-base font-bold text-charcoal">
-              Stainless bike rack — SBD-BR2042
+              Stainless bike rack — SBD-SSBR01
             </h3>
             <SpecTable
               rows={[
                 { label: "Overall height", value: "42 in" },
+                { label: "Loop height", value: "23 in" },
                 { label: "Base diameter", value: "12 in" },
-                { label: "Base plate thickness", value: "0.500 in" },
-                { label: "Mounting holes", value: "1/2 in" },
-                { label: "Material", value: "Grade 304 stainless (316 optional)" },
+                { label: "Mounting holes", value: "4 \u00d7 \u00d81/2 in" },
+                { label: "Capacity", value: "1 to 2 bikes" },
               ]}
             />
           </div>
