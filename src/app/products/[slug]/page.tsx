@@ -44,53 +44,75 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <JsonLd data={breadcrumbSchema(crumbs)} />
 
       {product.hero ? (
-        <header className="relative overflow-hidden border-b border-hairline bg-charcoal">
-          <Image
-            src={product.hero.src}
-            alt={product.hero.alt}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          {/* Legibility scrim: charcoal from the left, red glow line at base */}
+        <header className="ambient border-b border-hairline bg-charcoal">
+          <div className="blueprint-grid blueprint-grid-dark" aria-hidden />
           <div
+            className="glow-orb glow-orb-red"
             aria-hidden
-            className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/65 to-charcoal/25"
+            style={{ width: 460, height: 460, top: -180, left: -120, opacity: 0.4 }}
           />
           <div
+            className="ring-circle ring-circle-light"
             aria-hidden
-            className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-charcoal/85 to-transparent"
+            style={{ width: 260, height: 260, bottom: -80, left: "34%" }}
           />
           <div className="glow-line" aria-hidden style={{ bottom: 0, left: 0, right: 0 }} />
 
-          <div className="container-sbd relative py-20 md:py-28">
-            <nav aria-label="Breadcrumb" className="mb-6">
-              <ol className="flex flex-wrap items-center gap-x-2 text-xs text-white/60">
-                {crumbs.map((b, i) => (
-                  <li key={b.path} className="flex items-center gap-2">
-                    {i > 0 && <span aria-hidden>/</span>}
-                    {i === crumbs.length - 1 ? (
-                      <span className="text-white">{b.name}</span>
-                    ) : (
-                      <Link href={b.path} className="transition-colors hover:text-safety-yellow">
-                        {b.name}
-                      </Link>
-                    )}
-                  </li>
-                ))}
-              </ol>
-            </nav>
-            <p className="hero-in font-display text-xs font-bold uppercase tracking-[0.18em] text-safety-yellow">
-              {product.eyebrow}
-            </p>
-            <h1 className="hero-in hero-in-d1 mt-4 max-w-3xl text-[length:var(--text-h1)] text-white">
-              {product.headline}
-            </h1>
-            <div className="hero-in hero-in-d1 mt-6 h-1 w-24 bg-sbd-red" />
-            <p className="hero-in hero-in-d2 mt-7 max-w-2xl text-lg text-white/80">
-              {product.intro}
-            </p>
+          <div className="container-sbd grid items-center gap-12 py-16 md:py-20 lg:grid-cols-[1.1fr_1fr]">
+            {/* Text — left */}
+            <div>
+              <nav aria-label="Breadcrumb" className="mb-6">
+                <ol className="flex flex-wrap items-center gap-x-2 text-xs text-white/55">
+                  {crumbs.map((b, i) => (
+                    <li key={b.path} className="flex items-center gap-2">
+                      {i > 0 && <span aria-hidden>/</span>}
+                      {i === crumbs.length - 1 ? (
+                        <span className="text-white">{b.name}</span>
+                      ) : (
+                        <Link href={b.path} className="transition-colors hover:text-safety-yellow">
+                          {b.name}
+                        </Link>
+                      )}
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+              <p className="hero-in font-display text-xs font-bold uppercase tracking-[0.18em] text-safety-yellow">
+                {product.eyebrow}
+              </p>
+              <h1 className="hero-in hero-in-d1 mt-4 text-[length:var(--text-h1)] text-white">
+                {product.headline}
+              </h1>
+              <div className="hero-in hero-in-d1 mt-6 h-1 w-24 bg-sbd-red" />
+              <p className="hero-in hero-in-d2 mt-7 max-w-xl text-lg text-white/75">
+                {product.intro}
+              </p>
+            </div>
+
+            {/* Photo card — right, glowing red border */}
+            <div className="hero-in hero-in-d2 relative mx-auto w-full max-w-md lg:max-w-full">
+              {/* Outer glow halo */}
+              <div
+                aria-hidden
+                className="absolute -inset-3 rounded-[1.75rem] bg-[radial-gradient(ellipse_at_center,rgba(200,16,46,0.35),transparent_70%)] blur-xl"
+              />
+              <div className="relative overflow-hidden rounded-3xl border-2 border-sbd-red/70 shadow-[0_0_28px_rgba(200,16,46,0.45),0_0_70px_rgba(200,16,46,0.2),inset_0_0_24px_rgba(0,0,0,0.35)]">
+                <Image
+                  src={product.hero.src}
+                  alt={product.hero.alt}
+                  width={1000}
+                  height={1250}
+                  priority
+                  sizes="(max-width: 1024px) 28rem, 40vw"
+                  className="aspect-[4/5] w-full object-cover transition-transform duration-700 hover:scale-[1.03]"
+                />
+                {/* Corner glow accents */}
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/10"
+                />
+              </div>
+            </div>
           </div>
         </header>
       ) : (
