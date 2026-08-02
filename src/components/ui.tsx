@@ -287,31 +287,33 @@ export function CtaBand({
   primary?: { label: string; href: string };
 }) {
   return (
-    <section className="ambient bg-charcoal py-14 md:py-16">
-      <div className="blueprint-grid blueprint-grid-dark" aria-hidden />
-      <div
-        className="glow-orb glow-orb-red"
-        aria-hidden
-        style={{ width: 420, height: 420, top: -160, right: -100, opacity: 0.45 }}
-      />
-      <div className="ring-circle ring-circle-light" aria-hidden style={{ width: 220, height: 220, bottom: -70, left: "8%" }} />
-      <div className="glow-line" aria-hidden style={{ top: 0, left: "15%", right: "15%" }} />
+    <section className="bg-white py-12 md:py-16">
       <div className="container-sbd">
-        <div className="grid items-center gap-8 md:grid-cols-[1fr_auto]">
-          <div className="max-w-2xl">
-            <h2 className="text-[length:var(--text-h2)] text-white">{title}</h2>
-            <p className="mt-4 text-white/70">{body}</p>
-          </div>
-          <div className="flex flex-col gap-3 sm:flex-row md:flex-col lg:flex-row">
-            <Button href={primary.href} variant="primary" className="btn-sheen">
-              {primary.label}
-            </Button>
-            <a
-              href={site.phoneHref}
-              className="inline-flex items-center justify-center gap-2 border-2 border-white/30 px-6 py-3.5 font-display text-sm font-bold uppercase tracking-wider text-white transition-colors hover:border-white hover:bg-white hover:text-charcoal"
-            >
-              {site.phone}
-            </a>
+        <div className="ambient rounded-3xl bg-charcoal px-6 py-12 shadow-[0_20px_55px_rgba(26,26,26,0.22)] ring-1 ring-white/10 transition-shadow duration-500 hover:shadow-[0_26px_70px_rgba(26,26,26,0.3)] md:px-12 md:py-14">
+          <div className="blueprint-grid blueprint-grid-dark" aria-hidden />
+          <div
+            className="glow-orb glow-orb-red"
+            aria-hidden
+            style={{ width: 420, height: 420, top: -160, right: -100, opacity: 0.45 }}
+          />
+          <div className="ring-circle ring-circle-light" aria-hidden style={{ width: 220, height: 220, bottom: -70, left: "8%" }} />
+          <div className="glow-line" aria-hidden style={{ top: 0, left: "15%", right: "15%" }} />
+          <div className="grid items-center gap-8 md:grid-cols-[1fr_auto]">
+            <div className="max-w-2xl">
+              <h2 className="text-[length:var(--text-h2)] text-white">{title}</h2>
+              <p className="mt-4 text-white/70">{body}</p>
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row md:flex-col lg:flex-row">
+              <Button href={primary.href} variant="primary" className="btn-sheen">
+                {primary.label}
+              </Button>
+              <a
+                href={site.phoneHref}
+                className="inline-flex items-center justify-center gap-2 border-2 border-white/30 px-6 py-3.5 font-display text-sm font-bold uppercase tracking-wider text-white transition-colors hover:border-white hover:bg-white hover:text-charcoal"
+              >
+                {site.phone}
+              </a>
+            </div>
           </div>
         </div>
       </div>
