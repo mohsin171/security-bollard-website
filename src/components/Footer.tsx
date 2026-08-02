@@ -40,7 +40,21 @@ export default function Footer() {
   const columns = nav.filter((n) => n.children);
 
   return (
-    <footer className="bg-charcoal text-white">
+    <footer className="ambient bg-charcoal text-white">
+      {/* Ambient layer — same treatment as the quote band */}
+      <div className="blueprint-grid blueprint-grid-dark" aria-hidden />
+      <div
+        className="glow-orb glow-orb-red"
+        aria-hidden
+        style={{ width: 420, height: 420, top: -160, right: -100, opacity: 0.45 }}
+      />
+      <div
+        className="ring-circle ring-circle-light"
+        aria-hidden
+        style={{ width: 220, height: 220, bottom: -70, left: "8%" }}
+      />
+      <div className="glow-line" aria-hidden style={{ top: 0, left: "15%", right: "15%" }} />
+
       <div className="container-sbd py-14 md:py-16">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.6fr_repeat(4,1fr)] lg:gap-8">
           {/* Brand column */}
