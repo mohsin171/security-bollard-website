@@ -124,14 +124,10 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
       <Section>
         <SectionHeading title="Where it is used" />
-        <div className="grid gap-8 lg:grid-cols-[1.2fr_1fr]">
+        <div className="grid items-stretch gap-8 lg:grid-cols-[1.2fr_1fr]">
           <CheckList items={product.applications} />
-          <div className="relative self-start">
-            <div
-              aria-hidden
-              className="absolute -inset-3 rounded-[1.75rem] bg-[radial-gradient(ellipse_at_center,rgba(200,16,46,0.28),transparent_70%)] blur-xl"
-            />
-            <div className="relative flex min-h-[22rem] flex-col justify-center rounded-3xl border-2 border-sbd-red/70 bg-fog px-8 py-12 shadow-[0_0_26px_rgba(200,16,46,0.35),0_14px_50px_rgba(26,26,26,0.14)]">
+          <div className="relative flex">
+            <div className="relative flex h-full w-full flex-col justify-center rounded-3xl border-2 border-sbd-red/60 bg-fog px-8 py-10 shadow-[0_0_14px_rgba(200,16,46,0.16),0_10px_30px_rgba(26,26,26,0.08)]">
               <div aria-hidden className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-charcoal/10" />
               <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-sbd-red">
                 Not sure which option fits?
