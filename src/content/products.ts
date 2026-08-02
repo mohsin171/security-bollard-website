@@ -32,6 +32,10 @@ export const products: Product[] = [
     name: "Safety Bollards",
     navLabel: "Safety Bollards",
     eyebrow: "Property protection",
+    hero: {
+      src: "/products/safety-bollards-hero.webp",
+      alt: "A row of stainless steel bollards with yellow bands protecting the glass frontage of a commercial building",
+    },
     headline: "Safety bollards for commercial sites",
     intro:
       "A bollard does one job: put something solid between a vehicle and the thing you cannot afford to have hit. Storefront glazing, a dock door, a gas meter, an electrical panel, a pedestrian walkway. We supply fixed, removable, surface-mounted, stainless and decorative bollards for commercial properties across the GTA and Ontario.",
