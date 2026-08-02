@@ -197,7 +197,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                   )}
                   {v.datasheet && (
                     <div className="mt-6 flex flex-wrap items-center gap-3">
-                      
+                      <a
                         href={v.datasheet}
                         target="_blank"
                         rel="noopener"
@@ -208,16 +208,6 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                           <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2.2" />
                         </svg>
                         View PDF
-                      </a>
-                      
-                        href={v.datasheet}
-                        download
-                        className="inline-flex items-center gap-2 border-2 border-charcoal/25 px-5 py-2.5 font-display text-xs font-bold uppercase tracking-wider text-charcoal transition-colors hover:border-sbd-red hover:text-sbd-red"
-                      >
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
-                          <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                        Download
                       </a>
                     </div>
                   )}

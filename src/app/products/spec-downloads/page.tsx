@@ -60,23 +60,18 @@ export default function SpecDownloadsPage() {
                 <span className="block font-display text-sm font-bold text-charcoal">{d.name}</span>
               </span>
               <span className="flex shrink-0 items-center gap-2">
-                
+                <a
                   href={d.file}
                   target="_blank"
                   rel="noopener"
-                  className="bg-sbd-red px-3.5 py-2 font-display text-[0.65rem] font-bold uppercase tracking-wider text-white transition-colors hover:bg-sbd-red-dark"
+                  aria-label={"View " + d.code + " datasheet"}
+                  className="inline-flex items-center gap-1.5 bg-sbd-red px-3.5 py-2 font-display text-[0.65rem] font-bold uppercase tracking-wider text-white transition-colors hover:bg-sbd-red-dark"
                 >
-                  View
-                </a>
-                
-                  href={d.file}
-                  download
-                  aria-label={"Download " + d.code + " datasheet"}
-                  className="border-2 border-charcoal/25 p-2 text-charcoal transition-colors hover:border-sbd-red hover:text-sbd-red"
-                >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
-                    <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden>
+                    <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
+                    <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2.2" />
                   </svg>
+                  View PDF
                 </a>
               </span>
             </div>
