@@ -235,12 +235,14 @@ export function PageHeader({
   intro,
   breadcrumbs,
   background,
+  actions,
 }: {
   eyebrow?: string;
   title: string;
   intro?: string;
   breadcrumbs?: { name: string; path: string }[];
   background?: { src: string; alt?: string };
+  actions?: ReactNode;
 }) {
   const onPhoto = Boolean(background);
 
@@ -323,6 +325,7 @@ export function PageHeader({
             {intro}
           </p>
         )}
+        {actions && <div className="mt-9 flex flex-wrap gap-3">{actions}</div>}
       </div>
     </header>
   );
