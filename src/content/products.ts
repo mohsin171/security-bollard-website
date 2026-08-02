@@ -231,23 +231,6 @@ export const products: Product[] = [
           "Round base plate with four pre-drilled mounting holes for secure surface installation. Corrosion-resistant through Ontario winters.",
       },
       {
-        name: "Round Bike Rack",
-        model: "SBD-UBRSS01",
-        summary:
-          "Simple, sturdy and secure. The classic hoop offers the two points of contact and U-lock capability cyclists trust, with clean lines and all-steel construction that sits comfortably in architectural and landscape designs.",
-        image: { src: "/products/sbd-ubrss01-round.webp", alt: "SBD-UBRSS01 round hoop bike rack with flanged base plates" },
-        specs: [
-          { label: "Width", value: "33.46 in" },
-          { label: "Height", value: "31.5 in" },
-          { label: "Tube diameter", value: "1.89 in" },
-          { label: "Surface", value: "Hot-dip galvanized (HDG)" },
-          { label: "Mounting", value: "Surface mount, flanged base plates" },
-          { label: "Capacity", value: "1 to 2 bikes" },
-        ],
-        notes:
-          "Hot-dip galvanizing gives long service life against road salt. Polished stainless available on request for design-led frontages.",
-      },
-      {
         name: "Double Moon Bike Rack Bollard",
         model: "SBD-BRBM01",
         summary:
@@ -266,6 +249,23 @@ export const products: Product[] = [
           "Also available in-ground for installation into a concrete footing where the site allows.",
       },
       {
+        name: "Stainless Steel U Bike Rack",
+        model: "SBD-UBR31601",
+        summary:
+          "The minimalist U-shape in Grade 316 stainless \u2014 the highest corrosion resistance in the range, suited to heavy de-icing salt exposure. Two points of contact and U-lock capability in a clean form that blends into sidewalks, parks, campuses and commercial frontages.",
+        image: { src: "/products/sbd-ubr31601-u-rack.webp", alt: "SBD-UBR31601 stainless steel U bike rack with flanged base plates" },
+        specs: [
+          { label: "Width", value: "33.46 in" },
+          { label: "Height", value: "31.5 in" },
+          { label: "Tube diameter", value: "1.89 in" },
+          { label: "Material", value: "Stainless Steel 316" },
+          { label: "Capacity", value: "1 to 2 bikes" },
+          { label: "Mounting", value: "Surface mount (bolted)" },
+        ],
+        notes:
+          "Grade 316 is the specification to reach for where road salt is heavy \u2014 garage entries, transit-adjacent sites and exposed frontages.",
+      },
+      {
         name: "4-Way Bike Rack",
         model: "SBD-CBS4W01",
         summary:
@@ -282,6 +282,23 @@ export const products: Product[] = [
         notes:
           "One 4-Way replaces a row of four hoops \u2014 worth pricing against multiple single racks when space is tight.",
       },
+      {
+        name: "Round Bike Rack",
+        model: "SBD-UBRSS01",
+        summary:
+          "Simple, sturdy and secure. The classic hoop offers the two points of contact and U-lock capability cyclists trust, with clean lines and all-steel construction that sits comfortably in architectural and landscape designs.",
+        image: { src: "/products/sbd-ubrss01-round.webp", alt: "SBD-UBRSS01 round hoop bike rack with flanged base plates" },
+        specs: [
+          { label: "Width", value: "33.46 in" },
+          { label: "Height", value: "31.5 in" },
+          { label: "Tube diameter", value: "1.89 in" },
+          { label: "Surface", value: "Hot-dip galvanized (HDG)" },
+          { label: "Mounting", value: "Surface mount, flanged base plates" },
+          { label: "Capacity", value: "1 to 2 bikes" },
+        ],
+        notes:
+          "Hot-dip galvanizing gives long service life against road salt. Polished stainless available on request for design-led frontages.",
+      },
     ],
     choosing: [
       {
@@ -292,7 +309,7 @@ export const products: Product[] = [
       {
         question: "Galvanized or stainless?",
         answer:
-          "Hot-dip galvanized is the value choice and performs well through Ontario winters — it is what most ICI and streetscape projects use. Stainless is specified where the rack is a visible part of the design at a building entrance or high-end frontage. The Round rack (SBD-UBRSS01) is HDG; the SBD-SSBR01 is stainless steel.",
+          "Hot-dip galvanized is the value choice and performs well through Ontario winters — it is what most ICI and streetscape projects use. Stainless is specified where the rack is a visible part of the design at a building entrance or high-end frontage. The Round rack (SBD-UBRSS01) is HDG; the SBD-SSBR01 is stainless, and the U rack (SBD-UBR31601) is Grade 316 stainless for heavy salt exposure.",
       },
       {
         question: "What about AODA clearances?",
