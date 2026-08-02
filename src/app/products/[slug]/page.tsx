@@ -52,6 +52,11 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             style={{ width: 460, height: 460, top: -180, left: -120, opacity: 0.22 }}
           />
           <div
+            className="glow-orb glow-orb-yellow"
+            aria-hidden
+            style={{ width: 340, height: 340, bottom: -160, right: -80, opacity: 0.18 }}
+          />
+          <div
             className="ring-circle"
             aria-hidden
             style={{ width: 260, height: 260, bottom: -80, left: "34%" }}
@@ -127,6 +132,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <div className="grid items-stretch gap-8 lg:grid-cols-[1.2fr_1fr]">
           <CheckList items={product.applications} />
           <div className="relative flex">
+            {/* Glow halo behind the card */}
             <div className="relative flex h-full w-full flex-col justify-center rounded-3xl border-2 border-sbd-red/60 bg-fog px-8 py-10 shadow-[0_0_14px_rgba(200,16,46,0.16),0_10px_30px_rgba(26,26,26,0.08)]">
               <div aria-hidden className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-charcoal/10" />
               <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-sbd-red">
@@ -188,6 +194,18 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                     <p className="mt-4 border-l-2 border-stainless pl-4 text-sm italic text-slate-grey">
                       {v.notes}
                     </p>
+                  )}
+                  {v.datasheet && (
+                    <a
+                      href={v.datasheet}
+                      download
+                      className="mt-6 inline-flex items-center gap-2 border-2 border-charcoal px-5 py-2.5 font-display text-xs font-bold uppercase tracking-wider text-charcoal transition-colors hover:border-sbd-red hover:bg-sbd-red hover:text-white"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
+                        <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      Download PDF
+                    </a>
                   )}
                 </div>
                 <div className="self-center">

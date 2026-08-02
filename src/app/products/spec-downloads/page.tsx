@@ -39,6 +39,38 @@ export default function SpecDownloadsPage() {
 
       <Section>
         <SectionHeading
+          eyebrow="Product datasheets"
+          title="Download product datasheets"
+          intro="Current PDF datasheets with dimensions, materials, finishes and mounting details."
+        />
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            { code: "SBD-SSBR01", name: "Stainless Steel Bike Rack", file: "/datasheets/SBD-SSBR01-datasheet.pdf" },
+            { code: "SBD-BRBM01", name: "Double Moon Bike Rack Bollard", file: "/datasheets/SBD-BRBM01-datasheet.pdf" },
+            { code: "SBD-UBR31601", name: "Stainless Steel U Bike Rack", file: "/datasheets/SBD-UBR31601-datasheet.pdf" },
+            { code: "SBD-CBS4W01", name: "4-Way Bike Rack", file: "/datasheets/SBD-CBS4W01-datasheet.pdf" },
+            { code: "SBD-UBRSS01", name: "Round Bike Rack", file: "/datasheets/SBD-UBRSS01-datasheet.pdf" },
+          ].map((d) => (
+            <a
+              key={d.code}
+              href={d.file}
+              download
+              className="group flex items-center justify-between gap-4 border border-hairline bg-white px-5 py-4 transition-colors hover:border-sbd-red"
+            >
+              <span>
+                <span className="block font-mono text-xs font-semibold text-sbd-red">{d.code}</span>
+                <span className="block font-display text-sm font-bold text-charcoal">{d.name}</span>
+              </span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden className="shrink-0 text-slate-grey transition-colors group-hover:text-sbd-red">
+                <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+          ))}
+        </div>
+      </Section>
+
+      <Section tone="fog">
+        <SectionHeading
           eyebrow="Relevant sections"
           title="CSI MasterFormat references"
           intro="The divisions our products are typically specified under."
@@ -54,7 +86,7 @@ export default function SpecDownloadsPage() {
         </div>
       </Section>
 
-      <Section tone="fog">
+      <Section>
         <SectionHeading
           eyebrow="Technical data"
           title="Published specifications"
