@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { nav, site, capabilityStatement } from "@/content/site";
+import { nav, site } from "@/content/site";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -56,10 +56,6 @@ export default function Footer() {
               </a>
               <p className="text-xs text-white/45">{site.hours}</p>
             </div>
-
-            <p className="mt-5 max-w-xs border-l-2 border-sbd-red pl-3 text-xs leading-relaxed text-white/55">
-              {capabilityStatement}
-            </p>
           </div>
 
           {/* Nav columns */}
