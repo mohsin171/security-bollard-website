@@ -67,11 +67,6 @@ export const nav: NavItem[] = [
         href: "/products/traffic-access-barriers",
         blurb: "Define vehicle and pedestrian zones",
       },
-      {
-        label: "Spec Sheets & Downloads",
-        href: "/products/spec-downloads",
-        blurb: "Dimensions, materials and mounting data",
-      },
     ],
   },
   {

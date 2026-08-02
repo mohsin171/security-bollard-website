@@ -154,11 +154,6 @@ export default function HomePage() {
             ))}
           </div>
         </Reveal>
-        <div className="mt-8">
-          <Button href="/products/spec-downloads" variant="outline">
-            Spec sheets &amp; downloads
-          </Button>
-        </div>
       </Section>
 
       {/* ---------- Services ---------- */}

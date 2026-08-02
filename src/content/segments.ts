@@ -276,7 +276,6 @@ export const segments: Segment[] = [
       { label: "Bike racks — SBD-SSBR01, Round, Double Moon, 4-Way", href: "/products/bike-racks" },
       { label: "Manufactured metal bollards", href: "/products/safety-bollards" },
       { label: "Traffic and access barriers", href: "/products/traffic-access-barriers" },
-      { label: "Spec sheets and downloads", href: "/products/spec-downloads" },
     ],
     proofPoints: [
       "Relevant sections: 32 39 13 Manufactured Metal Bollards, 12 93 13 Bicycle Racks, 34 71 13 Vehicle Barriers",

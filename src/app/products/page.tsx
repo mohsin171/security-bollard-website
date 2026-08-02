@@ -96,9 +96,6 @@ export default function ProductsPage() {
             />
           </div>
         </div>
-        <div className="mt-8">
-          <Button href="/products/spec-downloads">Spec sheets &amp; downloads</Button>
-        </div>
       </Section>
 
       <Section>
@@ -119,7 +116,7 @@ export default function ProductsPage() {
             blurb="Sizing, finishes, mounting styles, quantities and layouts matched to the application."
           />
           <LinkCard
-            href="/products/spec-downloads"
+            href="/contact"
             title="Specification support"
             blurb="Dimensional data and mounting details for estimating, procurement and submittals."
           />
