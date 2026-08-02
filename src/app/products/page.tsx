@@ -104,7 +104,7 @@ export default function ProductsPage() {
 
       <Section tone="fog">
         <SectionHeading title="Also available" />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2">
           <LinkCard
             href="/services/replacement-upgrades"
             title="Replacement & upgrade programs"
@@ -114,11 +114,6 @@ export default function ProductsPage() {
             href="/services/portfolio-programs"
             title="Custom & project-specific"
             blurb="Sizing, finishes, mounting styles, quantities and layouts matched to the application."
-          />
-          <LinkCard
-            href="/contact"
-            title="Specification support"
-            blurb="Dimensional data and mounting details for estimating, procurement and submittals."
           />
         </div>
       </Section>

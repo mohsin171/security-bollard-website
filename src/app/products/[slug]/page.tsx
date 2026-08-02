@@ -272,12 +272,6 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               );
             })}
           </div>
-          <p className="reveal reveal-d4 mt-8 text-sm text-slate-grey">
-            Looking for dimensional data to attach to a submittal?{" "}
-            <Link href="/contact" className="font-semibold text-sbd-red underline underline-offset-4">
-              Contact us and we will send it over
-            </Link>
-          </p>
         </Reveal>
       </Section>
 
