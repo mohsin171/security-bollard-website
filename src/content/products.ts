@@ -130,6 +130,10 @@ export const products: Product[] = [
     name: "Bollard Covers & Visibility Products",
     navLabel: "Bollard Covers",
     eyebrow: "Visibility & appearance",
+    hero: {
+      src: "/products/bollard-covers-hero.webp",
+      alt: "Two black bollards with red and white banding marking a city street corner",
+    },
     headline: "Bollard covers and visibility products",
     intro:
       "A faded, rusted, chipped bollard fails two jobs at once: it stops being visible, and it makes the whole site look neglected. Covers restore both in minutes, without a crew, a repaint or a shutdown. This is usually the easiest and least disruptive improvement available on a commercial site.",
