@@ -27,6 +27,18 @@ export const site = {
   hours: "Monday to Friday, 8:00am – 5:00pm ET",
 } as const;
 
+/** Social profiles shown in the footer. Remove an entry to hide its icon. */
+export const social = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/SecurtiyBollardsDirect",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/securitybollarddirect",
+  },
+] as const;
+
 export type NavChild = { label: string; href: string; blurb?: string };
 export type NavItem = { label: string; href: string; children?: NavChild[] };
 
