@@ -196,16 +196,30 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                     </p>
                   )}
                   {v.datasheet && (
-                    <a
-                      href={v.datasheet}
-                      download
-                      className="mt-6 inline-flex items-center gap-2 border-2 border-charcoal px-5 py-2.5 font-display text-xs font-bold uppercase tracking-wider text-charcoal transition-colors hover:border-sbd-red hover:bg-sbd-red hover:text-white"
-                    >
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
-                        <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      Download PDF
-                    </a>
+                    <div className="mt-6 flex flex-wrap items-center gap-3">
+                      
+                        href={v.datasheet}
+                        target="_blank"
+                        rel="noopener"
+                        className="btn-sheen inline-flex items-center gap-2 bg-sbd-red px-5 py-2.5 font-display text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-sbd-red-dark"
+                      >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
+                          <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
+                          <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2.2" />
+                        </svg>
+                        View PDF
+                      </a>
+                      
+                        href={v.datasheet}
+                        download
+                        className="inline-flex items-center gap-2 border-2 border-charcoal/25 px-5 py-2.5 font-display text-xs font-bold uppercase tracking-wider text-charcoal transition-colors hover:border-sbd-red hover:text-sbd-red"
+                      >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
+                          <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        Download
+                      </a>
+                    </div>
                   )}
                 </div>
                 <div className="self-center">

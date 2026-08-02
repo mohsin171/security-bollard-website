@@ -51,20 +51,35 @@ export default function SpecDownloadsPage() {
             { code: "SBD-CBS4W01", name: "4-Way Bike Rack", file: "/datasheets/SBD-CBS4W01-datasheet.pdf" },
             { code: "SBD-UBRSS01", name: "Round Bike Rack", file: "/datasheets/SBD-UBRSS01-datasheet.pdf" },
           ].map((d) => (
-            <a
+            <div
               key={d.code}
-              href={d.file}
-              download
-              className="group flex items-center justify-between gap-4 border border-hairline bg-white px-5 py-4 transition-colors hover:border-sbd-red"
+              className="flex items-center justify-between gap-4 border border-hairline bg-white px-5 py-4 transition-colors hover:border-sbd-red"
             >
               <span>
                 <span className="block font-mono text-xs font-semibold text-sbd-red">{d.code}</span>
                 <span className="block font-display text-sm font-bold text-charcoal">{d.name}</span>
               </span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden className="shrink-0 text-slate-grey transition-colors group-hover:text-sbd-red">
-                <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </a>
+              <span className="flex shrink-0 items-center gap-2">
+                
+                  href={d.file}
+                  target="_blank"
+                  rel="noopener"
+                  className="bg-sbd-red px-3.5 py-2 font-display text-[0.65rem] font-bold uppercase tracking-wider text-white transition-colors hover:bg-sbd-red-dark"
+                >
+                  View
+                </a>
+                
+                  href={d.file}
+                  download
+                  aria-label={"Download " + d.code + " datasheet"}
+                  className="border-2 border-charcoal/25 p-2 text-charcoal transition-colors hover:border-sbd-red hover:text-sbd-red"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
+                    <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </a>
+              </span>
+            </div>
           ))}
         </div>
       </Section>
