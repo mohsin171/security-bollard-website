@@ -193,8 +193,8 @@ export const products: Product[] = [
     navLabel: "Bike Racks",
     eyebrow: "Bicycle parking",
     hero: {
-      src: "/products/bike-racks-hero.webp",
-      alt: "Steel bicycle rack hoops on a rain-soaked city sidewalk with autumn leaves",
+      src: "/products/bike-racks-hero-2.webp",
+      alt: "Row of steel bicycle rack hoops casting long shadows on a concrete plaza",
     },
     headline: "Commercial and public bike racks",
     intro:
