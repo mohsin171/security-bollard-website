@@ -247,7 +247,9 @@ export function PageHeader({
   return (
     <header
       className={`ambient border-b pb-12 pt-10 md:pb-16 md:pt-14 ${
-        onPhoto ? "border-charcoal/20 bg-charcoal" : "border-hairline bg-fog"
+        onPhoto
+          ? "flex min-h-[calc(100svh-4.6rem)] items-center border-charcoal/20 bg-charcoal lg:min-h-[calc(100svh-7.4rem)]"
+          : "border-hairline bg-fog"
       }`}
     >
       {background && (
@@ -279,7 +281,7 @@ export function PageHeader({
         style={{ width: 240, height: 240, top: -60, right: "10%" }}
       />
       <div className="glow-line" aria-hidden style={{ bottom: 0, left: 0, right: 0 }} />
-      <div className="container-sbd">
+      <div className={`container-sbd ${onPhoto ? "w-full" : ""}`}>
         {breadcrumbs && (
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol
