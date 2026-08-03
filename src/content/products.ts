@@ -229,6 +229,12 @@ export const products: Product[] = [
         summary:
           "Built for durability, security and style. Integrated side loops give U-lock compatibility at two heights, and the heavy-duty 12-inch base plate provides exceptional stability. Specified for urban streets, parks, schools, businesses and public spaces where finish quality is part of the design intent.",
         image: { src: "/products/sbd-ssbr01-stainless.webp", alt: "SBD-SSBR01 stainless steel bike rack with integrated side loops" },
+        gallery: [
+          { src: "/products/sbd-ssbr01-front.webp", alt: "SBD-SSBR01 stainless bike rack from the front, showing both integrated side loops" },
+          { src: "/products/sbd-ssbr01-side.webp", alt: "SBD-SSBR01 stainless bike rack from the side, with the loops edge on to the post" },
+          { src: "/products/sbd-ssbr01-top.webp", alt: "SBD-SSBR01 stainless bike rack from above, showing the post cap and the loops either side" },
+          { src: "/products/sbd-ssbr01-baseplate.webp", alt: "Close view of the SBD-SSBR01 round base plate and its mounting holes" },
+        ],
         specs: [
           { label: "Overall height", value: "42 in" },
           { label: "Loop height", value: "23 in" },
