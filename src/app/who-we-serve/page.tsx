@@ -35,21 +35,6 @@ export default function WhoWeServePage() {
         title="Same hardware, four very different conversations"
         intro="A property manager wants the problem gone without three phone calls. An EHS manager wants a numbered list for the next JHSC meeting. A contractor wants a submittal that gets approved first time. We have written a page for each of them."
         breadcrumbs={crumbs}
-        background={{
-          src: "/segments/who-we-serve-header.webp",
-          alt: "A condo entrance, a warehouse dock and a retail storefront, each protected by bollards",
-          tone: "light",
-        }}
-        actions={
-          <>
-            <Button href="/request-a-quote" className="btn-sheen">
-              Request a quote
-            </Button>
-            <Button href="/contact" variant="outline">
-              Contact us
-            </Button>
-          </>
-        }
       />
 
       <Section>

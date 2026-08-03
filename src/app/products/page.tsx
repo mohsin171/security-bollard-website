@@ -1,7 +1,7 @@
 import { products } from "@/content/products";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema } from "@/components/JsonLd";
-import { capabilityStatement, site } from "@/content/site";
+import { capabilityStatement } from "@/content/site";
 import {
   PageHeader, Section, SectionHeading, LinkCard,
   CtaBand, CapabilityNote, Button, SpecTable,
@@ -28,23 +28,6 @@ export default function ProductsPage() {
         title="Products built for commercial sites and Canadian winters"
         intro="Four categories, specified properly. Every product page carries dimensions, material grade, finish and mounting method — the information a facilities manager or an estimator actually needs before deciding."
         breadcrumbs={crumbs}
-        background={{
-          src: "/products/products-header.webp",
-          alt: "Bollards, a bike rack and a barrier arm outside a commercial building on an icy winter day",
-        }}
-        actions={
-          <>
-            <Button href="/request-a-quote" className="btn-sheen">
-              Request a quote
-            </Button>
-            <a
-              href={site.phoneHref}
-              className="inline-flex items-center justify-center gap-2 border-2 border-white/30 px-6 py-3.5 font-display text-sm font-bold uppercase tracking-wider text-white transition-colors hover:border-white hover:bg-white hover:text-charcoal"
-            >
-              {site.phone}
-            </a>
-          </>
-        }
       />
 
       <Section>

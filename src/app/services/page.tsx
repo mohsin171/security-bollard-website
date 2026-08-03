@@ -1,7 +1,6 @@
 import { services } from "@/content/services";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema } from "@/components/JsonLd";
-import { site } from "@/content/site";
 import { PageHeader, Section, SectionHeading, CtaBand, Button, NumberedList } from "@/components/ui";
 
 export const metadata = buildMetadata({
@@ -25,23 +24,6 @@ export default function ServicesPage() {
         title="Supply is the easy part. The service is why people call back."
         intro="Anyone can sell you a bollard. What makes a difference on a commercial site is how fast you get a quote, whether the product is right for the application, and whether the same supplier is still there when the same corner gets hit next winter."
         breadcrumbs={crumbs}
-        background={{
-          src: "/services/services-header.webp",
-          alt: "Two people in high-visibility vests reviewing a loading dock while a third checks a bollard at the door",
-        }}
-        actions={
-          <>
-            <Button href="/request-a-quote" className="btn-sheen">
-              Request a quote
-            </Button>
-            <a
-              href={site.phoneHref}
-              className="inline-flex items-center justify-center gap-2 border-2 border-white/30 px-6 py-3.5 font-display text-sm font-bold uppercase tracking-wider text-white transition-colors hover:border-white hover:bg-white hover:text-charcoal"
-            >
-              {site.phone}
-            </a>
-          </>
-        }
       />
 
       <Section>
