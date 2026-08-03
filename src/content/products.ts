@@ -286,6 +286,11 @@ export const products: Product[] = [
         summary:
           "The highest-capacity unit in the range: four U-shaped locking tubes around a heavy central post park up to eight bicycles in a single compact footprint. The efficient answer where a site plan calls for numbers, not just presence.",
         image: { src: "/products/sbd-cbs4w01-4way.webp", alt: "SBD-CBS4W01 4-Way bike rack with four U-shaped locking tubes" },
+        gallery: [
+          { src: "/products/sbd-cbs4w01-front.webp", alt: "SBD-CBS4W01 4-Way bike rack, front elevation with the loops square to the post" },
+          { src: "/products/sbd-cbs4w01-angle.webp", alt: "SBD-CBS4W01 4-Way bike rack seen at an angle, showing all four locking loops" },
+          { src: "/products/sbd-cbs4w01-top.webp", alt: "SBD-CBS4W01 4-Way bike rack from above, showing the four loops and the bolt-down base plate" },
+        ],
         specs: [
           { label: "Overall height", value: "35.25 in" },
           { label: "Overall width", value: "28.25 in" },
