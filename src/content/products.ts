@@ -268,6 +268,10 @@ export const products: Product[] = [
         summary:
           "The minimalist U-shape in Grade 316 stainless \u2014 the highest corrosion resistance in the range, suited to heavy de-icing salt exposure. Two points of contact and U-lock capability in a clean form that blends into sidewalks, parks, campuses and commercial frontages.",
         image: { src: "/products/sbd-ubr31601-u-rack.webp", alt: "SBD-UBR31601 stainless steel U bike rack with flanged base plates" },
+        gallery: [
+          { src: "/products/sbd-ubr31601-angle.webp", alt: "SBD-UBR31601 stainless U bike rack seen at an angle, showing both flanged base plates" },
+          { src: "/products/sbd-ubr31601-top.webp", alt: "SBD-UBR31601 stainless U bike rack from above, showing the base plate mounting holes" },
+        ],
         specs: [
           { label: "Width", value: "33.46 in" },
           { label: "Height", value: "31.5 in" },
