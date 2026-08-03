@@ -283,6 +283,8 @@ export const products: Product[] = [
         gallery: [
           { src: "/products/sbd-ubr31601-angle.webp", alt: "SBD-UBR31601 stainless U bike rack seen at an angle, showing both flanged base plates" },
           { src: "/products/sbd-ubr31601-top.webp", alt: "SBD-UBR31601 stainless U bike rack from above, showing the base plate mounting holes" },
+          { src: "/products/sbd-ubr31601-top-2.webp", alt: "SBD-UBR31601 stainless U bike rack laid flat, base plate faces to camera" },
+          { src: "/products/sbd-ubr31601-post.webp", alt: "Single stainless upright with a domed top and flanged base plate" },
         ],
         specs: [
           { label: "Width", value: "33.46 in" },
