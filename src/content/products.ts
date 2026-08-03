@@ -243,7 +243,7 @@ export const products: Product[] = [
       {
         name: "Double Moon Bike Rack Bollard",
         model: "SBD-BRBM01",
-        datasheet: "/datasheets/SBD-BRBM01-datasheet.pdf",
+        datasheet: "/datasheets/SBD-BRBM01-datasheet-2.pdf",
         summary:
           "A bollard and a bike rack in one footprint. The circular locking loops park two bicycles while the post itself works as vehicle access control \u2014 useful where a site needs both jobs done in a tight frontage. Assembles on site and mounts to a compact 120 mm base plate.",
         image: { src: "/products/sbd-brbm01-double-moon.webp", alt: "SBD-BRBM01 Double Moon bike rack bollard in powder-coated black" },
@@ -262,7 +262,7 @@ export const products: Product[] = [
       {
         name: "Stainless Steel U Bike Rack",
         model: "SBD-UBR31601",
-        datasheet: "/datasheets/SBD-UBR31601-datasheet.pdf",
+        datasheet: "/datasheets/SBD-UBR31601-datasheet-2.pdf",
         summary:
           "The minimalist U-shape in Grade 316 stainless \u2014 the highest corrosion resistance in the range, suited to heavy de-icing salt exposure. Two points of contact and U-lock capability in a clean form that blends into sidewalks, parks, campuses and commercial frontages.",
         image: { src: "/products/sbd-ubr31601-u-rack.webp", alt: "SBD-UBR31601 stainless steel U bike rack with flanged base plates" },
