@@ -249,6 +249,12 @@ export const products: Product[] = [
         summary:
           "A bollard and a bike rack in one footprint. The circular locking loops park two bicycles while the post itself works as vehicle access control \u2014 useful where a site needs both jobs done in a tight frontage. Assembles on site and mounts to a compact 120 mm base plate.",
         image: { src: "/products/sbd-brbm01-double-moon.webp", alt: "SBD-BRBM01 Double Moon bike rack bollard in powder-coated black" },
+        gallery: [
+          { src: "/products/sbd-brbm01-front.webp", alt: "SBD-BRBM01 Double Moon bollard from the front, with the loop edge on to the post" },
+          { src: "/products/sbd-brbm01-angle.webp", alt: "SBD-BRBM01 Double Moon bollard at an angle, showing the locking loop" },
+          { src: "/products/sbd-brbm01-top.webp", alt: "SBD-BRBM01 Double Moon bollard from above, showing the loop across the base plate" },
+          { src: "/products/sbd-brbm01-baseplate.webp", alt: "Close view of the SBD-BRBM01 base plate and its eight mounting holes" },
+        ],
         specs: [
           { label: "Post size", value: "60 mm" },
           { label: "Height", value: "853 mm" },
