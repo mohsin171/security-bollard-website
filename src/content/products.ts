@@ -280,7 +280,7 @@ export const products: Product[] = [
       {
         name: "4-Way Bike Rack",
         model: "SBD-CBS4W01",
-        datasheet: "/datasheets/SBD-CBS4W01-datasheet.pdf",
+        datasheet: "/datasheets/SBD-CBS4W01-datasheet-2.pdf",
         summary:
           "The highest-capacity unit in the range: four U-shaped locking tubes around a heavy central post park up to eight bicycles in a single compact footprint. The efficient answer where a site plan calls for numbers, not just presence.",
         image: { src: "/products/sbd-cbs4w01-4way.webp", alt: "SBD-CBS4W01 4-Way bike rack with four U-shaped locking tubes" },
