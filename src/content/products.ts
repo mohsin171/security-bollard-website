@@ -223,7 +223,7 @@ export const products: Product[] = [
       {
         name: "Stainless Steel Bike Rack",
         model: "SBD-SSBR01",
-        datasheet: "/datasheets/SBD-SSBR01-datasheet.pdf",
+        datasheet: "/datasheets/SBD-SSBR01-datasheet-2.pdf",
         summary:
           "Built for durability, security and style. Integrated side loops give U-lock compatibility at two heights, and the heavy-duty 12-inch base plate provides exceptional stability. Specified for urban streets, parks, schools, businesses and public spaces where finish quality is part of the design intent.",
         image: { src: "/products/sbd-ssbr01-stainless.webp", alt: "SBD-SSBR01 stainless steel bike rack with integrated side loops" },
