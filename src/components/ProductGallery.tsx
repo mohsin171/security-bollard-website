@@ -52,46 +52,46 @@ export default function ProductGallery({ images, model }: { images: Shot[]; mode
           ))}
         </div>
 
-        {images.length > 1 && (
-          <>
-            <button
-              type="button"
-              onClick={() => go(i - 1)}
-              aria-label="Previous photo"
-              className="absolute left-0 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-hairline bg-white/90 text-charcoal shadow-sm transition-colors hover:border-sbd-red hover:bg-sbd-red hover:text-white"
-            >
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden>
-                <path d="M15 5l-7 7 7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-            <button
-              type="button"
-              onClick={() => go(i + 1)}
-              aria-label="Next photo"
-              className="absolute right-0 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-hairline bg-white/90 text-charcoal shadow-sm transition-colors hover:border-sbd-red hover:bg-sbd-red hover:text-white"
-            >
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden>
-                <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-          </>
-        )}
       </div>
 
       {images.length > 1 && (
-        <div className="mt-3 flex items-center justify-center gap-2">
-          {images.map((img, n) => (
-            <button
-              key={img.src}
-              type="button"
-              onClick={() => go(n)}
-              aria-label={`Photo ${n + 1} of ${images.length}`}
-              aria-current={n === i}
-              className={`h-2 w-2 rounded-full transition-colors ${
-                n === i ? "bg-sbd-red" : "bg-stainless hover:bg-slate-grey"
-              }`}
-            />
-          ))}
+        <div className="relative mt-4 flex items-center justify-center gap-4">
+          <button
+            type="button"
+            onClick={() => go(i - 1)}
+            aria-label="Previous photo"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-hairline bg-white text-charcoal transition-colors hover:border-sbd-red hover:bg-sbd-red hover:text-white"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M15 5l-7 7 7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+
+          <div className="flex items-center gap-2">
+            {images.map((img, n) => (
+              <button
+                key={img.src}
+                type="button"
+                onClick={() => go(n)}
+                aria-label={`Photo ${n + 1} of ${images.length}`}
+                aria-current={n === i}
+                className={`h-2 w-2 rounded-full transition-colors ${
+                  n === i ? "bg-sbd-red" : "bg-stainless hover:bg-slate-grey"
+                }`}
+              />
+            ))}
+          </div>
+
+          <button
+            type="button"
+            onClick={() => go(i + 1)}
+            aria-label="Next photo"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-hairline bg-white text-charcoal transition-colors hover:border-sbd-red hover:bg-sbd-red hover:text-white"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
         </div>
       )}
 

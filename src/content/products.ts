@@ -305,7 +305,6 @@ export const products: Product[] = [
           "Simple, sturdy and secure. The classic hoop offers the two points of contact and U-lock capability cyclists trust, with clean lines and all-steel construction that sits comfortably in architectural and landscape designs.",
         image: { src: "/products/sbd-ubrss01-round.webp", alt: "SBD-UBRSS01 round hoop bike rack with flanged base plates" },
         gallery: [
-          { src: "/products/sbd-ubrss01-front.webp", alt: "SBD-UBRSS01 round bike rack, front elevation" },
           { src: "/products/sbd-ubrss01-side.webp", alt: "SBD-UBRSS01 round bike rack seen edge on, showing tube profile" },
           { src: "/products/sbd-ubrss01-top.webp", alt: "SBD-UBRSS01 round bike rack viewed from above, base plate to base plate" },
           { src: "/products/sbd-ubrss01-baseplate.webp", alt: "Close view of the SBD-UBRSS01 flanged base plate and mounting holes" },
