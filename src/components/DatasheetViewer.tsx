@@ -1,14 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 /**
- * Opens a datasheet in an overlay on the page rather than a new tab, so the
- * visitor can close it with the × and carry on reading. `#view=Fit` asks the
- * browser's PDF viewer to show the whole page instead of zooming to width.
+ * Opens a datasheet in an overlay rather than a new tab, so the visitor can
+ * close it with the × and carry on reading.
+ *
+ * Two things this has to work around:
+ *  - The card is inside a .reveal element, which uses a transform. A transform
+ *    makes an ancestor the containing block for position:fixed, so the overlay
+ *    has to be portalled to <body> or it lands mid-page instead of on screen.
+ *  - Safari's inline PDF viewer ignores #view=Fit and fits to width. Sizing the
+ *    frame narrower than the page's aspect ratio means fit-to-width shows the
+ *    whole sheet anyway.
  */
 export default function DatasheetViewer({ file, title }: { file: string; title: string }) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (!open) return;
@@ -23,6 +34,48 @@ export default function DatasheetViewer({ file, title }: { file: string; title: 
       window.removeEventListener("keydown", onKey);
     };
   }, [open]);
+
+  const overlay = (
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${title} datasheet`}
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-charcoal/85 backdrop-blur-sm sm:p-6"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) setOpen(false);
+      }}
+    >
+      <div className="flex h-full w-full flex-col overflow-hidden bg-white shadow-2xl sm:aspect-[58/100] sm:h-[92vh] sm:w-auto sm:max-w-[95vw] sm:rounded-lg">
+        <div className="flex shrink-0 items-center justify-between gap-3 border-b border-hairline px-4 py-3">
+          <p className="truncate font-display text-sm font-bold text-charcoal">{title}</p>
+          <div className="flex shrink-0 items-center gap-3">
+            <a
+              href={file}
+              download
+              className="font-display text-xs font-bold uppercase tracking-wider text-sbd-red hover:underline"
+            >
+              Download
+            </a>
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              aria-label="Close datasheet"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-hairline text-charcoal transition-colors hover:border-sbd-red hover:bg-sbd-red hover:text-white"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <iframe
+          src={`${file}#view=Fit&navpanes=0`}
+          title={`${title} datasheet`}
+          className="min-h-0 w-full flex-1 bg-fog"
+        />
+      </div>
+    </div>
+  );
 
   return (
     <>
@@ -43,60 +96,7 @@ export default function DatasheetViewer({ file, title }: { file: string; title: 
         View PDF
       </button>
 
-      {open && (
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label={`${title} datasheet`}
-          className="fixed inset-0 z-[60] flex flex-col bg-charcoal/80 p-3 backdrop-blur-sm sm:p-6"
-          onClick={(e) => {
-            if (e.target === e.currentTarget) setOpen(false);
-          }}
-        >
-          <div className="mx-auto flex h-full w-full max-w-5xl flex-col overflow-hidden rounded-lg bg-white shadow-2xl">
-            <div className="flex shrink-0 items-center justify-between gap-4 border-b border-hairline px-4 py-3">
-              <p className="truncate font-display text-sm font-bold text-charcoal">{title}</p>
-              <div className="flex shrink-0 items-center gap-2">
-                <a
-                  href={file}
-                  download
-                  className="hidden font-display text-xs font-bold uppercase tracking-wider text-sbd-red hover:underline sm:inline"
-                >
-                  Download
-                </a>
-                <a
-                  href={file}
-                  target="_blank"
-                  rel="noopener"
-                  className="hidden font-display text-xs font-bold uppercase tracking-wider text-slate-grey hover:text-charcoal sm:inline"
-                >
-                  Open in new tab
-                </a>
-                <button
-                  type="button"
-                  onClick={() => setOpen(false)}
-                  aria-label="Close datasheet"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-hairline text-charcoal transition-colors hover:border-sbd-red hover:bg-sbd-red hover:text-white"
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
-                    <path
-                      d="M6 6l12 12M18 6L6 18"
-                      stroke="currentColor"
-                      strokeWidth="2.4"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <iframe
-              src={`${file}#view=Fit&toolbar=1`}
-              title={`${title} datasheet`}
-              className="h-full w-full flex-1 bg-fog"
-            />
-          </div>
-        </div>
-      )}
+      {mounted && open && createPortal(overlay, document.body)}
     </>
   );
 }
