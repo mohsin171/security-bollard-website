@@ -21,7 +21,12 @@ export default function ProductGallery({ images, model }: { images: Shot[]; mode
       />
 
       <div
-        className="relative touch-pan-y select-none"
+        className="relative touch-pan-y select-none outline-none"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "ArrowLeft") go(i - 1);
+          if (e.key === "ArrowRight") go(i + 1);
+        }}
         onTouchStart={(e) => {
           startX.current = e.touches[0].clientX;
         }}
@@ -33,7 +38,7 @@ export default function ProductGallery({ images, model }: { images: Shot[]; mode
         }}
         role="group"
         aria-roledescription="carousel"
-        aria-label={`${model ?? "Product"} photos`}
+        aria-label={`${model ?? "Product"} photos — swipe or use the arrow keys`}
       >
         <div className="relative aspect-square w-full overflow-hidden">
           {images.map((img, n) => (
@@ -45,8 +50,10 @@ export default function ProductGallery({ images, model }: { images: Shot[]; mode
               height={900}
               sizes="300px"
               aria-hidden={n !== i}
-              className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-300 ${
-                n === i ? "opacity-100" : "pointer-events-none opacity-0"
+              className={`absolute inset-0 h-full w-full object-contain transition-[opacity,transform] duration-500 ease-out ${
+                n === i
+                  ? "scale-100 opacity-100"
+                  : "pointer-events-none scale-[0.97] opacity-0"
               }`}
             />
           ))}
@@ -60,7 +67,7 @@ export default function ProductGallery({ images, model }: { images: Shot[]; mode
             type="button"
             onClick={() => go(i - 1)}
             aria-label="Previous photo"
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-hairline bg-white text-charcoal transition-colors hover:border-sbd-red hover:bg-sbd-red hover:text-white"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-hairline bg-white text-charcoal transition-all duration-200 hover:border-sbd-red hover:bg-sbd-red hover:text-white active:scale-90"
           >
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden>
               <path d="M15 5l-7 7 7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
@@ -75,10 +82,15 @@ export default function ProductGallery({ images, model }: { images: Shot[]; mode
                 onClick={() => go(n)}
                 aria-label={`Photo ${n + 1} of ${images.length}`}
                 aria-current={n === i}
-                className={`h-2 w-2 rounded-full transition-colors ${
-                  n === i ? "bg-sbd-red" : "bg-stainless hover:bg-slate-grey"
-                }`}
-              />
+                className={`grid h-7 w-5 place-items-center transition-transform active:scale-90`}
+              >
+                <span
+                  aria-hidden
+                  className={`block rounded-full transition-all duration-300 ${
+                    n === i ? "h-2 w-5 bg-sbd-red" : "h-2 w-2 bg-stainless hover:bg-slate-grey"
+                  }`}
+                />
+              </button>
             ))}
           </div>
 
@@ -86,7 +98,7 @@ export default function ProductGallery({ images, model }: { images: Shot[]; mode
             type="button"
             onClick={() => go(i + 1)}
             aria-label="Next photo"
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-hairline bg-white text-charcoal transition-colors hover:border-sbd-red hover:bg-sbd-red hover:text-white"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-hairline bg-white text-charcoal transition-all duration-200 hover:border-sbd-red hover:bg-sbd-red hover:text-white active:scale-90"
           >
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden>
               <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />

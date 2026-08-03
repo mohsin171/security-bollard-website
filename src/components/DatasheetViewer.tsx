@@ -18,8 +18,15 @@ import { createPortal } from "react-dom";
 export default function DatasheetViewer({ file, title }: { file: string; title: string }) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  // Touch-only devices (iOS, Android) render just the first page of a PDF in an
+  // embedded frame, with no way to reach page 2. Hand those to the browser's own
+  // full-screen viewer instead, which pages and pinch-zooms properly.
+  const [nativeViewer, setNativeViewer] = useState(false);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    setNativeViewer(!window.matchMedia("(any-pointer: fine)").matches);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -77,22 +84,44 @@ export default function DatasheetViewer({ file, title }: { file: string; title: 
     </div>
   );
 
-  return (
-    <>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        className="btn-sheen inline-flex items-center gap-2 bg-sbd-red px-5 py-2.5 font-display text-xs font-bold uppercase tracking-wider text-white transition-all duration-300 hover:bg-sbd-red-dark hover:shadow-[0_6px_18px_rgba(200,16,46,0.3)]"
-      >
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
+  const triggerClass =
+    "btn-sheen inline-flex items-center gap-2 bg-sbd-red px-5 py-2.5 font-display text-xs font-bold uppercase tracking-wider text-white transition-all duration-300 hover:bg-sbd-red-dark hover:shadow-[0_6px_18px_rgba(200,16,46,0.3)] active:scale-[0.97]";
+
+  const eyeIcon = (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path
+        d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"
+        stroke="currentColor"
+        strokeWidth="2.2"
+        strokeLinejoin="round"
+      />
+      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2.2" />
+    </svg>
+  );
+
+  if (nativeViewer) {
+    return (
+      <a href={file} target="_blank" rel="noopener" className={triggerClass}>
+        {eyeIcon}
+        View PDF
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden>
           <path
-            d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"
+            d="M14 4h6v6M20 4l-8 8M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"
             stroke="currentColor"
             strokeWidth="2.2"
+            strokeLinecap="round"
             strokeLinejoin="round"
           />
-          <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2.2" />
         </svg>
+        <span className="sr-only">(opens the full datasheet in a new tab)</span>
+      </a>
+    );
+  }
+
+  return (
+    <>
+      <button type="button" onClick={() => setOpen(true)} className={triggerClass}>
+        {eyeIcon}
         View PDF
       </button>
 
