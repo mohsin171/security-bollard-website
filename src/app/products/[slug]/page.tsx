@@ -7,6 +7,7 @@ import { capabilityStatement } from "@/content/site";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, productSchema, faqSchema, breadcrumbSchema } from "@/components/JsonLd";
 import Reveal from "@/components/Reveal";
+import DatasheetViewer from "@/components/DatasheetViewer";
 import {
   PageHeader, Section, SectionHeading, SpecTable, CheckList,
   FaqList, CtaBand, LinkCard, CapabilityNote, Button,
@@ -210,18 +211,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                     )}
                     {v.datasheet && (
                       <div className="mt-6 flex flex-wrap items-center gap-3">
-                        <a
-                          href={v.datasheet}
-                          target="_blank"
-                          rel="noopener"
-                          className="btn-sheen inline-flex items-center gap-2 bg-sbd-red px-5 py-2.5 font-display text-xs font-bold uppercase tracking-wider text-white transition-all duration-300 hover:bg-sbd-red-dark hover:shadow-[0_6px_18px_rgba(200,16,46,0.3)]"
-                        >
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
-                            <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
-                            <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2.2" />
-                          </svg>
-                          View PDF
-                        </a>
+                        <DatasheetViewer file={v.datasheet} title={v.name} />
                       </div>
                     )}
                   </div>

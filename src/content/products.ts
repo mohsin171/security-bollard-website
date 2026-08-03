@@ -298,7 +298,7 @@ export const products: Product[] = [
       {
         name: "Round Bike Rack",
         model: "SBD-UBRSS01",
-        datasheet: "/datasheets/SBD-UBRSS01-datasheet-3.pdf",
+        datasheet: "/datasheets/SBD-UBRSS01-datasheet-4.pdf",
         summary:
           "Simple, sturdy and secure. The classic hoop offers the two points of contact and U-lock capability cyclists trust, with clean lines and all-steel construction that sits comfortably in architectural and landscape designs.",
         image: { src: "/products/sbd-ubrss01-round.webp", alt: "SBD-UBRSS01 round hoop bike rack with flanged base plates" },
