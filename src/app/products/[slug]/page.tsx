@@ -8,6 +8,7 @@ import { buildMetadata } from "@/lib/seo";
 import { JsonLd, productSchema, faqSchema, breadcrumbSchema } from "@/components/JsonLd";
 import Reveal from "@/components/Reveal";
 import DatasheetViewer from "@/components/DatasheetViewer";
+import ProductGallery from "@/components/ProductGallery";
 import {
   PageHeader, Section, SectionHeading, SpecTable, CheckList,
   FaqList, CtaBand, LinkCard, CapabilityNote, Button,
@@ -175,7 +176,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                     v.image ? "lg:grid-cols-[300px_1fr_1.05fr]" : "lg:grid-cols-[1fr_1.1fr]"
                   }`}
                 >
-                  {v.image && (
+                  {v.image && v.gallery?.length ? (
+                    <ProductGallery images={[v.image, ...v.gallery]} model={v.model} />
+                  ) : v.image ? (
                     <div className="relative mx-auto w-full max-w-[300px] self-center">
                       <div
                         aria-hidden
@@ -195,7 +198,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                         </p>
                       )}
                     </div>
-                  )}
+                  ) : null}
                   <div className="self-center">
                     {v.model && (
                       <p className="font-mono text-xs font-semibold uppercase tracking-wider text-sbd-red">
