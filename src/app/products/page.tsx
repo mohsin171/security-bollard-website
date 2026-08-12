@@ -26,7 +26,7 @@ export default function ProductsPage() {
       <PageHeader
         eyebrow="Commercial product portfolio"
         title="Products built for commercial sites and Canadian winters"
-        intro="Four categories, specified properly. Every product page carries dimensions, material grade, finish and mounting method — the information a facilities manager or an estimator actually needs before deciding."
+        intro="Six categories, specified properly. Every product page carries dimensions, material grade, finish and mounting method — the information a facilities manager or an estimator actually needs before deciding."
         breadcrumbs={crumbs}
       />
 
@@ -57,6 +57,22 @@ export default function ProductsPage() {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* Categories published without spec tables yet */}
+        <div className="mt-5 grid gap-5 sm:grid-cols-2">
+          <LinkCard
+            href="/products/sign-bollards"
+            eyebrow="Signage & protection"
+            title="Sign Bollards"
+            blurb="Protection and signage from one footing — accessible stalls, fire routes, EV bays and directional markings."
+          />
+          <LinkCard
+            href="/products/public-city-safety"
+            eyebrow="Public realm"
+            title="Public & City Safety"
+            blurb="Streetscape and public realm hardware, including the full bike rack range."
+          />
         </div>
       </Section>
 

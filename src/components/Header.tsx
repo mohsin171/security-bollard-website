@@ -94,6 +94,20 @@ export default function Header() {
                                   </span>
                                 )}
                               </Link>
+                              {child.children && (
+                                <ul className="border-l-2 border-hairline pb-1 pl-5 ml-5">
+                                  {child.children.map((sub) => (
+                                    <li key={sub.href}>
+                                      <Link
+                                        href={sub.href}
+                                        className="block py-2 pr-5 text-[0.82rem] text-slate-grey transition-colors hover:text-sbd-red"
+                                      >
+                                        {sub.label}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
                             </li>
                           ))}
                         </ul>
@@ -186,6 +200,20 @@ export default function Header() {
                                 >
                                   {child.label}
                                 </Link>
+                                {child.children && (
+                                  <ul>
+                                    {child.children.map((sub) => (
+                                      <li key={sub.href}>
+                                        <Link
+                                          href={sub.href}
+                                          className="block border-l-2 border-hairline py-2.5 pl-4 ml-9 pr-5 text-sm text-slate-grey"
+                                        >
+                                          {sub.label}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                )}
                               </li>
                             ))}
                           </ul>

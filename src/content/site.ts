@@ -39,7 +39,14 @@ export const social = [
   },
 ] as const;
 
-export type NavChild = { label: string; href: string; blurb?: string };
+export type NavGrandchild = { label: string; href: string };
+export type NavChild = {
+  label: string;
+  href: string;
+  blurb?: string;
+  /** Optional third level, shown indented under the child in the menu. */
+  children?: NavGrandchild[];
+};
 export type NavItem = { label: string; href: string; children?: NavChild[] };
 
 export const nav: NavItem[] = [
@@ -53,14 +60,20 @@ export const nav: NavItem[] = [
         blurb: "Fixed, removable, surface-mount, stainless and decorative",
       },
       {
+        label: "Sign Bollards",
+        href: "/products/sign-bollards",
+        blurb: "Protection and signage in one post",
+      },
+      {
         label: "Bollard Covers",
         href: "/products/bollard-covers",
         blurb: "Restore visibility without repainting",
       },
       {
-        label: "Bike Racks",
-        href: "/products/bike-racks",
-        blurb: "Stainless, Round, Double Moon and 4-Way",
+        label: "Public & City Safety",
+        href: "/products/public-city-safety",
+        blurb: "Bike racks and public realm hardware",
+        children: [{ label: "Bike Racks", href: "/products/bike-racks" }],
       },
       {
         label: "Traffic & Access Barriers",
