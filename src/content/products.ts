@@ -136,6 +136,10 @@ export const products: Product[] = [
     name: "Yellow Steel Bollards",
     navLabel: "Yellow Steel Bollards",
     eyebrow: "High visibility",
+    hero: {
+      src: "/products/yellow-steel-bollards-hero.webp",
+      alt: "A round yellow bollard with a red reflective band and a square yellow bollard with black hazard striping, bolted to a paved walkway outside a commercial building",
+    },
     headline: "Yellow steel bollards",
     intro:
       "The high-visibility workhorse. Steel pipe finished in safety yellow with reflective banding, used wherever a bollard needs to be seen before it is hit. This is the highest-volume bollard on most warehouse and industrial sites, and the one that gets replaced most often.",
