@@ -100,21 +100,41 @@ export default function DatasheetViewer({ file, title }: { file: string; title: 
   );
 
   if (nativeViewer) {
+    // No overlay on touch devices, so Download sits beside View PDF rather than
+    // inside the panel header where it lives on desktop.
     return (
-      <a href={file} target="_blank" rel="noopener" className={triggerClass}>
-        {eyeIcon}
-        View PDF
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden>
-          <path
-            d="M14 4h6v6M20 4l-8 8M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"
-            stroke="currentColor"
-            strokeWidth="2.2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-        <span className="sr-only">(opens the full datasheet in a new tab)</span>
-      </a>
+      <>
+        <a href={file} target="_blank" rel="noopener" className={triggerClass}>
+          {eyeIcon}
+          View PDF
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path
+              d="M14 4h6v6M20 4l-8 8M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <span className="sr-only">(opens the full datasheet in a new tab)</span>
+        </a>
+        <a
+          href={file}
+          download
+          className="inline-flex items-center gap-2 border-2 border-charcoal px-5 py-2.5 font-display text-xs font-bold uppercase tracking-wider text-charcoal transition-colors duration-200 hover:bg-charcoal hover:text-white active:scale-[0.97]"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path
+              d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 19h16"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          Download
+        </a>
+      </>
     );
   }
 
