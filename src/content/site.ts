@@ -39,13 +39,7 @@ export const social = [
   },
 ] as const;
 
-export type NavLeaf = { label: string; href: string };
-export type NavGrandchild = {
-  label: string;
-  href: string;
-  /** Optional fourth level — individual options within a range. */
-  children?: NavLeaf[];
-};
+export type NavGrandchild = { label: string; href: string };
 export type NavChild = {
   label: string;
   href: string;
@@ -65,16 +59,7 @@ export const nav: NavItem[] = [
         href: "/products/safety-bollards",
         blurb: "Fixed, removable, surface-mount, stainless and decorative",
         children: [
-          {
-            label: "Yellow Steel Bollards",
-            href: "/products/yellow-steel-bollards",
-            children: [
-              { label: "Round 4.5″ × 36″", href: "/products/yellow-steel-bollards#sbd-rsb4536y" },
-              { label: "Round 4.5″ × 42″", href: "/products/yellow-steel-bollards#sbd-rsb4542y" },
-              { label: "Round 6″ × 48″", href: "/products/yellow-steel-bollards#sbd-rsb648y" },
-              { label: "Square 4″ × 36″", href: "/products/yellow-steel-bollards#sbd-ssb436y" },
-            ],
-          },
+          { label: "Yellow Steel Bollards", href: "/products/yellow-steel-bollards" },
           { label: "Flexible Bollards", href: "/products/flexible-bollards" },
           { label: "Stainless Steel Bollards", href: "/products/stainless-steel-bollards" },
           { label: "Removable Bollards", href: "/products/removable-bollards" },

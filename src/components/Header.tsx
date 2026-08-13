@@ -9,11 +9,13 @@ import { nav, site } from "@/content/site";
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [expanded, setExpanded] = useState<string | null>(null);
+  const [expandedChild, setExpandedChild] = useState<string | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
     setOpen(false);
     setExpanded(null);
+    setExpandedChild(null);
   }, [pathname]);
 
   useEffect(() => {
@@ -104,20 +106,6 @@ export default function Header() {
                                       >
                                         {sub.label}
                                       </Link>
-                                      {sub.children && (
-                                        <ul className="ml-1 border-l border-hairline pb-1 pl-4">
-                                          {sub.children.map((opt) => (
-                                            <li key={opt.href}>
-                                              <Link
-                                                href={opt.href}
-                                                className="block py-1.5 pr-5 font-mono text-[0.72rem] text-slate-grey transition-colors hover:text-sbd-red"
-                                              >
-                                                {opt.label}
-                                              </Link>
-                                            </li>
-                                          ))}
-                                        </ul>
-                                      )}
                                     </li>
                                   ))}
                                 </ul>
@@ -206,39 +194,66 @@ export default function Header() {
                                 All {item.label}
                               </Link>
                             </li>
-                            {item.children.map((child) => (
-                              <li key={child.href}>
-                                <Link
-                                  href={child.href}
-                                  className="block px-5 py-2.5 text-sm text-charcoal"
-                                >
-                                  {child.label}
-                                </Link>
-                                {child.children && (
-                                  <ul>
-                                    {child.children.map((sub) => (
-                                      <li key={sub.href}>
-                                        <Link
-                                          href={sub.href}
-                                          className="block border-l-2 border-hairline py-2.5 pl-4 ml-9 pr-5 text-sm text-slate-grey"
-                                        >
-                                          {sub.label}
-                                        </Link>
-                                        {sub.children?.map((opt) => (
+                            {item.children.map((child) =>
+                              child.children ? (
+                                // Tapping the name opens the page; the + reveals the range.
+                                <li key={child.href}>
+                                  <div className="flex items-center">
+                                    <Link
+                                      href={child.href}
+                                      className="flex-1 px-5 py-2.5 text-sm text-charcoal"
+                                    >
+                                      {child.label}
+                                    </Link>
+                                    <button
+                                      type="button"
+                                      onClick={() =>
+                                        setExpandedChild(
+                                          expandedChild === child.href ? null : child.href
+                                        )
+                                      }
+                                      aria-expanded={expandedChild === child.href}
+                                      aria-label={`${
+                                        expandedChild === child.href ? "Hide" : "Show"
+                                      } ${child.label} range`}
+                                      className="mr-2 flex h-11 w-11 items-center justify-center text-lg text-sbd-red"
+                                    >
+                                      <span
+                                        aria-hidden
+                                        className={`transition-transform duration-200 ${
+                                          expandedChild === child.href ? "rotate-45" : ""
+                                        }`}
+                                      >
+                                        +
+                                      </span>
+                                    </button>
+                                  </div>
+                                  {expandedChild === child.href && (
+                                    <ul>
+                                      {child.children.map((sub) => (
+                                        <li key={sub.href}>
                                           <Link
-                                            key={opt.href}
-                                            href={opt.href}
-                                            className="block border-l border-hairline py-2 pl-4 ml-14 pr-5 font-mono text-xs text-slate-grey"
+                                            href={sub.href}
+                                            className="block border-l-2 border-hairline py-2.5 pl-4 ml-9 pr-5 text-sm text-slate-grey"
                                           >
-                                            {opt.label}
+                                            {sub.label}
                                           </Link>
-                                        ))}
-                                      </li>
-                                    ))}
-                                  </ul>
-                                )}
-                              </li>
-                            ))}
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  )}
+                                </li>
+                              ) : (
+                                <li key={child.href}>
+                                  <Link
+                                    href={child.href}
+                                    className="block px-5 py-2.5 text-sm text-charcoal"
+                                  >
+                                    {child.label}
+                                  </Link>
+                                </li>
+                              )
+                            )}
                           </ul>
                         )}
                       </>
