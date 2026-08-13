@@ -76,9 +76,9 @@ export default function Header() {
                       )}
                     </Link>
                     {item.children && (
-                      <div className="invisible absolute left-0 top-full z-50 w-80 border border-hairline bg-white opacity-0 shadow-lg transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-                        <div className="h-1 w-full bg-sbd-red" />
-                        <ul className="py-1">
+                      <div className="invisible absolute left-0 top-full z-50 flex max-h-[calc(100vh-7rem)] w-80 flex-col border border-hairline bg-white opacity-0 shadow-lg transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                        <div className="h-1 w-full shrink-0 bg-sbd-red" />
+                        <ul className="overflow-y-auto py-1">
                           {item.children.map((child) => (
                             <li key={child.href}>
                               <Link
@@ -104,6 +104,20 @@ export default function Header() {
                                       >
                                         {sub.label}
                                       </Link>
+                                      {sub.children && (
+                                        <ul className="ml-1 border-l border-hairline pb-1 pl-4">
+                                          {sub.children.map((opt) => (
+                                            <li key={opt.href}>
+                                              <Link
+                                                href={opt.href}
+                                                className="block py-1.5 pr-5 font-mono text-[0.72rem] text-slate-grey transition-colors hover:text-sbd-red"
+                                              >
+                                                {opt.label}
+                                              </Link>
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      )}
                                     </li>
                                   ))}
                                 </ul>
@@ -210,6 +224,15 @@ export default function Header() {
                                         >
                                           {sub.label}
                                         </Link>
+                                        {sub.children?.map((opt) => (
+                                          <Link
+                                            key={opt.href}
+                                            href={opt.href}
+                                            className="block border-l border-hairline py-2 pl-4 ml-14 pr-5 font-mono text-xs text-slate-grey"
+                                          >
+                                            {opt.label}
+                                          </Link>
+                                        ))}
                                       </li>
                                     ))}
                                   </ul>

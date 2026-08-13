@@ -16,9 +16,12 @@ import {
   FaqList, CtaBand, LinkCard, CapabilityNote, Button,
 } from "@/components/ui";
 
-/** Stable anchor for a variant card, so menu links can deep-link to it. */
-function variantAnchor(name: string) {
-  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+/**
+ * Stable anchor for a variant card, so menu links can deep-link to it. Uses the
+ * product code where there is one, since that never changes with the wording.
+ */
+function variantAnchor(v: { name: string; model?: string }) {
+  return (v.model ?? v.name).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
 export function generateStaticParams() {
@@ -184,7 +187,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             {product.variants.map((v) => (
               <article
                 key={v.name}
-                id={variantAnchor(v.name)}
+                id={variantAnchor(v)}
                 className="reveal hover-lift scroll-mt-28 border border-hairline bg-white shadow-[0_1px_2px_rgba(26,26,26,0.04)]"
               >
                 <div className="h-1 w-full bg-sbd-red" />
