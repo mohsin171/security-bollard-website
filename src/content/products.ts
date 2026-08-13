@@ -132,6 +132,136 @@ export const products: Product[] = [
     relatedSegments: ["retail-storefronts", "warehouse-industrial", "property-management"],
   },
   {
+    slug: "yellow-steel-bollards",
+    name: "Yellow Steel Bollards",
+    navLabel: "Yellow Steel Bollards",
+    eyebrow: "High visibility",
+    headline: "Yellow steel bollards",
+    intro:
+      "The high-visibility workhorse. Steel pipe finished in safety yellow with reflective banding, used wherever a bollard needs to be seen before it is hit. This is the highest-volume bollard on most warehouse and industrial sites, and the one that gets replaced most often.",
+    metaTitle: "Yellow Steel Bollards Toronto",
+    metaDescription:
+      "Round and square yellow steel bollards in 36in, 42in and 48in heights for warehouse, dock and industrial sites across Toronto and the GTA. Datasheets and dimensions.",
+    applications: [
+      "Loading dock corners, door tracks and dock aprons",
+      "Forklift aisles and pedestrian walkway edges",
+      "Racking ends and equipment protection inside the building",
+      "Gas meters, electrical panels and fire risers",
+      "Parking garage ramps and pillar corners",
+      "Driveways, parking lots and industrial yards",
+    ],
+    variants: [
+      {
+        name: "Round Steel Bollard — 4.5 in × 36 in",
+        model: "SBD-RSB4536Y",
+        datasheet: "/datasheets/SBD-RSB4536Y-datasheet.pdf",
+        summary:
+          "The standard height for aisle ends, racking protection and anything a forklift operator needs to see at eye level from a seated position. Domed cap and a red reflective band above the shaft.",
+        image: {
+          src: "/products/sbd-rsb-round-yellow.webp",
+          alt: "SBD-RSB4536Y round yellow steel bollard with red reflective band and flanged base plate",
+        },
+        specs: [
+          { label: "Material", value: "Steel" },
+          { label: "Finish", value: "UV powder-coated yellow" },
+          { label: "Size", value: "4.5 in × 36 in" },
+          { label: "Base plate", value: "8 in" },
+          { label: "Mounting holes", value: "5/8 in" },
+          { label: "Wall thickness", value: "1/8 in" },
+          { label: "Reflective tape", value: "Red" },
+        ],
+      },
+      {
+        name: "Round Steel Bollard — 4.5 in × 42 in",
+        model: "SBD-RSB4542Y",
+        datasheet: "/datasheets/SBD-RSB4542Y-datasheet.pdf",
+        summary:
+          "The common commercial height — tall enough to be seen over a car hood, low enough not to obstruct sightlines. The default choice at storefronts, ramps and building approaches.",
+        image: {
+          src: "/products/sbd-rsb-round-yellow.webp",
+          alt: "SBD-RSB4542Y round yellow steel bollard with red reflective band and flanged base plate",
+        },
+        specs: [
+          { label: "Material", value: "Steel" },
+          { label: "Finish", value: "UV powder-coated yellow" },
+          { label: "Size", value: "4.5 in × 42 in" },
+          { label: "Base plate", value: "8 in" },
+          { label: "Mounting holes", value: "5/8 in" },
+          { label: "Wall thickness", value: "1/8 in" },
+          { label: "Reflective tape", value: "Red" },
+        ],
+      },
+      {
+        name: "Round Steel Bollard — 6 in × 48 in",
+        model: "SBD-RSB648Y",
+        datasheet: "/datasheets/SBD-RSB648Y-datasheet.pdf",
+        summary:
+          "The heaviest of the three: a wider 6 inch shaft and 48 inches above grade, for truck yards, dock aprons and anywhere the vehicle likely to hit it is larger than a car.",
+        image: {
+          src: "/products/sbd-rsb-round-yellow.webp",
+          alt: "SBD-RSB648Y round yellow steel bollard with red reflective band and flanged base plate",
+        },
+        specs: [
+          { label: "Material", value: "Steel" },
+          { label: "Finish", value: "UV powder-coated yellow" },
+          { label: "Size", value: "6 in × 48 in" },
+          { label: "Base plate", value: "8 in" },
+          { label: "Mounting holes", value: "5/8 in" },
+          { label: "Wall thickness", value: "1/8 in" },
+          { label: "Reflective tape", value: "Red" },
+        ],
+      },
+      {
+        name: "Square Steel Bollard — 4 in × 36 in",
+        model: "SBD-SSB436Y",
+        datasheet: "/datasheets/SBD-SSB436Y-datasheet.pdf",
+        summary:
+          "Square section with a black hazard stripe rather than a reflective band. Sits flat against a wall, column or racking upright, which makes it useful where a round post would leave an awkward gap.",
+        image: {
+          src: "/products/sbd-ssb-square-yellow.webp",
+          alt: "SBD-SSB436Y square yellow steel bollard with black hazard striping on a square base plate",
+        },
+        specs: [
+          { label: "Material", value: "Steel" },
+          { label: "Finish", value: "UV powder-coated yellow" },
+          { label: "Size", value: "4 in × 36 in" },
+          { label: "Base plate", value: "8 in" },
+          { label: "Mounting holes", value: "5/8 in" },
+          { label: "Wall thickness", value: "1/8 in" },
+          { label: "Reflective tape", value: "Black" },
+        ],
+      },
+    ],
+    choosing: [
+      {
+        question: "Which height should I order?",
+        answer:
+          "36 inches for inside the building — aisle ends, racking, equipment — where the driver is seated on a forklift. 42 inches outdoors at storefronts, ramps and walkways, which is the common commercial standard. 48 inches where trucks rather than cars are the risk. If you are unsure, send a photo of the location and we will specify it.",
+      },
+      {
+        question: "Round or square?",
+        answer:
+          "Round for open positions and anywhere the bollard is seen from all sides. Square where the post sits against a wall, a column or a racking upright, because the flat face closes the gap a round shaft leaves. Both take the same anchors.",
+      },
+      {
+        question: "What do I need for the base?",
+        answer:
+          "All four mount on an 8 inch base plate with 5/8 inch holes, anchored to concrete. The concrete needs to be sound and thick enough to hold the anchors — asphalt and pavers usually need a different approach. Send a photo of the surface if you are not sure.",
+      },
+      {
+        question: "Will it stop a truck?",
+        answer:
+          "Be careful with this question. These are protective and deterrent bollards for the applications described here. They are not crash-rated. If your project requires certified anti-ram performance to ASTM F2656 or IWA 14-1, we will say so and refer you to a rated manufacturer.",
+      },
+      {
+        question: "The paint is already faded on ours. Do I have to replace them?",
+        answer:
+          "Usually not. A bollard cover slides over the existing post and restores high-visibility colour in minutes without a crew or a repaint. Replace the post when it is bent or rusted through, not when it has just lost its colour.",
+      },
+    ],
+    relatedSegments: ["warehouse-industrial", "property-management", "retail-storefronts"],
+  },
+  {
     slug: "bollard-covers",
     name: "Bollard Covers & Visibility Products",
     navLabel: "Bollard Covers",

@@ -36,44 +36,6 @@ const SPECS_ON_REQUEST = {
 
 export const categories: Category[] = [
   {
-    slug: "yellow-steel-bollards",
-    name: "Yellow Steel Bollards",
-    navLabel: "Yellow Steel Bollards",
-    eyebrow: "High visibility",
-    headline: "Yellow steel bollards",
-    intro:
-      "The high-visibility workhorse. Steel pipe finished in safety yellow, used wherever a bollard needs to be seen before it is hit. This is the highest-volume bollard on most warehouse and industrial sites, and the one that gets replaced most often.",
-    metaTitle: "Yellow Steel Bollards Toronto",
-    metaDescription:
-      "High-visibility yellow steel bollards for warehouse, dock and industrial sites across Toronto and the GTA. Quote within 24 hours.",
-    applications: [
-      "Loading dock corners, door tracks and dock aprons",
-      "Forklift aisles and pedestrian walkway edges",
-      "Racking ends and equipment protection inside the building",
-      "Gas meters, electrical panels and fire risers",
-      "Parking garage ramps and pillar corners",
-      "Anywhere a bollard needs to be seen from a moving vehicle",
-    ],
-    note: SPECS_ON_REQUEST,
-    related: [
-      {
-        href: "/products/safety-bollards",
-        title: "All safety bollards",
-        blurb: "The full range with dimensions, materials and mounting data.",
-      },
-      {
-        href: "/products/bollard-covers",
-        title: "Bollard covers",
-        blurb: "Restore faded yellow without repainting or a shutdown.",
-      },
-      {
-        href: "/products/galvanized-steel-bollards",
-        title: "Galvanized steel bollards",
-        blurb: "Where corrosion, not visibility, is the governing problem.",
-      },
-    ],
-  },
-  {
     slug: "flexible-bollards",
     name: "Flexible Bollards",
     navLabel: "Flexible Bollards",
