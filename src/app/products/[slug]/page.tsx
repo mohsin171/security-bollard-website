@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { products, getProduct } from "@/content/products";
+import { categories, getCategory } from "@/content/categories";
 import { getSegment } from "@/content/segments";
 import { capabilityStatement } from "@/content/site";
 import { buildMetadata } from "@/lib/seo";
@@ -9,30 +10,45 @@ import { JsonLd, productSchema, faqSchema, breadcrumbSchema } from "@/components
 import Reveal from "@/components/Reveal";
 import DatasheetViewer from "@/components/DatasheetViewer";
 import ProductGallery from "@/components/ProductGallery";
+import CategoryPage from "@/components/CategoryPage";
 import {
   PageHeader, Section, SectionHeading, SpecTable, CheckList,
   FaqList, CtaBand, LinkCard, CapabilityNote, Button,
 } from "@/components/ui";
 
+/** Stable anchor for a variant card, so menu links can deep-link to it. */
+function variantAnchor(name: string) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
 export function generateStaticParams() {
-  return products.map((p) => ({ slug: p.slug }));
+  return [
+    ...products.map((p) => ({ slug: p.slug })),
+    ...categories.map((c) => ({ slug: c.slug })),
+  ];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const product = getProduct(slug);
-  if (!product) return {};
+  const entry = getProduct(slug) ?? getCategory(slug);
+  if (!entry) return {};
   return buildMetadata({
-    title: product.metaTitle,
-    description: product.metaDescription,
-    path: `/products/${product.slug}`,
+    title: entry.metaTitle,
+    description: entry.metaDescription,
+    path: `/products/${entry.slug}`,
   });
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const product = getProduct(slug);
-  if (!product) notFound();
+
+  // Categories are the lighter pages in categories.ts — framing, no spec tables.
+  if (!product) {
+    const category = getCategory(slug);
+    if (category) return <CategoryPage category={category} />;
+    notFound();
+  }
 
   const crumbs = [
     { name: "Home", path: "/" },
@@ -168,7 +184,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             {product.variants.map((v) => (
               <article
                 key={v.name}
-                className="reveal hover-lift border border-hairline bg-white shadow-[0_1px_2px_rgba(26,26,26,0.04)]"
+                id={variantAnchor(v.name)}
+                className="reveal hover-lift scroll-mt-28 border border-hairline bg-white shadow-[0_1px_2px_rgba(26,26,26,0.04)]"
               >
                 <div className="h-1 w-full bg-sbd-red" />
                 <div

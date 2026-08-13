@@ -58,11 +58,21 @@ export const nav: NavItem[] = [
         label: "Safety Bollards",
         href: "/products/safety-bollards",
         blurb: "Fixed, removable, surface-mount, stainless and decorative",
+        children: [
+          { label: "Yellow Steel Bollards", href: "/products/yellow-steel-bollards" },
+          { label: "Flexible Bollards", href: "/products/flexible-bollards" },
+          { label: "Stainless Steel Bollards", href: "/products/stainless-steel-bollards" },
+          { label: "Removable Bollards", href: "/products/removable-bollards" },
+          { label: "Galvanized Steel Bollards", href: "/products/galvanized-steel-bollards" },
+          { label: "Retractable Bollards", href: "/products/retractable-bollards" },
+          { label: "Motorised Bollards", href: "/products/motorised-bollards" },
+        ],
       },
       {
         label: "Sign Bollards",
         href: "/products/sign-bollards",
         blurb: "Protection and signage in one post",
+        children: [{ label: "Parking Protection", href: "/products/parking-protection" }],
       },
       {
         label: "Bollard Covers",

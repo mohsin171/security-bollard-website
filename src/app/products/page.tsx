@@ -1,4 +1,5 @@
 import { products } from "@/content/products";
+import { categories } from "@/content/categories";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema } from "@/components/JsonLd";
 import { capabilityStatement } from "@/content/site";
@@ -26,7 +27,7 @@ export default function ProductsPage() {
       <PageHeader
         eyebrow="Commercial product portfolio"
         title="Products built for commercial sites and Canadian winters"
-        intro="Six categories, specified properly. Every product page carries dimensions, material grade, finish and mounting method — the information a facilities manager or an estimator actually needs before deciding."
+        intro="Every category, specified properly. Every product page carries dimensions, material grade, finish and mounting method — the information a facilities manager or an estimator actually needs before deciding."
         breadcrumbs={crumbs}
       />
 
@@ -59,20 +60,17 @@ export default function ProductsPage() {
           ))}
         </div>
 
-        {/* Categories published without spec tables yet */}
-        <div className="mt-5 grid gap-5 sm:grid-cols-2">
-          <LinkCard
-            href="/products/sign-bollards"
-            eyebrow="Signage & protection"
-            title="Sign Bollards"
-            blurb="Protection and signage from one footing — accessible stalls, fire routes, EV bays and directional markings."
-          />
-          <LinkCard
-            href="/products/public-city-safety"
-            eyebrow="Public realm"
-            title="Public & City Safety"
-            blurb="Streetscape and public realm hardware, including the full bike rack range."
-          />
+        {/* Categories from categories.ts — published without spec tables yet */}
+        <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {categories.map((c) => (
+            <LinkCard
+              key={c.slug}
+              href={`/products/${c.slug}`}
+              eyebrow={c.eyebrow}
+              title={c.name}
+              blurb={c.intro.split(". ")[0] + "."}
+            />
+          ))}
         </div>
       </Section>
 
