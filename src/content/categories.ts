@@ -116,48 +116,6 @@ export const categories: Category[] = [
     ],
   },
   {
-    slug: "removable-bollards",
-    name: "Removable Bollards",
-    navLabel: "Removable Bollards",
-    eyebrow: "Occasional access",
-    headline: "Removable bollards",
-    intro:
-      "For access that has to be closed most of the time and open occasionally. The bollard drops into a ground sleeve and lifts out with a key or padlock, leaving a flush cap in the surface — fire routes, service lanes, patio seasons and curbside pickup zones.",
-    metaTitle: "Removable Bollards Toronto",
-    metaDescription:
-      "Removable bollards with ground sleeves and locking options for fire routes, service lanes and seasonal access across Toronto and the GTA.",
-    applications: [
-      "Fire route access that must stay closed to general traffic",
-      "Service lanes and delivery entries opened on a schedule",
-      "Seasonal patios and curbside pickup zones",
-      "Restricted yards and staff-only entries",
-      "Event and market closures on private property",
-      "Anywhere a permanent bollard would block a legitimate vehicle twice a year",
-    ],
-    note: {
-      title: "Before you specify removable",
-      body:
-        "Ground sleeves need a core drill and a drainage consideration, and they add a maintenance item. If access is genuinely needed only once or twice a year, a fixed bollard with a planned removal is often cheaper over the life of the site. We will tell you which way the numbers point.",
-    },
-    related: [
-      {
-        href: "/products/safety-bollards",
-        title: "All safety bollards",
-        blurb: "Fixed, surface-mount and embedded options.",
-      },
-      {
-        href: "/products/retractable-bollards",
-        title: "Retractable bollards",
-        blurb: "Lowers into the ground instead of lifting out.",
-      },
-      {
-        href: "/products/traffic-access-barriers",
-        title: "Traffic & access barriers",
-        blurb: "Swing, drop and removable barrier configurations.",
-      },
-    ],
-  },
-  {
     slug: "galvanized-steel-bollards",
     name: "Galvanized Steel Bollards",
     navLabel: "Galvanized Steel Bollards",

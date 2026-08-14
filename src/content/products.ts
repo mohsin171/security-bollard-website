@@ -266,6 +266,113 @@ export const products: Product[] = [
     relatedSegments: ["warehouse-industrial", "property-management", "retail-storefronts"],
   },
   {
+    slug: "removable-bollards",
+    name: "Removable Bollards",
+    navLabel: "Removable Bollards",
+    eyebrow: "Occasional access",
+    headline: "Removable bollards",
+    intro:
+      "For access that has to be closed most of the time and open occasionally. The bollard drops into a ground sleeve and lifts out once the padlock is released, leaving a flush cap in the surface — fire routes, service lanes, patio seasons and curbside pickup zones.",
+    metaTitle: "Removable Bollards Toronto",
+    metaDescription:
+      "Removable bollards with ground sleeve and padlock, in yellow powder-coated steel and satin stainless, for fire routes and service lanes across Toronto and the GTA.",
+    applications: [
+      "Fire route access that must stay closed to general traffic",
+      "Service lanes and delivery entries opened on a schedule",
+      "Seasonal patios and curbside pickup zones",
+      "Restricted yards and staff-only entries",
+      "Event and market closures on private property",
+      "Anywhere a permanent bollard would block a legitimate vehicle twice a year",
+    ],
+    variants: [
+      {
+        name: "Removable Steel Bollard — 6″ × 36″",
+        model: "SBD-RSB636Y",
+        datasheet: "/datasheets/SBD-RSB636Y-datasheet.pdf",
+        summary:
+          "Yellow powder-coated steel with a red reflective band — the high-visibility option, for positions where the post needs to be seen as much as it needs to lock. Padlocks into a ground sleeve and lifts straight out for access.",
+        image: {
+          src: "/products/sbd-rsb636y-removable-yellow.webp",
+          alt: "SBD-RSB636Y removable yellow steel bollard with a red reflective band, padlock and ground sleeve",
+        },
+        specs: [
+          { label: "Material", value: "Steel" },
+          { label: "Finish", value: "UV powder-coated yellow" },
+          { label: "Size", value: "6″ × 36″" },
+          { label: "Diameter", value: "6.67″" },
+          { label: "Wall thickness", value: "1/8″" },
+          { label: "Reflective tape", value: "Red" },
+        ],
+      },
+      {
+        name: "Removable Stainless Bollard — 4″ × 36″",
+        model: "SBD-RSS436S",
+        datasheet: "/datasheets/SBD-RSS436S-datasheet.pdf",
+        summary:
+          "Satin stainless in the slimmer 4 inch size, for customer-facing frontages where a painted post would look wrong. Same padlock and ground sleeve arrangement, in a finish that does not need repainting.",
+        image: {
+          src: "/products/sbd-rss-removable-stainless.webp",
+          alt: "SBD-RSS436S removable satin stainless bollard with padlock and ground sleeve",
+        },
+        specs: [
+          { label: "Material", value: "Stainless Steel" },
+          { label: "Finish", value: "Satin" },
+          { label: "Size", value: "4″ × 36″" },
+          { label: "Diameter", value: "4.5″" },
+          { label: "Wall thickness", value: "1/8″" },
+          { label: "Reflective tape", value: "Optional" },
+        ],
+      },
+      {
+        name: "Removable Stainless Bollard — 6″ × 36″",
+        model: "SBD-RSS636S",
+        datasheet: "/datasheets/SBD-RSS636S-datasheet.pdf",
+        summary:
+          "The heavier stainless option at 6 inches, where the opening sees larger vehicles but the finish still has to suit a public frontage.",
+        image: {
+          src: "/products/sbd-rss-removable-stainless.webp",
+          alt: "SBD-RSS636S removable satin stainless bollard with padlock and ground sleeve",
+        },
+        specs: [
+          { label: "Material", value: "Stainless Steel" },
+          { label: "Finish", value: "Satin" },
+          { label: "Size", value: "6″ × 36″" },
+          { label: "Diameter", value: "6.67″" },
+          { label: "Wall thickness", value: "1/8″" },
+          { label: "Reflective tape", value: "Optional" },
+        ],
+      },
+    ],
+    choosing: [
+      {
+        question: "Yellow steel or stainless?",
+        answer:
+          "Yellow where being seen matters — yards, service lanes, anywhere a driver needs to notice the post before reversing into it. Stainless where the bollard sits in front of customers and the finish is part of the frontage. Stainless also stops the annual repaint.",
+      },
+      {
+        question: "What does the ground sleeve need?",
+        answer:
+          "A core drill into sound concrete, and a thought about where water goes once the sleeve fills. That is the part people forget. Send a photo of the surface and we will tell you whether the location suits a sleeve or whether a fixed bollard makes more sense.",
+      },
+      {
+        question: "Removable or fixed?",
+        answer:
+          "Fixed unless something legitimately needs to drive through. Removable costs more, needs the sleeve set into the surface, and adds a maintenance item. If access is genuinely needed only once or twice a year, a fixed bollard with a planned removal is often cheaper over the life of the site.",
+      },
+      {
+        question: "How is it secured?",
+        answer:
+          "A padlock through the sleeve collar holds the bollard down. Release the lock and it lifts out by hand, leaving the sleeve flush with the surface. Keep the cap in place when the bollard is out, or the sleeve fills with grit.",
+      },
+      {
+        question: "Will it stop a truck?",
+        answer:
+          "No, and be careful with anyone who says otherwise about a removable post. These are protective and deterrent products for the applications described here. They are not crash-rated. If your project requires certified anti-ram performance to ASTM F2656 or IWA 14-1, we will say so and refer you to a rated manufacturer.",
+      },
+    ],
+    relatedSegments: ["property-management", "retail-storefronts", "warehouse-industrial"],
+  },
+  {
     slug: "bollard-covers",
     name: "Bollard Covers & Visibility Products",
     navLabel: "Bollard Covers",
