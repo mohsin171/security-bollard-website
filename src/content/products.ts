@@ -286,25 +286,6 @@ export const products: Product[] = [
     ],
     variants: [
       {
-        name: "Removable Steel Bollard — 6″ × 36″",
-        model: "SBD-RSB636Y",
-        datasheet: "/datasheets/SBD-RSB636Y-datasheet.pdf",
-        summary:
-          "Yellow powder-coated steel with a red reflective band — the high-visibility option, for positions where the post needs to be seen as much as it needs to lock. Padlocks into a ground sleeve and lifts straight out for access.",
-        image: {
-          src: "/products/sbd-rsb636y-removable-yellow.webp",
-          alt: "SBD-RSB636Y removable yellow steel bollard with a red reflective band, padlock and ground sleeve",
-        },
-        specs: [
-          { label: "Material", value: "Steel" },
-          { label: "Finish", value: "UV powder-coated yellow" },
-          { label: "Size", value: "6″ × 36″" },
-          { label: "Diameter", value: "6.67″" },
-          { label: "Wall thickness", value: "1/8″" },
-          { label: "Reflective tape", value: "Red" },
-        ],
-      },
-      {
         name: "Removable Stainless Bollard — 4″ × 36″",
         model: "SBD-RSS436S",
         datasheet: "/datasheets/SBD-RSS436S-datasheet.pdf",
@@ -340,6 +321,25 @@ export const products: Product[] = [
           { label: "Diameter", value: "6.67″" },
           { label: "Wall thickness", value: "1/8″" },
           { label: "Reflective tape", value: "Optional" },
+        ],
+      },
+      {
+        name: "Removable Steel Bollard — 6″ × 36″",
+        model: "SBD-RSB636Y",
+        datasheet: "/datasheets/SBD-RSB636Y-datasheet.pdf",
+        summary:
+          "Yellow powder-coated steel with a red reflective band — the high-visibility option, for positions where the post needs to be seen as much as it needs to lock. Padlocks into a ground sleeve and lifts straight out for access.",
+        image: {
+          src: "/products/sbd-rsb636y-removable-yellow.webp",
+          alt: "SBD-RSB636Y removable yellow steel bollard with a red reflective band, padlock and ground sleeve",
+        },
+        specs: [
+          { label: "Material", value: "Steel" },
+          { label: "Finish", value: "UV powder-coated yellow" },
+          { label: "Size", value: "6″ × 36″" },
+          { label: "Diameter", value: "6.67″" },
+          { label: "Wall thickness", value: "1/8″" },
+          { label: "Reflective tape", value: "Red" },
         ],
       },
     ],
