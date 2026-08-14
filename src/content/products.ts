@@ -270,6 +270,10 @@ export const products: Product[] = [
     name: "Removable Bollards",
     navLabel: "Removable Bollards",
     eyebrow: "Occasional access",
+    hero: {
+      src: "/products/removable-bollards-hero.webp",
+      alt: "A satin stainless and a yellow removable bollard, each padlocked into a flush ground sleeve on a paved forecourt outside a commercial building",
+    },
     headline: "Removable bollards",
     intro:
       "For access that has to be closed most of the time and open occasionally. The bollard drops into a ground sleeve and lifts out once the padlock is released, leaving a flush cap in the surface — fire routes, service lanes, patio seasons and curbside pickup zones.",
