@@ -290,11 +290,30 @@ export const products: Product[] = [
     ],
     variants: [
       {
+        name: "Removable Steel Bollard — 4.5″ × 36″",
+        model: "SBD-RSB436Y",
+        datasheet: "/datasheets/SBD-RSB436Y-datasheet.pdf",
+        summary:
+          "Yellow powder-coated steel in the slimmer size, with a red reflective band. The high-visibility option where the opening is narrow and the post still needs to be seen before it is reversed into.",
+        image: {
+          src: "/products/sbd-rsb636y-removable-yellow.webp",
+          alt: "SBD-RSB436Y removable yellow steel bollard with a red reflective band, padlock and ground sleeve",
+        },
+        specs: [
+          { label: "Material", value: "Steel" },
+          { label: "Finish", value: "UV powder-coated yellow" },
+          { label: "Size", value: "4.5″ × 36″" },
+          { label: "Diameter", value: "4.5″" },
+          { label: "Wall thickness", value: "1/8″" },
+          { label: "Reflective tape", value: "Red" },
+        ],
+      },
+      {
         name: "Removable Stainless Bollard — 4″ × 36″",
         model: "SBD-RSS436S",
         datasheet: "/datasheets/SBD-RSS436S-datasheet.pdf",
         summary:
-          "Satin stainless in the slimmer 4 inch size, for customer-facing frontages where a painted post would look wrong. Same padlock and ground sleeve arrangement, in a finish that does not need repainting.",
+          "Satin stainless in the slimmer size, for customer-facing frontages where a painted post would look wrong. Same padlock and ground sleeve arrangement, in a finish that does not need repainting.",
         image: {
           src: "/products/sbd-rss-removable-stainless.webp",
           alt: "SBD-RSS436S removable satin stainless bollard with padlock and ground sleeve",
@@ -306,6 +325,25 @@ export const products: Product[] = [
           { label: "Diameter", value: "4.5″" },
           { label: "Wall thickness", value: "1/8″" },
           { label: "Reflective tape", value: "Optional" },
+        ],
+      },
+      {
+        name: "Removable Steel Bollard — 6″ × 36″",
+        model: "SBD-RSB636Y",
+        datasheet: "/datasheets/SBD-RSB636Y-datasheet.pdf",
+        summary:
+          "The heavier yellow option at 6 inches, for openings that see larger vehicles but still need the post to stand out.",
+        image: {
+          src: "/products/sbd-rsb636y-removable-yellow.webp",
+          alt: "SBD-RSB636Y removable yellow steel bollard with a red reflective band, padlock and ground sleeve",
+        },
+        specs: [
+          { label: "Material", value: "Steel" },
+          { label: "Finish", value: "UV powder-coated yellow" },
+          { label: "Size", value: "6″ × 36″" },
+          { label: "Diameter", value: "6.67″" },
+          { label: "Wall thickness", value: "1/8″" },
+          { label: "Reflective tape", value: "Red" },
         ],
       },
       {
@@ -325,25 +363,6 @@ export const products: Product[] = [
           { label: "Diameter", value: "6.67″" },
           { label: "Wall thickness", value: "1/8″" },
           { label: "Reflective tape", value: "Optional" },
-        ],
-      },
-      {
-        name: "Removable Steel Bollard — 6″ × 36″",
-        model: "SBD-RSB636Y",
-        datasheet: "/datasheets/SBD-RSB636Y-datasheet.pdf",
-        summary:
-          "Yellow powder-coated steel with a red reflective band — the high-visibility option, for positions where the post needs to be seen as much as it needs to lock. Padlocks into a ground sleeve and lifts straight out for access.",
-        image: {
-          src: "/products/sbd-rsb636y-removable-yellow.webp",
-          alt: "SBD-RSB636Y removable yellow steel bollard with a red reflective band, padlock and ground sleeve",
-        },
-        specs: [
-          { label: "Material", value: "Steel" },
-          { label: "Finish", value: "UV powder-coated yellow" },
-          { label: "Size", value: "6″ × 36″" },
-          { label: "Diameter", value: "6.67″" },
-          { label: "Wall thickness", value: "1/8″" },
-          { label: "Reflective tape", value: "Red" },
         ],
       },
     ],
