@@ -75,15 +75,15 @@ export const nav: NavItem[] = [
         children: [{ label: "Parking Protection", href: "/products/parking-protection" }],
       },
       {
-        label: "Bollard Covers",
-        href: "/products/bollard-covers",
-        blurb: "Restore visibility without repainting",
-      },
-      {
         label: "Public & City Safety",
         href: "/products/public-city-safety",
         blurb: "Bike racks and public realm hardware",
         children: [{ label: "Bike Racks", href: "/products/bike-racks" }],
+      },
+      {
+        label: "Bollard Covers",
+        href: "/products/bollard-covers",
+        blurb: "Restore visibility without repainting",
       },
       {
         label: "Traffic & Access Barriers",

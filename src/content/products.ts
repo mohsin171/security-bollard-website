@@ -396,73 +396,6 @@ export const products: Product[] = [
     relatedSegments: ["property-management", "retail-storefronts", "warehouse-industrial"],
   },
   {
-    slug: "bollard-covers",
-    name: "Bollard Covers & Visibility Products",
-    navLabel: "Bollard Covers",
-    eyebrow: "Visibility & appearance",
-    hero: {
-      src: "/products/bollard-covers-hero.webp",
-      alt: "Two black bollards with red and white banding marking a city street corner",
-    },
-    headline: "Bollard covers and visibility products",
-    intro:
-      "A faded, rusted, chipped bollard fails two jobs at once: it stops being visible, and it makes the whole site look neglected. Covers restore both in minutes, without a crew, a repaint or a shutdown. This is usually the easiest and least disruptive improvement available on a commercial site.",
-    metaTitle: "Bollard Covers & Sleeves",
-    metaDescription:
-      "High-visibility bollard covers and sleeves for commercial and industrial sites across the GTA. Restore visibility without repainting. Quote in 24 hours.",
-    applications: [
-      "Warehouse and dock bollards that are chipped, scraped or faded",
-      "Parking garage and ramp bollards after winter damage",
-      "Retail frontages failing a brand or franchisor appearance audit",
-      "Sites where repainting annually has become a recurring line item",
-      "Anywhere high-visibility compliance needs restoring quickly",
-    ],
-    variants: [
-      {
-        name: "High-Visibility Bollard Cover",
-        summary:
-          "A moulded sleeve that fits over the existing bollard. Restores high-visibility colour immediately and hides impact damage, rust and chipped paint underneath.",
-        specs: [
-          { label: "Fit", value: "Sized to existing bollard outside diameter" },
-          { label: "Colours", value: "Safety yellow, and other colours on request" },
-          { label: "Installation", value: "Slides over existing bollard — no tools, no shutdown" },
-          { label: "Maintenance", value: "Wipe clean; replace individually when struck" },
-          { label: "Options", value: "Reflective banding for low-light areas" },
-        ],
-        notes:
-          "Measure the outside diameter of the existing bollard, not the nominal pipe size. If you are unsure, send us a photo with a tape measure held against it.",
-      },
-      {
-        name: "Reflective Banding & Visibility Upgrades",
-        summary:
-          "Where the bollard itself is sound but visibility is the problem. Common in poorly lit garages, yards and dock aprons.",
-        specs: [
-          { label: "Application", value: "Applied to new or existing bollards" },
-          { label: "Use case", value: "Low-light garages, night operations, yard traffic" },
-          { label: "Pairs with", value: "Covers, or supplied on new bollards at order" },
-        ],
-      },
-    ],
-    choosing: [
-      {
-        question: "Cover or replace?",
-        answer:
-          "If the bollard is structurally sound and only looks bad, cover it. If it is bent, loose at the base, or the base plate anchors have pulled, replace it — a cover on a compromised bollard hides a problem instead of fixing it. Send a photo and we will tell you honestly which one you are looking at.",
-      },
-      {
-        question: "Why not just repaint?",
-        answer:
-          "Repainting is labour, it needs dry weather and a cure window, and it has to be repeated. A cover goes on in under a minute, does not need redoing annually, and can be replaced individually for a few dollars when a forklift finds it.",
-      },
-      {
-        question: "Can we standardise across a portfolio?",
-        answer:
-          "Yes, and this is the sensible way to buy them. We keep your sizes and colours on file so re-orders across multiple buildings are a one-line email rather than a fresh measurement exercise.",
-      },
-    ],
-    relatedSegments: ["warehouse-industrial", "property-management", "retail-storefronts"],
-  },
-  {
     slug: "bike-racks",
     name: "Bike Racks",
     navLabel: "Bike Racks",
@@ -631,6 +564,73 @@ export const products: Product[] = [
       },
     ],
     relatedSegments: ["contractors", "property-management", "retail-storefronts"],
+  },
+  {
+    slug: "bollard-covers",
+    name: "Bollard Covers & Visibility Products",
+    navLabel: "Bollard Covers",
+    eyebrow: "Visibility & appearance",
+    hero: {
+      src: "/products/bollard-covers-hero.webp",
+      alt: "Two black bollards with red and white banding marking a city street corner",
+    },
+    headline: "Bollard covers and visibility products",
+    intro:
+      "A faded, rusted, chipped bollard fails two jobs at once: it stops being visible, and it makes the whole site look neglected. Covers restore both in minutes, without a crew, a repaint or a shutdown. This is usually the easiest and least disruptive improvement available on a commercial site.",
+    metaTitle: "Bollard Covers & Sleeves",
+    metaDescription:
+      "High-visibility bollard covers and sleeves for commercial and industrial sites across the GTA. Restore visibility without repainting. Quote in 24 hours.",
+    applications: [
+      "Warehouse and dock bollards that are chipped, scraped or faded",
+      "Parking garage and ramp bollards after winter damage",
+      "Retail frontages failing a brand or franchisor appearance audit",
+      "Sites where repainting annually has become a recurring line item",
+      "Anywhere high-visibility compliance needs restoring quickly",
+    ],
+    variants: [
+      {
+        name: "High-Visibility Bollard Cover",
+        summary:
+          "A moulded sleeve that fits over the existing bollard. Restores high-visibility colour immediately and hides impact damage, rust and chipped paint underneath.",
+        specs: [
+          { label: "Fit", value: "Sized to existing bollard outside diameter" },
+          { label: "Colours", value: "Safety yellow, and other colours on request" },
+          { label: "Installation", value: "Slides over existing bollard — no tools, no shutdown" },
+          { label: "Maintenance", value: "Wipe clean; replace individually when struck" },
+          { label: "Options", value: "Reflective banding for low-light areas" },
+        ],
+        notes:
+          "Measure the outside diameter of the existing bollard, not the nominal pipe size. If you are unsure, send us a photo with a tape measure held against it.",
+      },
+      {
+        name: "Reflective Banding & Visibility Upgrades",
+        summary:
+          "Where the bollard itself is sound but visibility is the problem. Common in poorly lit garages, yards and dock aprons.",
+        specs: [
+          { label: "Application", value: "Applied to new or existing bollards" },
+          { label: "Use case", value: "Low-light garages, night operations, yard traffic" },
+          { label: "Pairs with", value: "Covers, or supplied on new bollards at order" },
+        ],
+      },
+    ],
+    choosing: [
+      {
+        question: "Cover or replace?",
+        answer:
+          "If the bollard is structurally sound and only looks bad, cover it. If it is bent, loose at the base, or the base plate anchors have pulled, replace it — a cover on a compromised bollard hides a problem instead of fixing it. Send a photo and we will tell you honestly which one you are looking at.",
+      },
+      {
+        question: "Why not just repaint?",
+        answer:
+          "Repainting is labour, it needs dry weather and a cure window, and it has to be repeated. A cover goes on in under a minute, does not need redoing annually, and can be replaced individually for a few dollars when a forklift finds it.",
+      },
+      {
+        question: "Can we standardise across a portfolio?",
+        answer:
+          "Yes, and this is the sensible way to buy them. We keep your sizes and colours on file so re-orders across multiple buildings are a one-line email rather than a fresh measurement exercise.",
+      },
+    ],
+    relatedSegments: ["warehouse-industrial", "property-management", "retail-storefronts"],
   },
   {
     slug: "traffic-access-barriers",
