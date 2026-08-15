@@ -36,48 +36,6 @@ const SPECS_ON_REQUEST = {
 
 export const categories: Category[] = [
   {
-    slug: "flexible-bollards",
-    name: "Flexible Bollards",
-    navLabel: "Flexible Bollards",
-    eyebrow: "Impact recovery",
-    headline: "Flexible bollards",
-    intro:
-      "A bollard that bends and stands back up. Where contact is expected rather than exceptional — drive-thru lanes, tight turns, wash bays — a flexible bollard absorbs the hit and recovers, instead of bending permanently and needing replacement every season.",
-    metaTitle: "Flexible Bollards Toronto",
-    metaDescription:
-      "Flexible impact-recovery bollards for drive-thrus, parking lots and tight turns across Toronto and the GTA. Quote within 24 hours.",
-    applications: [
-      "Drive-thru lanes and order points",
-      "Tight turns and pinch points where clipping is routine",
-      "Car wash and wash bay guidance",
-      "Parking lot islands and lane definition",
-      "Sites where a bent steel bollard has become a recurring line item",
-      "Locations where damage to the vehicle matters as much as damage to the site",
-    ],
-    note: {
-      title: "Choosing flexible over steel",
-      body:
-        "Flexible bollards are for guidance and repeated low-speed contact. They deform on purpose, so they are the wrong choice where the job is to physically stop a vehicle. Tell us what you are protecting and we will say which one the application needs.",
-    },
-    related: [
-      {
-        href: "/products/safety-bollards",
-        title: "All safety bollards",
-        blurb: "Fixed steel options where the bollard has to stand firm.",
-      },
-      {
-        href: "/products/parking-protection",
-        title: "Parking protection",
-        blurb: "Wheel stops, corner guards and bay definition.",
-      },
-      {
-        href: "/products/traffic-access-barriers",
-        title: "Traffic & access barriers",
-        blurb: "Where the risk runs along a line rather than at a point.",
-      },
-    ],
-  },
-  {
     slug: "stainless-steel-bollards",
     name: "Stainless Steel Bollards",
     navLabel: "Stainless Steel Bollards",

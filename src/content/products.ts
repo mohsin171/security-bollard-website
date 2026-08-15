@@ -266,6 +266,76 @@ export const products: Product[] = [
     relatedSegments: ["warehouse-industrial", "property-management", "retail-storefronts"],
   },
   {
+    slug: "flexible-bollards",
+    name: "Flexible Bollards",
+    navLabel: "Flexible Bollards",
+    eyebrow: "Impact recovery",
+    headline: "Flexible bollards",
+    intro:
+      "A bollard that bends and stands back up. Where contact is expected rather than exceptional — drive-thru lanes, tight turns, wash bays — a spring-loaded bollard absorbs the hit and returns to position, instead of bending permanently and needing replacement every season.",
+    metaTitle: "Flexible Spring Bollards Toronto",
+    metaDescription:
+      "Spring-loaded flexible bollards that flex on impact and return to position. Bolt-on mounting, 42in high, for drive-thrus and parking lots across Toronto and the GTA.",
+    applications: [
+      "Drive-thru lanes and order points",
+      "Tight turns and pinch points where clipping is routine",
+      "Car wash and wash bay guidance",
+      "Parking lot islands and lane definition",
+      "Sites where a bent steel bollard has become a recurring line item",
+      "Locations where damage to the vehicle matters as much as damage to the site",
+    ],
+    variants: [
+      {
+        name: "Flexible Spring Bollard — 42″",
+        model: "SBD-FSB42Y",
+        datasheet: "/datasheets/SBD-FSB42Y-datasheet.pdf",
+        summary:
+          "Steel post on a spring base. A vehicle clips it, the bollard lays over, and the spring stands it back up — no bent post to cut out and replace. Bolt-on base plate, so it goes down without a core drill.",
+        image: {
+          src: "/products/sbd-fsb42y-flexible-yellow.webp",
+          alt: "SBD-FSB42Y yellow flexible spring bollard with a red reflective band, black cap and bolt-on spring base",
+        },
+        specs: [
+          { label: "Material", value: "Steel" },
+          { label: "Finish", value: "Yellow Powder Coated" },
+          { label: "Height", value: "42″" },
+          { label: "Diameter", value: "2 1/8″" },
+          { label: "Mount type", value: "Bolt-On" },
+          { label: "Reflective tape", value: "Red (High Visibility)" },
+          { label: "Flexibility", value: "Spring Loaded" },
+        ],
+      },
+    ],
+    choosing: [
+      {
+        question: "When is flexible the right choice?",
+        answer:
+          "When contact is routine rather than rare. A drive-thru lane, a tight turn, a wash bay — anywhere a rigid post gets clipped several times a year. The spring absorbs the hit and stands the bollard back up, which takes the replacement off your maintenance list.",
+      },
+      {
+        question: "When is it the wrong choice?",
+        answer:
+          "When the job is to physically stop a vehicle. A flexible bollard is designed to give way. If you are protecting glazing, a gas meter or a dock door, you want a fixed steel post, not this. Tell us what is behind the bollard and we will say which one the application needs.",
+      },
+      {
+        question: "Does it damage the vehicle?",
+        answer:
+          "Far less than a rigid post does. That matters at customer-facing locations, where a scraped bumper turns into a claim. It is one of the main reasons drive-thrus specify flexible over fixed.",
+      },
+      {
+        question: "How does it mount?",
+        answer:
+          "Bolt-on base plate, anchored to concrete — no core drill and no sleeve to set into the surface. That also makes it straightforward to relocate if the lane layout changes.",
+      },
+      {
+        question: "Will it stop a truck?",
+        answer:
+          "No, and it is not meant to. This is a guidance and delineation product that gives way on impact by design. It is not crash-rated. If your project requires certified anti-ram performance to ASTM F2656 or IWA 14-1, we will say so and refer you to a rated manufacturer.",
+      },
+    ],
+    relatedSegments: ["retail-storefronts", "property-management", "warehouse-industrial"],
+  },
+  {
     slug: "removable-bollards",
     name: "Removable Bollards",
     navLabel: "Removable Bollards",
