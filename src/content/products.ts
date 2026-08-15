@@ -271,8 +271,8 @@ export const products: Product[] = [
     navLabel: "Removable Bollards",
     eyebrow: "Occasional access",
     hero: {
-      src: "/products/removable-bollards-hero.webp",
-      alt: "A satin stainless and a yellow removable bollard, each padlocked into a flush ground sleeve on a paved forecourt outside a commercial building",
+      src: "/products/removable-bollards-hero-2.webp",
+      alt: "A satin stainless and a yellow removable bollard side by side, each with a red band and a padlocked ground sleeve, on a paved forecourt outside a commercial building",
     },
     headline: "Removable bollards",
     intro:
