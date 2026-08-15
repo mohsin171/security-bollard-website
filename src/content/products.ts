@@ -292,7 +292,7 @@ export const products: Product[] = [
       {
         name: "Removable Steel Bollard — 4.5″ × 36″",
         model: "SBD-RSB436Y",
-        datasheet: "/datasheets/SBD-RSB436Y-datasheet.pdf",
+        datasheet: "/datasheets/SBD-RSB436Y-datasheet-2.pdf",
         summary:
           "Yellow powder-coated steel in the slimmer size, with a red reflective band. The high-visibility option where the opening is narrow and the post still needs to be seen before it is reversed into.",
         image: {
@@ -304,33 +304,31 @@ export const products: Product[] = [
           { label: "Finish", value: "UV powder-coated yellow" },
           { label: "Size", value: "4.5″ × 36″" },
           { label: "Diameter", value: "4.5″" },
-          { label: "Wall thickness", value: "1/8″" },
           { label: "Reflective tape", value: "Red" },
         ],
       },
       {
         name: "Removable Stainless Bollard — 4″ × 36″",
-        model: "SBD-RSS436S",
-        datasheet: "/datasheets/SBD-RSS436S-datasheet.pdf",
+        model: "SBD-RSSB436",
+        datasheet: "/datasheets/SBD-RSSB436-datasheet.pdf",
         summary:
           "Satin stainless in the slimmer size, for customer-facing frontages where a painted post would look wrong. Same padlock and ground sleeve arrangement, in a finish that does not need repainting.",
         image: {
           src: "/products/sbd-rss-removable-stainless.webp",
-          alt: "SBD-RSS436S removable satin stainless bollard with padlock and ground sleeve",
+          alt: "SBD-RSSB436 removable satin stainless bollard with padlock and ground sleeve",
         },
         specs: [
           { label: "Material", value: "Stainless Steel" },
           { label: "Finish", value: "Satin" },
           { label: "Size", value: "4″ × 36″" },
           { label: "Diameter", value: "4.5″" },
-          { label: "Wall thickness", value: "1/8″" },
           { label: "Reflective tape", value: "Optional" },
         ],
       },
       {
         name: "Removable Steel Bollard — 6″ × 36″",
         model: "SBD-RSB636Y",
-        datasheet: "/datasheets/SBD-RSB636Y-datasheet.pdf",
+        datasheet: "/datasheets/SBD-RSB636Y-datasheet-2.pdf",
         summary:
           "The heavier yellow option at 6 inches, for openings that see larger vehicles but still need the post to stand out.",
         image: {
@@ -342,26 +340,24 @@ export const products: Product[] = [
           { label: "Finish", value: "UV powder-coated yellow" },
           { label: "Size", value: "6″ × 36″" },
           { label: "Diameter", value: "6.67″" },
-          { label: "Wall thickness", value: "1/8″" },
           { label: "Reflective tape", value: "Red" },
         ],
       },
       {
         name: "Removable Stainless Bollard — 6″ × 36″",
-        model: "SBD-RSS636S",
-        datasheet: "/datasheets/SBD-RSS636S-datasheet.pdf",
+        model: "SBD-RSSB636",
+        datasheet: "/datasheets/SBD-RSSB636-datasheet.pdf",
         summary:
           "The heavier stainless option at 6 inches, where the opening sees larger vehicles but the finish still has to suit a public frontage.",
         image: {
           src: "/products/sbd-rss-removable-stainless.webp",
-          alt: "SBD-RSS636S removable satin stainless bollard with padlock and ground sleeve",
+          alt: "SBD-RSSB636 removable satin stainless bollard with padlock and ground sleeve",
         },
         specs: [
           { label: "Material", value: "Stainless Steel" },
           { label: "Finish", value: "Satin" },
           { label: "Size", value: "6″ × 36″" },
           { label: "Diameter", value: "6.67″" },
-          { label: "Wall thickness", value: "1/8″" },
           { label: "Reflective tape", value: "Optional" },
         ],
       },
