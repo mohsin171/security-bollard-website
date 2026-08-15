@@ -270,6 +270,10 @@ export const products: Product[] = [
     name: "Flexible Bollards",
     navLabel: "Flexible Bollards",
     eyebrow: "Impact recovery",
+    hero: {
+      src: "/products/flexible-bollards-hero.webp",
+      alt: "A yellow flexible spring bollard with a red reflective band and ribbed spring base, bolted to a paved forecourt outside a commercial building, with two more in the background",
+    },
     headline: "Flexible bollards",
     intro:
       "A bollard that bends and stands back up. Where contact is expected rather than exceptional — drive-thru lanes, tight turns, wash bays — a spring-loaded bollard absorbs the hit and returns to position, instead of bending permanently and needing replacement every season.",
