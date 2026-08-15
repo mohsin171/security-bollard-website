@@ -370,7 +370,7 @@ export const products: Product[] = [
         summary:
           "Yellow powder-coated steel in the slimmer size, with a red reflective band. The high-visibility option where the opening is narrow and the post still needs to be seen before it is reversed into.",
         image: {
-          src: "/products/sbd-rsb636y-removable-yellow.webp",
+          src: "/products/sbd-rsb-removable-yellow-2.webp",
           alt: "SBD-RSB436Y removable yellow steel bollard with a red reflective band, padlock and ground sleeve",
         },
         specs: [
@@ -406,7 +406,7 @@ export const products: Product[] = [
         summary:
           "The heavier yellow option at 6 inches, for openings that see larger vehicles but still need the post to stand out.",
         image: {
-          src: "/products/sbd-rsb636y-removable-yellow.webp",
+          src: "/products/sbd-rsb-removable-yellow-2.webp",
           alt: "SBD-RSB636Y removable yellow steel bollard with a red reflective band, padlock and ground sleeve",
         },
         specs: [
