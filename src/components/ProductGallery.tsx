@@ -43,7 +43,7 @@ export default function ProductGallery({ images, model }: { images: Shot[]; mode
         <div className="relative aspect-square w-full overflow-hidden">
           {images.map((img, n) => (
             <Image
-              key={img.src}
+              key={`${img.src}-${n}`}
               src={img.src}
               alt={img.alt}
               width={900}
@@ -77,7 +77,7 @@ export default function ProductGallery({ images, model }: { images: Shot[]; mode
           <div className="flex items-center gap-2">
             {images.map((img, n) => (
               <button
-                key={img.src}
+                key={`${img.src}-${n}`}
                 type="button"
                 onClick={() => go(n)}
                 aria-label={`Photo ${n + 1} of ${images.length}`}

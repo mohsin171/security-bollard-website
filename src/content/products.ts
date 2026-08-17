@@ -332,6 +332,7 @@ export const products: Product[] = [
         gallery: [
           { src: "/products/sbd-ssb-round-black.webp", alt: "SBD-SSB436 round bollard with a black reflective band" },
           { src: "/products/sbd-ssb-round-yellow.webp", alt: "SBD-SSB436 round bollard with a yellow reflective band" },
+          { src: "/products/sbd-ssb-round-red.webp", alt: "SBD-SSB436 round bollard with a red reflective band" },
         ],
         specs: [
           { label: "Material", value: "Stainless Steel" },
@@ -354,6 +355,7 @@ export const products: Product[] = [
         gallery: [
           { src: "/products/sbd-ssb-round-black.webp", alt: "SBD-SSB4536 round bollard with a black reflective band" },
           { src: "/products/sbd-ssb-round-yellow.webp", alt: "SBD-SSB4536 round bollard with a yellow reflective band" },
+          { src: "/products/sbd-ssb-round-red.webp", alt: "SBD-SSB4536 round bollard with a red reflective band" },
         ],
         specs: [
           { label: "Material", value: "Stainless Steel" },
@@ -376,6 +378,7 @@ export const products: Product[] = [
         gallery: [
           { src: "/products/sbd-ssb-round-black.webp", alt: "SBD-SSB6636 round bollard with a black reflective band" },
           { src: "/products/sbd-ssb-round-yellow.webp", alt: "SBD-SSB6636 round bollard with a yellow reflective band" },
+          { src: "/products/sbd-ssb-round-red.webp", alt: "SBD-SSB6636 round bollard with a red reflective band" },
         ],
         specs: [
           { label: "Material", value: "Stainless Steel" },
@@ -398,6 +401,7 @@ export const products: Product[] = [
         gallery: [
           { src: "/products/sbd-ssb-round-black.webp", alt: "SBD-SSB6648 round bollard with a black reflective band" },
           { src: "/products/sbd-ssb-round-yellow.webp", alt: "SBD-SSB6648 round bollard with a yellow reflective band" },
+          { src: "/products/sbd-ssb-round-red.webp", alt: "SBD-SSB6648 round bollard with a red reflective band" },
         ],
         specs: [
           { label: "Material", value: "Stainless Steel" },
