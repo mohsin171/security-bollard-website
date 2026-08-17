@@ -272,10 +272,10 @@ export const products: Product[] = [
     eyebrow: "Finish & appearance",
     headline: "Stainless steel bollards",
     intro:
-      "Where the bollard is visible to customers and the finish is part of the design. Satin stainless with a flat top, corrosion resistant and low maintenance — appropriate for storefronts, plazas, building entrances and any frontage where a painted steel post would look like an afterthought.",
+      "Where the bollard is visible to customers and the finish is part of the design. Satin stainless in flat top and domed round profiles, corrosion resistant and low maintenance — appropriate for storefronts, plazas, building entrances and any frontage where a painted steel post would look like an afterthought.",
     metaTitle: "Stainless Steel Bollards Toronto",
     metaDescription:
-      "Flat top satin stainless steel bollards in 4in x 36in and 6in x 48in for storefronts, plazas and building entrances across Toronto and the GTA.",
+      "Flat top and domed round satin stainless steel bollards from 4in x 36in to 6.6in x 48in, with red, yellow or black reflective bands. Toronto and the GTA.",
     applications: [
       "Storefront and glazing protection at customer-facing locations",
       "Building entrances, lobbies and porte-cochères",
@@ -319,12 +319,100 @@ export const products: Product[] = [
           { label: "Reflective tape", value: "Green" },
         ],
       },
+      {
+        name: "Steel Round Bollard — 4″ × 36″",
+        model: "SBD-SSB436",
+        datasheet: "/datasheets/SBD-SSB436-datasheet.pdf",
+        summary:
+          "Domed top, satin stainless, on an 8 inch base plate. The slimmest of the round range — for entrances and walkway edges where the post should read as part of the frontage.",
+        image: {
+          src: "/products/sbd-ssb-round-red.webp",
+          alt: "SBD-SSB436 satin stainless round bollard with a domed top and red reflective band",
+        },
+        gallery: [
+          { src: "/products/sbd-ssb-round-black.webp", alt: "SBD-SSB436 round bollard with a black reflective band" },
+          { src: "/products/sbd-ssb-round-yellow.webp", alt: "SBD-SSB436 round bollard with a yellow reflective band" },
+        ],
+        specs: [
+          { label: "Material", value: "Stainless Steel" },
+          { label: "Finish", value: "Satin" },
+          { label: "Size", value: "4″ × 36″" },
+          { label: "Base plate", value: "8″" },
+          { label: "Reflective tape", value: "Red / Yellow / Black" },
+        ],
+      },
+      {
+        name: "Steel Round Bollard — 4.5″ × 36″",
+        model: "SBD-SSB4536",
+        datasheet: "/datasheets/SBD-SSB4536-datasheet.pdf",
+        summary:
+          "A half inch wider than the 4 inch, on the same 8 inch base plate. The common choice where the frontage sees regular vehicle movement rather than the occasional reversing car.",
+        image: {
+          src: "/products/sbd-ssb-round-red.webp",
+          alt: "SBD-SSB4536 satin stainless round bollard with a domed top and red reflective band",
+        },
+        gallery: [
+          { src: "/products/sbd-ssb-round-black.webp", alt: "SBD-SSB4536 round bollard with a black reflective band" },
+          { src: "/products/sbd-ssb-round-yellow.webp", alt: "SBD-SSB4536 round bollard with a yellow reflective band" },
+        ],
+        specs: [
+          { label: "Material", value: "Stainless Steel" },
+          { label: "Finish", value: "Satin" },
+          { label: "Size", value: "4.5″ × 36″" },
+          { label: "Base plate", value: "8″" },
+          { label: "Reflective tape", value: "Red / Yellow / Black" },
+        ],
+      },
+      {
+        name: "Steel Round Bollard — 6.6″ × 36″",
+        model: "SBD-SSB6636",
+        datasheet: "/datasheets/SBD-SSB6636-datasheet.pdf",
+        summary:
+          "The heavy 6.6 inch shaft on a wider 11.5 inch base plate, at 36 inches tall. Specified where the vehicle likely to hit it is larger than a car.",
+        image: {
+          src: "/products/sbd-ssb-round-red.webp",
+          alt: "SBD-SSB6636 satin stainless round bollard with a domed top and red reflective band",
+        },
+        gallery: [
+          { src: "/products/sbd-ssb-round-black.webp", alt: "SBD-SSB6636 round bollard with a black reflective band" },
+          { src: "/products/sbd-ssb-round-yellow.webp", alt: "SBD-SSB6636 round bollard with a yellow reflective band" },
+        ],
+        specs: [
+          { label: "Material", value: "Stainless Steel" },
+          { label: "Finish", value: "Satin" },
+          { label: "Size", value: "6.6″ × 36″" },
+          { label: "Base plate", value: "11.5″" },
+          { label: "Reflective tape", value: "Red / Yellow / Black" },
+        ],
+      },
+      {
+        name: "Steel Round Bollard — 6.6″ × 48″",
+        model: "SBD-SSB6648",
+        datasheet: "/datasheets/SBD-SSB6648-datasheet.pdf",
+        summary:
+          "The tallest and heaviest of the round range — 6.6 inches across and 48 inches above grade, for yards, service courts and anywhere the post has to be seen from a truck cab.",
+        image: {
+          src: "/products/sbd-ssb-round-red.webp",
+          alt: "SBD-SSB6648 satin stainless round bollard with a domed top and red reflective band",
+        },
+        gallery: [
+          { src: "/products/sbd-ssb-round-black.webp", alt: "SBD-SSB6648 round bollard with a black reflective band" },
+          { src: "/products/sbd-ssb-round-yellow.webp", alt: "SBD-SSB6648 round bollard with a yellow reflective band" },
+        ],
+        specs: [
+          { label: "Material", value: "Stainless Steel" },
+          { label: "Finish", value: "Satin" },
+          { label: "Size", value: "6.6″ × 48″" },
+          { label: "Base plate", value: "11.5″" },
+          { label: "Reflective tape", value: "Red / Yellow / Black" },
+        ],
+      },
     ],
     choosing: [
       {
         question: "Which size should I order?",
         answer:
-          "4in × 36in at entrances, lobbies and pedestrian frontages, where the bollard should protect without dominating the approach. 6in × 48in where the vehicles are larger or the post needs to be seen from further back. If you are unsure, send a photo of the location and we will specify it.",
+          "The 4in and 4.5in sizes at entrances, lobbies and pedestrian frontages, where the bollard should protect without dominating the approach. The 6in and 6.6in sizes where the vehicles are larger. Go to 48in tall where the post has to be seen from a truck cab rather than a car. If you are unsure, send a photo of the location and we will specify it.",
       },
       {
         question: "Stainless or painted steel?",
@@ -332,9 +420,9 @@ export const products: Product[] = [
           "Stainless where customers see it and where you do not want to repaint. Painted yellow steel where being seen matters more than the finish — a warehouse aisle or a dock apron. Stainless costs more up front and saves the annual repaint.",
       },
       {
-        question: "Why a green reflective band?",
+        question: "Which band colour should I choose?",
         answer:
-          "It reads as guidance rather than hazard, which suits a customer frontage where a red or yellow band would look industrial. If your site standard calls for a different colour, tell us at quotation.",
+          "The round range comes with a red, yellow or black band and the flat tops carry green. Yellow reads as hazard and suits service areas; black is the quietest against a stainless post and suits a design-led frontage; red sits between the two. Tell us the site standard you are working to and we will match it.",
       },
       {
         question: "Will it stop a truck?",
