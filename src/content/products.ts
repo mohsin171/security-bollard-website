@@ -266,6 +266,85 @@ export const products: Product[] = [
     relatedSegments: ["warehouse-industrial", "property-management", "retail-storefronts"],
   },
   {
+    slug: "stainless-steel-bollards",
+    name: "Stainless Steel Bollards",
+    navLabel: "Stainless Steel Bollards",
+    eyebrow: "Finish & appearance",
+    headline: "Stainless steel bollards",
+    intro:
+      "Where the bollard is visible to customers and the finish is part of the design. Satin stainless with a flat top, corrosion resistant and low maintenance — appropriate for storefronts, plazas, building entrances and any frontage where a painted steel post would look like an afterthought.",
+    metaTitle: "Stainless Steel Bollards Toronto",
+    metaDescription:
+      "Flat top satin stainless steel bollards in 4in x 36in and 6in x 48in for storefronts, plazas and building entrances across Toronto and the GTA.",
+    applications: [
+      "Storefront and glazing protection at customer-facing locations",
+      "Building entrances, lobbies and porte-cochères",
+      "Plazas, streetscapes and public realm frontages",
+      "Hotels, clinics and pharmacies",
+      "Sites with a design standard or franchisor appearance requirement",
+      "Positions exposed to de-icing salt where a painted post would rust out",
+    ],
+    variants: [
+      {
+        name: "Flat Top Stainless Bollard — 4″ × 36″",
+        model: "SBD-FTSSB436",
+        datasheet: "/datasheets/SBD-FTSSB436-datasheet.pdf",
+        summary:
+          "The slimmer size, for frontages and entrances where the bollard has to protect without dominating the approach. Flat top, satin finish and a green reflective band.",
+        image: {
+          src: "/products/sbd-ftssb-flat-top-stainless.webp",
+          alt: "SBD-FTSSB436 flat top satin stainless steel bollard with a green reflective band",
+        },
+        specs: [
+          { label: "Material", value: "Stainless Steel" },
+          { label: "Finish", value: "Satin" },
+          { label: "Size", value: "4″ × 36″" },
+          { label: "Reflective tape", value: "Green" },
+        ],
+      },
+      {
+        name: "Flat Top Stainless Bollard — 6″ × 48″",
+        model: "SBD-FTSSB648",
+        datasheet: "/datasheets/SBD-FTSSB648-datasheet.pdf",
+        summary:
+          "The heavier size at 6 inches and 48 inches tall, where the approach carries larger vehicles or the bollard needs to read clearly from further back.",
+        image: {
+          src: "/products/sbd-ftssb-flat-top-stainless.webp",
+          alt: "SBD-FTSSB648 flat top satin stainless steel bollard with a green reflective band",
+        },
+        specs: [
+          { label: "Material", value: "Stainless Steel" },
+          { label: "Finish", value: "Satin" },
+          { label: "Size", value: "6″ × 48″" },
+          { label: "Reflective tape", value: "Green" },
+        ],
+      },
+    ],
+    choosing: [
+      {
+        question: "Which size should I order?",
+        answer:
+          "4in × 36in at entrances, lobbies and pedestrian frontages, where the bollard should protect without dominating the approach. 6in × 48in where the vehicles are larger or the post needs to be seen from further back. If you are unsure, send a photo of the location and we will specify it.",
+      },
+      {
+        question: "Stainless or painted steel?",
+        answer:
+          "Stainless where customers see it and where you do not want to repaint. Painted yellow steel where being seen matters more than the finish — a warehouse aisle or a dock apron. Stainless costs more up front and saves the annual repaint.",
+      },
+      {
+        question: "Why a green reflective band?",
+        answer:
+          "It reads as guidance rather than hazard, which suits a customer frontage where a red or yellow band would look industrial. If your site standard calls for a different colour, tell us at quotation.",
+      },
+      {
+        question: "Will it stop a truck?",
+        answer:
+          "Be careful with this question. These are protective and deterrent bollards for the applications described here. They are not crash-rated. If your project requires certified anti-ram performance to ASTM F2656 or IWA 14-1, we will say so and refer you to a rated manufacturer.",
+      },
+    ],
+    relatedSegments: ["retail-storefronts", "property-management", "contractors"],
+  },
+  {
     slug: "flexible-bollards",
     name: "Flexible Bollards",
     navLabel: "Flexible Bollards",

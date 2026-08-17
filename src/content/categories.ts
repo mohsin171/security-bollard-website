@@ -36,44 +36,6 @@ const SPECS_ON_REQUEST = {
 
 export const categories: Category[] = [
   {
-    slug: "stainless-steel-bollards",
-    name: "Stainless Steel Bollards",
-    navLabel: "Stainless Steel Bollards",
-    eyebrow: "Finish & appearance",
-    headline: "Stainless steel bollards",
-    intro:
-      "Where the bollard is visible to customers and the finish is part of the design. Corrosion resistant, low maintenance, and appropriate for storefronts, plazas, building entrances and any frontage where a painted steel post would look like an afterthought.",
-    metaTitle: "Stainless Steel Bollards Toronto",
-    metaDescription:
-      "Stainless steel bollards for storefronts, plazas and building entrances across Toronto and the GTA. Grade 304 and 316 options.",
-    applications: [
-      "Storefront and glazing protection at customer-facing locations",
-      "Building entrances, lobbies and porte-cochères",
-      "Plazas, streetscapes and public realm frontages",
-      "Hotels, clinics and pharmacies",
-      "Sites with a design standard or franchisor appearance requirement",
-      "Coastal and heavy de-icing salt exposure, in Grade 316",
-    ],
-    note: SPECS_ON_REQUEST,
-    related: [
-      {
-        href: "/products/safety-bollards",
-        title: "All safety bollards",
-        blurb: "Full dimensions, grades and head styles.",
-      },
-      {
-        href: "/products/public-city-safety",
-        title: "Public & city safety",
-        blurb: "Streetscape and public realm hardware.",
-      },
-      {
-        href: "/products/bike-racks",
-        title: "Bike racks",
-        blurb: "Matching stainless bicycle parking for the same frontage.",
-      },
-    ],
-  },
-  {
     slug: "galvanized-steel-bollards",
     name: "Galvanized Steel Bollards",
     navLabel: "Galvanized Steel Bollards",
