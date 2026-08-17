@@ -1,15 +1,44 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Shot = { src: string; alt: string };
 
+/**
+ * One random base per page load, shared by every gallery on the page. Combined
+ * with each card's position it staggers the opening photo, so a range sharing
+ * one set of colour options never renders as a column of identical images.
+ */
+let sharedBase: number | null = null;
+function galleryBase() {
+  if (sharedBase === null) sharedBase = Math.floor(Math.random() * 997);
+  return sharedBase;
+}
+
 /** Swipeable product gallery: drag on touch, arrows and dots on desktop. */
-export default function ProductGallery({ images, model }: { images: Shot[]; model?: string }) {
+export default function ProductGallery({
+  images,
+  model,
+  randomStart = false,
+  offset = 0,
+}: {
+  images: Shot[];
+  model?: string;
+  randomStart?: boolean;
+  offset?: number;
+}) {
   const [i, setI] = useState(0);
   const startX = useRef<number | null>(null);
   const last = images.length - 1;
+
+  // Picked after mount, not during render, so the server and client agree on
+  // the first paint and only then does it move to a random photo.
+  useEffect(() => {
+    if (randomStart && images.length > 1) {
+      setI((galleryBase() + offset) % images.length);
+    }
+  }, [randomStart, offset, images.length]);
 
   const go = (next: number) => setI(next < 0 ? last : next > last ? 0 : next);
 

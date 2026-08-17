@@ -9,6 +9,8 @@ export type Variant = {
   image?: { src: string; alt: string };
   /** Extra views shown in a swipeable gallery alongside `image`. */
   gallery?: { src: string; alt: string }[];
+  /** Open the gallery on a random photo, so colour options are not all identical on the page. */
+  randomStart?: boolean;
   datasheet?: string;
 };
 
@@ -322,6 +324,7 @@ export const products: Product[] = [
       {
         name: "Steel Round Bollard — 4″ × 36″",
         model: "SBD-SSB436",
+        randomStart: true,
         datasheet: "/datasheets/SBD-SSB436-datasheet.pdf",
         summary:
           "Domed top, satin stainless, on an 8 inch base plate. The slimmest of the round range — for entrances and walkway edges where the post should read as part of the frontage.",
@@ -332,7 +335,6 @@ export const products: Product[] = [
         gallery: [
           { src: "/products/sbd-ssb-round-black.webp", alt: "SBD-SSB436 round bollard with a black reflective band" },
           { src: "/products/sbd-ssb-round-yellow.webp", alt: "SBD-SSB436 round bollard with a yellow reflective band" },
-          { src: "/products/sbd-ssb-round-red.webp", alt: "SBD-SSB436 round bollard with a red reflective band" },
         ],
         specs: [
           { label: "Material", value: "Stainless Steel" },
@@ -345,6 +347,7 @@ export const products: Product[] = [
       {
         name: "Steel Round Bollard — 4.5″ × 36″",
         model: "SBD-SSB4536",
+        randomStart: true,
         datasheet: "/datasheets/SBD-SSB4536-datasheet.pdf",
         summary:
           "A half inch wider than the 4 inch, on the same 8 inch base plate. The common choice where the frontage sees regular vehicle movement rather than the occasional reversing car.",
@@ -355,7 +358,6 @@ export const products: Product[] = [
         gallery: [
           { src: "/products/sbd-ssb-round-black.webp", alt: "SBD-SSB4536 round bollard with a black reflective band" },
           { src: "/products/sbd-ssb-round-yellow.webp", alt: "SBD-SSB4536 round bollard with a yellow reflective band" },
-          { src: "/products/sbd-ssb-round-red.webp", alt: "SBD-SSB4536 round bollard with a red reflective band" },
         ],
         specs: [
           { label: "Material", value: "Stainless Steel" },
@@ -368,6 +370,7 @@ export const products: Product[] = [
       {
         name: "Steel Round Bollard — 6.6″ × 36″",
         model: "SBD-SSB6636",
+        randomStart: true,
         datasheet: "/datasheets/SBD-SSB6636-datasheet.pdf",
         summary:
           "The heavy 6.6 inch shaft on a wider 11.5 inch base plate, at 36 inches tall. Specified where the vehicle likely to hit it is larger than a car.",
@@ -378,7 +381,6 @@ export const products: Product[] = [
         gallery: [
           { src: "/products/sbd-ssb-round-black.webp", alt: "SBD-SSB6636 round bollard with a black reflective band" },
           { src: "/products/sbd-ssb-round-yellow.webp", alt: "SBD-SSB6636 round bollard with a yellow reflective band" },
-          { src: "/products/sbd-ssb-round-red.webp", alt: "SBD-SSB6636 round bollard with a red reflective band" },
         ],
         specs: [
           { label: "Material", value: "Stainless Steel" },
@@ -391,6 +393,7 @@ export const products: Product[] = [
       {
         name: "Steel Round Bollard — 6.6″ × 48″",
         model: "SBD-SSB6648",
+        randomStart: true,
         datasheet: "/datasheets/SBD-SSB6648-datasheet.pdf",
         summary:
           "The tallest and heaviest of the round range — 6.6 inches across and 48 inches above grade, for yards, service courts and anywhere the post has to be seen from a truck cab.",
@@ -401,7 +404,6 @@ export const products: Product[] = [
         gallery: [
           { src: "/products/sbd-ssb-round-black.webp", alt: "SBD-SSB6648 round bollard with a black reflective band" },
           { src: "/products/sbd-ssb-round-yellow.webp", alt: "SBD-SSB6648 round bollard with a yellow reflective band" },
-          { src: "/products/sbd-ssb-round-red.webp", alt: "SBD-SSB6648 round bollard with a red reflective band" },
         ],
         specs: [
           { label: "Material", value: "Stainless Steel" },

@@ -184,7 +184,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <SectionHeading eyebrow="Specifications" title="Options and technical data" />
           </div>
           <div className="space-y-10 md:space-y-14">
-            {product.variants.map((v) => (
+            {product.variants.map((v, vi) => (
               <article
                 key={v.name}
                 id={variantAnchor(v)}
@@ -197,7 +197,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                   }`}
                 >
                   {v.image && v.gallery?.length ? (
-                    <ProductGallery images={[v.image, ...v.gallery]} model={v.model} />
+                    <ProductGallery images={[v.image, ...v.gallery]} model={v.model} randomStart={v.randomStart} offset={vi} />
                   ) : v.image ? (
                     <div className="relative mx-auto w-full max-w-[300px] self-center">
                       <div
