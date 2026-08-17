@@ -272,6 +272,10 @@ export const products: Product[] = [
     name: "Stainless Steel Bollards",
     navLabel: "Stainless Steel Bollards",
     eyebrow: "Finish & appearance",
+    hero: {
+      src: "/products/stainless-steel-bollards-hero.webp",
+      alt: "Three domed-top satin stainless bollards on a paved forecourt outside a glass commercial building, banded in red, yellow and black",
+    },
     headline: "Stainless steel bollards",
     intro:
       "Where the bollard is visible to customers and the finish is part of the design. Satin stainless in flat top and domed round profiles, corrosion resistant and low maintenance — appropriate for storefronts, plazas, building entrances and any frontage where a painted steel post would look like an afterthought.",
