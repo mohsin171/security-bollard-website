@@ -4,8 +4,8 @@ export const site = {
   tagline: "Built for Safety. Made to Last.",
   phone: "416-474-4933",
   phoneHref: "tel:+14164744933",
-  email: "sales@securitybollarddirect.ca",
-  emailHref: "mailto:sales@securitybollarddirect.ca",
+  email: "info@securitybollarddirect.ca",
+  emailHref: "mailto:info@securitybollarddirect.ca",
   domain: "securitybollarddirect.ca",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://securitybollarddirect.ca",
   serviceArea:

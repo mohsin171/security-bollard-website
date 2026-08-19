@@ -55,7 +55,7 @@ then run `vercel env pull .env.local` locally.
 |---|---|---|
 | `NEXT_PUBLIC_SITE_URL` | `https://securitybollarddirect.ca` | Canonical URLs, sitemap, Open Graph. **Set this first** — SEO depends on it. |
 | `RESEND_API_KEY` | `re_xxxxx` | Sends quote notification emails |
-| `QUOTE_NOTIFICATION_EMAIL` | `sales@securitybollarddirect.ca` | Where leads are delivered |
+| `QUOTE_NOTIFICATION_EMAIL` | `info@securitybollarddirect.ca` | Where leads are delivered |
 | `QUOTE_FROM_EMAIL` | `quotes@securitybollarddirect.ca` | Sender address (domain must be verified in Resend) |
 
 > `NEXT_PUBLIC_` values are visible in the browser bundle. Never prefix a secret.
