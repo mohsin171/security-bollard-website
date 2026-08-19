@@ -521,6 +521,10 @@ export const products: Product[] = [
     name: "Galvanized Steel Bollards",
     navLabel: "Galvanized Steel Bollards",
     eyebrow: "Corrosion resistance",
+    hero: {
+      src: "/products/galvanized-steel-bollards-hero.webp",
+      alt: "Three hot-dip galvanized steel bollards on bolt-down base plates, set across a paved forecourt outside a glass commercial building",
+    },
     headline: "Galvanized steel bollards",
     intro:
       "Hot-dip galvanized steel, for outdoor positions where road salt and standing water do the damage rather than impact. The coating goes on after fabrication and covers cut edges and welds, which is why a galvanized post outlasts a painted one on an exposed site.",
