@@ -160,7 +160,7 @@ export const products: Product[] = [
       {
         name: "Round Steel Bollard — 4.5 in × 36 in",
         model: "SBD-RSB4536Y",
-        datasheet: "/datasheets/SBD-RSB4536Y-datasheet.pdf",
+        datasheet: "/datasheets/SBD-RSB4536Y-datasheet-r2.pdf",
         summary:
           "The standard height for aisle ends, racking protection and anything a forklift operator needs to see at eye level from a seated position. Domed cap and a red reflective band above the shaft.",
         image: {
@@ -180,7 +180,7 @@ export const products: Product[] = [
       {
         name: "Round Steel Bollard — 4.5 in × 42 in",
         model: "SBD-RSB4542Y",
-        datasheet: "/datasheets/SBD-RSB4542Y-datasheet.pdf",
+        datasheet: "/datasheets/SBD-RSB4542Y-datasheet-r2.pdf",
         summary:
           "The common commercial height — tall enough to be seen over a car hood, low enough not to obstruct sightlines. The default choice at storefronts, ramps and building approaches.",
         image: {
@@ -200,7 +200,7 @@ export const products: Product[] = [
       {
         name: "Round Steel Bollard — 6 in × 48 in",
         model: "SBD-RSB648Y",
-        datasheet: "/datasheets/SBD-RSB648Y-datasheet.pdf",
+        datasheet: "/datasheets/SBD-RSB648Y-datasheet-r2.pdf",
         summary:
           "The heaviest of the three: a wider 6 inch shaft and 48 inches above grade, for truck yards, dock aprons and anywhere the vehicle likely to hit it is larger than a car.",
         image: {
@@ -220,7 +220,7 @@ export const products: Product[] = [
       {
         name: "Square Steel Bollard — 4 in × 36 in",
         model: "SBD-SSB436Y",
-        datasheet: "/datasheets/SBD-SSB436Y-datasheet.pdf",
+        datasheet: "/datasheets/SBD-SSB436Y-datasheet-r2.pdf",
         summary:
           "Square section with a black hazard stripe rather than a reflective band. Sits flat against a wall, column or racking upright, which makes it useful where a round post would leave an awkward gap.",
         image: {
@@ -294,7 +294,7 @@ export const products: Product[] = [
       {
         name: "Flat Top Stainless Bollard — 4″ × 36″",
         model: "SBD-FTSSB436",
-        datasheet: "/datasheets/SBD-FTSSB436-datasheet.pdf",
+        datasheet: "/datasheets/SBD-FTSSB436-datasheet-r2.pdf",
         summary:
           "The slimmer size, for frontages and entrances where the bollard has to protect without dominating the approach. Flat top, satin finish and a green reflective band.",
         image: {
@@ -311,7 +311,7 @@ export const products: Product[] = [
       {
         name: "Flat Top Stainless Bollard — 6″ × 48″",
         model: "SBD-FTSSB648",
-        datasheet: "/datasheets/SBD-FTSSB648-datasheet.pdf",
+        datasheet: "/datasheets/SBD-FTSSB648-datasheet-r2.pdf",
         summary:
           "The heavier size at 6 inches and 48 inches tall, where the approach carries larger vehicles or the bollard needs to read clearly from further back.",
         image: {
@@ -329,7 +329,7 @@ export const products: Product[] = [
         name: "Steel Round Bollard — 4″ × 36″",
         model: "SBD-SSB436",
         randomStart: true,
-        datasheet: "/datasheets/SBD-SSB436-datasheet.pdf",
+        datasheet: "/datasheets/SBD-SSB436-datasheet-r2.pdf",
         summary:
           "Domed top, satin stainless, on an 8 inch base plate. The slimmest of the round range — for entrances and walkway edges where the post should read as part of the frontage.",
         image: {
@@ -352,7 +352,7 @@ export const products: Product[] = [
         name: "Steel Round Bollard — 4.5″ × 36″",
         model: "SBD-SSB4536",
         randomStart: true,
-        datasheet: "/datasheets/SBD-SSB4536-datasheet.pdf",
+        datasheet: "/datasheets/SBD-SSB4536-datasheet-r2.pdf",
         summary:
           "A half inch wider than the 4 inch, on the same 8 inch base plate. The common choice where the frontage sees regular vehicle movement rather than the occasional reversing car.",
         image: {
@@ -375,7 +375,7 @@ export const products: Product[] = [
         name: "Steel Round Bollard — 6.6″ × 36″",
         model: "SBD-SSB6636",
         randomStart: true,
-        datasheet: "/datasheets/SBD-SSB6636-datasheet.pdf",
+        datasheet: "/datasheets/SBD-SSB6636-datasheet-r2.pdf",
         summary:
           "The heavy 6.6 inch shaft on a wider 11.5 inch base plate, at 36 inches tall. Specified where the vehicle likely to hit it is larger than a car.",
         image: {
@@ -398,7 +398,7 @@ export const products: Product[] = [
         name: "Steel Round Bollard — 6.6″ × 48″",
         model: "SBD-SSB6648",
         randomStart: true,
-        datasheet: "/datasheets/SBD-SSB6648-datasheet.pdf",
+        datasheet: "/datasheets/SBD-SSB6648-datasheet-r2.pdf",
         summary:
           "The tallest and heaviest of the round range — 6.6 inches across and 48 inches above grade, for yards, service courts and anywhere the post has to be seen from a truck cab.",
         image: {
@@ -469,7 +469,7 @@ export const products: Product[] = [
       {
         name: "Flexible Spring Bollard — 42″",
         model: "SBD-FSB42Y",
-        datasheet: "/datasheets/SBD-FSB42Y-datasheet.pdf",
+        datasheet: "/datasheets/SBD-FSB42Y-datasheet-r2.pdf",
         summary:
           "Steel post on a spring base. A vehicle clips it, the bollard lays over, and the spring stands it back up — no bent post to cut out and replace. Bolt-on base plate, so it goes down without a core drill.",
         image: {
@@ -543,7 +543,7 @@ export const products: Product[] = [
       {
         name: "Galvanized Steel Bollard — 4.5″ × 48″",
         model: "SBD-GSB4548",
-        datasheet: "/datasheets/SBD-GSB4548-datasheet.pdf",
+        datasheet: "/datasheets/SBD-GSB4548-datasheet-r2.pdf",
         summary:
           "The slimmest of the range on an 8 inch base plate. Bolts down to concrete, so it goes in without a core drill and can be replaced without breaking up the surface.",
         image: {
@@ -560,7 +560,7 @@ export const products: Product[] = [
       {
         name: "Galvanized Steel Bollard — 6 5/8″ × 48″",
         model: "SBD-GSB648",
-        datasheet: "/datasheets/SBD-GSB648-datasheet.pdf",
+        datasheet: "/datasheets/SBD-GSB648-datasheet-r2.pdf",
         summary:
           "A heavier 6 5/8 inch shaft on a wider 12 inch base plate. The middle of the range, and the usual choice where cars and light trucks share the same approach.",
         image: {
@@ -577,7 +577,7 @@ export const products: Product[] = [
       {
         name: "Galvanized Steel Bollard — 8 5/8″ × 48″",
         model: "SBD-GSB848",
-        datasheet: "/datasheets/SBD-GSB848-datasheet.pdf",
+        datasheet: "/datasheets/SBD-GSB848-datasheet-r2.pdf",
         summary:
           "The heaviest section in the range at 8 5/8 inches across, on the same 12 inch base plate. For yards and service courts where the traffic is trucks rather than cars.",
         image: {
@@ -648,7 +648,7 @@ export const products: Product[] = [
       {
         name: "Removable Steel Bollard — 4.5″ × 36″",
         model: "SBD-RSB436Y",
-        datasheet: "/datasheets/SBD-RSB436Y-datasheet-2.pdf",
+        datasheet: "/datasheets/SBD-RSB436Y-datasheet-r2.pdf",
         summary:
           "Yellow powder-coated steel in the slimmer size, with a red reflective band. The high-visibility option where the opening is narrow and the post still needs to be seen before it is reversed into.",
         image: {
@@ -666,7 +666,7 @@ export const products: Product[] = [
       {
         name: "Removable Stainless Bollard — 4″ × 36″",
         model: "SBD-RSSB436",
-        datasheet: "/datasheets/SBD-RSSB436-datasheet.pdf",
+        datasheet: "/datasheets/SBD-RSSB436-datasheet-r2.pdf",
         summary:
           "Satin stainless in the slimmer size, for customer-facing frontages where a painted post would look wrong. Same padlock and ground sleeve arrangement, in a finish that does not need repainting.",
         image: {
@@ -684,7 +684,7 @@ export const products: Product[] = [
       {
         name: "Removable Steel Bollard — 6″ × 36″",
         model: "SBD-RSB636Y",
-        datasheet: "/datasheets/SBD-RSB636Y-datasheet-2.pdf",
+        datasheet: "/datasheets/SBD-RSB636Y-datasheet-r2.pdf",
         summary:
           "The heavier yellow option at 6 inches, for openings that see larger vehicles but still need the post to stand out.",
         image: {
@@ -702,7 +702,7 @@ export const products: Product[] = [
       {
         name: "Removable Stainless Bollard — 6″ × 36″",
         model: "SBD-RSSB636",
-        datasheet: "/datasheets/SBD-RSSB636-datasheet.pdf",
+        datasheet: "/datasheets/SBD-RSSB636-datasheet-r2.pdf",
         summary:
           "The heavier stainless option at 6 inches, where the opening sees larger vehicles but the finish still has to suit a public frontage.",
         image: {
@@ -774,7 +774,7 @@ export const products: Product[] = [
       {
         name: "Stainless Steel Bike Rack",
         model: "SBD-SSBR01",
-        datasheet: "/datasheets/SBD-SSBR01-datasheet-2.pdf",
+        datasheet: "/datasheets/SBD-SSBR01-datasheet-r2.pdf",
         summary:
           "Built for durability, security and style. Integrated side loops give U-lock compatibility at two heights, and the heavy-duty 12-inch base plate provides exceptional stability. Specified for urban streets, parks, schools, businesses and public spaces where finish quality is part of the design intent.",
         image: { src: "/products/sbd-ssbr01-stainless.webp", alt: "SBD-SSBR01 stainless steel bike rack with integrated side loops" },
@@ -800,7 +800,7 @@ export const products: Product[] = [
       {
         name: "Double Moon Bike Rack Bollard",
         model: "SBD-BRBM01",
-        datasheet: "/datasheets/SBD-BRBM01-datasheet-2.pdf",
+        datasheet: "/datasheets/SBD-BRBM01-datasheet-r2.pdf",
         summary:
           "A bollard and a bike rack in one footprint. The circular locking loops park two bicycles while the post itself works as vehicle access control \u2014 useful where a site needs both jobs done in a tight frontage. Assembles on site and mounts to a compact 120 mm base plate.",
         image: { src: "/products/sbd-brbm01-double-moon.webp", alt: "SBD-BRBM01 Double Moon bike rack bollard in powder-coated black" },
@@ -825,7 +825,7 @@ export const products: Product[] = [
       {
         name: "Stainless Steel U Bike Rack",
         model: "SBD-UBR31601",
-        datasheet: "/datasheets/SBD-UBR31601-datasheet-2.pdf",
+        datasheet: "/datasheets/SBD-UBR31601-datasheet-r2.pdf",
         summary:
           "The minimalist U-shape in Grade 316 stainless \u2014 the highest corrosion resistance in the range, suited to heavy de-icing salt exposure. Two points of contact and U-lock capability in a clean form that blends into sidewalks, parks, campuses and commercial frontages.",
         image: { src: "/products/sbd-ubr31601-u-rack.webp", alt: "SBD-UBR31601 stainless steel U bike rack with flanged base plates" },
@@ -849,7 +849,7 @@ export const products: Product[] = [
       {
         name: "4-Way Bike Rack",
         model: "SBD-CBS4W01",
-        datasheet: "/datasheets/SBD-CBS4W01-datasheet-2.pdf",
+        datasheet: "/datasheets/SBD-CBS4W01-datasheet-r2.pdf",
         summary:
           "The highest-capacity unit in the range: four U-shaped locking tubes around a heavy central post park up to eight bicycles in a single compact footprint. The efficient answer where a site plan calls for numbers, not just presence.",
         image: { src: "/products/sbd-cbs4w01-4way.webp", alt: "SBD-CBS4W01 4-Way bike rack with four U-shaped locking tubes" },
@@ -872,7 +872,7 @@ export const products: Product[] = [
       {
         name: "Round Bike Rack",
         model: "SBD-UBRSS01",
-        datasheet: "/datasheets/SBD-UBRSS01-datasheet-4.pdf",
+        datasheet: "/datasheets/SBD-UBRSS01-datasheet-r2.pdf",
         summary:
           "Simple, sturdy and secure. The classic hoop offers the two points of contact and U-lock capability cyclists trust, with clean lines and all-steel construction that sits comfortably in architectural and landscape designs.",
         image: { src: "/products/sbd-ubrss01-round.webp", alt: "SBD-UBRSS01 round hoop bike rack with flanged base plates" },
