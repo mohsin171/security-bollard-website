@@ -79,15 +79,26 @@ export async function POST(request: Request) {
 
   const d = parsed.data;
 
-  // Photo: validate only. Storage (Vercel Blob / R2) is wired in later —
-  // for now we note that a photo was supplied so nothing is silently dropped.
+  // The photo rides along with the notification email, so "send a photo, get a
+  // quote" actually delivers the photo. Long-term storage (Vercel Blob / R2) can
+  // come later; the attachment means nothing is lost in the meantime.
   const photo = form.get("photo");
   let photoNote = "";
+  let attachment: { filename: string; content: Buffer } | null = null;
   if (photo instanceof File && photo.size > 0) {
     if (photo.size > 10 * 1024 * 1024) {
       return NextResponse.json({ error: "That photo is larger than 10MB." }, { status: 400 });
     }
-    photoNote = `${photo.name} (${(photo.size / 1024 / 1024).toFixed(1)}MB)`;
+    const kb = photo.size / 1024;
+    photoNote = `${photo.name} (${kb < 1024 ? `${Math.round(kb)}KB` : `${(kb / 1024).toFixed(1)}MB`})`;
+    try {
+      attachment = {
+        filename: photo.name || "site-photo",
+        content: Buffer.from(await photo.arrayBuffer()),
+      };
+    } catch (err) {
+      console.error("[quote] could not read the uploaded photo:", err);
+    }
   }
 
   const summary = `
@@ -110,7 +121,7 @@ export async function POST(request: Request) {
       ${row("Timeline", d.timeline)}
       ${row("Installation", d.installation)}
       ${row("What prompted this", d.trigger)}
-      ${row("Photo attached", photoNote)}
+      ${row("Photo", photoNote ? `${photoNote} — attached to this email` : "")}
       ${row("Source page", d.sourcePage)}
     </table>
     ${
@@ -140,6 +151,7 @@ export async function POST(request: Request) {
         replyTo: d.email,
         subject: `Quote request — ${d.company || d.name}${d.siteType ? ` (${d.siteType})` : ""}`,
         html: summary,
+        ...(attachment ? { attachments: [attachment] } : {}),
       });
       emailed = true;
     } catch (err) {
