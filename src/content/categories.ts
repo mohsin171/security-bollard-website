@@ -36,44 +36,6 @@ const SPECS_ON_REQUEST = {
 
 export const categories: Category[] = [
   {
-    slug: "galvanized-steel-bollards",
-    name: "Galvanized Steel Bollards",
-    navLabel: "Galvanized Steel Bollards",
-    eyebrow: "Corrosion resistance",
-    headline: "Galvanized steel bollards",
-    intro:
-      "Hot-dip galvanized steel, for outdoor positions where road salt and standing water do the damage rather than impact. The coating goes on after fabrication and covers cut edges and welds, which is why a galvanized post outlasts a painted one on an exposed site.",
-    metaTitle: "Galvanized Steel Bollards Toronto",
-    metaDescription:
-      "Hot-dip galvanized steel bollards for exposed outdoor sites, garage entries and salt-heavy locations across Toronto and the GTA.",
-    applications: [
-      "Exposed parking lots and lot perimeters",
-      "Garage entries and ramps where salt is tracked in",
-      "Yards, laydown areas and fleet compounds",
-      "Transit-adjacent and roadside positions",
-      "Sites where painted bollards rust out on a two to three year cycle",
-      "Positions that are awkward to repaint once installed",
-    ],
-    note: SPECS_ON_REQUEST,
-    related: [
-      {
-        href: "/products/safety-bollards",
-        title: "All safety bollards",
-        blurb: "Finishes, heights and mounting methods compared.",
-      },
-      {
-        href: "/products/yellow-steel-bollards",
-        title: "Yellow steel bollards",
-        blurb: "Where being seen matters more than the coating.",
-      },
-      {
-        href: "/products/bollard-covers",
-        title: "Bollard covers",
-        blurb: "Add high-visibility colour over a galvanized post.",
-      },
-    ],
-  },
-  {
     slug: "retractable-bollards",
     name: "Retractable Bollards",
     navLabel: "Retractable Bollards",

@@ -517,6 +517,107 @@ export const products: Product[] = [
     relatedSegments: ["retail-storefronts", "property-management", "warehouse-industrial"],
   },
   {
+    slug: "galvanized-steel-bollards",
+    name: "Galvanized Steel Bollards",
+    navLabel: "Galvanized Steel Bollards",
+    eyebrow: "Corrosion resistance",
+    headline: "Galvanized steel bollards",
+    intro:
+      "Hot-dip galvanized steel, for outdoor positions where road salt and standing water do the damage rather than impact. The coating goes on after fabrication and covers cut edges and welds, which is why a galvanized post outlasts a painted one on an exposed site.",
+    metaTitle: "Galvanized Steel Bollards Toronto",
+    metaDescription:
+      "Bolt-down galvanized steel bollards in 4.5in, 6 5/8in and 8 5/8in diameters, all 48in tall, for exposed and salt-heavy sites across Toronto and the GTA.",
+    applications: [
+      "Exposed parking lots and lot perimeters",
+      "Garage entries and ramps where salt is tracked in",
+      "Yards, laydown areas and fleet compounds",
+      "Transit-adjacent and roadside positions",
+      "Sites where painted bollards rust out on a two to three year cycle",
+      "Positions that are awkward to repaint once installed",
+    ],
+    variants: [
+      {
+        name: "Galvanized Steel Bollard — 4.5″ × 48″",
+        model: "SBD-GSB4548",
+        datasheet: "/datasheets/SBD-GSB4548-datasheet.pdf",
+        summary:
+          "The slimmest of the range on an 8 inch base plate. Bolts down to concrete, so it goes in without a core drill and can be replaced without breaking up the surface.",
+        image: {
+          src: "/products/sbd-gsb-galvanized.webp",
+          alt: "SBD-GSB4548 hot-dip galvanized steel bollard on a bolt-down base plate",
+        },
+        specs: [
+          { label: "Material", value: "Galvanized Steel" },
+          { label: "Placement", value: "Bolt Down" },
+          { label: "Size", value: "4.5″ × 48″" },
+          { label: "Base plate", value: "8″" },
+        ],
+      },
+      {
+        name: "Galvanized Steel Bollard — 6 5/8″ × 48″",
+        model: "SBD-GSB648",
+        datasheet: "/datasheets/SBD-GSB648-datasheet.pdf",
+        summary:
+          "A heavier 6 5/8 inch shaft on a wider 12 inch base plate. The middle of the range, and the usual choice where cars and light trucks share the same approach.",
+        image: {
+          src: "/products/sbd-gsb-galvanized.webp",
+          alt: "SBD-GSB648 hot-dip galvanized steel bollard on a bolt-down base plate",
+        },
+        specs: [
+          { label: "Material", value: "Galvanized Steel" },
+          { label: "Placement", value: "Bolt Down" },
+          { label: "Size", value: "6 5/8″ × 48″" },
+          { label: "Base plate", value: "12″" },
+        ],
+      },
+      {
+        name: "Galvanized Steel Bollard — 8 5/8″ × 48″",
+        model: "SBD-GSB848",
+        datasheet: "/datasheets/SBD-GSB848-datasheet.pdf",
+        summary:
+          "The heaviest section in the range at 8 5/8 inches across, on the same 12 inch base plate. For yards and service courts where the traffic is trucks rather than cars.",
+        image: {
+          src: "/products/sbd-gsb-galvanized.webp",
+          alt: "SBD-GSB848 hot-dip galvanized steel bollard on a bolt-down base plate",
+        },
+        specs: [
+          { label: "Material", value: "Galvanized Steel" },
+          { label: "Placement", value: "Bolt Down" },
+          { label: "Size", value: "8 5/8″ × 48″" },
+          { label: "Base plate", value: "12″" },
+        ],
+      },
+    ],
+    choosing: [
+      {
+        question: "Which diameter should I order?",
+        answer:
+          "4.5in where the risk is a reversing car — lot perimeters, walkway edges, garage entries. 6 5/8in where cars and light trucks share the approach. 8 5/8in in yards and service courts where the traffic is trucks. All three stand 48in above grade.",
+      },
+      {
+        question: "Galvanized or painted yellow?",
+        answer:
+          "Galvanized where corrosion is the problem and the post is awkward to repaint — exposed lots, ramps that get salted, roadside positions. Painted yellow where being seen matters more than the coating. If you want both, a bollard cover puts high-visibility colour over a galvanized post.",
+      },
+      {
+        question: "Why does galvanizing outlast paint?",
+        answer:
+          "The coating goes on after the bollard is fabricated, so it covers cut edges and welds — the places paint fails first. On an exposed Ontario site that is usually the difference between replacing posts every few winters and leaving them alone.",
+      },
+      {
+        question: "What does bolt-down need?",
+        answer:
+          "Sound concrete of adequate thickness for the anchors, and no core drill. Asphalt and pavers usually need a different approach. Send a photo of the surface if you are not sure and we will tell you.",
+      },
+      {
+        question: "Will it stop a truck?",
+        answer:
+          "Be careful with this question. These are protective and deterrent bollards for the applications described here. They are not crash-rated. If your project requires certified anti-ram performance to ASTM F2656 or IWA 14-1, we will say so and refer you to a rated manufacturer.",
+      },
+    ],
+    relatedSegments: ["property-management", "warehouse-industrial", "retail-storefronts"],
+  },
+  {
     slug: "removable-bollards",
     name: "Removable Bollards",
     navLabel: "Removable Bollards",
