@@ -150,6 +150,7 @@ export async function POST(request: Request) {
   }
 
   // 2. Persist, if the database is configured.
+  let stored = false;
   try {
     const db = getDb();
     if (db) {
@@ -172,15 +173,27 @@ export async function POST(request: Request) {
         photoUrl: photoNote || null,
         sourcePage: d.sourcePage || null,
       });
+      stored = true;
     }
   } catch (err) {
     console.error("[quote] database insert failed:", err);
   }
 
-  if (!emailed && !process.env.DATABASE_URL) {
-    // Nothing is configured yet — still succeed so the form is testable,
-    // but make it loud in the logs.
-    console.warn("[quote] No delivery channel configured. Submission logged only.");
+  // Never tell a customer their enquiry was received when it went nowhere.
+  // If neither the email nor the database took it, say so and give them the
+  // phone number — a visible error is far cheaper than a lost lead.
+  if (!emailed && !stored) {
+    console.error(
+      "[quote] DELIVERY FAILED — no channel accepted this submission.",
+      { hasResendKey: Boolean(apiKey), to },
+      d
+    );
+    return NextResponse.json(
+      {
+        error: `We could not send that just now. Please call ${site.phone} or email ${site.email} and we will pick it up straight away.`,
+      },
+      { status: 503 }
+    );
   }
 
   return NextResponse.json({ ok: true });
