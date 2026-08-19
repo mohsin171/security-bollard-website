@@ -25,13 +25,13 @@ export function buildMetadata({
       siteName: site.name,
       locale: "en_CA",
       type: "website",
-      images: [{ url: `${site.url}/logos/sbd-logo-full.png`, width: 1568, height: 700, alt: site.name }],
+      images: [{ url: `${site.url}/og/sbd-og.png`, width: 1200, height: 630, alt: site.name }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [`${site.url}/logos/sbd-logo-full.png`],
+      images: [`${site.url}/og/sbd-og.png`],
     },
   };
 }

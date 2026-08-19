@@ -1,4 +1,4 @@
-import { site } from "@/content/site";
+import { site, social } from "@/content/site";
 
 export function JsonLd({ data }: { data: Record<string, unknown> }) {
   return (
@@ -22,6 +22,7 @@ export const localBusinessSchema = {
   image: `${site.url}/logos/sbd-logo-full.png`,
   logo: `${site.url}/logos/sbd-logo-full.png`,
   priceRange: "$$",
+  sameAs: social.map((s) => s.href),
   address: {
     "@type": "PostalAddress",
     addressRegion: "ON",

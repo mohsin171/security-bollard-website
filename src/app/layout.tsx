@@ -47,6 +47,14 @@ export const metadata: Metadata = {
   creator: site.name,
   publisher: site.name,
   formatDetection: { telephone: true, address: false, email: true },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/favicon.ico"],
+  },
   alternates: { canonical: site.url },
   openGraph: {
     type: "website",
@@ -57,9 +65,9 @@ export const metadata: Metadata = {
     description: site.description,
     images: [
       {
-        url: `${site.url}/logos/sbd-logo-full.png`,
-        width: 1568,
-        height: 700,
+        url: `${site.url}/og/sbd-og.png`,
+        width: 1200,
+        height: 630,
         alt: `${site.name} — ${site.tagline}`,
       },
     ],
@@ -68,7 +76,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${site.name} | Commercial Bollards & Site Protection`,
     description: site.description,
-    images: [`${site.url}/logos/sbd-logo-full.png`],
+    images: [`${site.url}/og/sbd-og.png`],
   },
   robots: {
     index: true,
