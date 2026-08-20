@@ -723,6 +723,10 @@ export const products: Product[] = [
     name: "Automatic Bollards",
     navLabel: "Automatic Bollards",
     eyebrow: "Access control",
+    hero: {
+      src: "/products/automatic-bollards-hero.webp",
+      alt: "SBD-AMSB2331 automatic rising bollard in stainless steel, shown raised on its mounting plate",
+    },
     headline: "Automatic bollards",
     intro:
       "A bollard that rises and lowers on its own, operated from a control point rather than by hand. Used where an opening is closed by default, opened many times a day, and nobody is available to lift a post in and out.",
