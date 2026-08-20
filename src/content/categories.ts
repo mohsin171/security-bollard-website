@@ -36,48 +36,6 @@ const SPECS_ON_REQUEST = {
 
 export const categories: Category[] = [
   {
-    slug: "retractable-bollards",
-    name: "Retractable Bollards",
-    navLabel: "Retractable Bollards",
-    eyebrow: "Access control",
-    headline: "Retractable bollards",
-    intro:
-      "A bollard that lowers into the ground instead of being lifted out, so the same opening can be closed to general traffic and released for authorised vehicles without anything to carry or store. Used where access changes through the day rather than through the year.",
-    metaTitle: "Retractable Bollards Toronto",
-    metaDescription:
-      "Retractable bollards for controlled vehicle access at commercial sites across Toronto and the GTA. Talk to us before you design around one.",
-    applications: [
-      "Shared entries used by both authorised and general traffic",
-      "Service courts and loading areas with scheduled access",
-      "Pedestrian zones opened for deliveries at set hours",
-      "Restricted yards and staff parking entries",
-      "Frontages where a lifted-out bollard has nowhere to be stored",
-      "Sites where staff will not reliably re-install a removable post",
-    ],
-    note: {
-      title: "Talk to us before you design around one",
-      body:
-        "Retractable units need a pit, drainage and a maintenance plan, and the installed cost is a different order to a fixed bollard. Tell us the opening, the traffic and how often it changes, and we will tell you plainly what is involved and where we would recommend something simpler.",
-    },
-    related: [
-      {
-        href: "/products/removable-bollards",
-        title: "Removable bollards",
-        blurb: "Lifts out into storage — lower cost, more handling.",
-      },
-      {
-        href: "/products/motorised-bollards",
-        title: "Motorised bollards",
-        blurb: "Operated from a control point rather than by hand.",
-      },
-      {
-        href: "/products/traffic-access-barriers",
-        title: "Traffic & access barriers",
-        blurb: "Swing, drop and removable barrier configurations.",
-      },
-    ],
-  },
-  {
     slug: "motorised-bollards",
     name: "Motorised Bollards",
     navLabel: "Motorised Bollards",

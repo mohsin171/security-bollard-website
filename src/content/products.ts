@@ -622,6 +622,78 @@ export const products: Product[] = [
     relatedSegments: ["property-management", "warehouse-industrial", "retail-storefronts"],
   },
   {
+    slug: "retractable-bollards",
+    name: "Retractable Bollards",
+    navLabel: "Retractable Bollards",
+    eyebrow: "Access control",
+    headline: "Retractable bollards",
+    intro:
+      "A bollard that drops into the ground instead of being carried away. Lift it and lock it to close the opening; release the key lock and it retracts flush, leaving nothing to trip over and nothing to store. Used where access changes through the day rather than through the year.",
+    metaTitle: "Retractable Bollards Toronto",
+    metaDescription:
+      "Manual lift retractable stainless steel bollards with key lock and in-ground mount, for driveways, parking areas and commercial entrances across Toronto and the GTA.",
+    applications: [
+      "Shared entries used by both authorised and general traffic",
+      "Residential and condominium driveways",
+      "Service courts and loading areas with scheduled access",
+      "Pedestrian zones opened for deliveries at set hours",
+      "Gated communities and restricted parking areas",
+      "Frontages where a lifted-out bollard has nowhere to be stored",
+    ],
+    variants: [
+      {
+        name: "Retractable Stainless Bollard — 4.5″ × 27″",
+        model: "SBD-SRB4527",
+        datasheet: "/datasheets/SBD-SRB4527-datasheet.pdf",
+        summary:
+          "Satin brushed stainless on an in-ground casing. Lift the post by the recessed handle and the key lock holds it up; unlock it and it drops flush with the surface. No power, no hydraulics and nothing to carry.",
+        image: {
+          src: "/products/sbd-srb4527-retractable.webp",
+          alt: "SBD-SRB4527 retractable satin stainless bollard raised on its in-ground casing, with a lifting handle and lockable top",
+        },
+        specs: [
+          { label: "Material", value: "Stainless Steel" },
+          { label: "Placement", value: "Retractable / In-Ground" },
+          { label: "Size", value: "4.5″ × 27″" },
+          { label: "Base plate", value: "5 1/2″" },
+          { label: "Finish", value: "Satin Brushed" },
+          { label: "Operation", value: "Manual Lift (Retractable)" },
+          { label: "Locking", value: "Lockable Top (Key Lock)" },
+          { label: "Installation", value: "In-Ground Mount" },
+          { label: "Reflective tape", value: "Optional" },
+        ],
+      },
+    ],
+    choosing: [
+      {
+        question: "Is it powered?",
+        answer:
+          "No. This is a manual lift bollard — you raise and lower it by hand and a key lock holds it in position. There is no motor, no hydraulics and no controls to commission, which is why it costs a fraction of an automatic rising bollard and has far less to go wrong.",
+      },
+      {
+        question: "Retractable or removable?",
+        answer:
+          "Retractable when the post has nowhere to go — it drops into its own casing and sits flush, so nothing has to be carried to a store room and nothing goes missing. Removable when you would rather lift the post out entirely and cap the sleeve. Removable costs less; retractable is easier on staff who open the same entry every day.",
+      },
+      {
+        question: "What does installation involve?",
+        answer:
+          "An in-ground casing set into the surface, which means excavation and a thought about where water drains. That is more work than bolting a fixed bollard down, so it is worth confirming the location suits it before you specify. Send a photo and we will tell you.",
+      },
+      {
+        question: "How is it secured?",
+        answer:
+          "A key lock in the top holds the bollard raised. The same lock releases it to retract. Keep the top clear of grit — an in-ground unit needs the surround kept clean to keep working smoothly.",
+      },
+      {
+        question: "Will it stop a truck?",
+        answer:
+          "No. This is an access control and deterrent product for the applications described here. It is not crash-rated. If your project requires certified anti-ram performance to ASTM F2656 or IWA 14-1, we will say so and refer you to a rated manufacturer.",
+      },
+    ],
+    relatedSegments: ["property-management", "retail-storefronts", "contractors"],
+  },
+  {
     slug: "removable-bollards",
     name: "Removable Bollards",
     navLabel: "Removable Bollards",
