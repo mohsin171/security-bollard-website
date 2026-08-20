@@ -36,48 +36,6 @@ const SPECS_ON_REQUEST = {
 
 export const categories: Category[] = [
   {
-    slug: "automatic-bollards",
-    name: "Automatic Bollards",
-    navLabel: "Automatic Bollards",
-    eyebrow: "Access control",
-    headline: "Automatic bollards",
-    intro:
-      "Rising bollards operated from a control point rather than by hand — a fob, a keypad, an intercom or a gate controller. Used where an opening is closed by default, opened many times a day, and nobody is available to lift a post in and out.",
-    metaTitle: "Automatic Bollards Toronto",
-    metaDescription:
-      "Automatic rising bollards for controlled vehicle access at commercial sites across Toronto and the GTA. Talk to us about your project.",
-    applications: [
-      "Entries opened many times a day under access control",
-      "Pedestrianised frontages with timed vehicle access",
-      "Condominium and commercial parking entries",
-      "Service courts shared between tenants",
-      "Sites already running fobs, keypads or gate controllers",
-      "Openings where manual handling is not practical",
-    ],
-    note: {
-      title: "Specified as a project, not a part number",
-      body:
-        "An automatic installation involves a pit, power, drainage, controls and commissioning, and it is quoted against the site rather than off a price list. Send us the opening and how you want it operated. We will tell you what we can stand behind and be straight with you about anything we would bring a specialist in for.",
-    },
-    related: [
-      {
-        href: "/products/retractable-bollards",
-        title: "Retractable bollards",
-        blurb: "The same idea, operated at the bollard.",
-      },
-      {
-        href: "/products/traffic-access-barriers",
-        title: "Traffic & access barriers",
-        blurb: "Swing, drop and removable configurations.",
-      },
-      {
-        href: "/services/site-assessment",
-        title: "Site assessment",
-        blurb: "Send a photo of the opening and get a quote in 24 hours.",
-      },
-    ],
-  },
-  {
     slug: "sign-bollards",
     name: "Sign Bollards",
     navLabel: "Sign Bollards",

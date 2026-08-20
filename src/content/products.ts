@@ -719,6 +719,82 @@ export const products: Product[] = [
     relatedSegments: ["property-management", "retail-storefronts", "contractors"],
   },
   {
+    slug: "automatic-bollards",
+    name: "Automatic Bollards",
+    navLabel: "Automatic Bollards",
+    eyebrow: "Access control",
+    headline: "Automatic bollards",
+    intro:
+      "A bollard that rises and lowers on its own, operated from a control point rather than by hand. Used where an opening is closed by default, opened many times a day, and nobody is available to lift a post in and out.",
+    metaTitle: "Automatic Bollards Toronto",
+    metaDescription:
+      "Automatic rising bollard systems with electric actuator, 600mm and 800mm heights, powder coated or 304/316 stainless, for commercial entrances across Toronto and the GTA.",
+    applications: [
+      "Entries opened many times a day under access control",
+      "Pedestrianised frontages with timed vehicle access",
+      "Condominium and commercial parking entries",
+      "Gated communities and residential driveways",
+      "Service courts shared between tenants",
+      "Openings where manual handling is not practical",
+    ],
+    variants: [
+      {
+        name: "Automatic Steel Bollard System",
+        model: "SBD-AMSB2331",
+        datasheet: "/datasheets/SBD-AMSB2331-datasheet.pdf",
+        summary:
+          "An electric actuator drives the bollard up and down on a lead screw, so the opening is controlled without anyone handling a post. Available in powder-coated steel or 304 and 316 stainless, in two heights, with a rising speed of 9.5cm per second.",
+        image: {
+          src: "/products/sbd-amsb2331-automatic.webp",
+          alt: "SBD-AMSB2331 automatic rising bollard in stainless steel, raised on its square mounting plate",
+        },
+        specs: [
+          { label: "Bollard type", value: "Automatic Retractable" },
+          { label: "Crash rating", value: "Non-rated" },
+          { label: "Height", value: "600mm / 23.6in, 800mm / 31.5in" },
+          { label: "Diameter", value: "275mm" },
+          { label: "Wall thickness", value: "4mm" },
+          { label: "Material", value: "S235JR steel or AISI 304 / 316 stainless" },
+          { label: "Finish", value: "Powder Coated, Stainless Steel 304, Stainless Steel 316" },
+          { label: "Coating", value: "Anti-corrosion grey anthracite, custom RAL on request" },
+          { label: "Rising speed", value: "9.5 cm/s" },
+          { label: "Lowering speed", value: "12 cm/s" },
+          { label: "Foundation depth", value: "1840mm / 72.4in" },
+        ],
+        notes:
+          "The foundation is the deciding factor: 1840mm of excavation, plus power and drainage. Confirm the location can take it before you design around one.",
+      },
+    ],
+    choosing: [
+      {
+        question: "What does the installation actually involve?",
+        answer:
+          "A pit almost two metres deep, a power supply, drainage, and controls wired to however you want it operated — a fob, a keypad, an intercom or an existing gate controller. It is a project quoted against your site, not a part number off a price list. Send us the opening and how you want it operated.",
+      },
+      {
+        question: "Automatic or manual?",
+        answer:
+          "Automatic where the opening is used many times a day and nobody is going to walk out and lift a post each time. Manual — a retractable or removable bollard — where access changes a few times a week or seasonally. Manual costs a fraction as much and has nothing to fail.",
+      },
+      {
+        question: "Which height and finish?",
+        answer:
+          "600mm where the bollard has to be seen but not dominate a frontage, 800mm where it is doing more of the work. Powder coat where colour matters or a site standard applies, 304 stainless for a customer-facing entrance, 316 where de-icing salt is heavy.",
+      },
+      {
+        question: "Will it stop a truck?",
+        answer:
+          "No. The datasheet states plainly that this bollard is non-rated, and we will not tell you otherwise. It controls access; it is not an anti-ram barrier. If your project requires certified performance to ASTM F2656 or IWA 14-1, we will say so and refer you to a rated manufacturer.",
+      },
+      {
+        question: "Who commissions it?",
+        answer:
+          "Powered installations involve groundwork, electrical connection and commissioning. Tell us the site and we will be straight with you about what we handle ourselves and where we bring a specialist in.",
+      },
+    ],
+    relatedSegments: ["property-management", "retail-storefronts", "contractors"],
+  },
+  {
     slug: "removable-bollards",
     name: "Removable Bollards",
     navLabel: "Removable Bollards",
