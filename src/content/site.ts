@@ -65,7 +65,7 @@ export const nav: NavItem[] = [
           { label: "Removable Bollards", href: "/products/removable-bollards" },
           { label: "Galvanized Steel Bollards", href: "/products/galvanized-steel-bollards" },
           { label: "Retractable Bollards", href: "/products/retractable-bollards" },
-          { label: "Motorised Bollards", href: "/products/motorised-bollards" },
+          { label: "Automatic Bollards", href: "/products/automatic-bollards" },
         ],
       },
       {
