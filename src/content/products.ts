@@ -663,6 +663,31 @@ export const products: Product[] = [
           { label: "Reflective tape", value: "Optional" },
         ],
       },
+      {
+        // Published exactly as the supplied sheet reads. Its printed code is
+        // RSB4536 and its printed size is 4.5in x 27in, which do not agree with
+        // each other — flagged with the owner, who asked for it as-is.
+        name: "Retractable Stainless Bollard — 4.5\u2033 \u00d7 27\u2033 (RSB4536)",
+        model: "SBD-RSB4536",
+        datasheet: "/datasheets/SBD-RSB4536-datasheet.pdf",
+        summary:
+          "The same manual lift arrangement on a galvanized in-ground casing, with an optional band on the stainless post. Lifts and locks to close the opening; unlocks to drop away.",
+        image: {
+          src: "/products/sbd-rsb4536-retractable-sleeve.webp",
+          alt: "SBD-RSB4536 retractable stainless bollard with a banded post standing in its galvanized in-ground casing",
+        },
+        specs: [
+          { label: "Material", value: "Stainless Steel" },
+          { label: "Placement", value: "Retractable / In-Ground" },
+          { label: "Size", value: "4.5\u2033 \u00d7 27\u2033" },
+          { label: "Base plate", value: "5 1/2\u2033" },
+          { label: "Finish", value: "Satin Brushed" },
+          { label: "Operation", value: "Manual Lift (Retractable)" },
+          { label: "Locking", value: "Lockable Top (Key Lock)" },
+          { label: "Installation", value: "In-Ground Mount" },
+          { label: "Reflective tape", value: "Optional" },
+        ],
+      },
     ],
     choosing: [
       {
