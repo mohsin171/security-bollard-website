@@ -65,8 +65,8 @@ export default function HomePage() {
       <section className="relative isolate overflow-hidden border-b border-hairline bg-white">
         {/* Scene sits to the right; the artwork fades to white where the copy goes */}
         <Image
-          src="/home-hero.webp"
-          alt="Stainless bollards with red bands and a bike rack outside a Toronto commercial building, with the CN Tower behind"
+          src="/home-hero-2.webp"
+          alt="Stainless bollards with red bands, a bike rack and a decorative black bollard outside a Toronto commercial building at sunset"
           fill
           priority
           sizes="100vw"
