@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import { products } from "@/content/products";
+import { getProduct } from "@/content/products";
+import { getCategory } from "@/content/categories";
 import { services } from "@/content/services";
 import { segments } from "@/content/segments";
 import { applications } from "@/content/applications";
-import { site, capabilityStatement } from "@/content/site";
+import { nav, site, capabilityStatement } from "@/content/site";
 import Reveal from "@/components/Reveal";
 import {
   Section,
@@ -37,6 +38,25 @@ const VULNERABLE_POINTS = [
     detail: "So bikes get chained to the accessibility railing instead.",
   },
 ];
+
+/**
+ * The home page lists the top-level product categories only — the same five
+ * entries as the Products menu — not every individual bollard type beneath
+ * them. Reading from `nav` keeps the two in step automatically.
+ */
+function mainProducts() {
+  const children = nav.find((n) => n.href === "/products")?.children ?? [];
+  return children.map((child) => {
+    const slug = child.href.replace("/products/", "");
+    const entry = getProduct(slug) ?? getCategory(slug);
+    return {
+      href: child.href,
+      name: entry?.name ?? child.label,
+      eyebrow: entry?.eyebrow,
+      intro: entry?.intro ?? child.blurb ?? "",
+    };
+  });
+}
 
 export default function HomePage() {
   return (
@@ -142,14 +162,17 @@ export default function HomePage() {
               intro="Real dimensions, real material grades, real mounting details. If a spec sheet says stainless, the specification table says stainless."
             />
           </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {products.map((p, i) => (
-              <div key={p.slug} className={`reveal reveal-d${Math.min(i + 1, 4)} hover-lift`}>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {mainProducts().map((p, i) => (
+              <div key={p.href} className={`reveal reveal-d${Math.min(i + 1, 4)} hover-lift`}>
                 <LinkCard
-                  href={`/products/${p.slug}`}
+                  href={p.href}
                   eyebrow={p.eyebrow}
                   title={p.name}
-                  blurb={p.intro.split(". ").slice(0, 2).join(". ") + "."}
+                  blurb={(() => {
+                    const t = p.intro.split(". ").slice(0, 2).join(". ");
+                    return t.endsWith(".") ? t : `${t}.`;
+                  })()}
                 />
               </div>
             ))}
