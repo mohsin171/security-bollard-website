@@ -70,7 +70,9 @@ export default function HomePage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-right"
+          /* contain on large screens so the artwork is never cropped; cover below,
+             where the frame is far taller than the image */
+          className="object-cover object-right lg:object-contain"
         />
         {/* Insurance for the copy at every width, since the fade in the artwork moves */}
         <div
