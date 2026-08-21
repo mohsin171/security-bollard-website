@@ -62,32 +62,38 @@ export default function HomePage() {
   return (
     <>
       {/* ---------- Hero ---------- */}
-      <section className="ambient border-b border-hairline bg-white">
-        <div className="blueprint-grid" aria-hidden />
-        <div
-          className="glow-orb glow-orb-red"
-          aria-hidden
-          style={{ width: 520, height: 520, top: -220, right: -160, opacity: 0.32 }}
+      <section className="relative isolate overflow-hidden border-b border-hairline bg-white">
+        {/* Scene sits to the right; the artwork fades to white where the copy goes */}
+        <Image
+          src="/home-hero.webp"
+          alt="Stainless bollards with red bands and a bike rack outside a Toronto commercial building, with the CN Tower behind"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-right"
         />
+        {/* Insurance for the copy at every width, since the fade in the artwork moves */}
         <div
-          className="glow-orb glow-orb-yellow"
           aria-hidden
-          style={{ width: 380, height: 380, bottom: -190, left: -120, opacity: 0.22 }}
+          className="absolute inset-0 bg-gradient-to-r from-white from-30% via-white/85 via-55% to-transparent to-72% lg:from-38% lg:via-white/55 lg:via-58% lg:to-70%"
         />
-        <div className="ring-circle" aria-hidden style={{ width: 340, height: 340, top: -90, right: "16%" }} />
-        <div className="ring-circle" aria-hidden style={{ width: 190, height: 190, top: 30, right: "24%", animationDelay: "2.5s" }} />
-        <div className="glow-line" aria-hidden style={{ bottom: 0, left: "5%", right: "5%" }} />
-        <div className="container-sbd grid min-h-[calc(100svh-4.6rem)] items-center gap-10 py-12 lg:min-h-[calc(100svh-7.4rem)] lg:grid-cols-[1.1fr_1fr] lg:content-center lg:items-start lg:gap-14 lg:py-6">
-          <div>
-            <div className="hero-in"><Eyebrow>Bollards &middot; Bike racks &middot; Barriers &middot; Bollard covers</Eyebrow></div>
+
+        <div className="container-sbd relative flex min-h-[calc(100svh-4.6rem)] items-center py-12 lg:min-h-[calc(100svh-7.4rem)] lg:py-6">
+          <div className="max-w-xl">
+            <div className="hero-in flex items-center gap-2.5">
+              <Eyebrow>Bollards &middot; Bike racks &middot; Barriers &middot; Covers</Eyebrow>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" className="shrink-0 text-sbd-red" aria-hidden>
+                <path d="M12 1.8l1.2 3.9 2.7-2-.6 3.5 3.4-1.2-1.7 3 3.9.9-3.1 2.1 2.4 2-4.2.3.8 2.5-3.4-1.3-.5 2.1-1.3-1.3v5.4h-.8v-5.4l-1.3 1.3-.5-2.1-3.4 1.3.8-2.5-4.2-.3 2.4-2L2.1 9.9l3.9-.9-1.7-3 3.4 1.2-.6-3.5 2.7 2L12 1.8Z" />
+              </svg>
+            </div>
             <h1 className="hero-in hero-in-d1 mt-4 text-[length:var(--text-hero)] leading-[1.05] text-charcoal">
-              Every commercial site has{" "}
-              <span className="block text-sbd-red">the same weak points.</span>
+              Built to protect what matters.{" "}
+              <span className="block text-sbd-red">Made for Canada.</span>
             </h1>
             <div className="hero-in hero-in-d1 mt-6 h-1 w-24 bg-sbd-red" />
             <p className="hero-in hero-in-d2 mt-6 max-w-lg text-lg text-slate-grey">
-              Bollards, bike racks, barriers and covers for commercial sites — assessed, supplied
-              and installed. Send a photo of the spot and get a written quote within 24 hours.
+              High-quality bollards, bike racks, barriers and covers for commercial sites across
+              Canada. Durable. Reliable. Built to last.
             </p>
             <div className="hero-in hero-in-d3 mt-8 flex flex-wrap gap-3">
               <Button href="/request-a-quote" className="btn-sheen">Send a photo, get a quote</Button>
@@ -96,25 +102,64 @@ export default function HomePage() {
               </Button>
             </div>
 
-            {/* What we actually do, in the order a buyer needs it */}
-            <ul className="hero-in hero-in-d3 mt-6 flex flex-wrap items-center gap-x-6 gap-y-2">
+            {/* Assess, supply, install — the order a buyer moves through */}
+            <ul className="hero-in hero-in-d3 mt-7 flex flex-wrap items-stretch gap-x-5 gap-y-3">
               {[
-                { label: "Security assessment", href: "/services/site-assessment" },
-                { label: "Supply", href: "/products" },
-                { label: "Professional installation", href: "/services/supply-installation" },
-              ].map((step) => (
-                <li key={step.href} className="flex items-center gap-2.5">
-                  <span aria-hidden className="h-1 w-3.5 shrink-0 bg-sbd-red" />
-                  <Link
-                    href={step.href}
-                    className="font-display text-[0.8rem] font-bold uppercase tracking-wide text-charcoal transition-colors hover:text-sbd-red"
-                  >
-                    {step.label}
+                {
+                  label: "Security assessment",
+                  href: "/services/site-assessment",
+                  icon: (
+                    <>
+                      <path d="M12 3.2l6.6 2.4v4.9c0 4-2.7 7.7-6.6 8.7-3.9-1-6.6-4.7-6.6-8.7V5.6L12 3.2Z" />
+                      <path d="m9.1 11.9 2 2 3.8-3.9" />
+                    </>
+                  ),
+                },
+                {
+                  label: "Supply",
+                  href: "/products",
+                  icon: (
+                    <>
+                      <path d="M3 7.5h9.5v7.8H3zM12.5 10.4h3.9l2.6 3v1.9h-6.5z" />
+                      <circle cx="7" cy="17.6" r="1.5" />
+                      <circle cx="16.4" cy="17.6" r="1.5" />
+                    </>
+                  ),
+                },
+                {
+                  label: "Professional installation",
+                  href: "/services/supply-installation",
+                  icon: (
+                    <>
+                      <path d="M14.6 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.7-3.7a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9l-3.7 3.7Z" />
+                    </>
+                  ),
+                },
+              ].map((step, i) => (
+                <li key={step.href} className={i > 0 ? "border-l border-hairline pl-5" : ""}>
+                  <Link href={step.href} className="group flex items-center gap-2.5">
+                    <svg
+                      width="21"
+                      height="21"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.7"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="shrink-0 text-sbd-red"
+                      aria-hidden
+                    >
+                      {step.icon}
+                    </svg>
+                    <span className="max-w-[8.5rem] font-display text-[0.8rem] font-bold uppercase leading-tight tracking-wide text-charcoal transition-colors group-hover:text-sbd-red">
+                      {step.label}
+                    </span>
                   </Link>
                 </li>
               ))}
             </ul>
-            <p className="hero-in hero-in-d4 mt-5 text-sm text-slate-grey">
+            <p className="hero-in hero-in-d4 mt-6 text-sm text-slate-grey">
               Or call{" "}
               <a href={site.phoneHref} className="font-display font-bold text-sbd-red">
                 {site.phone}
@@ -122,37 +167,34 @@ export default function HomePage() {
               &middot; {site.hours}
             </p>
           </div>
-
-          {/* Signature: the vulnerable points list, as a numbered ledger */}
-          <div className="hero-in hero-in-d2 border border-hairline bg-fog shadow-[0_0_60px_rgba(200,16,46,0.08)]">
-            <div className="h-1 w-full bg-sbd-red" />
-            <div className="p-6 md:p-7">
-              <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
-                Where the damage happens
-              </p>
-              <ul className="mt-4 divide-y divide-hairline">
-                {VULNERABLE_POINTS.map((p, i) => (
-                  <li key={p.place} className="flex gap-4 py-3.5 first:pt-0 last:pb-0">
-                    <span className="font-display text-sm font-bold tabular-nums text-sbd-red">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <div>
-                      <p className="font-display text-[0.95rem] font-bold text-charcoal">
-                        {p.place}
-                      </p>
-                      <p className="mt-0.5 text-sm text-slate-grey">{p.detail}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-5 border-t border-hairline pt-4 text-sm text-slate-grey">
-                None of it is dramatic. It is steady, budgeted damage — and the hardware that
-                prevents it has existed for decades.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
+
+      {/* ---------- Where the damage happens ---------- */}
+      <Section>
+        <Reveal className="grid gap-10 lg:grid-cols-[1fr_1.15fr] lg:items-center">
+          <div className="reveal">
+            <SectionHeading
+              eyebrow="Where the damage happens"
+              title="The same four places, on almost every site"
+              intro="None of it is dramatic. It is steady, budgeted damage — and the hardware that prevents it has existed for decades."
+            />
+          </div>
+          <ul className="reveal reveal-d1 divide-y divide-hairline border-y border-hairline">
+            {VULNERABLE_POINTS.map((p, i) => (
+              <li key={p.place} className="flex gap-5 py-5">
+                <span className="font-display text-sm font-bold tabular-nums text-sbd-red">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <p className="font-display text-[0.95rem] font-bold text-charcoal">{p.place}</p>
+                  <p className="mt-0.5 text-sm text-slate-grey">{p.detail}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      </Section>
 
       {/* ---------- Promise bar ---------- */}
       <section className="bg-charcoal">
