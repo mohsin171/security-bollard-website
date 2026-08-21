@@ -79,7 +79,7 @@ export default function HomePage() {
         <div className="glow-line" aria-hidden style={{ bottom: 0, left: "5%", right: "5%" }} />
         <div className="container-sbd grid min-h-[calc(100svh-4.6rem)] items-center gap-10 py-12 lg:min-h-[calc(100svh-7.4rem)] lg:grid-cols-[1.1fr_1fr] lg:content-center lg:items-start lg:gap-14 lg:py-6">
           <div>
-            <div className="hero-in"><Eyebrow>Commercial site protection &middot; GTA &amp; Ontario</Eyebrow></div>
+            <div className="hero-in"><Eyebrow>Bollards &middot; Bike racks &middot; Barriers &middot; Bollard covers</Eyebrow></div>
             <h1 className="hero-in hero-in-d1 mt-4 text-[length:var(--text-hero)] leading-[1.05] text-charcoal">
               Every commercial site has{" "}
               <span className="block text-sbd-red">the same weak points.</span>
