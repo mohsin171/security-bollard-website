@@ -74,10 +74,11 @@ export default function HomePage() {
              where the frame is far taller than the image */
           className="object-cover object-right lg:object-contain"
         />
-        {/* Insurance for the copy at every width, since the fade in the artwork moves */}
+        {/* Small screens only: the artwork is cropped there, so the copy needs a wash.
+            On large screens the artwork carries its own white curve and watermark leaf. */}
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-r from-white from-30% via-white/85 via-55% to-transparent to-72% lg:from-38% lg:via-white/55 lg:via-58% lg:to-70%"
+          className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent lg:hidden"
         />
 
         <div className="container-sbd relative flex min-h-[calc(100svh-4.6rem)] items-center py-12 lg:min-h-[calc(100svh-7.4rem)] lg:py-6">
