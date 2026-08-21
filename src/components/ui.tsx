@@ -285,7 +285,7 @@ export function PageHeader({
     <header
       className={`ambient border-b ${
         artwork
-          ? "relative isolate overflow-hidden border-hairline bg-white pb-16 pt-12 md:pb-24 md:pt-16"
+          ? "relative isolate flex items-center overflow-hidden border-hairline bg-white pb-16 pt-12 md:pb-24 md:pt-16 lg:min-h-[calc(100svh-7.4rem)] lg:py-0"
           : `pb-12 pt-10 md:pb-16 md:pt-14 ${
               onPhoto
                 ? `flex min-h-[calc(100svh-4.6rem)] items-center lg:min-h-[calc(100svh-7.4rem)] ${
