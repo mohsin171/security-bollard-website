@@ -626,6 +626,10 @@ export const products: Product[] = [
     name: "Retractable Bollards",
     navLabel: "Retractable Bollards",
     eyebrow: "Access control",
+    hero: {
+      src: "/products/retractable-bollards-hero.webp",
+      alt: "A retractable stainless bollard lowered into its in-ground casing beside a raised bollard with a yellow band, on a paved forecourt outside a commercial building",
+    },
     headline: "Retractable bollards",
     intro:
       "A bollard that drops into the ground instead of being carried away. Lift it and lock it to close the opening; release the key lock and it retracts flush, leaving nothing to trip over and nothing to store. Used where access changes through the day rather than through the year.",
