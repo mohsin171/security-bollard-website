@@ -53,13 +53,15 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       {photo && (
         <Section className="!pb-0">
           <Reveal>
-            <div className="reveal relative aspect-[21/9] w-full overflow-hidden border border-hairline">
+            {/* Held to max-w-4xl: the source art is modest, and stretching it
+                across the full container was a visible upscale. */}
+            <div className="reveal relative mx-auto aspect-[16/9] w-full max-w-4xl overflow-hidden border border-hairline">
               <Image
                 src={photo}
                 alt={`Bollards protecting ${guide.name.toLowerCase()}`}
                 fill
                 priority
-                sizes="100vw"
+                sizes="(max-width: 896px) 100vw, 896px"
                 className="object-cover"
               />
             </div>
