@@ -77,21 +77,19 @@ export default function HomePage() {
         <div className="ring-circle" aria-hidden style={{ width: 340, height: 340, top: -90, right: "16%" }} />
         <div className="ring-circle" aria-hidden style={{ width: 190, height: 190, top: 30, right: "24%", animationDelay: "2.5s" }} />
         <div className="glow-line" aria-hidden style={{ bottom: 0, left: "5%", right: "5%" }} />
-        <div className="container-sbd grid items-center gap-12 py-14 md:py-20 lg:grid-cols-[1.15fr_1fr]">
+        <div className="container-sbd grid min-h-[calc(100svh-4.6rem)] items-center gap-10 py-12 lg:min-h-[calc(100svh-7.4rem)] lg:grid-cols-[1.1fr_1fr] lg:content-center lg:items-start lg:gap-14 lg:py-10">
           <div>
-            <div className="hero-in"><Eyebrow>Commercial safety &amp; streetscape solutions</Eyebrow></div>
-            <h1 className="hero-in hero-in-d1 mt-4 text-[length:var(--text-hero)] text-charcoal">
-              Every commercial site has{" "}
-              <span className="block text-sbd-red">the same weak points.</span>
+            <div className="hero-in"><Eyebrow>Commercial site protection &middot; GTA &amp; Ontario</Eyebrow></div>
+            <h1 className="hero-in hero-in-d1 mt-4 text-[length:var(--text-hero)] leading-[1.03] text-charcoal">
+              The damage is predictable.{" "}
+              <span className="block text-sbd-red">So is the fix.</span>
             </h1>
             <div className="hero-in hero-in-d1 mt-6 h-1 w-24 bg-sbd-red" />
-            <p className="hero-in hero-in-d2 mt-7 max-w-xl text-lg text-slate-grey">
-              We assess the site, supply the hardware that protects it — bollards, bike racks,
-              barriers and covers — and install it, for commercial properties across the GTA and
-              Ontario. Send us a photo of the problem and you will have a written quote within 24
-              hours.
+            <p className="hero-in hero-in-d2 mt-6 max-w-lg text-lg text-slate-grey">
+              Bollards, bike racks, barriers and covers for commercial sites — assessed, supplied
+              and installed. Send a photo of the spot and get a written quote within 24 hours.
             </p>
-            <div className="hero-in hero-in-d3 mt-9 flex flex-wrap gap-3">
+            <div className="hero-in hero-in-d3 mt-8 flex flex-wrap gap-3">
               <Button href="/request-a-quote" className="btn-sheen">Send a photo, get a quote</Button>
               <Button href="/products" variant="outline">
                 Browse products
@@ -99,7 +97,7 @@ export default function HomePage() {
             </div>
 
             {/* What we actually do, in the order a buyer needs it */}
-            <ul className="hero-in hero-in-d3 mt-7 flex flex-wrap items-center gap-x-6 gap-y-2">
+            <ul className="hero-in hero-in-d3 mt-6 flex flex-wrap items-center gap-x-6 gap-y-2">
               {[
                 { label: "Security assessment", href: "/services/site-assessment" },
                 { label: "Supply", href: "/products" },
@@ -116,7 +114,7 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
-            <p className="hero-in hero-in-d4 mt-6 text-sm text-slate-grey">
+            <p className="hero-in hero-in-d4 mt-5 text-sm text-slate-grey">
               Or call{" "}
               <a href={site.phoneHref} className="font-display font-bold text-sbd-red">
                 {site.phone}
@@ -128,13 +126,13 @@ export default function HomePage() {
           {/* Signature: the vulnerable points list, as a numbered ledger */}
           <div className="hero-in hero-in-d2 border border-hairline bg-fog shadow-[0_0_60px_rgba(200,16,46,0.08)]">
             <div className="h-1 w-full bg-sbd-red" />
-            <div className="p-6 md:p-8">
+            <div className="p-6 md:p-7">
               <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
                 Where the damage happens
               </p>
-              <ul className="mt-5 divide-y divide-hairline">
+              <ul className="mt-4 divide-y divide-hairline">
                 {VULNERABLE_POINTS.map((p, i) => (
-                  <li key={p.place} className="flex gap-4 py-4 first:pt-0 last:pb-0">
+                  <li key={p.place} className="flex gap-4 py-3.5 first:pt-0 last:pb-0">
                     <span className="font-display text-sm font-bold tabular-nums text-sbd-red">
                       {String(i + 1).padStart(2, "0")}
                     </span>
@@ -147,9 +145,9 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 border-t border-hairline pt-5 text-sm text-slate-grey">
-                None of it is dramatic. It is steady, predictable, budgeted damage — and the
-                hardware that prevents it has existed for decades.
+              <p className="mt-5 border-t border-hairline pt-4 text-sm text-slate-grey">
+                None of it is dramatic. It is steady, budgeted damage — and the hardware that
+                prevents it has existed for decades.
               </p>
             </div>
           </div>
