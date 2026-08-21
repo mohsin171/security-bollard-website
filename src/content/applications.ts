@@ -11,70 +11,77 @@
 
 export type Application = {
   name: string;
+  /** Matches the guide slug in guides.ts and the photo filename. */
+  slug: string;
   blurb: string;
   image: string;
-  href?: string;
 };
 
 export const applications: Application[] = [
   {
     name: "Storefronts",
+    slug: "storefronts",
     image: "/applications/storefronts.webp",
     blurb: "Glazing, entrances, ATM and payment areas — where a low-speed nudge becomes a broken window.",
-    href: "/who-we-serve/retail-storefronts",
   },
   {
     name: "Gas stations",
+    slug: "gas-stations",
     image: "/applications/gas-stations.webp",
     blurb: "Fuel pumps and dispensers, propane cages, air and vacuum machines, car wash entrances.",
   },
   {
     name: "Electrical units",
+    slug: "electrical-units",
     image: "/applications/electrical-units.webp",
     blurb: "Transformers, panels, switchgear and metering — expensive to repair, and often beside a parking space.",
   },
   {
     name: "Gas units",
+    slug: "gas-units",
     image: "/applications/gas-units.webp",
     blurb: "Meters, regulators and risers on a building face, where a reversing vehicle is the real risk.",
   },
   {
     name: "Daycares",
+    slug: "daycares",
     image: "/applications/daycares.webp",
     blurb: "Drop-off loops, fenced play area edges and the path children walk between car and door.",
   },
   {
     name: "Schools",
+    slug: "schools",
     image: "/applications/schools.webp",
     blurb: "Bus loops, pedestrian entries and walkways that run alongside moving traffic.",
   },
   {
     name: "Parking lots",
+    slug: "parking-lots",
     image: "/applications/parking-lots.webp",
     blurb: "Bays, islands, garage columns and the building face cars nose into every day.",
-    href: "/products/parking-protection",
   },
   {
     name: "Drive-throughs",
+    slug: "drive-throughs",
     image: "/applications/drive-throughs.webp",
     blurb: "Order points and tight turns, where contact is routine rather than exceptional.",
-    href: "/products/flexible-bollards",
   },
   {
     name: "Warehouses",
+    slug: "warehouses",
     image: "/applications/warehouses.webp",
     blurb: "Racking ends, forklift aisles and equipment, separated by hardware rather than painted lines.",
-    href: "/who-we-serve/warehouse-industrial",
   },
   {
     name: "Truck docks",
+    slug: "truck-docks",
     image: "/applications/truck-docks.webp",
     blurb: "Dock corners, door tracks and levellers — the highest-repeat impact zone on most sites.",
   },
   {
     name: "Public places",
+    slug: "public-places",
     image: "/applications/public-places.webp",
     blurb: "Plazas, transit approaches and walkways, where the finish matters as much as the protection.",
-    href: "/products/public-city-safety",
   },
 ];

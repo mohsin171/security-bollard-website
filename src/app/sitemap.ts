@@ -4,6 +4,7 @@ import { products } from "@/content/products";
 import { categories } from "@/content/categories";
 import { services } from "@/content/services";
 import { segments } from "@/content/segments";
+import { guides } from "@/content/guides";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -39,6 +40,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    })),
+    ...guides.map((g) => ({
+      url: `${site.url}/protecting/${g.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
     })),
     ...services.map((s) => ({
       url: `${site.url}/services/${s.slug}`,

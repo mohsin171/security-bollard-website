@@ -311,15 +311,18 @@ export default function HomePage() {
             />
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {applications.map((a, i) => {
-              const body = (
-                <>
+            {applications.map((a, i) => (
+              <div key={a.slug} className={`reveal reveal-d${Math.min((i % 4) + 1, 4)}`}>
+                <Link
+                  href={`/protecting/${a.slug}`}
+                  className="group block h-full overflow-hidden border border-hairline bg-white transition-colors hover:border-sbd-red"
+                >
                   <span className="relative block aspect-[16/9] w-full overflow-hidden bg-fog">
                     <Image
                       src={a.image}
                       alt={`Bollards protecting ${a.name.toLowerCase()}`}
                       fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                     />
                   </span>
@@ -333,31 +336,16 @@ export default function HomePage() {
                         <span className="mt-1.5 block text-sm text-slate-grey">{a.blurb}</span>
                       </span>
                     </span>
-                    {a.href && (
-                      <span className="mt-3 block pl-7 font-display text-[0.65rem] font-bold uppercase tracking-wider text-sbd-red">
-                        See the range &rarr;
+                    <span className="mt-3 flex items-center gap-1 pl-7 font-display text-[0.65rem] font-bold uppercase tracking-wider text-sbd-red">
+                      Read more
+                      <span aria-hidden className="transition-transform duration-200 group-hover:translate-x-1">
+                        &rarr;
                       </span>
-                    )}
+                    </span>
                   </span>
-                </>
-              );
-              return (
-                <div key={a.name} className={`reveal reveal-d${Math.min((i % 4) + 1, 4)}`}>
-                  {a.href ? (
-                    <Link
-                      href={a.href}
-                      className="group block h-full overflow-hidden border border-hairline bg-white transition-colors hover:border-sbd-red"
-                    >
-                      {body}
-                    </Link>
-                  ) : (
-                    <div className="group h-full overflow-hidden border border-hairline bg-white">
-                      {body}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+                </Link>
+              </div>
+            ))}
           </div>
           <div className="reveal reveal-d2 mt-8 flex flex-wrap items-center gap-4">
             <Button href="/request-a-quote" className="btn-sheen">
