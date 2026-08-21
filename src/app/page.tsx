@@ -77,12 +77,12 @@ export default function HomePage() {
         <div className="ring-circle" aria-hidden style={{ width: 340, height: 340, top: -90, right: "16%" }} />
         <div className="ring-circle" aria-hidden style={{ width: 190, height: 190, top: 30, right: "24%", animationDelay: "2.5s" }} />
         <div className="glow-line" aria-hidden style={{ bottom: 0, left: "5%", right: "5%" }} />
-        <div className="container-sbd grid min-h-[calc(100svh-4.6rem)] items-center gap-10 py-12 lg:min-h-[calc(100svh-7.4rem)] lg:grid-cols-[1.1fr_1fr] lg:content-center lg:items-start lg:gap-14 lg:py-10">
+        <div className="container-sbd grid min-h-[calc(100svh-4.6rem)] items-center gap-10 py-12 lg:min-h-[calc(100svh-7.4rem)] lg:grid-cols-[1.1fr_1fr] lg:content-center lg:items-start lg:gap-14 lg:py-6">
           <div>
             <div className="hero-in"><Eyebrow>Commercial site protection &middot; GTA &amp; Ontario</Eyebrow></div>
-            <h1 className="hero-in hero-in-d1 mt-4 text-[length:var(--text-hero)] leading-[1.03] text-charcoal">
-              The damage is predictable.{" "}
-              <span className="block text-sbd-red">So is the fix.</span>
+            <h1 className="hero-in hero-in-d1 mt-4 text-[length:var(--text-hero)] leading-[1.05] text-charcoal">
+              Every commercial site has{" "}
+              <span className="block text-sbd-red">the same weak points.</span>
             </h1>
             <div className="hero-in hero-in-d1 mt-6 h-1 w-24 bg-sbd-red" />
             <p className="hero-in hero-in-d2 mt-6 max-w-lg text-lg text-slate-grey">
