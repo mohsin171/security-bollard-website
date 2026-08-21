@@ -105,17 +105,42 @@ export function LinkCard({
   title,
   blurb,
   eyebrow,
+  image,
+  imageAlt,
+  imageAspect = "16/9",
 }: {
   href: string;
   title: string;
   blurb?: string;
   eyebrow?: string;
+  /** Optional photo above the copy. */
+  image?: string;
+  imageAlt?: string;
+  imageAspect?: "16/9" | "4/5";
 }) {
   return (
     <Link
       href={href}
-      className="group flex h-full flex-col border border-hairline bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-sbd-red hover:shadow-[0_12px_32px_rgba(200,16,46,0.1)]"
+      className={`group flex h-full flex-col border border-hairline bg-white transition-all duration-300 hover:-translate-y-1 hover:border-sbd-red hover:shadow-[0_12px_32px_rgba(200,16,46,0.1)] ${
+        image ? "overflow-hidden" : "p-6"
+      }`}
     >
+      {image && (
+        <span
+          className={`relative block w-full overflow-hidden bg-fog ${
+            imageAspect === "4/5" ? "aspect-[4/5]" : "aspect-[16/9]"
+          }`}
+        >
+          <Image
+            src={image}
+            alt={imageAlt ?? ""}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+          />
+        </span>
+      )}
+      <span className={image ? "flex flex-1 flex-col p-6" : "contents"}>
       {eyebrow && (
         <p className="mb-2 font-display text-[0.65rem] font-bold uppercase tracking-[0.18em] text-slate-grey">
           {eyebrow}
@@ -126,8 +151,9 @@ export function LinkCard({
       </h3>
       {blurb && <p className="mt-2 flex-1 text-[0.95rem] text-slate-grey">{blurb}</p>}
       <span className="mt-4 inline-flex items-center gap-1 font-display text-xs font-bold uppercase tracking-wider text-sbd-red">
-        View
-        <span aria-hidden className="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+          View
+          <span aria-hidden className="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+        </span>
       </span>
     </Link>
   );

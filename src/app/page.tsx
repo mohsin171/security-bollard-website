@@ -5,6 +5,7 @@ import { getCategory } from "@/content/categories";
 import { services } from "@/content/services";
 import { segments } from "@/content/segments";
 import { applications } from "@/content/applications";
+import { homeProductImages, homeServiceImages, homeSegmentImages } from "@/content/homeCards";
 import { nav, site, capabilityStatement } from "@/content/site";
 import Reveal from "@/components/Reveal";
 import {
@@ -232,6 +233,8 @@ export default function HomePage() {
                   href={p.href}
                   eyebrow={p.eyebrow}
                   title={p.name}
+                  image={homeProductImages[p.href.replace("/products/", "")]}
+                  imageAlt={`${p.name} on a commercial site`}
                   blurb={(() => {
                     const t = p.intro.split(". ").slice(0, 2).join(". ");
                     return t.endsWith(".") ? t : `${t}.`;
@@ -261,6 +264,8 @@ export default function HomePage() {
                   eyebrow={s.eyebrow}
                   title={s.name}
                   blurb={s.headline}
+                  image={homeServiceImages[s.slug]}
+                  imageAlt={s.name}
                 />
               </div>
             ))}
@@ -285,6 +290,9 @@ export default function HomePage() {
                   href={`/who-we-serve/${s.slug}`}
                   title={s.navLabel}
                   blurb={s.headline}
+                  image={homeSegmentImages[s.slug]}
+                  imageAlt={s.navLabel}
+                  imageAspect="4/5"
                 />
               </div>
             ))}
