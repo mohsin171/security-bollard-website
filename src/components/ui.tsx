@@ -267,22 +267,32 @@ export function PageHeader({
   title: string;
   intro?: string;
   breadcrumbs?: { name: string; path: string }[];
-  background?: { src: string; alt?: string; tone?: "dark" | "light" };
+  /**
+   * tone "artwork" is for banner art that already carries its own white field
+   * for the copy — it is shown whole rather than cropped, and gets no wash on
+   * large screens so the artwork's own shapes survive.
+   */
+  background?: { src: string; alt?: string; tone?: "dark" | "light" | "artwork" };
   actions?: ReactNode;
 }) {
   const onPhoto = Boolean(background);
-  const lightPhoto = background?.tone === "light";
+  const artwork = background?.tone === "artwork";
+  const lightPhoto = background?.tone === "light" || artwork;
   // Light-toned photos keep the default charcoal type; dark ones flip to white.
   const invert = onPhoto && !lightPhoto;
 
   return (
     <header
-      className={`ambient border-b pb-12 pt-10 md:pb-16 md:pt-14 ${
-        onPhoto
-          ? `flex min-h-[calc(100svh-4.6rem)] items-center lg:min-h-[calc(100svh-7.4rem)] ${
-              lightPhoto ? "border-hairline bg-white" : "border-charcoal/20 bg-charcoal"
+      className={`ambient border-b ${
+        artwork
+          ? "relative isolate overflow-hidden border-hairline bg-white pb-16 pt-12 md:pb-24 md:pt-16"
+          : `pb-12 pt-10 md:pb-16 md:pt-14 ${
+              onPhoto
+                ? `flex min-h-[calc(100svh-4.6rem)] items-center lg:min-h-[calc(100svh-7.4rem)] ${
+                    lightPhoto ? "border-hairline bg-white" : "border-charcoal/20 bg-charcoal"
+                  }`
+                : "border-hairline bg-fog"
             }`
-          : "border-hairline bg-fog"
       }`}
     >
       {background && (
@@ -293,35 +303,47 @@ export function PageHeader({
             fill
             priority
             sizes="100vw"
-            className="object-cover"
+            className={
+              artwork ? "object-cover object-right lg:object-contain" : "object-cover"
+            }
           />
-          {/* Scrim — keeps the copy legible over the photo */}
+          {/* Scrim — keeps the copy legible over the photo. Artwork carries its
+              own white field on large screens, so it only needs one below. */}
           <div
             aria-hidden
             className={
-              lightPhoto
-                ? "absolute inset-0 bg-gradient-to-r from-white/95 via-white/75 to-white/20"
-                : "absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/80 to-charcoal/40"
+              artwork
+                ? "absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent lg:hidden"
+                : lightPhoto
+                  ? "absolute inset-0 bg-gradient-to-r from-white/95 via-white/75 to-white/20"
+                  : "absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/80 to-charcoal/40"
             }
           />
+          {!artwork && (
+            <div
+              aria-hidden
+              className={lightPhoto ? "absolute inset-0 bg-white/10" : "absolute inset-0 bg-charcoal/15"}
+            />
+          )}
+        </>
+      )}
+      {!artwork && (
+        <>
           <div
+            className="glow-orb glow-orb-red"
             aria-hidden
-            className={lightPhoto ? "absolute inset-0 bg-white/10" : "absolute inset-0 bg-charcoal/15"}
+            style={{ width: 380, height: 380, top: -190, right: -110, opacity: invert ? 0.35 : 0.2 }}
+          />
+          <div
+            className={`ring-circle ${invert ? "ring-circle-light" : ""}`}
+            aria-hidden
+            style={{ width: 240, height: 240, top: -60, right: "10%" }}
           />
         </>
       )}
-      <div
-        className="glow-orb glow-orb-red"
-        aria-hidden
-        style={{ width: 380, height: 380, top: -190, right: -110, opacity: invert ? 0.35 : 0.2 }}
-      />
-      <div
-        className={`ring-circle ${invert ? "ring-circle-light" : ""}`}
-        aria-hidden
-        style={{ width: 240, height: 240, top: -60, right: "10%" }}
-      />
       <div className="glow-line" aria-hidden style={{ bottom: 0, left: 0, right: 0 }} />
-      <div className={`container-sbd ${onPhoto ? "w-full" : ""}`}>
+      <div className={`container-sbd relative ${onPhoto ? "w-full" : ""}`}>
+        <div className={artwork ? "max-w-xl" : ""}>
         {breadcrumbs && (
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol
@@ -364,6 +386,7 @@ export function PageHeader({
           </p>
         )}
         {actions && <div className="mt-9 flex flex-wrap gap-3">{actions}</div>}
+        </div>
       </div>
     </header>
   );
