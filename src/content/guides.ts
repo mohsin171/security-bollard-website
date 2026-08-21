@@ -17,9 +17,17 @@ export type Guide = {
   name: string;
   eyebrow: string;
   title: string;
+  /** The standfirst heading, e.g. "Protect Your Gas Station, Customers & Equipment". */
+  subtitle: string;
   intro: string;
+  /** Second intro paragraph naming the company and the service area. */
+  lede: string;
   metaTitle: string;
   metaDescription: string;
+  /** The highest-value thing to protect on this kind of site. */
+  focus: { title: string; paras: string[] };
+  /** Closing supply-and-installation paragraph. */
+  supply: string;
   /** What actually gets struck on this kind of site. */
   protects: string[];
   /** What a properly placed bollard changes. */
@@ -106,6 +114,16 @@ const QUOTE_NOTE = {
 export const guides: Guide[] = [
   {
     slug: "storefronts",
+    subtitle: "Protect Your Storefront, Customers & Entrances",
+    lede: "Security Bollard Direct supplies and installs commercial storefront bollards throughout the Greater Toronto Area, to help protect glazing, entrances, payment areas and the people using them.",
+    focus: {
+      title: "Storefront Glazing Protection Bollards",
+      paras: [
+        "Glazing is the single most expensive thing on a retail frontage and the least able to take a knock. A vehicle rolling forward at walking pace can put a window, a door frame and an automatic door mechanism out of service in one movement, and the replacement glass is rarely in stock.",
+        "Properly positioned bollards create a physical stop between the parking area and the glass line, while keeping the entrance clear and the frontage looking like a shop rather than a compound.",
+      ],
+    },
+    supply: "Security Bollard Direct provides bollard supply and professional installation for retail plazas, franchise locations, pharmacies, banks, restaurants and multi-site operators throughout the GTA. We can help determine the appropriate bollard type, size, placement and installation method for your frontage.",
     name: "Storefronts",
     eyebrow: "Retail & customer-facing",
     title: "How bollards protect a storefront",
@@ -138,6 +156,16 @@ export const guides: Guide[] = [
   },
   {
     slug: "gas-stations",
+    subtitle: "Protect Your Gas Station, Customers & Equipment",
+    lede: "Security Bollard Direct supplies and installs durable gas station security bollards throughout the Greater Toronto Area to help protect critical equipment, property and people.",
+    focus: {
+      title: "Gas Pump Protection Bollards",
+      paras: [
+        "Fuel dispensers are one of the most important areas of a gas station to protect. A vehicle striking a pump can cause expensive equipment damage, business interruption and serious safety concerns.",
+        "Our steel bollard systems create a strong physical barrier between vehicles and fuel dispensing equipment while maintaining a professional appearance.",
+      ],
+    },
+    supply: "Security Bollard Direct provides bollard supply and professional installation for independent gas stations, convenience stores, fuel retailers, property managers and commercial facilities throughout the GTA. We can help determine the appropriate bollard type, size, placement and installation method based on your property.",
     name: "Gas stations",
     eyebrow: "Fuel retail",
     title: "How bollards protect a gas station",
@@ -173,6 +201,16 @@ export const guides: Guide[] = [
   },
   {
     slug: "electrical-units",
+    subtitle: "Protect Electrical Equipment from Vehicle Impact",
+    lede: "Security Bollard Direct supplies and installs durable electrical unit protection bollards throughout the Greater Toronto Area for commercial, industrial and institutional properties.",
+    focus: {
+      title: "Transformer Protection Bollards",
+      paras: [
+        "Transformers are often installed beside parking spaces, driveways and vehicle-access areas, because that is where the service runs. Properly positioned steel bollards create a strong physical barrier that helps reduce the risk of vehicles striking sensitive electrical equipment.",
+        "Electrical cabinets and utility equipment can be expensive to repair and may require immediate service if damaged. We provide bollard solutions for both new construction and existing commercial properties.",
+      ],
+    },
+    supply: "Proper placement matters as much as product here. Bollards need to provide effective vehicle protection while maintaining suitable access for inspection, maintenance and servicing. Security Bollard Direct provides supply and installation based on the layout and protection requirements of your property.",
     name: "Electrical units",
     eyebrow: "Utility & infrastructure",
     title: "How bollards protect electrical equipment",
@@ -206,6 +244,16 @@ export const guides: Guide[] = [
   },
   {
     slug: "gas-units",
+    subtitle: "Protect Gas Meters, Regulators & Risers",
+    lede: "Security Bollard Direct supplies and installs gas meter protection bollards throughout the Greater Toronto Area, positioned to the clearances your utility requires.",
+    focus: {
+      title: "Gas Meter Protection Bollards",
+      paras: [
+        "Gas meters sit on the building face at bumper height, usually next to a parking space or a service drive. A reversing vehicle is the realistic risk, and unlike most impacts this one has consequences well beyond the repair bill.",
+        "A short run of bollards on the vehicle side of the meter set gives the driver something solid to meet first, while leaving the meter accessible for reading, servicing and emergency shut-off.",
+      ],
+    },
+    supply: "Security Bollard Direct provides supply and professional installation for commercial, industrial and multi-residential properties throughout the GTA. Gas utilities publish minimum clearances around meter sets, and those govern where a bollard can be placed \u2014 we position to the clearance rather than to whatever fits.",
     name: "Gas units",
     eyebrow: "Utility & infrastructure",
     title: "How bollards protect gas meters and regulators",
@@ -236,6 +284,16 @@ export const guides: Guide[] = [
   },
   {
     slug: "daycares",
+    subtitle: "Protect Children, Play Areas & Drop-Off Zones",
+    lede: "Security Bollard Direct supplies and installs safety bollards for daycares and childcare centres throughout the Greater Toronto Area, separating children on foot from vehicle movement.",
+    focus: {
+      title: "Drop-Off Zone Protection Bollards",
+      paras: [
+        "The drop-off loop concentrates the two things you least want to mix: small children on foot and parents in a hurry in vehicles. It is busiest in the two short windows either side of the working day, and that is when the risk is highest.",
+        "Bollards along the walking route hold vehicles back from the path between car and door, and make the intended route obvious to a driver without anyone having to explain the signage.",
+      ],
+    },
+    supply: "Security Bollard Direct provides supply and professional installation for licensed childcare centres, preschools, after-school programs and community facilities throughout the GTA. We can help determine appropriate placement around drop-off loops, play area fencing and building entrances.",
     name: "Daycares",
     eyebrow: "Childcare",
     title: "How bollards protect a daycare",
@@ -267,6 +325,16 @@ export const guides: Guide[] = [
   },
   {
     slug: "schools",
+    subtitle: "Protect Students, Entrances & Walkways",
+    lede: "Security Bollard Direct supplies and installs safety bollards and bike racks for schools throughout the Greater Toronto Area, for bus loops, pedestrian entries and walkways alongside moving traffic.",
+    focus: {
+      title: "Pedestrian Entry Protection Bollards",
+      paras: [
+        "A school site runs a bus loop, a parent drop-off, a staff lot and a service entrance, often through the same few metres of asphalt, twice a day. Pedestrian routes cross all of it.",
+        "Bollards define those routes with hardware rather than paint, which keeps working after the line has worn away and through a winter of plowing.",
+      ],
+    },
+    supply: "Security Bollard Direct provides supply and professional installation for public and private schools, colleges and campuses throughout the GTA. Bus turning circles usually set the geometry of a school site, so we position around the bus path and the walking route.",
     name: "Schools",
     eyebrow: "Education",
     title: "How bollards protect a school",
@@ -298,6 +366,16 @@ export const guides: Guide[] = [
   },
   {
     slug: "parking-lots",
+    subtitle: "Protect Buildings, Columns & Bays",
+    lede: "Security Bollard Direct supplies and installs parking lot bollards, wheel stops and column protection throughout the Greater Toronto Area.",
+    focus: {
+      title: "Building Face & Column Protection",
+      paras: [
+        "A parking lot damages itself slowly. Overhang past the wheel stop, a clipped column, a nosed-in bumper against the building face \u2014 none of it looks serious on the day, and all of it appears in the repair budget every year.",
+        "Bollards and wheel stops limit how far a vehicle can travel before it reaches something structural, which turns an annual repair into a one-off installation.",
+      ],
+    },
+    supply: "Security Bollard Direct provides supply and professional installation for commercial plazas, office buildings, condominium properties, parking structures and retail centres throughout the GTA. Where a wheel stop solves the problem more cheaply than a bollard, we will say so.",
     name: "Parking lots",
     eyebrow: "Parking areas",
     title: "How bollards protect a parking lot",
@@ -329,6 +407,16 @@ export const guides: Guide[] = [
   },
   {
     slug: "drive-throughs",
+    subtitle: "Protect Order Points, Lanes & Equipment",
+    lede: "Security Bollard Direct supplies and installs drive-through bollards throughout the Greater Toronto Area, for lanes where vehicle contact is routine rather than exceptional.",
+    focus: {
+      title: "Order Point & Menu Board Protection",
+      paras: [
+        "In a drive-through the lane is narrow by design, drivers are looking at a menu board rather than the kerb, and the same corner gets clipped week after week. Order points, speaker posts and payment windows take the consequences.",
+        "Flexible bollards absorb that repeated contact and return to position, so a clipped post is not a replacement job. Where the bollard has to actually stop a vehicle \u2014 in front of glazing or a gas meter \u2014 a fixed steel post is the right answer instead.",
+      ],
+    },
+    supply: "Security Bollard Direct provides supply and professional installation for quick service restaurants, coffee chains, pharmacies with drive-through service and car wash operators throughout the GTA. Most drive-throughs need both flexible and fixed bollards, in different positions.",
     name: "Drive-throughs",
     eyebrow: "Quick service",
     title: "How bollards protect a drive-through",
@@ -360,6 +448,16 @@ export const guides: Guide[] = [
   },
   {
     slug: "warehouses",
+    subtitle: "Protect Racking, Equipment & People on Foot",
+    lede: "Security Bollard Direct supplies and installs warehouse safety bollards and guard rail throughout the Greater Toronto Area, and will walk your floor at no charge to produce a numbered risk list.",
+    focus: {
+      title: "Racking & Aisle Protection Bollards",
+      paras: [
+        "Inside a warehouse the vehicles are forklifts, they operate all shift, and the driver's sightlines are blocked by whatever is on the forks. Painted lines record where people are supposed to walk; they do not stop anything.",
+        "Bollards and guard rail at racking ends, aisle entries and walkway edges turn a struck upright into a struck bollard. That is the difference between a replaceable post and a rack collapse.",
+      ],
+    },
+    supply: "Security Bollard Direct provides supply and professional installation for warehouses, distribution centres, manufacturing facilities and cold storage throughout the GTA. A free safety walkthrough gives your JHSC a numbered risk list in priority order, with a quote against each line and no obligation to buy any of it.",
     name: "Warehouses",
     eyebrow: "Industrial",
     title: "How bollards protect a warehouse",
@@ -391,6 +489,16 @@ export const guides: Guide[] = [
   },
   {
     slug: "truck-docks",
+    subtitle: "Protect Doors, Levellers & Dock Corners",
+    lede: "Security Bollard Direct supplies and installs dock protection bollards throughout the Greater Toronto Area, for the highest-repeat impact zone on most commercial sites.",
+    focus: {
+      title: "Dock Door & Corner Protection Bollards",
+      paras: [
+        "A trailer reverses onto the dock several times a day, guided by mirrors and a spotter who is not always there, with inches of margin either side. Corners, door tracks, levellers and control panels absorb the misses.",
+        "Surface-mounted bollards on a base plate take that impact instead of the building, and can be swapped without breaking up the apron. Dock bollards are consumable, and that is the point \u2014 they are cheaper and quicker to replace than a door track.",
+      ],
+    },
+    supply: "Security Bollard Direct provides supply and professional installation for distribution centres, warehouses, food and beverage facilities and retail service yards throughout the GTA. We can plan a replacement schedule so damage becomes a budgeted line rather than an emergency call.",
     name: "Truck docks",
     eyebrow: "Loading & shipping",
     title: "How bollards protect a truck dock",
@@ -422,6 +530,16 @@ export const guides: Guide[] = [
   },
   {
     slug: "public-places",
+    subtitle: "Protect Pedestrians, Plazas & Public Frontages",
+    lede: "Security Bollard Direct supplies and installs streetscape and public realm bollards and bike racks throughout the Greater Toronto Area, for municipalities, BIAs, campuses and mixed-use developments.",
+    focus: {
+      title: "Streetscape & Plaza Protection Bollards",
+      paras: [
+        "In a plaza, a transit approach or a park entrance the requirement is the same as on a private site \u2014 separate people from vehicles \u2014 but the finish, the approvals and the design standard all matter more, and the hardware is looked at by thousands of people a day.",
+        "Satin stainless and decorative bollards define pedestrian space without fencing it off, while removable and retractable units keep service and emergency access available.",
+      ],
+    },
+    supply: "Security Bollard Direct provides supply and professional installation for municipal projects, BIA streetscape improvements, transit authorities, school and hospital campuses and mixed-use developments throughout the GTA. Send the specification section and the schedule, and we will confirm compliance in writing.",
     name: "Public places",
     eyebrow: "Public realm",
     title: "How bollards protect a public space",
@@ -455,3 +573,53 @@ export const guides: Guide[] = [
 
 export const getGuide = (slug: string) => guides.find((g) => g.slug === slug);
 export { QUOTE_NOTE };
+
+/** Shared across every guide — the same commercial range, described once. */
+export const BUILD_FEATURES = [
+  "Heavy-duty steel construction",
+  "Multiple bollard diameters and heights",
+  "Surface-mounted and in-ground options",
+  "Powder-coated finishes",
+  "Galvanized finishes",
+  "Stainless steel construction",
+  "Reflective safety tape",
+  "Custom colours",
+  "Fixed, removable and automatic systems",
+  "Professional installation",
+];
+
+/** Written out in full on each guide, as the owner's copy does. */
+export const SERVICE_AREA = [
+  "Toronto", "Mississauga", "Brampton", "Vaughan", "Markham", "Richmond Hill",
+  "Scarborough", "North York", "Etobicoke", "Oakville", "Burlington", "Milton",
+];
+
+/** The option descriptions that appear under "Bollard options for ...". */
+export const OPTION_NOTES: Record<string, string> = {
+  "/products/safety-bollards":
+    "Heavy-duty steel bollards provide permanent protection for high-risk areas. Available in multiple diameters, heights and finishes.",
+  "/products/yellow-steel-bollards":
+    "High-visibility powder-coated steel with reflective banding, for positions where the bollard needs to be seen before it is hit.",
+  "/products/galvanized-steel-bollards":
+    "Designed for outdoor environments, galvanized bollards provide excellent corrosion resistance and long-term durability.",
+  "/products/stainless-steel-bollards":
+    "A premium option combining protection with a clean, modern appearance. Suited to storefronts, entrances and customer-facing areas.",
+  "/products/flexible-bollards":
+    "Spring-loaded posts that flex on impact and return to position, for lanes and turns where contact is routine.",
+  "/products/removable-bollards":
+    "Removable bollards allow controlled vehicle access while providing protection when required.",
+  "/products/retractable-bollards":
+    "Manual lift bollards that drop flush into their own casing, so nothing has to be carried away or stored.",
+  "/products/automatic-bollards":
+    "Automatic bollards provide convenient access control for restricted entrances, service areas and high-traffic openings.",
+  "/products/bollard-covers":
+    "Covers restore high-visibility colour over an existing post in minutes, without a crew, a repaint or a shutdown.",
+  "/products/traffic-access-barriers":
+    "Guard rail and barrier runs for where the risk follows a line rather than sitting at a single point.",
+  "/products/bike-racks":
+    "Stainless, round, Double Moon, 4-Way and 316 stainless U racks, with dimensions and datasheets for each.",
+  "/products/sign-bollards":
+    "Marks the rule and protects the space from one footing — accessible stalls, fire routes and directional markings.",
+  "/products/parking-protection":
+    "Wheel stops, column guards and bay definition, for the damage a parking area does to itself.",
+};
