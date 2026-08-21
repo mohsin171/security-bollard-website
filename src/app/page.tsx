@@ -302,37 +302,50 @@ export default function HomePage() {
               intro="Even a low-speed impact can write off a fuel pump, a transformer or a storefront window — and take the business offline while it is repaired. A bollard is the cheapest thing on site that stops that happening."
             />
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {applications.map((a, i) => {
               const body = (
                 <>
-                  <span className="flex items-start gap-3">
-                    <span aria-hidden className="mt-[0.6rem] h-1.5 w-4 shrink-0 bg-sbd-red" />
-                    <span>
-                      <span className="block font-display text-base font-bold text-charcoal">
-                        {a.name}
-                      </span>
-                      <span className="mt-1.5 block text-sm text-slate-grey">{a.blurb}</span>
-                    </span>
+                  <span className="relative block aspect-[16/9] w-full overflow-hidden bg-fog">
+                    <Image
+                      src={a.image}
+                      alt={`Bollards protecting ${a.name.toLowerCase()}`}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    />
                   </span>
-                  {a.href && (
-                    <span className="mt-3 block pl-7 font-display text-[0.65rem] font-bold uppercase tracking-wider text-sbd-red">
-                      See the range &rarr;
+                  <span className="block p-6">
+                    <span className="flex items-start gap-3">
+                      <span aria-hidden className="mt-[0.6rem] h-1.5 w-4 shrink-0 bg-sbd-red" />
+                      <span>
+                        <span className="block font-display text-base font-bold text-charcoal">
+                          {a.name}
+                        </span>
+                        <span className="mt-1.5 block text-sm text-slate-grey">{a.blurb}</span>
+                      </span>
                     </span>
-                  )}
+                    {a.href && (
+                      <span className="mt-3 block pl-7 font-display text-[0.65rem] font-bold uppercase tracking-wider text-sbd-red">
+                        See the range &rarr;
+                      </span>
+                    )}
+                  </span>
                 </>
               );
               return (
-                <div key={a.name} className={`reveal reveal-d${Math.min((i % 3) + 1, 4)}`}>
+                <div key={a.name} className={`reveal reveal-d${Math.min((i % 4) + 1, 4)}`}>
                   {a.href ? (
                     <Link
                       href={a.href}
-                      className="hover-lift block h-full border border-hairline bg-white p-6 transition-colors hover:border-sbd-red"
+                      className="group block h-full overflow-hidden border border-hairline bg-white transition-colors hover:border-sbd-red"
                     >
                       {body}
                     </Link>
                   ) : (
-                    <div className="h-full border border-hairline bg-white p-6">{body}</div>
+                    <div className="group h-full overflow-hidden border border-hairline bg-white">
+                      {body}
+                    </div>
                   )}
                 </div>
               );
