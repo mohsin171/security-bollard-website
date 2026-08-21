@@ -86,8 +86,9 @@ export default function HomePage() {
             </h1>
             <div className="hero-in hero-in-d1 mt-6 h-1 w-24 bg-sbd-red" />
             <p className="hero-in hero-in-d2 mt-6 max-w-lg text-lg text-slate-grey">
-              Bollards, bike racks, barriers and covers for commercial sites — assessed, supplied
-              and installed. Send a photo of the spot and get a written quote within 24 hours.
+              A bollard costs less than the door behind it, and far less than the third repair.
+              Send a photo of the spot and you will have a part number, a price and a date within
+              24 hours.
             </p>
             <div className="hero-in hero-in-d3 mt-8 flex flex-wrap gap-3">
               <Button href="/request-a-quote" className="btn-sheen">Send a photo, get a quote</Button>
