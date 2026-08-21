@@ -3,6 +3,7 @@ import Image from "next/image";
 import { products } from "@/content/products";
 import { services } from "@/content/services";
 import { segments } from "@/content/segments";
+import { applications } from "@/content/applications";
 import { site, capabilityStatement } from "@/content/site";
 import Reveal from "@/components/Reveal";
 import {
@@ -205,8 +206,65 @@ export default function HomePage() {
         </Reveal>
       </Section>
 
-      {/* ---------- Why us ---------- */}
+      {/* ---------- Where bollards go ---------- */}
       <Section tone="fog">
+        <Reveal>
+          <div className="reveal">
+            <SectionHeading
+              eyebrow="Where bollards go"
+              title="Eleven places a vehicle meets something expensive"
+              intro="Even a low-speed impact can write off a fuel pump, a transformer or a storefront window — and take the business offline while it is repaired. A bollard is the cheapest thing on site that stops that happening."
+            />
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {applications.map((a, i) => {
+              const body = (
+                <>
+                  <span className="flex items-start gap-3">
+                    <span aria-hidden className="mt-[0.6rem] h-1.5 w-4 shrink-0 bg-sbd-red" />
+                    <span>
+                      <span className="block font-display text-base font-bold text-charcoal">
+                        {a.name}
+                      </span>
+                      <span className="mt-1.5 block text-sm text-slate-grey">{a.blurb}</span>
+                    </span>
+                  </span>
+                  {a.href && (
+                    <span className="mt-3 block pl-7 font-display text-[0.65rem] font-bold uppercase tracking-wider text-sbd-red">
+                      See the range &rarr;
+                    </span>
+                  )}
+                </>
+              );
+              return (
+                <div key={a.name} className={`reveal reveal-d${Math.min((i % 3) + 1, 4)}`}>
+                  {a.href ? (
+                    <Link
+                      href={a.href}
+                      className="hover-lift block h-full border border-hairline bg-white p-6 transition-colors hover:border-sbd-red"
+                    >
+                      {body}
+                    </Link>
+                  ) : (
+                    <div className="h-full border border-hairline bg-white p-6">{body}</div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+          <div className="reveal reveal-d2 mt-8 flex flex-wrap items-center gap-4">
+            <Button href="/request-a-quote" className="btn-sheen">
+              Send a photo of the spot
+            </Button>
+            <p className="text-sm text-slate-grey">
+              Tell us what you are protecting and from what. Quote back within 24 hours.
+            </p>
+          </div>
+        </Reveal>
+      </Section>
+
+      {/* ---------- Why us ---------- */}
+      <Section>
         <Reveal className="grid gap-12 lg:grid-cols-2">
           <div className="reveal">
             <SectionHeading
