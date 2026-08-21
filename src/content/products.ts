@@ -728,8 +728,8 @@ export const products: Product[] = [
     navLabel: "Automatic Bollards",
     eyebrow: "Access control",
     hero: {
-      src: "/products/automatic-bollards-hero.webp",
-      alt: "SBD-AMSB2331 automatic rising bollard in stainless steel, shown raised on its mounting plate",
+      src: "/products/automatic-bollards-hero-2.webp",
+      alt: "An automatic rising bollard in stainless steel, raised on its square base plate on a paved forecourt outside a glass commercial building",
     },
     headline: "Automatic bollards",
     intro:
