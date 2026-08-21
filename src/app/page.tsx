@@ -86,9 +86,10 @@ export default function HomePage() {
             </h1>
             <div className="hero-in hero-in-d1 mt-6 h-1 w-24 bg-sbd-red" />
             <p className="hero-in hero-in-d2 mt-7 max-w-xl text-lg text-slate-grey">
-              We supply the hardware that protects them — bollards, bike racks, barriers and covers
-              — to commercial properties across the GTA and Ontario. Send us a photo of the problem
-              and you will have a written quote within 24 hours.
+              We assess the site, supply the hardware that protects it — bollards, bike racks,
+              barriers and covers — and install it, for commercial properties across the GTA and
+              Ontario. Send us a photo of the problem and you will have a written quote within 24
+              hours.
             </p>
             <div className="hero-in hero-in-d3 mt-9 flex flex-wrap gap-3">
               <Button href="/request-a-quote" className="btn-sheen">Send a photo, get a quote</Button>
@@ -96,6 +97,25 @@ export default function HomePage() {
                 Browse products
               </Button>
             </div>
+
+            {/* What we actually do, in the order a buyer needs it */}
+            <ul className="hero-in hero-in-d3 mt-7 flex flex-wrap items-center gap-x-6 gap-y-2">
+              {[
+                { label: "Security assessment", href: "/services/site-assessment" },
+                { label: "Supply", href: "/products" },
+                { label: "Professional installation", href: "/services/supply-installation" },
+              ].map((step) => (
+                <li key={step.href} className="flex items-center gap-2.5">
+                  <span aria-hidden className="h-1 w-3.5 shrink-0 bg-sbd-red" />
+                  <Link
+                    href={step.href}
+                    className="font-display text-[0.8rem] font-bold uppercase tracking-wide text-charcoal transition-colors hover:text-sbd-red"
+                  >
+                    {step.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
             <p className="hero-in hero-in-d4 mt-6 text-sm text-slate-grey">
               Or call{" "}
               <a href={site.phoneHref} className="font-display font-bold text-sbd-red">
