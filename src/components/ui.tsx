@@ -272,7 +272,13 @@ export function PageHeader({
    * for the copy — it is shown whole rather than cropped, and gets no wash on
    * large screens so the artwork's own shapes survive.
    */
-  background?: { src: string; alt?: string; tone?: "dark" | "light" | "artwork" };
+  background?: {
+    src: string;
+    alt?: string;
+    tone?: "dark" | "light" | "artwork";
+    /** How wide the copy may run before it meets the artwork's curve. */
+    copy?: "md" | "lg" | "xl";
+  };
   actions?: ReactNode;
 }) {
   const onPhoto = Boolean(background);
@@ -343,7 +349,13 @@ export function PageHeader({
       )}
       <div className="glow-line" aria-hidden style={{ bottom: 0, left: 0, right: 0 }} />
       <div className={`container-sbd relative ${onPhoto ? "w-full" : ""}`}>
-        <div className={artwork ? "max-w-lg" : ""}>
+        <div
+          className={
+            artwork
+              ? { md: "max-w-md", lg: "max-w-lg", xl: "max-w-xl" }[background?.copy ?? "lg"]
+              : ""
+          }
+        >
         {breadcrumbs && (
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol
