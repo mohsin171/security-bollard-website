@@ -83,7 +83,7 @@ export default function HomePage() {
             veil heavy enough to read against. */}
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-l from-white/45 via-white/78 to-white/94 lg:hidden"
+          className="absolute inset-0 bg-gradient-to-l from-white/28 via-white/72 to-white/92 lg:hidden"
         />
 
         <div className="container-sbd relative flex min-h-[calc(100svh-4.6rem)] items-center py-10 lg:h-full lg:min-h-0 lg:py-6">
