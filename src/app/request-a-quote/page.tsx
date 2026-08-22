@@ -10,6 +10,7 @@ export const metadata = buildMetadata({
   description:
     "Send a photo and get a written commercial quote within 24 hours. Bollards, bike racks, covers and barriers across Toronto, the GTA and Ontario.",
   path: "/request-a-quote",
+  image: "/request-a-quote-hero-5.webp",
 });
 
 export default function RequestQuotePage() {

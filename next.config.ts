@@ -9,6 +9,20 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        // Photography is versioned in the filename (-2, -3, -4), so a hard
+        // cache is safe: a replacement always arrives under a new name.
+        source: "/:path*.webp",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" },
+        ],
+      },
+      {
+        source: "/logos/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" },
+        ],
+      },
+      {
         // Datasheets are versioned in the filename (-r2), so they can be
         // cached hard. Saves re-downloading multi-MB PDFs on repeat visits.
         source: "/datasheets/:path*",

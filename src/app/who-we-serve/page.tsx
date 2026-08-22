@@ -9,6 +9,7 @@ export const metadata = buildMetadata({
   description:
     "Commercial site protection for property managers and condos, warehouses and industrial sites, retail and store fronts, and contractors and architects across the GTA.",
   path: "/who-we-serve",
+  image: "/who-we-serve-hero-4.webp",
 });
 
 const ALSO_SERVED = [

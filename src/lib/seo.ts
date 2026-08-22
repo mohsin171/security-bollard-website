@@ -6,13 +6,17 @@ export function buildMetadata({
   description,
   path = "/",
   noIndex = false,
+  image,
 }: {
   title: string;
   description: string;
   path?: string;
   noIndex?: boolean;
+  /** Page-specific share image; falls back to the generic OG card. */
+  image?: string;
 }): Metadata {
   const url = `${site.url}${path === "/" ? "" : path}`;
+  const share = image ? `${site.url}${image}` : `${site.url}/og/sbd-og.png`;
   return {
     title,
     description,
@@ -25,13 +29,13 @@ export function buildMetadata({
       siteName: site.name,
       locale: "en_CA",
       type: "website",
-      images: [{ url: `${site.url}/og/sbd-og.png`, width: 1200, height: 630, alt: site.name }],
+      images: [{ url: share, alt: title }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [`${site.url}/og/sbd-og.png`],
+      images: [share],
     },
   };
 }

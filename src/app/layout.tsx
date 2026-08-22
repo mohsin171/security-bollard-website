@@ -3,7 +3,7 @@ import { Archivo, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { JsonLd, localBusinessSchema } from "@/components/JsonLd";
+import { JsonLd, localBusinessSchema, websiteSchema } from "@/components/JsonLd";
 import { site } from "@/content/site";
 
 const archivo = Archivo({
@@ -105,6 +105,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <JsonLd data={localBusinessSchema} />
+        <JsonLd data={websiteSchema} />
         <Header />
         <main id="main" className="flex-1">
           {children}

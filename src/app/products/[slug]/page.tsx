@@ -39,6 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: entry.metaTitle,
     description: entry.metaDescription,
     path: `/products/${entry.slug}`,
+    image: "hero" in entry ? entry.hero?.src : undefined,
   });
 }
 
@@ -61,7 +62,14 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
   return (
     <>
-      <JsonLd data={productSchema(product.name, product.metaDescription, `/products/${product.slug}`)} />
+      <JsonLd
+        data={productSchema(
+          product.name,
+          product.metaDescription,
+          `/products/${product.slug}`,
+          product.hero?.src
+        )}
+      />
       <JsonLd data={faqSchema(product.choosing.map((c) => ({ q: c.question, a: c.answer })))} />
       <JsonLd data={breadcrumbSchema(crumbs)} />
 

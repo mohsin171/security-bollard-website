@@ -9,6 +9,7 @@ export const metadata = buildMetadata({
   description:
     "Site assessment with 24-hour quotes, supply and coordinated installation, free warehouse safety walkthroughs, portfolio programs and replacement scheduling across the GTA.",
   path: "/services",
+  image: "/services-hero-8.webp",
 });
 
 export default function ServicesPage() {

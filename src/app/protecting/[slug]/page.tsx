@@ -7,7 +7,7 @@ import {
 import { applications } from "@/content/applications";
 import { capabilityStatement, site } from "@/content/site";
 import { buildMetadata } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema } from "@/components/JsonLd";
+import { JsonLd, articleSchema, breadcrumbSchema } from "@/components/JsonLd";
 import Reveal from "@/components/Reveal";
 import {
   PageHeader, Section, SectionHeading, CheckList,
@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: guide.metaTitle,
     description: guide.metaDescription,
     path: `/protecting/${guide.slug}`,
+    image: applications.find((a) => a.slug === guide.slug)?.image,
   });
 }
 
@@ -42,6 +43,14 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
   return (
     <>
+      <JsonLd
+        data={articleSchema({
+          headline: guide.title,
+          description: guide.metaDescription,
+          path: `/protecting/${guide.slug}`,
+          image: photo,
+        })}
+      />
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <PageHeader
         eyebrow={guide.eyebrow}

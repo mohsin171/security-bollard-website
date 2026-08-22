@@ -9,6 +9,7 @@ export const metadata = buildMetadata({
   description:
     "Contact Security Bollard Direct for commercial bollards, bike racks and site protection across Toronto, the GTA and Ontario. Call 416-474-4933.",
   path: "/contact",
+  image: "/contact-hero-6.webp",
 });
 
 export default function ContactPage() {

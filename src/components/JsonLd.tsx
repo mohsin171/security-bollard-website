@@ -51,7 +51,7 @@ export function serviceSchema(name: string, description: string, path: string) {
   };
 }
 
-export function productSchema(name: string, description: string, path: string) {
+export function productSchema(name: string, description: string, path: string, image?: string) {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -60,6 +60,7 @@ export function productSchema(name: string, description: string, path: string) {
     url: `${site.url}${path}`,
     brand: { "@type": "Brand", name: site.name },
     category: "Commercial site protection hardware",
+    ...(image ? { image: [`${site.url}${image}`] } : {}),
   };
 }
 
@@ -87,3 +88,45 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
     })),
   };
 }
+
+/** Long-form application guides — /protecting/<slug>. */
+export function articleSchema({
+  headline,
+  description,
+  path,
+  image,
+}: {
+  headline: string;
+  description: string;
+  path: string;
+  image?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    description,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${site.url}${path}` },
+    url: `${site.url}${path}`,
+    ...(image ? { image: [`${site.url}${image}`] } : {}),
+    author: { "@type": "Organization", name: site.name, url: site.url },
+    publisher: {
+      "@type": "Organization",
+      name: site.name,
+      logo: { "@type": "ImageObject", url: `${site.url}/logos/sbd-logo-full.png` },
+    },
+    isAccessibleForFree: true,
+  };
+}
+
+/** Site-level entity, so search engines tie the pages to one brand. */
+export const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${site.url}/#website`,
+  url: site.url,
+  name: site.name,
+  description: site.description,
+  inLanguage: "en-CA",
+  publisher: { "@id": `${site.url}/#business` },
+};

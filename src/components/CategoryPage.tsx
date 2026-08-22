@@ -1,6 +1,6 @@
 import type { Category } from "@/content/categories";
 import { capabilityStatement, site } from "@/content/site";
-import { JsonLd, breadcrumbSchema } from "@/components/JsonLd";
+import { JsonLd, breadcrumbSchema, productSchema } from "@/components/JsonLd";
 import Reveal from "@/components/Reveal";
 import {
   PageHeader, Section, SectionHeading, CheckList,
@@ -17,6 +17,13 @@ export default function CategoryPage({ category }: { category: Category }) {
 
   return (
     <>
+      <JsonLd
+        data={productSchema(
+          category.name,
+          category.metaDescription ?? category.intro,
+          `/products/${category.slug}`
+        )}
+      />
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <PageHeader
         eyebrow={category.eyebrow}
