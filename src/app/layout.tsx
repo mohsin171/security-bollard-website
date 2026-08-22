@@ -5,6 +5,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { JsonLd, localBusinessSchema, websiteSchema } from "@/components/JsonLd";
 import { site } from "@/content/site";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -111,6 +114,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
+        {/* Cookieless, no consent banner needed. Shows up in the Vercel
+            dashboard once Web Analytics is enabled there. */}
+        <Analytics />
+        <SpeedInsights />
+        {/* Google Analytics loads only once a measurement ID is set, so there
+            is no third-party script on the site until then. */}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
       </body>
     </html>
   );

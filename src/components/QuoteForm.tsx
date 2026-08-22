@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent, type ChangeEvent } from "react";
+import { track } from "@vercel/analytics";
 import { site } from "@/content/site";
 
 const SITE_TYPES = [
@@ -80,6 +81,8 @@ export default function QuoteForm() {
       }
 
       setStatus("success");
+      // The conversion that matters: a real enquiry, not a page view.
+      track("quote_submitted", { siteType: String(data.get("siteType") ?? "") });
       form.reset();
       setFileName("");
     } catch {
