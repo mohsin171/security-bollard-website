@@ -21,7 +21,7 @@ export const applications: Application[] = [
   {
     name: "Storefronts",
     slug: "storefronts",
-    image: "/applications/storefronts-4.webp",
+    image: "/applications/storefronts-5.webp",
     blurb: "Glazing, entrances, ATM and payment areas — where a low-speed nudge becomes a broken window.",
   },
   {
@@ -81,7 +81,7 @@ export const applications: Application[] = [
   {
     name: "Public places",
     slug: "public-places",
-    image: "/applications/public-places-3.webp",
+    image: "/applications/public-places-4.webp",
     blurb: "Plazas, transit approaches and walkways, where the finish matters as much as the protection.",
   },
 ];
