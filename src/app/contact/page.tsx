@@ -96,7 +96,7 @@ export default function ContactPage() {
                 "What you are protecting, and from what",
                 "Site type and address, or at least the city",
                 "How many units, and across how many locations",
-                "Mounting surface — concrete, asphalt, pavers, or unknown",
+                "Mounting surface: concrete, asphalt, pavers, or unknown",
                 "Whether this is a replacement, an addition or new construction",
                 "Any architect's specification or drawing, if one exists",
                 "Who approves the spend, and what that process looks like",

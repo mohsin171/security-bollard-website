@@ -22,7 +22,7 @@ export const applications: Application[] = [
     name: "Store Fronts",
     slug: "storefronts",
     image: "/applications/storefronts-5.webp",
-    blurb: "Glazing, entrances, ATM and payment areas — where a low-speed nudge becomes a broken window.",
+    blurb: "Glazing, entrances, ATM and payment areas, where a low-speed nudge becomes a broken window.",
   },
   {
     name: "Gas stations",
@@ -34,7 +34,7 @@ export const applications: Application[] = [
     name: "Electrical units",
     slug: "electrical-units",
     image: "/applications/electrical-units-4.webp",
-    blurb: "Transformers, panels, switchgear and metering — expensive to repair, and often beside a parking space.",
+    blurb: "Transformers, panels, switchgear and metering: expensive to repair, and often beside a parking space.",
   },
   {
     name: "Gas units",
@@ -76,7 +76,7 @@ export const applications: Application[] = [
     name: "Truck docks",
     slug: "truck-docks",
     image: "/applications/truck-docks-4.webp",
-    blurb: "Dock corners, door tracks and levellers — the highest-repeat impact zone on most sites.",
+    blurb: "Dock corners, door tracks and levellers: the highest-repeat impact zone on most sites.",
   },
   {
     name: "Public places",

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand palette — Security Bollard Direct Brand Guidelines v1.0, Section 4 */
+  /* Brand palette: Security Bollard Direct Brand Guidelines v1.0, Section 4 */
   --color-sbd-red: #c8102e;
   --color-sbd-red-dark: #a30d26;
   --color-charcoal: #1a1a1a;
@@ -12,7 +12,7 @@
   --color-fog: #f4f4f4;
   --color-hairline: #e2e2e2;
 
-  /* Typography — Archivo (display) / Inter (body), Section 5 */
+  /* Typography: Archivo (display) / Inter (body), Section 5 */
   --font-display: var(--font-archivo), "Arial Black", Arial, sans-serif;
   --font-sans: var(--font-inter), Calibri, system-ui, sans-serif;
 
@@ -59,7 +59,7 @@
 
 @layer components {
   /* The signature structural device: the red rule.
-     Brand Guidelines Section 6 — 1.5–3pt, SBD Red, under headings. */
+     Brand Guidelines Section 6, 1.5-3pt, SBD Red, under headings. */
   .red-rule::after {
     content: "";
     display: block;
@@ -69,7 +69,7 @@
     background: var(--color-sbd-red);
   }
 
-  /* Hazard stripe — industrial-segment materials only, max 8mm tall.
+  /* Hazard stripe: industrial-segment materials only, max 8mm tall.
      Brand Guidelines Section 6. */
   .hazard-stripe {
     height: 10px;
@@ -83,7 +83,7 @@
   }
 
   /* Banner-artwork heroes. The artwork already carries its own white field for
-     the copy, so it must never be cropped down the left edge — but forcing a
+     the copy, so it must never be cropped down the left edge, but forcing a
      full-screen height on a 2:1 image leaves a letterbox band. On large screens
      the frame takes its height from the artwork's own ratio instead, so the art
      fills it edge to edge. Capped at one screen; --art-ar per image. */

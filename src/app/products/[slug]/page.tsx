@@ -48,7 +48,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const product = getProduct(slug);
 
-  // Categories are the lighter pages in categories.ts — framing, no spec tables.
+  // Categories are the lighter pages in categories.ts: framing, no spec tables.
   if (!product) {
     const category = getCategory(slug);
     if (category) return <CategoryPage category={category} />;
@@ -95,7 +95,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           <div className="glow-line" aria-hidden style={{ bottom: 0, left: 0, right: 0 }} />
 
           <div className="container-sbd grid min-h-[calc(100svh-4.6rem)] items-center gap-10 py-10 md:py-12 lg:min-h-[calc(100svh-7.4rem)] lg:grid-cols-[1.1fr_1fr]">
-            {/* Text — left */}
+            {/* Text, left */}
             <div>
               <nav aria-label="Breadcrumb" className="mb-6">
                 <ol className="flex flex-wrap items-center gap-x-2 text-xs text-slate-grey">
@@ -125,7 +125,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               </p>
             </div>
 
-            {/* Photo card — right, glowing red border, sized to the viewport */}
+            {/* Photo card, right, glowing red border, sized to the viewport */}
             <div className="hero-in hero-in-d2 relative mx-auto aspect-[4/5] w-full max-w-[24rem] lg:mx-0 lg:h-[min(70vh,37rem)] lg:w-auto lg:max-w-none lg:justify-self-end">
               {/* Outer glow halo */}
               <div
@@ -176,7 +176,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 </p>
                 <p className="mt-4 text-lg text-charcoal">
                   Send a photo of the location and tell us what you are protecting. We will specify it
-                  and quote it within 24 hours — including the cheaper option if that is the right one.
+                  and quote it within 24 hours, including the cheaper option if that is the right one.
                 </p>
                 <div className="mt-7">
                   <Button href="/request-a-quote" className="btn-sheen">Send a photo</Button>

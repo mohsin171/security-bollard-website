@@ -67,7 +67,7 @@ export default function ProductGallery({
         }}
         role="group"
         aria-roledescription="carousel"
-        aria-label={`${model ?? "Product"} photos — swipe or use the arrow keys`}
+        aria-label={`${model ?? "Product"} photos: swipe or use the arrow keys`}
       >
         <div className="relative aspect-square w-full overflow-hidden">
           {images.map((img, n) => (

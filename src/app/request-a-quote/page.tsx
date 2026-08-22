@@ -25,7 +25,7 @@ export default function RequestQuotePage() {
       <PageHeader
         eyebrow="Request a quote"
         title="Send a photo. Get a written quote within 24 hours."
-        intro="The more of this you can answer the faster we can price it — but if all you have is a photograph and an address, send that and we will ask the rest."
+        intro="The more of this you can answer the faster we can price it, but if all you have is a photograph and an address, send that and we will ask the rest."
         breadcrumbs={crumbs}
         background={{
           src: "/request-a-quote-hero-5.webp",

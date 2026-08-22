@@ -29,7 +29,7 @@ export default function ProductsPage() {
       <PageHeader
         eyebrow="Commercial product portfolio"
         title="Products built for commercial sites and Canadian winters"
-        intro="Every category, specified properly. Every product page carries dimensions, material grade, finish and mounting method — the information a facilities manager or an estimator actually needs before deciding."
+        intro="Every category, specified properly. Every product page carries dimensions, material grade, finish and mounting method: the information a facilities manager or an estimator actually needs before deciding."
         breadcrumbs={crumbs}
         background={{
           src: "/products-hero-4.webp",
@@ -67,7 +67,7 @@ export default function ProductsPage() {
           ))}
         </div>
 
-        {/* Categories from categories.ts — published without spec tables yet */}
+        {/* Categories from categories.ts, published without spec tables yet */}
         <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((c) => (
             <LinkCard
@@ -90,7 +90,7 @@ export default function ProductsPage() {
         <div className="grid gap-6 md:grid-cols-2">
           <div>
             <h3 className="mb-3 font-display text-base font-bold text-charcoal">
-              Round bike rack — SBD-UBRSS01
+              Round bike rack, SBD-UBRSS01
             </h3>
             <SpecTable
               rows={[
@@ -104,7 +104,7 @@ export default function ProductsPage() {
           </div>
           <div>
             <h3 className="mb-3 font-display text-base font-bold text-charcoal">
-              Stainless bike rack — SBD-SSBR01
+              Stainless bike rack, SBD-SSBR01
             </h3>
             <SpecTable
               rows={[

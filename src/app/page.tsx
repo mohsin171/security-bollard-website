@@ -18,7 +18,7 @@ import {
 } from "@/components/ui";
 
 /* The four vulnerable points from the brand narrative. This is the most
-   characteristic thing in the subject's world — specific, unglamorous,
+   characteristic thing in the subject's world: specific, unglamorous,
    instantly recognisable to a facilities manager. */
 const VULNERABLE_POINTS = [
   {
@@ -40,8 +40,8 @@ const VULNERABLE_POINTS = [
 ];
 
 /**
- * The home page lists the top-level product categories only — the same five
- * entries as the Products menu — not every individual bollard type beneath
+ * The home page lists the top-level product categories only: the same five
+ * entries as the Products menu: not every individual bollard type beneath
  * them. Reading from `nav` keeps the two in step automatically.
  */
 function mainProducts() {
@@ -112,7 +112,7 @@ export default function HomePage() {
               </Button>
             </div>
 
-            {/* Assess, supply, install — the order a buyer moves through */}
+            {/* Assess, supply, install: the order a buyer moves through */}
             <ul className="hero-in hero-in-d3 mt-7 grid grid-cols-1 gap-3 sm:flex sm:flex-wrap sm:items-stretch sm:gap-x-5 sm:gap-y-3">
               {[
                 {
@@ -190,7 +190,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Where the damage happens"
               title="The same four places, on almost every site"
-              intro="None of it is dramatic. It is steady, budgeted damage — and the hardware that prevents it has existed for decades."
+              intro="None of it is dramatic. It is steady, budgeted damage, and the hardware that prevents it has existed for decades."
             />
           </div>
           <ul className="reveal reveal-d1 divide-y divide-hairline border-y border-hairline">
@@ -316,7 +316,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Where bollards go"
               title="Eleven places a vehicle meets something expensive"
-              intro="Even a low-speed impact can write off a fuel pump, a transformer or a store front window — and take the business offline while it is repaired. A bollard is the cheapest thing on site that stops that happening."
+              intro="Even a low-speed impact can write off a fuel pump, a transformer or a store front window, and take the business offline while it is repaired. A bollard is the cheapest thing on site that stops that happening."
             />
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -377,7 +377,7 @@ export default function HomePage() {
             />
             <CheckList
               items={[
-                "Quotes within 24 hours — a published operating standard, not an aspiration",
+                "Quotes within 24 hours: a published operating standard, not an aspiration",
                 "Photo-based site assessment, so routine work needs no site visit",
                 "Full commercial range: bollards, covers, bike racks and barriers",
                 "Per-building quoting and standing price lists for portfolios",

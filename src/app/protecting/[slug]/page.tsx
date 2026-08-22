@@ -230,7 +230,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               </p>
               <p className="mt-5 border-t border-hairline pt-5 text-sm text-slate-grey">
                 Send your location, photos and the areas you want protected. We will recommend a
-                suitable bollard solution and quote supply and installation — within 24 hours.
+                suitable bollard solution and quote supply and installation within 24 hours.
               </p>
             </div>
           </div>

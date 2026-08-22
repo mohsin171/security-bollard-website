@@ -89,7 +89,7 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
   };
 }
 
-/** Long-form application guides — /protecting/<slug>. */
+/** Long-form application guides: /protecting/<slug>. */
 export function articleSchema({
   headline,
   description,

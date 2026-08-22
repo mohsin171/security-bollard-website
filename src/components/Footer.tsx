@@ -40,7 +40,7 @@ export default function Footer() {
 
   return (
     <footer className="ambient bg-charcoal text-white">
-      {/* Ambient layer — same treatment as the quote band */}
+      {/* Ambient layer: same treatment as the quote band */}
       <div className="blueprint-grid blueprint-grid-dark" aria-hidden />
       <div
         className="glow-orb glow-orb-red"
@@ -61,7 +61,7 @@ export default function Footer() {
             <Link
               href="/"
               className="inline-block rounded-sm bg-white p-2.5"
-              aria-label={`${site.name} — home`}
+              aria-label={`${site.name} home`}
             >
               <Image
                 src="/logos/sbd-logo-full.png"
@@ -119,7 +119,7 @@ export default function Footer() {
 
           {/* Nav columns */}
           {columns.map((col) => (
-            <nav key={col.href} aria-label={`Footer — ${col.label}`}>
+            <nav key={col.href} aria-label={`Footer: ${col.label}`}>
               <h2 className="font-display text-[11px] font-bold uppercase tracking-[0.22em] text-white">
                 <Link href={col.href} className="inline-block py-2.5 transition-colors hover:text-white/70">
                   {col.label}
@@ -141,7 +141,7 @@ export default function Footer() {
           ))}
 
           {/* Company column */}
-          <nav aria-label="Footer — Company">
+          <nav aria-label="Footer: Company">
             <h2 className="font-display text-[11px] font-bold uppercase tracking-[0.22em] text-white">
               Company
             </h2>

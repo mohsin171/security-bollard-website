@@ -24,7 +24,7 @@ const VALUES = [
   {
     title: "Say what it is",
     detail:
-      "Precise about capability. Our products are protective and deterrent, not crash-certified — and we volunteer that rather than wait to be asked.",
+      "Precise about capability. Our products are protective and deterrent, not crash-certified, and we volunteer that rather than wait to be asked.",
   },
   {
     title: "Solve the site, not the SKU",
@@ -70,7 +70,7 @@ export default function AboutPage() {
               bike rack that was never installed, so bikes are chained to the accessibility railing.
             </p>
             <p>
-              None of this is dramatic. It is steady, predictable, budgeted damage — and the
+              None of this is dramatic. It is steady, predictable, budgeted damage, and the
               hardware that prevents it has existed for decades.
             </p>
             <p className="font-semibold text-charcoal">

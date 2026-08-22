@@ -118,12 +118,12 @@ export const products: Product[] = [
       {
         question: "What height do I need?",
         answer:
-          "42in above grade is the common commercial standard — high enough to be seen over a hood, low enough not to obstruct sightlines. Warehouse and dock applications often use a shorter, heavier-wall unit. Tell us what you are protecting and from what, and we will specify it.",
+          "42in above grade is the common commercial standard: high enough to be seen over a hood, low enough not to obstruct sightlines. Warehouse and dock applications often use a shorter, heavier-wall unit. Tell us what you are protecting and from what, and we will specify it.",
       },
       {
         question: "Concrete, asphalt or pavers?",
         answer:
-          "This determines everything about mounting and price. Surface-mount base plates need sound concrete of adequate thickness. Asphalt and pavers usually need a different approach. If you are not sure, send a photo — we can usually tell.",
+          "This determines everything about mounting and price. Surface-mount base plates need sound concrete of adequate thickness. Asphalt and pavers usually need a different approach. If you are not sure, send a photo. We can usually tell.",
       },
       {
         question: "Will it stop a truck?",
@@ -158,7 +158,7 @@ export const products: Product[] = [
     ],
     variants: [
       {
-        name: "Round Steel Bollard — 4.5 in × 36 in",
+        name: "Round Steel Bollard, 4.5 in × 36 in",
         model: "SBD-RSB4536Y",
         datasheet: "/datasheets/SBD-RSB4536Y-datasheet-r2.pdf",
         summary:
@@ -178,11 +178,11 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Round Steel Bollard — 4.5 in × 42 in",
+        name: "Round Steel Bollard, 4.5 in × 42 in",
         model: "SBD-RSB4542Y",
         datasheet: "/datasheets/SBD-RSB4542Y-datasheet-r2.pdf",
         summary:
-          "The common commercial height — tall enough to be seen over a car hood, low enough not to obstruct sightlines. The default choice at store fronts, ramps and building approaches.",
+          "The common commercial height: tall enough to be seen over a car hood, low enough not to obstruct sightlines. The default choice at store fronts, ramps and building approaches.",
         image: {
           src: "/products/sbd-rsb-round-yellow.webp",
           alt: "SBD-RSB4542Y round yellow steel bollard with red reflective band and flanged base plate",
@@ -198,7 +198,7 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Round Steel Bollard — 6 in × 48 in",
+        name: "Round Steel Bollard, 6 in × 48 in",
         model: "SBD-RSB648Y",
         datasheet: "/datasheets/SBD-RSB648Y-datasheet-r2.pdf",
         summary:
@@ -218,7 +218,7 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Square Steel Bollard — 4 in × 36 in",
+        name: "Square Steel Bollard, 4 in × 36 in",
         model: "SBD-SSB436Y",
         datasheet: "/datasheets/SBD-SSB436Y-datasheet-r2.pdf",
         summary:
@@ -242,7 +242,7 @@ export const products: Product[] = [
       {
         question: "Which height should I order?",
         answer:
-          "36 inches for inside the building — aisle ends, racking, equipment — where the driver is seated on a forklift. 42 inches outdoors at store fronts, ramps and walkways, which is the common commercial standard. 48 inches where trucks rather than cars are the risk. If you are unsure, send a photo of the location and we will specify it.",
+          "36 inches for inside the building: aisle ends, racking, equipment, where the driver is seated on a forklift. 42 inches outdoors at store fronts, ramps and walkways, which is the common commercial standard. 48 inches where trucks rather than cars are the risk. If you are unsure, send a photo of the location and we will specify it.",
       },
       {
         question: "Round or square?",
@@ -252,7 +252,7 @@ export const products: Product[] = [
       {
         question: "What do I need for the base?",
         answer:
-          "All four mount on an 8 inch base plate with 5/8 inch holes, anchored to concrete. The concrete needs to be sound and thick enough to hold the anchors — asphalt and pavers usually need a different approach. Send a photo of the surface if you are not sure.",
+          "All four mount on an 8 inch base plate with 5/8 inch holes, anchored to concrete. The concrete needs to be sound and thick enough to hold the anchors. Asphalt and pavers usually need a different approach. Send a photo of the surface if you are not sure.",
       },
       {
         question: "Will it stop a truck?",
@@ -278,7 +278,7 @@ export const products: Product[] = [
     },
     headline: "Stainless steel bollards",
     intro:
-      "Where the bollard is visible to customers and the finish is part of the design. Satin stainless in flat top and domed round profiles, corrosion resistant and low maintenance — appropriate for store fronts, plazas, building entrances and any frontage where a painted steel post would look like an afterthought.",
+      "Where the bollard is visible to customers and the finish is part of the design. Satin stainless in flat top and domed round profiles, corrosion resistant and low maintenance: appropriate for store fronts, plazas, building entrances and any frontage where a painted steel post would look like an afterthought.",
     metaTitle: "Stainless Steel Bollards Toronto",
     metaDescription:
       "Flat top and domed round satin stainless steel bollards from 4in x 36in to 6.6in x 48in, with red, yellow or black reflective bands. Toronto and the GTA.",
@@ -292,7 +292,7 @@ export const products: Product[] = [
     ],
     variants: [
       {
-        name: "Flat Top Stainless Bollard — 4″ × 36″",
+        name: "Flat Top Stainless Bollard, 4″ × 36″",
         model: "SBD-FTSSB436",
         datasheet: "/datasheets/SBD-FTSSB436-datasheet-r2.pdf",
         summary:
@@ -309,7 +309,7 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Flat Top Stainless Bollard — 6″ × 48″",
+        name: "Flat Top Stainless Bollard, 6″ × 48″",
         model: "SBD-FTSSB648",
         datasheet: "/datasheets/SBD-FTSSB648-datasheet-r2.pdf",
         summary:
@@ -326,12 +326,12 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Steel Round Bollard — 4″ × 36″",
+        name: "Steel Round Bollard, 4″ × 36″",
         model: "SBD-SSB436",
         randomStart: true,
         datasheet: "/datasheets/SBD-SSB436-datasheet-r2.pdf",
         summary:
-          "Domed top, satin stainless, on an 8 inch base plate. The slimmest of the round range — for entrances and walkway edges where the post should read as part of the frontage.",
+          "Domed top, satin stainless, on an 8 inch base plate. The slimmest of the round range: for entrances and walkway edges where the post should read as part of the frontage.",
         image: {
           src: "/products/sbd-ssb-round-red.webp",
           alt: "SBD-SSB436 satin stainless round bollard with a domed top and red reflective band",
@@ -349,7 +349,7 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Steel Round Bollard — 4.5″ × 36″",
+        name: "Steel Round Bollard, 4.5″ × 36″",
         model: "SBD-SSB4536",
         randomStart: true,
         datasheet: "/datasheets/SBD-SSB4536-datasheet-r2.pdf",
@@ -372,7 +372,7 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Steel Round Bollard — 6.6″ × 36″",
+        name: "Steel Round Bollard, 6.6″ × 36″",
         model: "SBD-SSB6636",
         randomStart: true,
         datasheet: "/datasheets/SBD-SSB6636-datasheet-r2.pdf",
@@ -395,12 +395,12 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Steel Round Bollard — 6.6″ × 48″",
+        name: "Steel Round Bollard, 6.6″ × 48″",
         model: "SBD-SSB6648",
         randomStart: true,
         datasheet: "/datasheets/SBD-SSB6648-datasheet-r2.pdf",
         summary:
-          "The tallest and heaviest of the round range — 6.6 inches across and 48 inches above grade, for yards, service courts and anywhere the post has to be seen from a truck cab.",
+          "The tallest and heaviest of the round range: 6.6 inches across and 48 inches above grade, for yards, service courts and anywhere the post has to be seen from a truck cab.",
         image: {
           src: "/products/sbd-ssb-round-red.webp",
           alt: "SBD-SSB6648 satin stainless round bollard with a domed top and red reflective band",
@@ -427,7 +427,7 @@ export const products: Product[] = [
       {
         question: "Stainless or painted steel?",
         answer:
-          "Stainless where customers see it and where you do not want to repaint. Painted yellow steel where being seen matters more than the finish — a warehouse aisle or a dock apron. Stainless costs more up front and saves the annual repaint.",
+          "Stainless where customers see it and where you do not want to repaint. Painted yellow steel where being seen matters more than the finish: a warehouse aisle or a dock apron. Stainless costs more up front and saves the annual repaint.",
       },
       {
         question: "Which band colour should I choose?",
@@ -453,7 +453,7 @@ export const products: Product[] = [
     },
     headline: "Flexible bollards",
     intro:
-      "A bollard that bends and stands back up. Where contact is expected rather than exceptional — drive-thru lanes, tight turns, wash bays — a spring-loaded bollard absorbs the hit and returns to position, instead of bending permanently and needing replacement every season.",
+      "A bollard that bends and stands back up. Where contact is expected rather than exceptional: drive-thru lanes, tight turns, wash bays. A spring-loaded bollard absorbs the hit and returns to position, instead of bending permanently and needing replacement every season.",
     metaTitle: "Flexible Spring Bollards Toronto",
     metaDescription:
       "Spring-loaded flexible bollards that flex on impact and return to position. Bolt-on mounting, 42in high, for drive-thrus and parking lots across Toronto and the GTA.",
@@ -467,11 +467,11 @@ export const products: Product[] = [
     ],
     variants: [
       {
-        name: "Flexible Spring Bollard — 42″",
+        name: "Flexible Spring Bollard, 42″",
         model: "SBD-FSB42Y",
         datasheet: "/datasheets/SBD-FSB42Y-datasheet-r3.pdf",
         summary:
-          "Steel post on a spring base. A vehicle clips it, the bollard lays over, and the spring stands it back up — no bent post to cut out and replace. Bolt-on base plate, so it goes down without a core drill.",
+          "Steel post on a spring base. A vehicle clips it, the bollard lays over, and the spring stands it back up: no bent post to cut out and replace. Bolt-on base plate, so it goes down without a core drill.",
         image: {
           src: "/products/sbd-fsb42y-flexible-yellow.webp",
           alt: "SBD-FSB42Y yellow flexible spring bollard with a red reflective band, black cap and bolt-on spring base",
@@ -491,7 +491,7 @@ export const products: Product[] = [
       {
         question: "When is flexible the right choice?",
         answer:
-          "When contact is routine rather than rare. A drive-thru lane, a tight turn, a wash bay — anywhere a rigid post gets clipped several times a year. The spring absorbs the hit and stands the bollard back up, which takes the replacement off your maintenance list.",
+          "When contact is routine rather than rare. A drive-thru lane, a tight turn, a wash bay: anywhere a rigid post gets clipped several times a year. The spring absorbs the hit and stands the bollard back up, which takes the replacement off your maintenance list.",
       },
       {
         question: "When is it the wrong choice?",
@@ -506,7 +506,7 @@ export const products: Product[] = [
       {
         question: "How does it mount?",
         answer:
-          "Bolt-on base plate, anchored to concrete — no core drill and no sleeve to set into the surface. That also makes it straightforward to relocate if the lane layout changes.",
+          "Bolt-on base plate, anchored to concrete: no core drill and no sleeve to set into the surface. That also makes it straightforward to relocate if the lane layout changes.",
       },
       {
         question: "Will it stop a truck?",
@@ -541,7 +541,7 @@ export const products: Product[] = [
     ],
     variants: [
       {
-        name: "Galvanized Steel Bollard — 4.5″ × 48″",
+        name: "Galvanized Steel Bollard, 4.5″ × 48″",
         model: "SBD-GSB4548",
         datasheet: "/datasheets/SBD-GSB4548-datasheet-r2.pdf",
         summary:
@@ -558,7 +558,7 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Galvanized Steel Bollard — 6 5/8″ × 48″",
+        name: "Galvanized Steel Bollard, 6 5/8″ × 48″",
         model: "SBD-GSB648",
         datasheet: "/datasheets/SBD-GSB648-datasheet-r2.pdf",
         summary:
@@ -575,7 +575,7 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Galvanized Steel Bollard — 8 5/8″ × 48″",
+        name: "Galvanized Steel Bollard, 8 5/8″ × 48″",
         model: "SBD-GSB848",
         datasheet: "/datasheets/SBD-GSB848-datasheet-r2.pdf",
         summary:
@@ -596,17 +596,17 @@ export const products: Product[] = [
       {
         question: "Which diameter should I order?",
         answer:
-          "4.5in where the risk is a reversing car — lot perimeters, walkway edges, garage entries. 6 5/8in where cars and light trucks share the approach. 8 5/8in in yards and service courts where the traffic is trucks. All three stand 48in above grade.",
+          "4.5in where the risk is a reversing car: lot perimeters, walkway edges, garage entries. 6 5/8in where cars and light trucks share the approach. 8 5/8in in yards and service courts where the traffic is trucks. All three stand 48in above grade.",
       },
       {
         question: "Galvanized or painted yellow?",
         answer:
-          "Galvanized where corrosion is the problem and the post is awkward to repaint — exposed lots, ramps that get salted, roadside positions. Painted yellow where being seen matters more than the coating. If you want both, a bollard cover puts high-visibility colour over a galvanized post.",
+          "Galvanized where corrosion is the problem and the post is awkward to repaint: exposed lots, ramps that get salted, roadside positions. Painted yellow where being seen matters more than the coating. If you want both, a bollard cover puts high-visibility colour over a galvanized post.",
       },
       {
         question: "Why does galvanizing outlast paint?",
         answer:
-          "The coating goes on after the bollard is fabricated, so it covers cut edges and welds — the places paint fails first. On an exposed Ontario site that is usually the difference between replacing posts every few winters and leaving them alone.",
+          "The coating goes on after the bollard is fabricated, so it covers cut edges and welds: the places paint fails first. On an exposed Ontario site that is usually the difference between replacing posts every few winters and leaving them alone.",
       },
       {
         question: "What does bolt-down need?",
@@ -646,7 +646,7 @@ export const products: Product[] = [
     ],
     variants: [
       {
-        name: "Retractable Stainless Bollard — 4.5″ × 27″",
+        name: "Retractable Stainless Bollard, 4.5″ × 27″",
         model: "SBD-SRB4527",
         datasheet: "/datasheets/SBD-SRB4527-datasheet.pdf",
         summary:
@@ -670,8 +670,8 @@ export const products: Product[] = [
       {
         // Published exactly as the supplied sheet reads. Its printed code is
         // RSB4536 and its printed size is 4.5in x 27in, which do not agree with
-        // each other — flagged with the owner, who asked for it as-is.
-        name: "Retractable Stainless Bollard — 4.5\u2033 \u00d7 27\u2033 (RSB4536)",
+        // each other: flagged with the owner, who asked for it as-is.
+        name: "Retractable Stainless Bollard, 4.5\u2033 \u00d7 27\u2033 (RSB4536)",
         model: "SBD-RSB4536",
         datasheet: "/datasheets/SBD-RSB4536-datasheet.pdf",
         summary:
@@ -697,12 +697,12 @@ export const products: Product[] = [
       {
         question: "Is it powered?",
         answer:
-          "No. This is a manual lift bollard — you raise and lower it by hand and a key lock holds it in position. There is no motor, no hydraulics and no controls to commission, which is why it costs a fraction of an automatic rising bollard and has far less to go wrong.",
+          "No. This is a manual lift bollard. You raise and lower it by hand and a key lock holds it in position. There is no motor, no hydraulics and no controls to commission, which is why it costs a fraction of an automatic rising bollard and has far less to go wrong.",
       },
       {
         question: "Retractable or removable?",
         answer:
-          "Retractable when the post has nowhere to go — it drops into its own casing and sits flush, so nothing has to be carried to a store room and nothing goes missing. Removable when you would rather lift the post out entirely and cap the sleeve. Removable costs less; retractable is easier on staff who open the same entry every day.",
+          "Retractable when the post has nowhere to go. It drops into its own casing and sits flush, so nothing has to be carried to a store room and nothing goes missing. Removable when you would rather lift the post out entirely and cap the sleeve. Removable costs less; retractable is easier on staff who open the same entry every day.",
       },
       {
         question: "What does installation involve?",
@@ -712,7 +712,7 @@ export const products: Product[] = [
       {
         question: "How is it secured?",
         answer:
-          "A key lock in the top holds the bollard raised. The same lock releases it to retract. Keep the top clear of grit — an in-ground unit needs the surround kept clean to keep working smoothly.",
+          "A key lock in the top holds the bollard raised. The same lock releases it to retract. Keep the top clear of grit. An in-ground unit needs the surround kept clean to keep working smoothly.",
       },
       {
         question: "Will it stop a truck?",
@@ -777,12 +777,12 @@ export const products: Product[] = [
       {
         question: "What does the installation actually involve?",
         answer:
-          "A pit almost two metres deep, a power supply, drainage, and controls wired to however you want it operated — a fob, a keypad, an intercom or an existing gate controller. It is a project quoted against your site, not a part number off a price list. Send us the opening and how you want it operated.",
+          "A pit almost two metres deep, a power supply, drainage, and controls wired to however you want it operated: a fob, a keypad, an intercom or an existing gate controller. It is a project quoted against your site, not a part number off a price list. Send us the opening and how you want it operated.",
       },
       {
         question: "Automatic or manual?",
         answer:
-          "Automatic where the opening is used many times a day and nobody is going to walk out and lift a post each time. Manual — a retractable or removable bollard — where access changes a few times a week or seasonally. Manual costs a fraction as much and has nothing to fail.",
+          "Automatic where the opening is used many times a day and nobody is going to walk out and lift a post each time. Manual: a retractable or removable bollard, where access changes a few times a week or seasonally. Manual costs a fraction as much and has nothing to fail.",
       },
       {
         question: "Which height and finish?",
@@ -813,7 +813,7 @@ export const products: Product[] = [
     },
     headline: "Removable bollards",
     intro:
-      "For access that has to be closed most of the time and open occasionally. The bollard drops into a ground sleeve and lifts out once the padlock is released, leaving a flush cap in the surface — fire routes, service lanes, patio seasons and curbside pickup zones.",
+      "For access that has to be closed most of the time and open occasionally. The bollard drops into a ground sleeve and lifts out once the padlock is released, leaving a flush cap in the surface: fire routes, service lanes, patio seasons and curbside pickup zones.",
     metaTitle: "Removable Bollards Toronto",
     metaDescription:
       "Removable bollards with ground sleeve and padlock, in yellow powder-coated steel and satin stainless, for fire routes and service lanes across Toronto and the GTA.",
@@ -827,7 +827,7 @@ export const products: Product[] = [
     ],
     variants: [
       {
-        name: "Removable Steel Bollard — 4.5″ × 36″",
+        name: "Removable Steel Bollard, 4.5″ × 36″",
         model: "SBD-RSB436Y",
         datasheet: "/datasheets/SBD-RSB436Y-datasheet-r2.pdf",
         summary:
@@ -845,7 +845,7 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Removable Stainless Bollard — 4″ × 36″",
+        name: "Removable Stainless Bollard, 4″ × 36″",
         model: "SBD-RSSB436",
         datasheet: "/datasheets/SBD-RSSB436-datasheet-r2.pdf",
         summary:
@@ -863,7 +863,7 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Removable Steel Bollard — 6″ × 36″",
+        name: "Removable Steel Bollard, 6″ × 36″",
         model: "SBD-RSB636Y",
         datasheet: "/datasheets/SBD-RSB636Y-datasheet-r2.pdf",
         summary:
@@ -881,7 +881,7 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Removable Stainless Bollard — 6″ × 36″",
+        name: "Removable Stainless Bollard, 6″ × 36″",
         model: "SBD-RSSB636",
         datasheet: "/datasheets/SBD-RSSB636-datasheet-r2.pdf",
         summary:
@@ -903,7 +903,7 @@ export const products: Product[] = [
       {
         question: "Yellow steel or stainless?",
         answer:
-          "Yellow where being seen matters — yards, service lanes, anywhere a driver needs to notice the post before reversing into it. Stainless where the bollard sits in front of customers and the finish is part of the frontage. Stainless also stops the annual repaint.",
+          "Yellow where being seen matters: yards, service lanes, anywhere a driver needs to notice the post before reversing into it. Stainless where the bollard sits in front of customers and the finish is part of the frontage. Stainless also stops the annual repaint.",
       },
       {
         question: "What does the ground sleeve need?",
@@ -935,7 +935,7 @@ export const products: Product[] = [
     eyebrow: "Bicycle parking",
     hero: {
       src: "/products/bike-racks-hero-4.webp",
-      alt: "A row of stainless and black bike racks — post, round hoop, U and Double Moon — on a paved commercial forecourt at dusk",
+      alt: "A row of stainless and black bike racks: post, round hoop, U and Double Moon, on a paved commercial forecourt at dusk",
     },
     headline: "Commercial and public bike racks",
     intro:
@@ -983,7 +983,7 @@ export const products: Product[] = [
         model: "SBD-BRBM01",
         datasheet: "/datasheets/SBD-BRBM01-datasheet-r3.pdf",
         summary:
-          "A bollard and a bike rack in one footprint. The circular locking loops park two bicycles while the post itself works as vehicle access control \u2014 useful where a site needs both jobs done in a tight frontage. Assembles on site and mounts to a compact 120 mm base plate.",
+          "A bollard and a bike rack in one footprint. The circular locking loops park two bicycles while the post itself works as vehicle access control, useful where a site needs both jobs done in a tight frontage. Assembles on site and mounts to a compact 120 mm base plate.",
         image: { src: "/products/sbd-brbm01-double-moon.webp", alt: "SBD-BRBM01 Double Moon bike rack bollard in powder-coated black" },
         gallery: [
           { src: "/products/sbd-brbm01-front.webp", alt: "SBD-BRBM01 Double Moon bollard from the front, with the loop edge on to the post" },
@@ -1008,7 +1008,7 @@ export const products: Product[] = [
         model: "SBD-UBR31601",
         datasheet: "/datasheets/SBD-UBR31601-datasheet-r3.pdf",
         summary:
-          "The minimalist U-shape in Grade 316 stainless \u2014 the highest corrosion resistance in the range, suited to heavy de-icing salt exposure. Two points of contact and U-lock capability in a clean form that blends into sidewalks, parks, campuses and commercial frontages.",
+          "The minimalist U-shape in Grade 316 stainless: the highest corrosion resistance in the range, suited to heavy de-icing salt exposure. Two points of contact and U-lock capability in a clean form that blends into sidewalks, parks, campuses and commercial frontages.",
         image: { src: "/products/sbd-ubr31601-u-rack.webp", alt: "SBD-UBR31601 stainless steel U bike rack with flanged base plates" },
         gallery: [
           { src: "/products/sbd-ubr31601-angle.webp", alt: "SBD-UBR31601 stainless U bike rack seen at an angle, showing both flanged base plates" },
@@ -1025,7 +1025,7 @@ export const products: Product[] = [
           { label: "Mounting", value: "Surface mount (bolted)" },
         ],
         notes:
-          "Grade 316 is the specification to reach for where road salt is heavy \u2014 garage entries, transit-adjacent sites and exposed frontages.",
+          "Grade 316 is the specification to reach for where road salt is heavy: garage entries, transit-adjacent sites and exposed frontages.",
       },
       {
         name: "4-Way Bike Rack",
@@ -1048,7 +1048,7 @@ export const products: Product[] = [
           { label: "Finish", value: "Powder-coated black" },
         ],
         notes:
-          "One 4-Way replaces a row of four hoops \u2014 worth pricing against multiple single racks when space is tight.",
+          "One 4-Way replaces a row of four hoops, worth pricing against multiple single racks when space is tight.",
       },
       {
         name: "Round Bike Rack",
@@ -1083,7 +1083,7 @@ export const products: Product[] = [
       {
         question: "Galvanized or stainless?",
         answer:
-          "Hot-dip galvanized is the value choice and performs well through Ontario winters — it is what most ICI and streetscape projects use. Stainless is specified where the rack is a visible part of the design at a building entrance or high-end frontage. The Round rack (SBD-UBRSS01) is HDG; the SBD-SSBR01 is stainless, and the U rack (SBD-UBR31601) is Grade 316 stainless for heavy salt exposure.",
+          "Hot-dip galvanized is the value choice and performs well through Ontario winters, it is what most ICI and streetscape projects use. Stainless is specified where the rack is a visible part of the design at a building entrance or high-end frontage. The Round rack (SBD-UBRSS01) is HDG; the SBD-SSBR01 is stainless, and the U rack (SBD-UBR31601) is Grade 316 stainless for heavy salt exposure.",
       },
       {
         question: "What about AODA clearances?",
@@ -1128,7 +1128,7 @@ export const products: Product[] = [
         specs: [
           { label: "Fit", value: "Sized to existing bollard outside diameter" },
           { label: "Colours", value: "Safety yellow, and other colours on request" },
-          { label: "Installation", value: "Slides over existing bollard — no tools, no shutdown" },
+          { label: "Installation", value: "Slides over existing bollard, no tools, no shutdown" },
           { label: "Maintenance", value: "Wipe clean; replace individually when struck" },
           { label: "Options", value: "Reflective banding for low-light areas" },
         ],
@@ -1150,7 +1150,7 @@ export const products: Product[] = [
       {
         question: "Cover or replace?",
         answer:
-          "If the bollard is structurally sound and only looks bad, cover it. If it is bent, loose at the base, or the base plate anchors have pulled, replace it — a cover on a compromised bollard hides a problem instead of fixing it. Send a photo and we will tell you honestly which one you are looking at.",
+          "If the bollard is structurally sound and only looks bad, cover it. If it is bent, loose at the base, or the base plate anchors have pulled, replace it. A cover on a compromised bollard hides a problem instead of fixing it. Send a photo and we will tell you honestly which one you are looking at.",
       },
       {
         question: "Why not just repaint?",
@@ -1176,7 +1176,7 @@ export const products: Product[] = [
     },
     headline: "Traffic and access barriers",
     intro:
-      "Bollards protect a point. Barriers organise a whole area — where vehicles go, where people walk, and where the two are not allowed to meet. Used to define parking, protect equipment and staging areas, and separate pedestrian routes from operating traffic.",
+      "Bollards protect a point. Barriers organise a whole area, where vehicles go, where people walk, and where the two are not allowed to meet. Used to define parking, protect equipment and staging areas, and separate pedestrian routes from operating traffic.",
     metaTitle: "Traffic & Access Barriers",
     metaDescription:
       "Traffic and access barriers for commercial and industrial sites across the GTA. Define vehicle and pedestrian zones, protect equipment and staging areas.",
@@ -1225,12 +1225,12 @@ export const products: Product[] = [
       {
         question: "Barrier or bollards?",
         answer:
-          "Bollards where the risk is a specific point — a door, a panel, a corner. Barriers where the risk is anywhere along a line, such as a walkway running beside an operating aisle. Most industrial sites need both, and a walkthrough is the fastest way to work out which goes where.",
+          "Bollards where the risk is a specific point: a door, a panel, a corner. Barriers where the risk is anywhere along a line, such as a walkway running beside an operating aisle. Most industrial sites need both, and a walkthrough is the fastest way to work out which goes where.",
       },
       {
         question: "Is painted floor marking enough?",
         answer:
-          "For wayfinding, yes. As a control, no — and auditors will say so. A painted line does not stop a forklift. If a corrective action plan calls for pedestrian separation, it is generally asking for a physical control.",
+          "For wayfinding, yes. As a control, no, and auditors will say so. A painted line does not stop a forklift. If a corrective action plan calls for pedestrian separation, it is generally asking for a physical control.",
       },
     ],
     relatedSegments: ["warehouse-industrial", "property-management", "contractors"],

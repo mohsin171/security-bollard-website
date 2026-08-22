@@ -57,7 +57,7 @@ export const segments: Segment[] = [
       },
     ],
     approach: [
-      "Send a photo from your phone — we quote from it, usually the same day",
+      "Send a photo from your phone. We quote from it, usually the same day",
       "Standing price list held on file so re-orders are one line of email",
       "Per-building quoting and invoicing that fits your accounting",
       "Order history by address, so a replacement matches what is already there",
@@ -72,7 +72,7 @@ export const segments: Segment[] = [
       { label: "Visitor parking barriers", href: "/products/traffic-access-barriers" },
     ],
     proofPoints: [
-      "Quotes issued within 24 hours — this is a published operating standard, not an aspiration",
+      "Quotes issued within 24 hours: this is a published operating standard, not an aspiration",
       "Photo-based assessment, so no site visit needs scheduling for routine work",
       "One point of contact across every building in the portfolio",
     ],
@@ -105,7 +105,7 @@ export const segments: Segment[] = [
       src: "/who-we-serve/warehouse-industrial-hero.webp",
       alt: "A yellow guard rail and impact bollard protecting a dock door and racking upright, with a forklift working alongside",
     },
-    headline: "Physical separation between forklifts and people — not just painted lines",
+    headline: "Physical separation between forklifts and people, not just painted lines",
     intro:
       "Forklift damage is not an event, it is a line item. Dock doors, racking uprights, overhead door tracks, gas meters, electrical panels, eyewash stations and fire risers all take cumulative hits. A single sprinkler riser strike can shut a shift down. And when an auditor asks how pedestrians are separated from operating traffic, a painted line is not a control.",
     metaTitle: "Warehouse Safety Bollards & Barriers",
@@ -182,7 +182,7 @@ export const segments: Segment[] = [
       src: "/who-we-serve/retail-storefronts-hero.webp",
       alt: "A line of stainless bollards along the sidewalk in front of a retail store front's glazing",
     },
-    headline: "Protect the glazing, the entry and the people — the same way at every location",
+    headline: "Protect the glazing, the entry and the people: the same way at every location",
     intro:
       "One vehicle into a store front costs more in downtime, glazing, inventory and insurance than a full bollard package across several sites. For multi-location operators the harder problem is consistency: getting the same protection specified, priced and installed the same way at forty stores without quoting each one from scratch.",
     metaTitle: "Store Front Protection Bollards for Retail",
@@ -236,7 +236,7 @@ export const segments: Segment[] = [
       },
       {
         q: "Our locations are leased. Does that change anything?",
-        a: "It usually means landlord approval is required before anything is anchored into their surface. Raise it on the first call — it is the most common reason a retail quote stalls in legal.",
+        a: "It usually means landlord approval is required before anything is anchored into their surface. Raise it on the first call. It is the most common reason a retail quote stalls in legal.",
       },
       {
         q: "Will bollards stop a ram-raid?",
@@ -291,7 +291,7 @@ export const segments: Segment[] = [
       "Clear statement of what we do not supply, so nothing is assumed",
     ],
     products: [
-      { label: "Bike racks — SBD-SSBR01, Round, Double Moon, 4-Way", href: "/products/bike-racks" },
+      { label: "Bike racks, SBD-SSBR01, Round, Double Moon, 4-Way", href: "/products/bike-racks" },
       { label: "Manufactured metal bollards", href: "/products/safety-bollards" },
       { label: "Traffic and access barriers", href: "/products/traffic-access-barriers" },
     ],
@@ -303,7 +303,7 @@ export const segments: Segment[] = [
     faqs: [
       {
         q: "Do you have CAD and Revit files?",
-        a: "Dimensional data and mounting details are available now on the product spec sheets. CAD, Revit families and three-part CSI specifications are in production — if you need a specific file for a live project, contact us and we will prioritise it.",
+        a: "Dimensional data and mounting details are available now on the product spec sheets. CAD, Revit families and three-part CSI specifications are in production, if you need a specific file for a live project, contact us and we will prioritise it.",
       },
       {
         q: "How fast can you turn a submittal?",
@@ -311,7 +311,7 @@ export const segments: Segment[] = [
       },
       {
         q: "Are your bike racks compliant with Toronto requirements?",
-        a: "Our racks meet the standard two-point-contact, U-lock-compatible configuration expected for short-term bicycle parking. Compliance also depends on placement — short-term spaces need to be at grade, publicly accessible, and within 30 metres of a pedestrian entrance. We are glad to review the layout with you.",
+        a: "Our racks meet the standard two-point-contact, U-lock-compatible configuration expected for short-term bicycle parking. Compliance also depends on placement: short-term spaces need to be at grade, publicly accessible, and within 30 metres of a pedestrian entrance. We are glad to review the layout with you.",
       },
       {
         q: "Do you self-perform installation?",

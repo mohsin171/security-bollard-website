@@ -2,7 +2,7 @@
  * PRODUCT CATEGORIES
  * ---------------------------------------------------------------
  * Lighter-weight product pages than `products.ts`. A category page carries
- * the framing — what the product is for and where it gets used — but no
+ * the framing: what the product is for and where it gets used, but no
  * dimensional or material data, because a buyer could order from that and
  * these ranges are not specified yet.
  *
@@ -42,10 +42,10 @@ export const categories: Category[] = [
     eyebrow: "Signage & protection",
     headline: "Sign bollards",
     intro:
-      "A sign on a post tells a driver the rule. A bollard stops the driver reaching what is behind it. A sign bollard does both from one footing — which is why it turns up wherever a site needs to mark a space and protect it at the same time.",
+      "A sign on a post tells a driver the rule. A bollard stops the driver reaching what is behind it. A sign bollard does both from one footing, which is why it turns up wherever a site needs to mark a space and protect it at the same time.",
     metaTitle: "Sign Bollards Toronto",
     metaDescription:
-      "Sign bollards for commercial and industrial sites across Toronto and the GTA — physical protection and signage in a single post.",
+      "Sign bollards for commercial and industrial sites across Toronto and the GTA: physical protection and signage in a single post.",
     applications: [
       "Accessible parking stalls that need both a sign and a physical guard",
       "Visitor, reserved and EV charging bays",
@@ -122,10 +122,10 @@ export const categories: Category[] = [
     eyebrow: "Public realm",
     headline: "Public and city safety",
     intro:
-      "Hardware for spaces the public walks through rather than works in: sidewalks, plazas, transit approaches, parks and campus frontages. The requirement is the same as on a private site — separate people from vehicles — but the finish, the approvals and the design standard all matter more.",
+      "Hardware for spaces the public walks through rather than works in: sidewalks, plazas, transit approaches, parks and campus frontages. The requirement is the same as on a private site: separate people from vehicles, but the finish, the approvals and the design standard all matter more.",
     metaTitle: "Public & City Safety Hardware Toronto",
     metaDescription:
-      "Public realm and streetscape hardware for municipalities, BIAs and campuses across Toronto and the GTA — bike racks and pedestrian protection.",
+      "Public realm and streetscape hardware for municipalities, BIAs and campuses across Toronto and the GTA: bike racks and pedestrian protection.",
     applications: [
       "Streetscape and BIA improvement projects",
       "Municipal parks, trails and community centres",

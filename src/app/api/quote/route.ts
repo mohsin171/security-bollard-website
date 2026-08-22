@@ -121,7 +121,7 @@ export async function POST(request: Request) {
       ${row("Timeline", d.timeline)}
       ${row("Installation", d.installation)}
       ${row("What prompted this", d.trigger)}
-      ${row("Photo", photoNote ? `${photoNote} — attached to this email` : "")}
+      ${row("Photo", photoNote ? `${photoNote}, attached to this email` : "")}
       ${row("Source page", d.sourcePage)}
     </table>
     ${
@@ -137,7 +137,7 @@ export async function POST(request: Request) {
     </p>
   </div>`;
 
-  // 1. Notify first — the lead must survive a database problem.
+  // 1. Notify first: the lead must survive a database problem.
   let emailed = false;
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.QUOTE_NOTIFICATION_EMAIL || site.email;
@@ -149,7 +149,7 @@ export async function POST(request: Request) {
         from: process.env.QUOTE_FROM_EMAIL || "quotes@securitybollarddirect.ca",
         to,
         replyTo: d.email,
-        subject: `Quote request — ${d.company || d.name}${d.siteType ? ` (${d.siteType})` : ""}`,
+        subject: `Quote request: ${d.company || d.name}${d.siteType ? ` (${d.siteType})` : ""}`,
         html: summary,
         ...(attachment ? { attachments: [attachment] } : {}),
       });
@@ -158,7 +158,7 @@ export async function POST(request: Request) {
       console.error("[quote] email failed:", err);
     }
   } else {
-    console.warn("[quote] RESEND_API_KEY not set — logging submission instead:", d);
+    console.warn("[quote] RESEND_API_KEY not set, logging submission instead:", d);
   }
 
   // 2. Persist, if the database is configured.
@@ -193,10 +193,10 @@ export async function POST(request: Request) {
 
   // Never tell a customer their enquiry was received when it went nowhere.
   // If neither the email nor the database took it, say so and give them the
-  // phone number — a visible error is far cheaper than a lost lead.
+  // phone number: a visible error is far cheaper than a lost lead.
   if (!emailed && !stored) {
     console.error(
-      "[quote] DELIVERY FAILED — no channel accepted this submission.",
+      "[quote] DELIVERY FAILED: no channel accepted this submission.",
       { hasResendKey: Boolean(apiKey), to },
       d
     );

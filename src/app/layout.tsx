@@ -22,7 +22,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} | Commercial Bollards, Bike Racks & Site Protection — GTA & Ontario`,
+    default: `${site.name} | Commercial Bollards, Bike Racks & Site Protection in the GTA & Ontario`,
     template: `%s | ${site.name}`,
   },
   description:
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
         url: `${site.url}/og/sbd-og.png`,
         width: 1200,
         height: 630,
-        alt: `${site.name} — ${site.tagline}`,
+        alt: `${site.name}, ${site.tagline}`,
       },
     ],
   },

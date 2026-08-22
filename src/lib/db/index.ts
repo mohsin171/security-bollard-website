@@ -4,7 +4,7 @@ import * as schema from "./schema";
 
 /**
  * The database is optional at runtime. If DATABASE_URL is not configured the
- * site still works and the quote form still emails — we never lose a lead to
+ * site still works and the quote form still emails: we never lose a lead to
  * an infrastructure error.
  */
 export function getDb() {

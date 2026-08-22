@@ -44,7 +44,7 @@ export const services: Service[] = [
       {
         title: "We ask what actually matters",
         detail:
-          "What are you protecting, and from what? Is this a replacement or an addition? Who approves the spend? Ten questions, not fifty — and never a quote issued blind.",
+          "What are you protecting, and from what? Is this a replacement or an addition? Who approves the spend? Ten questions, not fifty, and never a quote issued blind.",
       },
       {
         title: "You get a written quote inside 24 hours",
@@ -65,7 +65,7 @@ export const services: Service[] = [
       "Honest advice when the answer is a cheaper product than the one you asked for",
     ],
     outcome:
-      "A quote you can act on, forward or file — issued fast enough that the problem does not roll into next quarter.",
+      "A quote you can act on, forward or file: issued fast enough that the problem does not roll into next quarter.",
     cta: { label: "Send a photo, get a quote", href: "/request-a-quote" },
   },
   {
@@ -104,7 +104,7 @@ export const services: Service[] = [
       {
         title: "Site work and sign-off",
         detail:
-          "Access windows respected — off-hours for retail and distribution centres, summer windows for schools. Photographs on completion.",
+          "Access windows respected: off-hours for retail and distribution centres, summer windows for schools. Photographs on completion.",
       },
     ],
     included: [
@@ -134,7 +134,7 @@ export const services: Service[] = [
     },
     headline: "A numbered risk list your JHSC can action",
     intro:
-      "Most distribution centres have somewhere between fifteen and thirty unprotected strike points — dock doors, racking uprights, gas meters, electrical panels, eyewash stations, fire risers, pedestrian crossings. They are obvious once someone walks the floor looking for them, and invisible when you walk past them every day. We will walk your site and hand you the list.",
+      "Most distribution centres have somewhere between fifteen and thirty unprotected strike points: dock doors, racking uprights, gas meters, electrical panels, eyewash stations, fire risers, pedestrian crossings. They are obvious once someone walks the floor looking for them, and invisible when you walk past them every day. We will walk your site and hand you the list.",
     metaTitle: "Free Warehouse Safety Walkthrough | Forklift Impact & Pedestrian Separation",
     metaDescription:
       "Free 30-minute warehouse safety walkthrough across Peel, Halton and the GTA. Get a numbered risk list of unprotected strike points for your JHSC.",
@@ -167,7 +167,7 @@ export const services: Service[] = [
       "Notes on pedestrian and forklift separation where painted lines are being relied on",
       "Volume pricing on high-visibility bollards and covers",
       "Phased pricing so the work can be split across budget years",
-      "No obligation — the list is yours regardless",
+      "No obligation: the list is yours regardless",
     ],
     outcome:
       "A document your JHSC can action, and a defensible answer when an auditor or a client asks what physical controls are in place.",
@@ -221,7 +221,7 @@ export const services: Service[] = [
       "Board-ready one-page summaries for capital approvals",
     ],
     outcome:
-      "The same product, the same price and the same supplier across the portfolio — and no procurement exercise for a job that does not deserve one.",
+      "The same product, the same price and the same supplier across the portfolio, and no procurement exercise for a job that does not deserve one.",
     cta: { label: "Set up portfolio pricing", href: "/request-a-quote" },
   },
   {
@@ -233,7 +233,7 @@ export const services: Service[] = [
       src: "/services/replacement-upgrades-hero.webp",
       alt: "A rusted-out old bollard stump beside its stainless replacement freshly bolted to the pavement, with anchors and an impact driver alongside",
     },
-    headline: "Bent, rusted, missing — replaced on a schedule",
+    headline: "Bent, rusted, missing: replaced on a schedule",
     intro:
       "Site protection hardware is consumable. The garage ramp corner gets clipped every winter. The dock door finds a reversing trailer twice a year. This is not a failure of the site, it is the hardware doing its job. The question is whether replacement happens on a plan or as an emergency.",
     metaTitle: "Bollard Replacement & Upgrade Programs | GTA Commercial",

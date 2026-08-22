@@ -7,7 +7,7 @@ import {
   CtaBand, CapabilityNote, Button, LinkCard,
 } from "@/components/ui";
 
-/** Renders a lighter product page from `categories.ts` — framing, no spec tables. */
+/** Renders a lighter product page from `categories.ts`: framing, no spec tables. */
 export default function CategoryPage({ category }: { category: Category }) {
   const crumbs = [
     { name: "Home", path: "/" },

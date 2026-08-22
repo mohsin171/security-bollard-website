@@ -9,7 +9,7 @@
  * slug as the tile's photo in `applications.ts`.
  *
  * These are protective and deterrent products. Nothing here claims a crash
- * rating — the capability statement appears on every one of these pages.
+ * rating: the capability statement appears on every one of these pages.
  */
 
 export type Guide = {
@@ -108,7 +108,7 @@ const RANGE = {
 const QUOTE_NOTE = {
   title: "Send a photo of the spot",
   body:
-    "Tell us what you are protecting and from what. We will come back with a part number, a price and a date within 24 hours — including the cheaper option if that is the right one.",
+    "Tell us what you are protecting and from what. We will come back with a part number, a price and a date within 24 hours, including the cheaper option if that is the right one.",
 };
 
 export const guides: Guide[] = [
@@ -128,7 +128,7 @@ export const guides: Guide[] = [
     eyebrow: "Retail & customer-facing",
     title: "How bollards protect a store front",
     intro:
-      "A store front is a sheet of glass with a parking lot pointed at it. Most of the damage is not dramatic — a driver reaches for the accelerator instead of the brake at two miles an hour, and a window, a door frame or a payment terminal is gone.",
+      "A store front is a sheet of glass with a parking lot pointed at it. Most of the damage is not dramatic. A driver reaches for the accelerator instead of the brake at two miles an hour, and a window, a door frame or a payment terminal is gone.",
     metaTitle: "Store Front Protection Bollards",
     metaDescription:
       "How properly placed bollards protect store front glazing, entrances and payment areas from low-speed vehicle impact. Supply and installation across the GTA.",
@@ -215,7 +215,7 @@ export const guides: Guide[] = [
     eyebrow: "Utility & infrastructure",
     title: "How bollards protect electrical equipment",
     intro:
-      "Transformers, switchgear and electrical cabinets are routinely installed beside parking spaces, driveways and loading areas — because that is where the service runs. Damage to them is expensive, slow to repair, and takes power with it.",
+      "Transformers, switchgear and electrical cabinets are routinely installed beside parking spaces, driveways and loading areas, because that is where the service runs. Damage to them is expensive, slow to repair, and takes power with it.",
     metaTitle: "Electrical Unit Protection Bollards",
     metaDescription:
       "Protect transformers, electrical cabinets, switchgear and utility equipment from vehicle impact with properly placed bollards across Toronto and the GTA.",
@@ -253,12 +253,12 @@ export const guides: Guide[] = [
         "A short run of bollards on the vehicle side of the meter set gives the driver something solid to meet first, while leaving the meter accessible for reading, servicing and emergency shut-off.",
       ],
     },
-    supply: "Security Bollard Direct provides supply and professional installation for commercial, industrial and multi-residential properties throughout the GTA. Gas utilities publish minimum clearances around meter sets, and those govern where a bollard can be placed \u2014 we position to the clearance rather than to whatever fits.",
+    supply: "Security Bollard Direct provides supply and professional installation for commercial, industrial and multi-residential properties throughout the GTA. Gas utilities publish minimum clearances around meter sets, and those govern where a bollard can be placed, and we position to the clearance rather than to whatever fits.",
     name: "Gas units",
     eyebrow: "Utility & infrastructure",
     title: "How bollards protect gas meters and regulators",
     intro:
-      "Gas meters sit on the building face, at bumper height, usually next to a parking space or a service drive. A reversing vehicle is the realistic risk — and unlike most impacts, this one has consequences beyond the repair bill.",
+      "Gas meters sit on the building face, at bumper height, usually next to a parking space or a service drive. A reversing vehicle is the realistic risk, and unlike most impacts, this one has consequences beyond the repair bill.",
     metaTitle: "Gas Meter Protection Bollards",
     metaDescription:
       "Protect gas meters, regulators and risers from vehicle impact with bollards placed to utility clearances. Supply and installation across the GTA.",
@@ -371,7 +371,7 @@ export const guides: Guide[] = [
     focus: {
       title: "Building Face & Column Protection",
       paras: [
-        "A parking lot damages itself slowly. Overhang past the wheel stop, a clipped column, a nosed-in bumper against the building face \u2014 none of it looks serious on the day, and all of it appears in the repair budget every year.",
+        "A parking lot damages itself slowly. Overhang past the wheel stop, a clipped column, a nosed-in bumper against the building face. None of it looks serious on the day, and all of it appears in the repair budget every year.",
         "Bollards and wheel stops limit how far a vehicle can travel before it reaches something structural, which turns an annual repair into a one-off installation.",
       ],
     },
@@ -380,7 +380,7 @@ export const guides: Guide[] = [
     eyebrow: "Parking areas",
     title: "How bollards protect a parking lot",
     intro:
-      "A parking lot damages itself slowly. Overhang past the wheel stop, a clipped column, a nosed-in bumper against the building face — none of it looks serious on the day, and all of it appears in the repair budget every year.",
+      "A parking lot damages itself slowly. Overhang past the wheel stop, a clipped column, a nosed-in bumper against the building face. None of it looks serious on the day, and all of it appears in the repair budget every year.",
     metaTitle: "Parking Lot Bollards & Protection",
     metaDescription:
       "Bollards, wheel stops and column guards that stop a commercial parking lot wearing itself out. Supply and installation across the GTA.",
@@ -402,7 +402,7 @@ export const guides: Guide[] = [
     note: {
       title: "Cheapest fix first",
       body:
-        "In a lot, a wheel stop often solves what people ask a bollard to solve, at a fraction of the cost. Where the risk is a specific point — a column, a door, a panel — the bollard is the right answer. We will tell you which applies.",
+        "In a lot, a wheel stop often solves what people ask a bollard to solve, at a fraction of the cost. Where the risk is a specific point: a column, a door, a panel. The bollard is the right answer. We will tell you which applies.",
     },
   },
   {
@@ -413,7 +413,7 @@ export const guides: Guide[] = [
       title: "Order Point & Menu Board Protection",
       paras: [
         "In a drive-through the lane is narrow by design, drivers are looking at a menu board rather than the kerb, and the same corner gets clipped week after week. Order points, speaker posts and payment windows take the consequences.",
-        "Flexible bollards absorb that repeated contact and return to position, so a clipped post is not a replacement job. Where the bollard has to actually stop a vehicle \u2014 in front of glazing or a gas meter \u2014 a fixed steel post is the right answer instead.",
+        "Flexible bollards absorb that repeated contact and return to position, so a clipped post is not a replacement job. Where the bollard has to actually stop a vehicle, in front of glazing or a gas meter, a fixed steel post is the right answer instead.",
       ],
     },
     supply: "Security Bollard Direct provides supply and professional installation for quick service restaurants, coffee chains, pharmacies with drive-through service and car wash operators throughout the GTA. Most drive-throughs need both flexible and fixed bollards, in different positions.",
@@ -495,7 +495,7 @@ export const guides: Guide[] = [
       title: "Dock Door & Corner Protection Bollards",
       paras: [
         "A trailer reverses onto the dock several times a day, guided by mirrors and a spotter who is not always there, with inches of margin either side. Corners, door tracks, levellers and control panels absorb the misses.",
-        "Surface-mounted bollards on a base plate take that impact instead of the building, and can be swapped without breaking up the apron. Dock bollards are consumable, and that is the point \u2014 they are cheaper and quicker to replace than a door track.",
+        "Surface-mounted bollards on a base plate take that impact instead of the building, and can be swapped without breaking up the apron. Dock bollards are consumable, and that is the point: they are cheaper and quicker to replace than a door track.",
       ],
     },
     supply: "Security Bollard Direct provides supply and professional installation for distribution centres, warehouses, food and beverage facilities and retail service yards throughout the GTA. We can plan a replacement schedule so damage becomes a budgeted line rather than an emergency call.",
@@ -506,7 +506,7 @@ export const guides: Guide[] = [
       "The dock is the highest-repeat impact zone on most commercial sites. A trailer reverses onto it several times a day, guided by mirrors and a spotter who is not always there, and the margin either side is measured in inches.",
     metaTitle: "Truck Dock Protection Bollards",
     metaDescription:
-      "Dock bollards and guards for corners, door tracks and levellers — the highest-repeat impact zone on most sites. Supply and installation across the GTA.",
+      "Dock bollards and guards for corners, door tracks and levellers: the highest-repeat impact zone on most sites. Supply and installation across the GTA.",
     protects: [
       "Dock corners and the wall either side of the opening",
       "Overhead door tracks and jambs",
@@ -535,7 +535,7 @@ export const guides: Guide[] = [
     focus: {
       title: "Streetscape & Plaza Protection Bollards",
       paras: [
-        "In a plaza, a transit approach or a park entrance the requirement is the same as on a private site \u2014 separate people from vehicles \u2014 but the finish, the approvals and the design standard all matter more, and the hardware is looked at by thousands of people a day.",
+        "In a plaza, a transit approach or a park entrance the requirement is the same as on a private site: separate people from vehicles, but the finish, the approvals and the design standard all matter more, and the hardware is looked at by thousands of people a day.",
         "Satin stainless and decorative bollards define pedestrian space without fencing it off, while removable and retractable units keep service and emergency access available.",
       ],
     },
@@ -544,7 +544,7 @@ export const guides: Guide[] = [
     eyebrow: "Public realm",
     title: "How bollards protect a public space",
     intro:
-      "In a plaza, a transit approach or a park entrance the requirement is the same as on a private site — separate people from vehicles — but the finish, the approvals and the design standard all matter more, and the hardware is looked at by thousands of people a day.",
+      "In a plaza, a transit approach or a park entrance the requirement is the same as on a private site: separate people from vehicles, but the finish, the approvals and the design standard all matter more, and the hardware is looked at by thousands of people a day.",
     metaTitle: "Public Realm & Streetscape Bollards",
     metaDescription:
       "Streetscape and public realm bollards and bike racks for plazas, transit approaches, parks and campus frontages across Toronto and the GTA.",
@@ -574,7 +574,7 @@ export const guides: Guide[] = [
 export const getGuide = (slug: string) => guides.find((g) => g.slug === slug);
 export { QUOTE_NOTE };
 
-/** Shared across every guide — the same commercial range, described once. */
+/** Shared across every guide: the same commercial range, described once. */
 export const BUILD_FEATURES = [
   "Heavy-duty steel construction",
   "Multiple bollard diameters and heights",
@@ -619,7 +619,7 @@ export const OPTION_NOTES: Record<string, string> = {
   "/products/bike-racks":
     "Stainless, round, Double Moon, 4-Way and 316 stainless U racks, with dimensions and datasheets for each.",
   "/products/sign-bollards":
-    "Marks the rule and protects the space from one footing — accessible stalls, fire routes and directional markings.",
+    "Marks the rule and protects the space from one footing: accessible stalls, fire routes and directional markings.",
   "/products/parking-protection":
     "Wheel stops, column guards and bay definition, for the damage a parking area does to itself.",
 };

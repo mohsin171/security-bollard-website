@@ -24,7 +24,7 @@ const PROTECTING = [
   "Parking garage ramp or pillar",
   "Bicycle parking (code requirement)",
   "Vehicle theft or unauthorised access",
-  "Not sure — need advice",
+  "Not sure, need advice",
 ];
 
 const PROJECT_TYPE = ["Replacement of existing", "New addition", "New construction", "Not sure"];
@@ -63,7 +63,7 @@ export default function QuoteForm() {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    // Honeypot — bots fill hidden fields, humans do not.
+    // Honeypot: bots fill hidden fields, humans do not.
     if (data.get("company_website")) {
       setStatus("success");
       return;
@@ -95,7 +95,7 @@ export default function QuoteForm() {
           Request received
         </p>
         <h2 className="mt-3 font-display text-2xl font-bold text-charcoal">
-          Thanks — we have your details.
+          Thanks. We have your details.
         </h2>
         <p className="mt-3 text-slate-grey">
           You will get a written quote within 24 hours on a business day, including part numbers,
@@ -279,7 +279,7 @@ export default function QuoteForm() {
             </label>
             <select id="installation" name="installation" defaultValue="" className={field}>
               <option value="">Select one</option>
-              <option value="Supply only">Supply only — we have a contractor</option>
+              <option value="Supply only">Supply only, we have a contractor</option>
               <option value="Supply and install">Supply and install as one number</option>
               <option value="Not sure">Not sure yet</option>
             </select>
@@ -297,7 +297,7 @@ export default function QuoteForm() {
             <label htmlFor="trigger" className={label}>
               What prompted this now?
               <span className={hint}>
-                An incident, an audit, a budget cycle, a complaint — it changes what we recommend
+                An incident, an audit, a budget cycle, a complaint. It changes what we recommend
               </span>
             </label>
             <input id="trigger" name="trigger" type="text" className={field} />
@@ -359,7 +359,7 @@ export default function QuoteForm() {
           <a href={site.phoneHref} className="font-semibold text-sbd-red">
             {site.phone}
           </a>{" "}
-          — quotes issued within 24 hours on business days.
+         : quotes issued within 24 hours on business days.
         </p>
       </div>
     </form>

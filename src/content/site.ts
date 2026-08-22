@@ -119,7 +119,7 @@ export const nav: NavItem[] = [
       {
         label: "Replacement & Upgrade Programs",
         href: "/services/replacement-upgrades",
-        blurb: "Bent, rusted, missing — replaced on a schedule",
+        blurb: "Bent, rusted, missing: replaced on a schedule",
       },
     ],
   },

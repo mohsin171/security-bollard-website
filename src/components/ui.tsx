@@ -260,7 +260,7 @@ export function PageHeader({
   breadcrumbs?: { name: string; path: string }[];
   /**
    * tone "artwork" is for banner art that already carries its own white field
-   * for the copy — it is shown whole rather than cropped, and gets no wash on
+   * for the copy: it is shown whole rather than cropped, and gets no wash on
    * large screens so the artwork's own shapes survive.
    */
   background?: {
@@ -305,7 +305,7 @@ export function PageHeader({
             sizes="100vw"
             className={artwork ? "object-cover object-right" : "object-cover"}
           />
-          {/* Scrim — keeps the copy legible over the photo. Artwork carries its
+          {/* Scrim: keeps the copy legible over the photo. Artwork carries its
               own white field on large screens, so it only needs one below. */}
           <div
             aria-hidden

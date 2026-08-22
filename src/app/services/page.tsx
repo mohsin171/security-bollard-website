@@ -74,7 +74,7 @@ export default function ServicesPage() {
             {
               title: "Recommend",
               detail:
-                "Match the application to suitable products, finishes and mounting options — including the cheaper option when that is the right answer.",
+                "Match the application to suitable products, finishes and mounting options, including the cheaper option when that is the right answer.",
             },
             {
               title: "Deliver",

@@ -46,7 +46,7 @@ export default function Header() {
 
       <header className="sticky top-0 z-50 border-b border-hairline bg-white/95 backdrop-blur-sm">
         <div className="container-sbd flex items-center justify-between gap-4 py-2.5">
-          <Link href="/" className="shrink-0" aria-label={`${site.name} — home`}>
+          <Link href="/" className="shrink-0" aria-label={`${site.name} home`}>
             <Image
               src="/logos/sbd-logo-full.png"
               alt={site.name}
