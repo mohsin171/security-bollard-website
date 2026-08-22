@@ -17,7 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/who-we-serve", priority: 0.85, freq: "monthly" },
     { path: "/contact", priority: 0.8, freq: "monthly" },
     { path: "/about", priority: 0.7, freq: "monthly" },
-    { path: "/projects", priority: 0.7, freq: "weekly" },
     { path: "/privacy", priority: 0.2, freq: "yearly" },
     { path: "/terms", priority: 0.2, freq: "yearly" },
   ];

@@ -4,7 +4,6 @@ import { nav, site, social } from "@/content/site";
 
 const companyLinks = [
   { label: "About", href: "/about" },
-  { label: "Projects", href: "/projects" },
   { label: "Contact", href: "/contact" },
   { label: "Request a Quote", href: "/request-a-quote", emphasis: true },
 ];

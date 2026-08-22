@@ -8,6 +8,12 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Projects page removed Aug 2026 — send saved links to the product range.
+      {
+        source: "/projects",
+        destination: "/products",
+        permanent: true,
+      },
       // Renamed Aug 2026: Motorised Bollards -> Automatic Bollards.
       {
         source: "/products/motorised-bollards",
