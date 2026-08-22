@@ -3,6 +3,7 @@ import { Archivo, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { JsonLd, localBusinessSchema, websiteSchema } from "@/components/JsonLd";
 import { site } from "@/content/site";
 import { Analytics } from "@vercel/analytics/next";
@@ -114,6 +115,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
+        <WhatsAppButton />
         {/* Cookieless, no consent banner needed. Shows up in the Vercel
             dashboard once Web Analytics is enabled there. */}
         <Analytics />
