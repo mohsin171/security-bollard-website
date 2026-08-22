@@ -3,6 +3,7 @@ import Reveal from "@/components/Reveal";
 import Image from "next/image";
 import Link from "next/link";
 import { services, getService } from "@/content/services";
+import { homeServiceImages } from "@/content/homeCards";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, serviceSchema, breadcrumbSchema } from "@/components/JsonLd";
 import {
@@ -180,7 +181,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <SectionHeading title="Other services" />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {others.map((s) => (
-            <LinkCard key={s.slug} href={`/services/${s.slug}`} title={s.navLabel} blurb={s.eyebrow} />
+            <LinkCard
+              key={s.slug}
+              href={`/services/${s.slug}`}
+              title={s.navLabel}
+              blurb={s.eyebrow}
+              image={homeServiceImages[s.slug]}
+              imageAlt={s.name}
+            />
           ))}
         </div>
       </Section>
