@@ -291,7 +291,7 @@ export function PageHeader({
     <header
       className={`ambient border-b ${
         artwork
-          ? "relative isolate flex items-center overflow-hidden border-hairline bg-white pb-16 pt-12 md:pb-24 md:pt-16 lg:min-h-[calc(100svh-7.4rem)] lg:py-0"
+          ? "art-hero relative isolate flex items-center overflow-hidden border-hairline bg-white pb-16 pt-12 md:pb-24 md:pt-16 lg:py-0"
           : `pb-12 pt-10 md:pb-16 md:pt-14 ${
               onPhoto
                 ? `flex min-h-[calc(100svh-4.6rem)] items-center lg:min-h-[calc(100svh-7.4rem)] ${
@@ -309,9 +309,7 @@ export function PageHeader({
             fill
             priority
             sizes="100vw"
-            className={
-              artwork ? "object-cover object-right lg:object-contain" : "object-cover"
-            }
+            className={artwork ? "object-cover object-right" : "object-cover"}
           />
           {/* Scrim — keeps the copy legible over the photo. Artwork carries its
               own white field on large screens, so it only needs one below. */}
@@ -319,7 +317,7 @@ export function PageHeader({
             aria-hidden
             className={
               artwork
-                ? "absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent lg:hidden"
+                ? "absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent xl:hidden"
                 : lightPhoto
                   ? "absolute inset-0 bg-gradient-to-r from-white/95 via-white/75 to-white/20"
                   : "absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/80 to-charcoal/40"

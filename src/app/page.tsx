@@ -63,7 +63,10 @@ export default function HomePage() {
   return (
     <>
       {/* ---------- Hero ---------- */}
-      <section className="relative isolate overflow-hidden border-b border-hairline bg-white">
+      <section
+        className="art-hero relative isolate overflow-hidden border-b border-hairline bg-white"
+        style={{ "--art-ar": 2.047 } as React.CSSProperties}
+      >
         {/* Scene sits to the right; the artwork fades to white where the copy goes */}
         <Image
           src="/home-hero-3.webp"
@@ -71,9 +74,7 @@ export default function HomePage() {
           fill
           priority
           sizes="100vw"
-          /* contain on large screens so the artwork is never cropped; cover below,
-             where the frame is far taller than the image */
-          className="object-cover object-right lg:object-contain"
+          className="object-cover object-right"
         />
         {/* Small screens only: the artwork is cropped there, so the copy needs a wash.
             On large screens the artwork carries its own white curve and watermark leaf. */}
@@ -82,7 +83,7 @@ export default function HomePage() {
           className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent lg:hidden"
         />
 
-        <div className="container-sbd relative flex min-h-[calc(100svh-4.6rem)] items-center py-12 lg:min-h-[calc(100svh-7.4rem)] lg:py-6">
+        <div className="container-sbd relative flex min-h-[calc(100svh-4.6rem)] items-center py-12 lg:h-full lg:min-h-0 lg:py-6">
           <div className="max-w-xl">
             <div className="hero-in flex items-center gap-2.5">
               <Eyebrow>Bollards &middot; Bike racks &middot; Barriers &middot; Covers</Eyebrow>

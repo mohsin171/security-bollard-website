@@ -91,6 +91,22 @@
     );
   }
 
+  /* Banner-artwork heroes. The artwork already carries its own white field for
+     the copy, so it must never be cropped down the left edge — but forcing a
+     full-screen height on a 2:1 image leaves a letterbox band. On large screens
+     the frame takes its height from the artwork's own ratio instead, so the art
+     fills it edge to edge. Capped at one screen; --art-ar per image. */
+  .art-hero {
+    --art-ar: 2;
+  }
+
+  @media (min-width: 1024px) {
+    .art-hero {
+      height: min(calc(100svh - 7.4rem), calc(100vw / var(--art-ar)));
+      min-height: 30rem;
+    }
+  }
+
   .container-sbd {
     width: 100%;
     max-width: 76rem;
