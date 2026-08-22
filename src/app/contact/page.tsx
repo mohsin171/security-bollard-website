@@ -1,6 +1,6 @@
 import { buildMetadata } from "@/lib/seo";
 import Reveal from "@/components/Reveal";
-import { JsonLd, breadcrumbSchema, localBusinessSchema } from "@/components/JsonLd";
+import { JsonLd, breadcrumbSchema } from "@/components/JsonLd";
 import { site } from "@/content/site";
 import { PageHeader, Section, SectionHeading, Button, LinkCard, CheckList } from "@/components/ui";
 
@@ -21,7 +21,6 @@ export default function ContactPage() {
   return (
     <Reveal>
       <JsonLd data={breadcrumbSchema(crumbs)} />
-      <JsonLd data={localBusinessSchema} />
       <PageHeader
         eyebrow="Contact us"
         title="Let's build a safer commercial space"

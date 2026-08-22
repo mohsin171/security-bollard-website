@@ -1,13 +1,13 @@
 import { services } from "@/content/services";
 import Reveal from "@/components/Reveal";
 import { buildMetadata } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema } from "@/components/JsonLd";
+import { JsonLd, breadcrumbSchema, itemListSchema } from "@/components/JsonLd";
 import { PageHeader, Section, SectionHeading, CtaBand, Button, NumberedList } from "@/components/ui";
 
 export const metadata = buildMetadata({
   title: "Commercial Services",
   description:
-    "Site assessment with 24-hour quotes, supply and coordinated installation, free warehouse safety walkthroughs, portfolio programs and replacement scheduling across the GTA.",
+    "Site assessment with 24-hour quotes, supply and coordinated installation, free warehouse safety walkthroughs, portfolio programs.",
   path: "/services",
   image: "/services-hero-9.webp",
 });
@@ -21,6 +21,7 @@ export default function ServicesPage() {
   return (
     <Reveal>
       <JsonLd data={breadcrumbSchema(crumbs)} />
+      <JsonLd data={itemListSchema("Commercial services", "/services", services.map((s) => ({ name: s.name, path: `/services/${s.slug}` })))} />
       <PageHeader
         eyebrow="How we work"
         title="Supply is the easy part. The service is why people call back."

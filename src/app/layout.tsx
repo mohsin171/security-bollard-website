@@ -22,11 +22,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} | Commercial Bollards & Site Protection, GTA`,
+    default: `${site.name} | Commercial Site Protection, GTA`,
     template: `${site.name} | %s`,
   },
   description:
-    "Commercial-grade safety bollards, bike racks, bollard covers and traffic barriers supplied across Toronto, the GTA and Ontario. Written quotes within 24 hours. Built for Safety. Made to Last.",
+    "Commercial-grade safety bollards, bike racks, bollard covers and traffic barriers supplied across Toronto, the GTA and Ontario. Written quotes within 24 hours.",
   applicationName: site.name,
   keywords: [
     "commercial bollards Toronto",

@@ -90,6 +90,9 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
 }
 
 /** Long-form application guides: /protecting/<slug>. */
+/** These guides were written and last revised in August 2026. */
+const GUIDE_DATE = "2026-08-22";
+
 export function articleSchema({
   headline,
   description,
@@ -109,12 +112,12 @@ export function articleSchema({
     mainEntityOfPage: { "@type": "WebPage", "@id": `${site.url}${path}` },
     url: `${site.url}${path}`,
     ...(image ? { image: [`${site.url}${image}`] } : {}),
-    author: { "@type": "Organization", name: site.name, url: site.url },
-    publisher: {
-      "@type": "Organization",
-      name: site.name,
-      logo: { "@type": "ImageObject", url: `${site.url}/logos/sbd-logo-full.png` },
-    },
+    datePublished: GUIDE_DATE,
+    dateModified: GUIDE_DATE,
+    inLanguage: "en-CA",
+    isPartOf: { "@id": `${site.url}/#website` },
+    author: { "@id": `${site.url}/#business` },
+    publisher: { "@id": `${site.url}/#business` },
     isAccessibleForFree: true,
   };
 }
@@ -130,3 +133,24 @@ export const websiteSchema = {
   inLanguage: "en-CA",
   publisher: { "@id": `${site.url}/#business` },
 };
+
+/** Listing pages: what the collection contains, in order. */
+export function itemListSchema(
+  name: string,
+  path: string,
+  items: { name: string; path: string }[]
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    url: `${site.url}${path}`,
+    numberOfItems: items.length,
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: it.name,
+      url: `${site.url}${it.path}`,
+    })),
+  };
+}

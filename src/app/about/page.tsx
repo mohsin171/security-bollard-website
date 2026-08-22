@@ -10,7 +10,7 @@ import {
 export const metadata = buildMetadata({
   title: "About Us",
   description:
-    "Security Bollard Direct supplies commercial-grade bollards, bike racks, barriers and covers across the GTA and Ontario, with 24-hour quoting and honest product advice.",
+    "Security Bollard Direct supplies commercial-grade bollards, bike racks, barriers and covers across the GTA and Ontario, with 24-hour quoting.",
   path: "/about",
   image: "/about-hero-6.webp",
 });

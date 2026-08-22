@@ -2,7 +2,7 @@ import { products } from "@/content/products";
 import Reveal from "@/components/Reveal";
 import { categories } from "@/content/categories";
 import { buildMetadata } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema } from "@/components/JsonLd";
+import { JsonLd, breadcrumbSchema, itemListSchema } from "@/components/JsonLd";
 import { capabilityStatement } from "@/content/site";
 import {
   PageHeader, Section, SectionHeading, LinkCard,
@@ -12,7 +12,7 @@ import {
 export const metadata = buildMetadata({
   title: "Commercial Products",
   description:
-    "Commercial-grade bollards, bollard covers, bike racks and traffic barriers supplied across Toronto, the GTA and Ontario. Full dimensional and material specifications.",
+    "Commercial-grade bollards, bollard covers, bike racks and traffic barriers supplied across Toronto, the GTA and Ontario.",
   path: "/products",
   image: "/products-hero-4.webp",
 });
@@ -26,6 +26,7 @@ export default function ProductsPage() {
   return (
     <Reveal>
       <JsonLd data={breadcrumbSchema(crumbs)} />
+      <JsonLd data={itemListSchema("Commercial products", "/products", products.map((p) => ({ name: p.name, path: `/products/${p.slug}` })))} />
       <PageHeader
         eyebrow="Commercial product portfolio"
         title="Products built for commercial sites and Canadian winters"

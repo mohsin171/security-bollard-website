@@ -147,7 +147,7 @@ export const products: Product[] = [
       "The high-visibility workhorse. Steel pipe finished in safety yellow with reflective banding, used wherever a bollard needs to be seen before it is hit. This is the highest-volume bollard on most warehouse and industrial sites, and the one that gets replaced most often.",
     metaTitle: "Yellow Steel Bollards Toronto",
     metaDescription:
-      "Round and square yellow steel bollards in 36in, 42in and 48in heights for warehouse, dock and industrial sites across Toronto and the GTA. Datasheets and dimensions.",
+      "Round and square yellow steel bollards in 36in, 42in and 48in heights for warehouse, dock and industrial sites across Toronto and the GTA.",
     applications: [
       "Loading dock corners, door tracks and dock aprons",
       "Forklift aisles and pedestrian walkway edges",
@@ -456,7 +456,7 @@ export const products: Product[] = [
       "A bollard that bends and stands back up. Where contact is expected rather than exceptional: drive-thru lanes, tight turns, wash bays. A spring-loaded bollard absorbs the hit and returns to position, instead of bending permanently and needing replacement every season.",
     metaTitle: "Flexible Spring Bollards Toronto",
     metaDescription:
-      "Spring-loaded flexible bollards that flex on impact and return to position. Bolt-on mounting, 42in high, for drive-thrus and parking lots across Toronto and the GTA.",
+      "Spring-loaded flexible bollards that flex on impact and return to position. Bolt-on mounting, 42in high, for drive-thrus and parking lots across Toronto.",
     applications: [
       "Drive-thru lanes and order points",
       "Tight turns and pinch points where clipping is routine",
@@ -635,7 +635,7 @@ export const products: Product[] = [
       "A bollard that drops into the ground instead of being carried away. Lift it and lock it to close the opening; release the key lock and it retracts flush, leaving nothing to trip over and nothing to store. Used where access changes through the day rather than through the year.",
     metaTitle: "Retractable Bollards Toronto",
     metaDescription:
-      "Manual lift retractable stainless steel bollards with key lock and in-ground mount, for driveways, parking areas and commercial entrances across Toronto and the GTA.",
+      "Manual lift retractable stainless steel bollards with key lock and in-ground mount, for driveways, parking areas and commercial entrances across Toronto.",
     applications: [
       "Shared entries used by both authorised and general traffic",
       "Residential and condominium driveways",
@@ -736,7 +736,7 @@ export const products: Product[] = [
       "A bollard that rises and lowers on its own, operated from a control point rather than by hand. Used where an opening is closed by default, opened many times a day, and nobody is available to lift a post in and out.",
     metaTitle: "Automatic Bollards Toronto",
     metaDescription:
-      "Automatic rising bollard systems with electric actuator, 600mm and 800mm heights, powder coated or 304/316 stainless, for commercial entrances across Toronto and the GTA.",
+      "Automatic rising bollard systems with electric actuator, 600mm and 800mm heights, powder coated or 304/316 stainless.",
     applications: [
       "Entries opened many times a day under access control",
       "Pedestrianised frontages with timed vehicle access",
@@ -816,7 +816,7 @@ export const products: Product[] = [
       "For access that has to be closed most of the time and open occasionally. The bollard drops into a ground sleeve and lifts out once the padlock is released, leaving a flush cap in the surface: fire routes, service lanes, patio seasons and curbside pickup zones.",
     metaTitle: "Removable Bollards Toronto",
     metaDescription:
-      "Removable bollards with ground sleeve and padlock, in yellow powder-coated steel and satin stainless, for fire routes and service lanes across Toronto and the GTA.",
+      "Removable bollards with ground sleeve and padlock, in yellow powder-coated steel and satin stainless, for fire routes and service lanes across Toronto.",
     applications: [
       "Fire route access that must stay closed to general traffic",
       "Service lanes and delivery entries opened on a schedule",
@@ -942,7 +942,7 @@ export const products: Product[] = [
       "In Toronto, bicycle parking is a code requirement rather than an amenity. Chapter 230 of Zoning By-law 569-2013 sets bicycle parking rates, short-term spaces must be visible and publicly accessible at grade, and the Toronto Green Standard applies to new mid-to-high-rise residential and all ICI development. If you are filing a Site Plan Approval application, there is a bike rack line item in your project.",
     metaTitle: "Commercial Bike Racks Toronto",
     metaDescription:
-      "Stainless (SBD-SSBR01), Round, Double Moon and 4-Way bike racks for commercial, condo and public properties in Toronto and the GTA. Submittal-ready specifications.",
+      "Stainless (SBD-SSBR01), Round, Double Moon and 4-Way bike racks for commercial, condo and public properties in Toronto and the GTA.",
     applications: [
       "New ICI and mid/high-rise development under Site Plan Approval",
       "Condominium visitor and resident short-term bicycle parking",

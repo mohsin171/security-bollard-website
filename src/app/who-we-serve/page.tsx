@@ -1,13 +1,13 @@
 import { segments } from "@/content/segments";
 import Reveal from "@/components/Reveal";
 import { buildMetadata } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema } from "@/components/JsonLd";
+import { JsonLd, breadcrumbSchema, itemListSchema } from "@/components/JsonLd";
 import { PageHeader, Section, SectionHeading, CtaBand, Button, LinkCard } from "@/components/ui";
 
 export const metadata = buildMetadata({
   title: "Who We Serve",
   description:
-    "Commercial site protection for property managers and condos, warehouses and industrial sites, retail and store fronts, and contractors and architects across the GTA.",
+    "Commercial site protection for property managers and condos, warehouses and industrial sites, retail and store fronts, and contractors.",
   path: "/who-we-serve",
   image: "/who-we-serve-hero-5.webp",
 });
@@ -32,6 +32,7 @@ export default function WhoWeServePage() {
   return (
     <Reveal>
       <JsonLd data={breadcrumbSchema(crumbs)} />
+      <JsonLd data={itemListSchema("Sectors served", "/who-we-serve", segments.map((s) => ({ name: s.name, path: `/who-we-serve/${s.slug}` })))} />
       <PageHeader
         eyebrow="Markets served"
         title="Same hardware, four very different conversations"

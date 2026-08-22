@@ -31,9 +31,9 @@ export const segments: Segment[] = [
     headline: "Bent, rusted or missing bollards? One supplier for the whole portfolio.",
     intro:
       "You manage between eight and fifteen properties. A bollard at a garage ramp gets clipped, a resident complains that bikes are chained to the accessibility railing, and suddenly a $2,800 job needs three quotes and a board meeting. The job is not hard. Getting it quoted, approved and finished without it consuming a week of your time is the hard part.",
-    metaTitle: "Bollards & Bike Racks for Property Managers",
+    metaTitle: "Bollards for Property Managers",
     metaDescription:
-      "Commercial bollard replacement, bollard covers and bike racks for property management portfolios and condo corporations across the GTA. Photo to quote in 24 hours.",
+      "Commercial bollard replacement, bollard covers and bike racks for property management portfolios and condo corporations across the GTA.",
     problems: [
       {
         title: "Garage entries and ramps take constant damage",
@@ -185,9 +185,9 @@ export const segments: Segment[] = [
     headline: "Protect the glazing, the entry and the people: the same way at every location",
     intro:
       "One vehicle into a store front costs more in downtime, glazing, inventory and insurance than a full bollard package across several sites. For multi-location operators the harder problem is consistency: getting the same protection specified, priced and installed the same way at forty stores without quoting each one from scratch.",
-    metaTitle: "Store Front Protection Bollards for Retail",
+    metaTitle: "Store Front Protection Bollards",
     metaDescription:
-      "Store front protection bollards for retail, pharmacy, cannabis, convenience and QSR operators across the GTA. Standardised per-site packages and phased rollouts.",
+      "Store front protection bollards for retail, pharmacy, cannabis, convenience and QSR operators across the GTA.",
     problems: [
       {
         title: "Glazing and entries are unprotected",
@@ -257,9 +257,9 @@ export const segments: Segment[] = [
     headline: "Submittal-ready product data and lead times confirmed in writing",
     intro:
       "You are buying against a drawing and a deadline. What you need from a supplier is a submittal package that gets approved the first time, a lead time that holds, and a price that does not move between tender and delivery. What you do not need is marketing language.",
-    metaTitle: "Bollard & Bike Rack Supply for Contractors",
+    metaTitle: "Bollards for Contractors",
     metaDescription:
-      "Submittal-ready bollard and bike rack supply for GTA site, landscape and general contractors. Dimensional data, materials, mounting details and confirmed lead times.",
+      "Submittal-ready bollard and bike rack supply for GTA site, landscape and general contractors.",
     problems: [
       {
         title: "Submittals get rejected on incomplete data",

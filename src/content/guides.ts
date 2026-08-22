@@ -173,7 +173,7 @@ export const guides: Guide[] = [
       "Gas stations are exposed to vehicle movement every hour they are open, at close quarters, by drivers manoeuvring in tight spaces while distracted. Fuel dispensers, propane storage, store fronts, electrical equipment and pedestrian zones can all be damaged by a single low-speed collision.",
     metaTitle: "Gas Station Security Bollards",
     metaDescription:
-      "Protect fuel pumps, propane cages, store fronts and electrical equipment at gas stations with properly placed bollards. Supply and installation across the GTA.",
+      "Protect fuel pumps, propane cages, store fronts and electrical equipment at gas stations with properly placed bollards.",
     protects: [
       "Fuel pumps and dispensers",
       "Propane storage cages",
@@ -301,7 +301,7 @@ export const guides: Guide[] = [
       "A daycare concentrates the two things you least want to mix: small children on foot and parents in a hurry in vehicles. The drop-off loop is busiest in the two windows either side of the working day, and that is when the risk is highest.",
     metaTitle: "Daycare Safety Bollards",
     metaDescription:
-      "Protect daycare drop-off loops, play area fences and pedestrian paths with bollards that separate children on foot from vehicle movement. GTA supply and installation.",
+      "Protect daycare drop-off loops, play area fences and pedestrian paths with bollards that separate children on foot from vehicle movement.",
     protects: [
       "The path children walk between car and door",
       "Fenced play area edges next to parking",
@@ -465,7 +465,7 @@ export const guides: Guide[] = [
       "Inside a warehouse the vehicles are forklifts, they operate all shift, and the driver's sightlines are blocked by whatever is on the forks. Painted lines record where people are supposed to walk. They do not stop anything.",
     metaTitle: "Warehouse Safety Bollards",
     metaDescription:
-      "Bollards and guard rail for racking ends, forklift aisles and equipment protection in warehouses across Toronto and the GTA. Free safety walkthrough available.",
+      "Bollards and guard rail for racking ends, forklift aisles and equipment protection in warehouses across Toronto and the GTA.",
     protects: [
       "Racking ends and aisle entries",
       "Pedestrian walkways beside operating aisles",

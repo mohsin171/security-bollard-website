@@ -80,7 +80,7 @@ export const services: Service[] = [
     headline: "Supply only, or supply with coordinated installation",
     intro:
       "Some buyers have a contractor and just need the right product delivered on the right day. Others want one number and one point of contact. We do both, and we are clear about which one you are buying.",
-    metaTitle: "Bollard Supply & Installation Coordination | GTA & Ontario",
+    metaTitle: "Bollard Supply & Installation",
     metaDescription:
       "Commercial bollard and bike rack supply with coordinated installation across the GTA. Confirmed lead times, staged deliveries and multi-site rollouts.",
     forWho:
@@ -135,7 +135,7 @@ export const services: Service[] = [
     headline: "A numbered risk list your JHSC can action",
     intro:
       "Most distribution centres have somewhere between fifteen and thirty unprotected strike points: dock doors, racking uprights, gas meters, electrical panels, eyewash stations, fire risers, pedestrian crossings. They are obvious once someone walks the floor looking for them, and invisible when you walk past them every day. We will walk your site and hand you the list.",
-    metaTitle: "Free Warehouse Safety Walkthrough | Forklift Impact & Pedestrian Separation",
+    metaTitle: "Free Warehouse Safety Walkthrough",
     metaDescription:
       "Free 30-minute warehouse safety walkthrough across Peel, Halton and the GTA. Get a numbered risk list of unprotected strike points for your JHSC.",
     forWho:
@@ -185,7 +185,7 @@ export const services: Service[] = [
     headline: "One supplier across every building you manage",
     intro:
       "Chasing three quotes for a $2,800 job costs more in management time than the job is worth. If you manage a portfolio, the sensible arrangement is standing pricing on file, one point of contact, and per-building quoting that does not restart from zero every time something gets hit.",
-    metaTitle: "Multi-Site & Portfolio Programs | Property Management Supply",
+    metaTitle: "Multi-Site & Portfolio Programs",
     metaDescription:
       "Standing price lists, per-building quoting and repeat-order history for property management portfolios, condo corporations and multi-site retail operators.",
     forWho:
@@ -236,7 +236,7 @@ export const services: Service[] = [
     headline: "Bent, rusted, missing: replaced on a schedule",
     intro:
       "Site protection hardware is consumable. The garage ramp corner gets clipped every winter. The dock door finds a reversing trailer twice a year. This is not a failure of the site, it is the hardware doing its job. The question is whether replacement happens on a plan or as an emergency.",
-    metaTitle: "Bollard Replacement & Upgrade Programs | GTA Commercial",
+    metaTitle: "Bollard Replacement & Upgrades",
     metaDescription:
       "Replace bent, rusted, damaged or missing bollards across commercial properties in the GTA. Scheduled replacement programs and reserve-fund planning support.",
     forWho:
