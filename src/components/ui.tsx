@@ -228,7 +228,7 @@ export function FaqList({ faqs }: { faqs: { q: string; a: string }[] }) {
     <div className="divide-y divide-hairline border-y border-hairline">
       {faqs.map((f) => (
         <details key={f.q} className="group py-5">
-          <summary className="flex cursor-pointer list-none items-start justify-between gap-4">
+          <summary className="flex min-h-11 cursor-pointer list-none items-start justify-between gap-4 py-1">
             <span className="font-display text-base font-bold text-charcoal">{f.q}</span>
             <span
               aria-hidden
@@ -303,7 +303,11 @@ export function PageHeader({
             fill
             priority
             sizes="100vw"
-            className={artwork ? "object-cover object-right" : "object-cover"}
+            className={
+              // Banner artwork is a desktop device: on a phone the copy would
+              // sit on top of the photo, so there it becomes a card below.
+              artwork ? "hidden object-cover object-right lg:block" : "object-cover"
+            }
           />
           {/* Scrim — keeps the copy legible over the photo. Artwork carries its
               own white field on large screens, so it only needs one below. */}
@@ -311,7 +315,7 @@ export function PageHeader({
             aria-hidden
             className={
               artwork
-                ? "absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent xl:hidden"
+                ? "hidden"
                 : lightPhoto
                   ? "absolute inset-0 bg-gradient-to-r from-white/95 via-white/75 to-white/20"
                   : "absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/80 to-charcoal/40"
@@ -344,7 +348,11 @@ export function PageHeader({
         <div
           className={
             artwork
-              ? { md: "max-w-md", lg: "max-w-lg", xl: "max-w-xl" }[background?.copy ?? "lg"]
+              ? {
+                  md: "w-full lg:max-w-md",
+                  lg: "w-full lg:max-w-lg",
+                  xl: "w-full lg:max-w-xl",
+                }[background?.copy ?? "lg"]
               : ""
           }
         >
@@ -361,7 +369,7 @@ export function PageHeader({
                   {i === breadcrumbs.length - 1 ? (
                     <span className={invert ? "text-white" : "text-charcoal"}>{b.name}</span>
                   ) : (
-                    <Link href={b.path} className="hover:text-sbd-red">
+                    <Link href={b.path} className="inline-block py-2.5 hover:text-sbd-red">
                       {b.name}
                     </Link>
                   )}
@@ -390,6 +398,20 @@ export function PageHeader({
           </p>
         )}
         {actions && <div className="mt-9 flex flex-wrap gap-3">{actions}</div>}
+
+        {/* Phones get the artwork as a card under the copy, where it can be
+            looked at instead of read through. */}
+        {artwork && background && (
+          <div className="relative mt-9 aspect-[4/3] w-full overflow-hidden rounded-xl border border-hairline lg:hidden">
+            <Image
+              src={background.src}
+              alt={background.alt ?? ""}
+              fill
+              sizes="(max-width: 1024px) 100vw, 1px"
+              className="object-cover object-right"
+            />
+          </div>
+        )}
         </div>
       </div>
     </header>

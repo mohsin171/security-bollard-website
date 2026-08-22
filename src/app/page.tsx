@@ -76,20 +76,14 @@ export default function HomePage() {
           sizes="100vw"
           /* top-anchored: if the frame is ever shorter than the artwork, the
              crop comes off the pavement, never the maple leaf at the top */
-          className="object-cover object-right-top"
-        />
-        {/* Small screens only: the artwork is cropped there, so the copy needs a wash.
-            On large screens the artwork carries its own white curve and watermark leaf. */}
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent lg:hidden"
+          className="hidden object-cover object-right-top lg:block"
         />
 
-        <div className="container-sbd relative flex min-h-[calc(100svh-4.6rem)] items-center py-12 lg:h-full lg:min-h-0 lg:py-6">
+        <div className="container-sbd relative flex items-center py-10 lg:h-full lg:py-6">
           <div className="max-w-xl">
             <div className="hero-in flex items-center gap-2.5">
               <Eyebrow>Bollards &middot; Bike racks &middot; Barriers &middot; Covers</Eyebrow>
-              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" className="shrink-0 text-sbd-red" aria-hidden>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" className="hidden shrink-0 text-sbd-red sm:block" aria-hidden>
                 <path d="M12 1.8l1.2 3.9 2.7-2-.6 3.5 3.4-1.2-1.7 3 3.9.9-3.1 2.1 2.4 2-4.2.3.8 2.5-3.4-1.3-.5 2.1-1.3-1.3v5.4h-.8v-5.4l-1.3 1.3-.5-2.1-3.4 1.3.8-2.5-4.2-.3 2.4-2L2.1 9.9l3.9-.9-1.7-3 3.4 1.2-.6-3.5 2.7 2L12 1.8Z" />
               </svg>
             </div>
@@ -110,7 +104,7 @@ export default function HomePage() {
             </div>
 
             {/* Assess, supply, install — the order a buyer moves through */}
-            <ul className="hero-in hero-in-d3 mt-7 flex flex-wrap items-stretch gap-x-5 gap-y-3">
+            <ul className="hero-in hero-in-d3 mt-7 grid grid-cols-1 gap-3 sm:flex sm:flex-wrap sm:items-stretch sm:gap-x-5 sm:gap-y-3">
               {[
                 {
                   label: "Security assessment",
@@ -143,7 +137,10 @@ export default function HomePage() {
                   ),
                 },
               ].map((step, i) => (
-                <li key={step.href} className={i > 0 ? "border-l border-hairline pl-5" : ""}>
+                <li
+                  key={step.href}
+                  className={i > 0 ? "sm:border-l sm:border-hairline sm:pl-5" : ""}
+                >
                   <Link href={step.href} className="group flex items-center gap-2.5">
                     <svg
                       width="21"
@@ -173,6 +170,17 @@ export default function HomePage() {
               </a>{" "}
               &middot; {site.hours}
             </p>
+
+            {/* Phones: the scene sits under the copy rather than behind it. */}
+            <div className="hero-in hero-in-d4 relative mt-8 aspect-[4/3] w-full overflow-hidden rounded-xl border border-hairline lg:hidden">
+              <Image
+                src="/home-hero-9.webp"
+                alt="Stainless bollards with red bands, a bike rack and a decorative black bollard outside a Toronto commercial building at sunset"
+                fill
+                sizes="(max-width: 1024px) 100vw, 1px"
+                className="object-cover object-right"
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -59,7 +59,7 @@ export default function ContactPage() {
               </p>
               <a
                 href={site.emailHref}
-                className="mt-1 block font-display text-lg font-bold text-charcoal transition-colors hover:text-sbd-red"
+                className="mt-1 block py-1.5 font-display text-lg font-bold text-charcoal transition-colors hover:text-sbd-red"
               >
                 {site.email}
               </a>

@@ -80,13 +80,13 @@ export default function Footer() {
             <div className="mt-5 space-y-1">
               <a
                 href={site.phoneHref}
-                className="block font-display text-lg font-bold tracking-wide text-safety-yellow transition-opacity hover:opacity-80"
+                className="block py-1.5 font-display text-lg font-bold tracking-wide text-safety-yellow transition-opacity hover:opacity-80"
               >
                 {site.phone}
               </a>
               <a
                 href={site.emailHref}
-                className="block text-sm text-white/55 transition-colors hover:text-white"
+                className="block py-2 text-sm text-white/55 transition-colors hover:text-white"
               >
                 {site.email}
               </a>
@@ -121,7 +121,7 @@ export default function Footer() {
           {columns.map((col) => (
             <nav key={col.href} aria-label={`Footer — ${col.label}`}>
               <h2 className="font-display text-[11px] font-bold uppercase tracking-[0.22em] text-white">
-                <Link href={col.href} className="transition-colors hover:text-white/70">
+                <Link href={col.href} className="inline-block py-2.5 transition-colors hover:text-white/70">
                   {col.label}
                 </Link>
               </h2>
@@ -130,7 +130,7 @@ export default function Footer() {
                   <li key={child.href}>
                     <Link
                       href={child.href}
-                      className="text-white/55 transition-colors hover:text-white"
+                      className="inline-block py-2.5 text-white/55 transition-colors hover:text-white"
                     >
                       {child.label}
                     </Link>
@@ -150,11 +150,11 @@ export default function Footer() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className={
+                    className={`inline-block py-2.5 ${
                       l.emphasis
                         ? "font-semibold text-white transition-colors hover:text-safety-yellow"
                         : "text-white/55 transition-colors hover:text-white"
-                    }
+                    }`}
                   >
                     {l.label}
                   </Link>
@@ -174,7 +174,7 @@ export default function Footer() {
               <li key={l.href}>
                 <Link
                   href={l.href}
-                  className="text-white/40 transition-colors hover:text-white"
+                  className="inline-block py-2.5 text-white/40 transition-colors hover:text-white"
                 >
                   {l.label}
                 </Link>
