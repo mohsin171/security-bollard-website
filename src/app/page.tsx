@@ -395,7 +395,7 @@ export default function HomePage() {
           <div className="reveal reveal-d2 space-y-6">
             <div className="border-l-4 border-sbd-red bg-white p-6 shadow-[0_0_36px_rgba(200,16,46,0.07)]">
               <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-sbd-red">
-                Straight answer
+                Product capability
               </p>
               <h3 className="mt-3 font-display text-lg font-bold text-charcoal">
                 &ldquo;Will it stop a truck?&rdquo;

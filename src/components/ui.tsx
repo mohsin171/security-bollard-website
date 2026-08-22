@@ -459,7 +459,7 @@ export function CapabilityNote({ text }: { text: string }) {
   return (
     <aside className="border-l-4 border-sbd-red bg-fog p-6">
       <p className="mb-2 font-display text-xs font-bold uppercase tracking-[0.18em] text-sbd-red">
-        Straight answer
+        Product capability
       </p>
       <p className="text-charcoal">{text}</p>
     </aside>
