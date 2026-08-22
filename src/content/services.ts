@@ -229,6 +229,10 @@ export const services: Service[] = [
     name: "Replacement & Upgrade Programs",
     navLabel: "Replacement & Upgrade Programs",
     eyebrow: "The recurring job",
+    hero: {
+      src: "/services/replacement-upgrades-hero.webp",
+      alt: "A rusted-out old bollard stump beside its stainless replacement freshly bolted to the pavement, with anchors and an impact driver alongside",
+    },
     headline: "Bent, rusted, missing — replaced on a schedule",
     intro:
       "Site protection hardware is consumable. The garage ramp corner gets clipped every winter. The dock door finds a reversing trailer twice a year. This is not a failure of the site, it is the hardware doing its job. The question is whether replacement happens on a plan or as an emergency.",
