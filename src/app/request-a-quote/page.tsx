@@ -26,7 +26,7 @@ export default function RequestQuotePage() {
         intro="The more of this you can answer the faster we can price it — but if all you have is a photograph and an address, send that and we will ask the rest."
         breadcrumbs={crumbs}
         background={{
-          src: "/request-a-quote-hero-2.webp",
+          src: "/request-a-quote-hero-3.webp",
           alt: "Someone photographing a row of stainless bollards on a phone, with the three steps to a quote listed beside them",
           tone: "artwork",
           copy: "md",
