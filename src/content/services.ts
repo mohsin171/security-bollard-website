@@ -128,6 +128,10 @@ export const services: Service[] = [
     name: "Warehouse Safety Walkthrough",
     navLabel: "Warehouse Safety Walkthrough",
     eyebrow: "For EHS and facilities",
+    hero: {
+      src: "/services/warehouse-walkthrough-hero.webp",
+      alt: "A row of black bollards with yellow reflective bands guarding a racking aisle in a distribution warehouse, with a forklift alongside",
+    },
     headline: "A numbered risk list your JHSC can action",
     intro:
       "Most distribution centres have somewhere between fifteen and thirty unprotected strike points — dock doors, racking uprights, gas meters, electrical panels, eyewash stations, fire risers, pedestrian crossings. They are obvious once someone walks the floor looking for them, and invisible when you walk past them every day. We will walk your site and hand you the list.",
@@ -174,6 +178,10 @@ export const services: Service[] = [
     name: "Multi-Site & Portfolio Programs",
     navLabel: "Multi-Site & Portfolio Programs",
     eyebrow: "For portfolios",
+    hero: {
+      src: "/services/portfolio-programs-hero.webp",
+      alt: "A city map with red location pins marking multiple sites across a portfolio",
+    },
     headline: "One supplier across every building you manage",
     intro:
       "Chasing three quotes for a $2,800 job costs more in management time than the job is worth. If you manage a portfolio, the sensible arrangement is standing pricing on file, one point of contact, and per-building quoting that does not restart from zero every time something gets hit.",
