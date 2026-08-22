@@ -49,8 +49,8 @@ export default function AboutPage() {
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <PageHeader
         eyebrow="About us"
-        title="The supplier in between the catalogue and the crew"
-        intro="Security Bollard Direct supplies commercial-grade site protection hardware to property managers, facilities teams, contractors and project teams across the Greater Toronto Area and Ontario."
+        title="Commercial site protection, supplied and installed"
+        intro="Security Bollard Direct supplies and installs safety bollards, bike racks, traffic barriers and bollard covers for commercial properties across Toronto, the GTA and Ontario. We assess the spot, recommend hardware that suits the application, and put a written quote with a part number and a price in your inbox within 24 hours."
         breadcrumbs={crumbs}
         background={{
           src: "/about-hero-6.webp",
