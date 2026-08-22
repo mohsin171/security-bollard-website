@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { site } from "@/content/site";
 
 /* ---------- Layout primitives ---------- */
@@ -278,6 +278,8 @@ export function PageHeader({
     tone?: "dark" | "light" | "artwork";
     /** How wide the copy may run before it meets the artwork's curve. */
     copy?: "md" | "lg" | "xl";
+    /** Artwork aspect ratio; the frame takes its height from this. Default 2:1. */
+    ratio?: number;
   };
   actions?: ReactNode;
 }) {
@@ -289,6 +291,7 @@ export function PageHeader({
 
   return (
     <header
+      style={artwork ? ({ "--art-ar": background?.ratio ?? 2 } as CSSProperties) : undefined}
       className={`ambient border-b ${
         artwork
           ? "art-hero relative isolate flex items-center overflow-hidden border-hairline bg-white pb-16 pt-12 md:pb-24 md:pt-16 lg:py-0"

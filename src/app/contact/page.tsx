@@ -26,10 +26,11 @@ export default function ContactPage() {
         intro="Practical products and responsive support for commercial properties, contractors and project teams across the GTA and Ontario."
         breadcrumbs={crumbs}
         background={{
-          src: "/contact-hero-3.webp",
+          src: "/contact-hero-5.webp",
           alt: "Stainless bollards with red bands lining the entrance of the Security Bollard Direct building at sunset",
           tone: "artwork",
           copy: "md",
+          ratio: 2.2,
         }}
       />
 
