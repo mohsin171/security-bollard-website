@@ -311,7 +311,7 @@ export function PageHeader({
             aria-hidden
             className={
               artwork
-                ? "absolute inset-0 bg-white/88 lg:hidden"
+                ? "absolute inset-0 bg-gradient-to-l from-white/68 via-white/88 to-white/96 lg:hidden"
                 : lightPhoto
                   ? "absolute inset-0 bg-gradient-to-r from-white/95 via-white/75 to-white/20"
                   : "absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/80 to-charcoal/40"
@@ -388,7 +388,14 @@ export function PageHeader({
         </h1>
         {intro && (
           <p
-            className={`mt-7 max-w-3xl text-lg ${invert ? "text-white/75" : "text-slate-grey"}`}
+            className={`mt-7 max-w-3xl text-lg ${
+              invert
+                ? "text-white/75"
+                : artwork
+                  // over the artwork on phones, grey does not hold up
+                  ? "text-charcoal lg:text-slate-grey"
+                  : "text-slate-grey"
+            }`}
           >
             {intro}
           </p>

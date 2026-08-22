@@ -81,7 +81,10 @@ export default function HomePage() {
 
         {/* Phones and tablets: the copy sits on the artwork, so it needs a
             veil heavy enough to read against. */}
-        <div aria-hidden className="absolute inset-0 bg-white/88 lg:hidden" />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-l from-white/68 via-white/88 to-white/96 lg:hidden"
+        />
 
         <div className="container-sbd relative flex min-h-[calc(100svh-4.6rem)] items-center py-10 lg:h-full lg:min-h-0 lg:py-6">
           <div className="max-w-xl">
@@ -96,7 +99,7 @@ export default function HomePage() {
               <span className="block text-sbd-red">Made for Canada.</span>
             </h1>
             <div className="hero-in hero-in-d1 mt-6 h-1 w-24 bg-sbd-red" />
-            <p className="hero-in hero-in-d2 mt-6 max-w-lg text-lg text-slate-grey">
+            <p className="hero-in hero-in-d2 mt-6 max-w-lg text-lg text-charcoal lg:text-slate-grey">
               High-quality bollards, bike racks, barriers and covers for commercial sites across
               Canada. Durable. Reliable. Built to last.
             </p>
