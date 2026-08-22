@@ -17,7 +17,7 @@ const SITE_TYPES = [
 ];
 
 const PROTECTING = [
-  "Store Front, glazing or building entrance",
+  "Store front, glazing or building entrance",
   "Loading dock, doors or racking",
   "Gas meter, electrical panel or equipment",
   "Pedestrian walkway or drop-off area",

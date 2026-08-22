@@ -76,10 +76,14 @@ export default function HomePage() {
           sizes="100vw"
           /* top-anchored: if the frame is ever shorter than the artwork, the
              crop comes off the pavement, never the maple leaf at the top */
-          className="hidden object-cover object-right-top lg:block"
+          className="object-cover object-right-top"
         />
 
-        <div className="container-sbd relative flex items-center py-10 lg:h-full lg:py-6">
+        {/* Phones and tablets: the copy sits on the artwork, so it needs a
+            veil heavy enough to read against. */}
+        <div aria-hidden className="absolute inset-0 bg-white/88 lg:hidden" />
+
+        <div className="container-sbd relative flex min-h-[calc(100svh-4.6rem)] items-center py-10 lg:h-full lg:min-h-0 lg:py-6">
           <div className="max-w-xl">
             <div className="hero-in flex items-center gap-2.5">
               <Eyebrow>Bollards &middot; Bike racks &middot; Barriers &middot; Covers</Eyebrow>
@@ -170,17 +174,6 @@ export default function HomePage() {
               </a>{" "}
               &middot; {site.hours}
             </p>
-
-            {/* Phones: the scene sits under the copy rather than behind it. */}
-            <div className="hero-in hero-in-d4 relative mt-8 aspect-[4/3] w-full overflow-hidden rounded-xl border border-hairline lg:hidden">
-              <Image
-                src="/home-hero-9.webp"
-                alt="Stainless bollards with red bands, a bike rack and a decorative black bollard outside a Toronto commercial building at sunset"
-                fill
-                sizes="(max-width: 1024px) 100vw, 1px"
-                className="object-cover object-right"
-              />
-            </div>
           </div>
         </div>
       </section>

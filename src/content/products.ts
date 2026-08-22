@@ -42,12 +42,12 @@ export const products: Product[] = [
     },
     headline: "Safety bollards for commercial sites",
     intro:
-      "A bollard does one job: put something solid between a vehicle and the thing you cannot afford to have hit. Store Front glazing, a dock door, a gas meter, an electrical panel, a pedestrian walkway. We supply fixed, removable, surface-mounted, stainless and decorative bollards for commercial properties across the GTA and Ontario.",
+      "A bollard does one job: put something solid between a vehicle and the thing you cannot afford to have hit. Store front glazing, a dock door, a gas meter, an electrical panel, a pedestrian walkway. We supply fixed, removable, surface-mounted, stainless and decorative bollards for commercial properties across the GTA and Ontario.",
     metaTitle: "Commercial Safety Bollards Toronto",
     metaDescription:
       "Fixed, removable, surface-mount, stainless and yellow-black safety bollards for commercial sites across Toronto and the GTA. Quote within 24 hours.",
     applications: [
-      "Store Front and glazing protection at retail, pharmacy and cannabis locations",
+      "Store front and glazing protection at retail, pharmacy and cannabis locations",
       "Loading dock corners, overhead door tracks and dock aprons",
       "Gas meters, electrical panels, transformers and fire risers",
       "Parking garage ramps, pillar corners and curb entries",
@@ -283,7 +283,7 @@ export const products: Product[] = [
     metaDescription:
       "Flat top and domed round satin stainless steel bollards from 4in x 36in to 6.6in x 48in, with red, yellow or black reflective bands. Toronto and the GTA.",
     applications: [
-      "Store Front and glazing protection at customer-facing locations",
+      "Store front and glazing protection at customer-facing locations",
       "Building entrances, lobbies and porte-cochères",
       "Plazas, streetscapes and public realm frontages",
       "Hotels, clinics and pharmacies",

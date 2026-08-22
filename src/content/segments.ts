@@ -187,12 +187,12 @@ export const segments: Segment[] = [
       "One vehicle into a store front costs more in downtime, glazing, inventory and insurance than a full bollard package across several sites. For multi-location operators the harder problem is consistency: getting the same protection specified, priced and installed the same way at forty stores without quoting each one from scratch.",
     metaTitle: "Store Front Protection Bollards for Retail",
     metaDescription:
-      "Store Front protection bollards for retail, pharmacy, cannabis, convenience and QSR operators across the GTA. Standardised per-site packages and phased rollouts.",
+      "Store front protection bollards for retail, pharmacy, cannabis, convenience and QSR operators across the GTA. Standardised per-site packages and phased rollouts.",
     problems: [
       {
         title: "Glazing and entries are unprotected",
         detail:
-          "Store Front glass, entry vestibules, ATMs and propane cages sit directly in line with a parking lot and nothing in between.",
+          "Store front glass, entry vestibules, ATMs and propane cages sit directly in line with a parking lot and nothing in between.",
       },
       {
         title: "Rollouts vary store to store",
