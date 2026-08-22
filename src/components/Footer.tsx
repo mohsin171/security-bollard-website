@@ -3,8 +3,8 @@ import Image from "next/image";
 import { nav, site, social } from "@/content/site";
 
 const companyLinks = [
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact Us", href: "/contact" },
   { label: "Request a Quote", href: "/request-a-quote", emphasis: true },
 ];
 

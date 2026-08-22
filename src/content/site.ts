@@ -149,8 +149,8 @@ export const nav: NavItem[] = [
       },
     ],
   },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 /** The capability statement from the brand guide. Used verbatim wherever

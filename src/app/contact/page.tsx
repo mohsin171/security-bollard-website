@@ -13,7 +13,7 @@ export const metadata = buildMetadata({
 export default function ContactPage() {
   const crumbs = [
     { name: "Home", path: "/" },
-    { name: "Contact", path: "/contact" },
+    { name: "Contact Us", path: "/contact" },
   ];
 
   return (
@@ -21,7 +21,7 @@ export default function ContactPage() {
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <JsonLd data={localBusinessSchema} />
       <PageHeader
-        eyebrow="Contact"
+        eyebrow="Contact us"
         title="Let's build a safer commercial space"
         intro="Practical products and responsive support for commercial properties, contractors and project teams across the GTA and Ontario."
         breadcrumbs={crumbs}
