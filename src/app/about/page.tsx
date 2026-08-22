@@ -51,7 +51,7 @@ export default function AboutPage() {
         intro="Security Bollard Direct supplies commercial-grade site protection hardware to property managers, facilities teams, contractors and project teams across the Greater Toronto Area and Ontario."
         breadcrumbs={crumbs}
         background={{
-          src: "/about-hero.webp",
+          src: "/about-hero-2.webp",
           alt: "A Security Bollard Direct truck loaded with stainless bollards outside the depot, with three colleagues reviewing a job on a tablet and the Toronto skyline behind",
           tone: "artwork",
           copy: "md",
