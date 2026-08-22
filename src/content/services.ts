@@ -7,6 +7,8 @@ export type Service = {
   intro: string;
   metaTitle: string;
   metaDescription: string;
+  /** Optional scene photo, shown in the full-viewport header. */
+  hero?: { src: string; alt: string };
   forWho: string;
   steps: { title: string; detail: string }[];
   included: string[];
@@ -21,6 +23,10 @@ export const services: Service[] = [
     name: "Site Assessment & Quotation",
     navLabel: "Site Assessment & Quotation",
     eyebrow: "How we start",
+    hero: {
+      src: "/services/site-assessment-hero.webp",
+      alt: "Someone photographing a stainless bollard with a red band on a phone, outside a glass commercial entrance",
+    },
     headline: "Send a photo. Get a quote within 24 hours.",
     intro:
       "Most site-protection problems can be identified from a photograph and two questions. You should not have to book a meeting, host a site visit and wait a week to find out what a replacement bollard costs. Send us a picture of the problem and we will come back with a part number, a price and a date.",

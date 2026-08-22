@@ -1,4 +1,6 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
 import { services, getService } from "@/content/services";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, serviceSchema, breadcrumbSchema } from "@/components/JsonLd";
@@ -39,12 +41,88 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <JsonLd data={serviceSchema(service.name, service.metaDescription, `/services/${service.slug}`)} />
       <JsonLd data={breadcrumbSchema(crumbs)} />
 
-      <PageHeader
-        eyebrow={service.eyebrow}
-        title={service.headline}
-        intro={service.intro}
-        breadcrumbs={crumbs}
-      />
+      {service.hero ? (
+        /* Same full-viewport header as the product pages: copy left, photo in a
+           glowing red card on the right. */
+        <header className="ambient border-b border-hairline bg-white">
+          <div className="blueprint-grid" aria-hidden />
+          <div
+            className="glow-orb glow-orb-red"
+            aria-hidden
+            style={{ width: 460, height: 460, top: -180, left: -120, opacity: 0.22 }}
+          />
+          <div
+            className="glow-orb glow-orb-yellow"
+            aria-hidden
+            style={{ width: 340, height: 340, bottom: -160, right: -80, opacity: 0.18 }}
+          />
+          <div
+            className="ring-circle"
+            aria-hidden
+            style={{ width: 260, height: 260, bottom: -80, left: "34%" }}
+          />
+          <div className="glow-line" aria-hidden style={{ bottom: 0, left: 0, right: 0 }} />
+
+          <div className="container-sbd grid min-h-[calc(100svh-4.6rem)] items-center gap-10 py-10 md:py-12 lg:min-h-[calc(100svh-7.4rem)] lg:grid-cols-[1.1fr_1fr]">
+            <div>
+              <nav aria-label="Breadcrumb" className="mb-6">
+                <ol className="flex flex-wrap items-center gap-x-2 text-xs text-slate-grey">
+                  {crumbs.map((b, i) => (
+                    <li key={b.path} className="flex items-center gap-2">
+                      {i > 0 && <span aria-hidden>/</span>}
+                      {i === crumbs.length - 1 ? (
+                        <span className="text-charcoal">{b.name}</span>
+                      ) : (
+                        <Link href={b.path} className="transition-colors hover:text-sbd-red">
+                          {b.name}
+                        </Link>
+                      )}
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+              <p className="hero-in font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
+                {service.eyebrow}
+              </p>
+              <h1 className="hero-in hero-in-d1 mt-4 text-[length:var(--text-h1)] text-charcoal">
+                {service.headline}
+              </h1>
+              <div className="hero-in hero-in-d1 mt-6 h-1 w-24 bg-sbd-red" />
+              <p className="hero-in hero-in-d2 mt-7 max-w-xl text-lg text-slate-grey">
+                {service.intro}
+              </p>
+            </div>
+
+            <div className="hero-in hero-in-d2 relative mx-auto aspect-[4/5] w-full max-w-[24rem] lg:mx-0 lg:h-[min(70vh,37rem)] lg:w-auto lg:max-w-none lg:justify-self-end">
+              <div
+                aria-hidden
+                className="absolute -inset-3 rounded-[1.75rem] bg-[radial-gradient(ellipse_at_center,rgba(200,16,46,0.3),transparent_70%)] blur-xl"
+              />
+              <div className="relative h-full w-full overflow-hidden rounded-3xl border-2 border-sbd-red/70 shadow-[0_0_26px_rgba(200,16,46,0.35),0_14px_50px_rgba(26,26,26,0.18)]">
+                <Image
+                  src={service.hero.src}
+                  alt={service.hero.alt}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 24rem, 30rem"
+                  className="object-cover transition-transform duration-700 hover:scale-[1.03]"
+                />
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-charcoal/10"
+                />
+              </div>
+            </div>
+          </div>
+        </header>
+      ) : (
+        <PageHeader
+          eyebrow={service.eyebrow}
+          title={service.headline}
+          intro={service.intro}
+          breadcrumbs={crumbs}
+        />
+      )}
 
       <Section>
         <div className="grid gap-10 lg:grid-cols-[1.35fr_1fr]">
