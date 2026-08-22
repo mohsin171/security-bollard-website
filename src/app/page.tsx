@@ -65,16 +65,18 @@ export default function HomePage() {
       {/* ---------- Hero ---------- */}
       <section
         className="art-hero relative isolate overflow-hidden border-b border-hairline bg-white"
-        style={{ "--art-ar": 1.965 } as React.CSSProperties}
+        style={{ "--art-ar": 1.8194 } as React.CSSProperties}
       >
         {/* Scene sits to the right; the artwork fades to white where the copy goes */}
         <Image
-          src="/home-hero-8.webp"
+          src="/home-hero-9.webp"
           alt="Stainless bollards with red bands, a bike rack and a decorative black bollard outside a Toronto commercial building at sunset"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-right"
+          /* top-anchored: if the frame is ever shorter than the artwork, the
+             crop comes off the pavement, never the maple leaf at the top */
+          className="object-cover object-right-top"
         />
         {/* Small screens only: the artwork is cropped there, so the copy needs a wash.
             On large screens the artwork carries its own white curve and watermark leaf. */}
