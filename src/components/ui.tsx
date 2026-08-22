@@ -343,7 +343,7 @@ export function PageHeader({
       )}
       <div className="glow-line" aria-hidden style={{ bottom: 0, left: 0, right: 0 }} />
       <div className={`container-sbd relative ${onPhoto ? "w-full" : ""}`}>
-        <div className={artwork ? "max-w-xl" : ""}>
+        <div className={artwork ? "max-w-lg" : ""}>
         {breadcrumbs && (
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol
