@@ -4,6 +4,10 @@ export const site = {
   tagline: "Built for Safety. Made to Last.",
   phone: "416-474-4933",
   phoneHref: "tel:+14164744933",
+  /** Click-to-chat. Same published number, in international format. */
+  whatsappHref:
+    "https://wa.me/14164744933?text=" +
+    encodeURIComponent("Hi Security Bollard Direct, I would like a quote."),
   email: "info@securitybollarddirect.ca",
   emailHref: "mailto:info@securitybollarddirect.ca",
   domain: "securitybollarddirect.ca",
@@ -36,6 +40,12 @@ export const social = [
   {
     label: "Instagram",
     href: "https://www.instagram.com/securitybollarddirect",
+  },
+  {
+    label: "WhatsApp",
+    href:
+      "https://wa.me/14164744933?text=" +
+      encodeURIComponent("Hi Security Bollard Direct, I would like a quote."),
   },
 ] as const;
 
