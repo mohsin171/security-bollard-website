@@ -84,8 +84,9 @@ export default async function SegmentPage({ params }: { params: Promise<{ slug: 
                   ))}
                 </ol>
               </nav>
-              <p className="hero-in font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
-                {seg.eyebrow}
+              {/* The sector's own name, as it reads in the menu and on the cards. */}
+              <p className="hero-in font-display text-sm font-bold uppercase tracking-[0.16em] text-sbd-red">
+                {seg.navLabel}
               </p>
               <h1 className="hero-in hero-in-d1 mt-4 text-[length:var(--text-h1)] text-charcoal">
                 {seg.headline}
