@@ -1,6 +1,8 @@
+import Image from "next/image";
 import { products } from "@/content/products";
 import Reveal from "@/components/Reveal";
 import { categories } from "@/content/categories";
+import { homeProductImages } from "@/content/homeCards";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, itemListSchema } from "@/components/JsonLd";
 import { capabilityStatement } from "@/content/site";
@@ -44,6 +46,17 @@ export default function ProductsPage() {
           {products.map((p) => (
             <article key={p.slug} className="reveal hover-lift flex flex-col overflow-hidden border border-hairline bg-white">
               <div className="h-1 w-full bg-sbd-red" />
+              {p.hero && (
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-fog">
+                  <Image
+                    src={p.hero.src}
+                    alt={p.hero.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-500 hover:scale-[1.03]"
+                  />
+                </div>
+              )}
               <div className="flex flex-1 flex-col p-7">
                 <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
                   {p.eyebrow}
@@ -77,6 +90,8 @@ export default function ProductsPage() {
               eyebrow={c.eyebrow}
               title={c.name}
               blurb={c.intro.split(". ")[0] + "."}
+              image={homeProductImages[c.slug]}
+              imageAlt={c.name}
             />
           ))}
         </div>
