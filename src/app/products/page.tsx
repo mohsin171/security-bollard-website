@@ -11,6 +11,26 @@ import {
   CtaBand, CapabilityNote, Button, SpecTable,
 } from "@/components/ui";
 
+/**
+ * Product close-ups for the three categories whose variants carry no product
+ * shot yet. Cropped from each page's own hero, so the card shows the product
+ * rather than the whole street scene.
+ */
+const PRODUCT_THUMBS: Record<string, { src: string; alt: string }> = {
+  "safety-bollards": {
+    src: "/products/safety-bollards-thumb.webp",
+    alt: "Stainless safety bollards with yellow bands on a paved commercial frontage",
+  },
+  "bollard-covers": {
+    src: "/products/bollard-covers-thumb.webp",
+    alt: "Decorative bollard cover with a domed cap and banded collar",
+  },
+  "traffic-access-barriers": {
+    src: "/products/traffic-access-barriers-thumb.webp",
+    alt: "Barrier arm and card reader pedestal at a vehicle entrance",
+  },
+};
+
 export const metadata = buildMetadata({
   title: "Commercial Products",
   description:
@@ -52,7 +72,7 @@ export default function ProductsPage() {
                     hero for the categories that have no product shot yet. */}
                 <div className="flex items-start gap-5">
                   {(() => {
-                    const shot = p.variants.find((v) => v.image)?.image;
+                    const shot = p.variants.find((v) => v.image)?.image ?? PRODUCT_THUMBS[p.slug];
                     const pic = shot ?? p.hero;
                     if (!pic) return null;
                     return (
