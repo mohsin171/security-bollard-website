@@ -73,6 +73,10 @@ export const services: Service[] = [
     name: "Supply & Installation",
     navLabel: "Supply & Installation",
     eyebrow: "Getting it in the ground",
+    hero: {
+      src: "/services/supply-installation-hero.webp",
+      alt: "An installer in a hard hat and hi-vis torquing down the base plate of a stainless bollard on a city sidewalk, with the truck behind",
+    },
     headline: "Supply only, or supply with coordinated installation",
     intro:
       "Some buyers have a contractor and just need the right product delivered on the right day. Others want one number and one point of contact. We do both, and we are clear about which one you are buying.",
