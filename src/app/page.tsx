@@ -65,11 +65,11 @@ export default function HomePage() {
       {/* ---------- Hero ---------- */}
       <section
         className="art-hero relative isolate overflow-hidden border-b border-hairline bg-white"
-        style={{ "--art-ar": 1.819 } as React.CSSProperties}
+        style={{ "--art-ar": 1.965 } as React.CSSProperties}
       >
         {/* Scene sits to the right; the artwork fades to white where the copy goes */}
         <Image
-          src="/home-hero-7.webp"
+          src="/home-hero-8.webp"
           alt="Stainless bollards with red bands, a bike rack and a decorative black bollard outside a Toronto commercial building at sunset"
           fill
           priority
