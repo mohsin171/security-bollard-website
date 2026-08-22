@@ -66,8 +66,9 @@ export default function Footer() {
               <Image
                 src="/logos/sbd-logo-full.png"
                 alt={site.name}
-                width={1568}
-                height={700}
+                width={260}
+                height={116}
+                sizes="99px"
                 className="h-11 w-auto"
               />
             </Link>

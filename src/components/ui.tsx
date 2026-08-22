@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { CSSProperties, ReactNode } from "react";
 import { site } from "@/content/site";
+import { heroBlur } from "@/content/heroBlur";
 
 /* ---------- Layout primitives ---------- */
 
@@ -304,6 +305,9 @@ export function PageHeader({
             fill
             priority
             sizes="100vw"
+            {...(heroBlur[background.src]
+              ? { placeholder: "blur" as const, blurDataURL: heroBlur[background.src] }
+              : {})}
             className={artwork ? "object-cover object-right" : "object-cover"}
           />
           {/* Scrim: keeps the copy legible over the photo. Artwork carries its

@@ -50,9 +50,10 @@ export default function Header() {
             <Image
               src="/logos/sbd-logo-full.png"
               alt={site.name}
-              width={1568}
-              height={700}
+              width={320}
+              height={143}
               priority
+              sizes="(min-width: 768px) 144px, 126px"
               className="h-14 w-auto md:h-16"
             />
           </Link>

@@ -7,6 +7,7 @@ import { segments } from "@/content/segments";
 import { applications } from "@/content/applications";
 import { homeProductImages, homeServiceImages, homeSegmentImages } from "@/content/homeCards";
 import { nav, site, capabilityStatement } from "@/content/site";
+import { heroBlur } from "@/content/heroBlur";
 import Reveal from "@/components/Reveal";
 import {
   Section,
@@ -73,6 +74,8 @@ export default function HomePage() {
           fill
           priority
           sizes="100vw"
+          placeholder="blur"
+          blurDataURL={heroBlur["/home-hero-9.webp"]}
           /* top-anchored: if the frame is ever shorter than the artwork, the
              crop comes off the pavement, never the maple leaf at the top */
           className="object-cover object-right-top"
