@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { segments, getSegment } from "@/content/segments";
@@ -37,7 +38,7 @@ export default async function SegmentPage({ params }: { params: Promise<{ slug: 
   ];
 
   return (
-    <>
+    <Reveal>
       <JsonLd data={serviceSchema(seg.name, seg.metaDescription, `/who-we-serve/${seg.slug}`)} />
       <JsonLd data={faqSchema(seg.faqs)} />
       <JsonLd data={breadcrumbSchema(crumbs)} />
@@ -140,7 +141,7 @@ export default async function SegmentPage({ params }: { params: Promise<{ slug: 
             <CheckList items={seg.approach} />
           </div>
           <div className="space-y-6">
-            <div className="border border-hairline bg-white p-6">
+            <div className="reveal border border-hairline bg-white p-6">
               <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
                 Products for this application
               </p>
@@ -157,7 +158,7 @@ export default async function SegmentPage({ params }: { params: Promise<{ slug: 
                 ))}
               </ul>
             </div>
-            <div className="border-l-4 border-sbd-red bg-white p-6">
+            <div className="reveal reveal-d1 border-l-4 border-sbd-red bg-white p-6">
               <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-sbd-red">
                 Worth knowing
               </p>
@@ -189,6 +190,6 @@ export default async function SegmentPage({ params }: { params: Promise<{ slug: 
       </Section>
 
       <CtaBand />
-    </>
+    </Reveal>
   );
 }

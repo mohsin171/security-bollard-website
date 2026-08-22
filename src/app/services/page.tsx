@@ -1,4 +1,5 @@
 import { services } from "@/content/services";
+import Reveal from "@/components/Reveal";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema } from "@/components/JsonLd";
 import { PageHeader, Section, SectionHeading, CtaBand, Button, NumberedList } from "@/components/ui";
@@ -17,7 +18,7 @@ export default function ServicesPage() {
   ];
 
   return (
-    <>
+    <Reveal>
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <PageHeader
         eyebrow="How we work"
@@ -34,7 +35,7 @@ export default function ServicesPage() {
       <Section>
         <div className="space-y-6">
           {services.map((s, i) => (
-            <article key={s.slug} className="border border-hairline bg-white">
+            <article key={s.slug} className="reveal hover-lift overflow-hidden border border-hairline bg-white">
               <div className="h-1 w-full bg-sbd-red" />
               <div className="grid gap-6 p-7 md:grid-cols-[4rem_1fr_auto] md:items-center md:p-8">
                 <span className="font-display text-3xl font-bold tabular-nums text-sbd-red">
@@ -84,6 +85,6 @@ export default function ServicesPage() {
       </Section>
 
       <CtaBand />
-    </>
+    </Reveal>
   );
 }

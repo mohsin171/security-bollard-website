@@ -1,4 +1,5 @@
 import { segments } from "@/content/segments";
+import Reveal from "@/components/Reveal";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema } from "@/components/JsonLd";
 import { PageHeader, Section, SectionHeading, CtaBand, Button, LinkCard } from "@/components/ui";
@@ -28,7 +29,7 @@ export default function WhoWeServePage() {
   ];
 
   return (
-    <>
+    <Reveal>
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <PageHeader
         eyebrow="Markets served"
@@ -45,7 +46,7 @@ export default function WhoWeServePage() {
       <Section>
         <div className="space-y-6">
           {segments.map((s) => (
-            <article key={s.slug} className="border border-hairline bg-white">
+            <article key={s.slug} className="reveal hover-lift overflow-hidden border border-hairline bg-white">
               <div className="h-1 w-full bg-sbd-red" />
               <div className="grid gap-6 p-7 md:grid-cols-[1.3fr_1fr] md:p-8">
                 <div>
@@ -80,7 +81,7 @@ export default function WhoWeServePage() {
         />
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {ALSO_SERVED.map((a) => (
-            <div key={a} className="border border-hairline bg-white px-4 py-3 text-sm text-charcoal">
+            <div key={a} className="reveal hover-lift border border-hairline bg-white px-4 py-3 text-sm text-charcoal">
               {a}
             </div>
           ))}
@@ -93,6 +94,6 @@ export default function WhoWeServePage() {
       </Section>
 
       <CtaBand />
-    </>
+    </Reveal>
   );
 }

@@ -84,7 +84,7 @@ export function Button({
   className?: string;
 }) {
   const base =
-    "inline-flex items-center justify-center gap-2 px-6 py-3.5 font-display text-sm font-bold uppercase tracking-wider transition-colors duration-150";
+    "inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3.5 font-display text-sm font-bold uppercase tracking-wider transition-all duration-200 hover:-translate-y-px active:translate-y-0";
   const variants = {
     primary: "bg-sbd-red text-white hover:bg-sbd-red-dark",
     outline: "border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-white",
@@ -156,15 +156,6 @@ export function LinkCard({
         </span>
       </span>
     </Link>
-  );
-}
-
-export function StatCard({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="border-l-4 border-sbd-red bg-fog px-5 py-4">
-      <p className="font-display text-2xl font-bold text-charcoal">{value}</p>
-      <p className="mt-1 text-sm text-slate-grey">{label}</p>
-    </div>
   );
 }
 

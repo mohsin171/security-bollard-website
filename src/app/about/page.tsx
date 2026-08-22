@@ -1,4 +1,5 @@
 import { buildMetadata } from "@/lib/seo";
+import Reveal from "@/components/Reveal";
 import { JsonLd, breadcrumbSchema } from "@/components/JsonLd";
 import { site, capabilityStatement } from "@/content/site";
 import {
@@ -43,7 +44,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <>
+    <Reveal>
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <PageHeader
         eyebrow="About us"
@@ -91,7 +92,7 @@ export default function AboutPage() {
           </div>
 
           <aside className="h-fit space-y-6">
-            <div className="border border-hairline bg-fog p-6">
+            <div className="reveal border border-hairline bg-fog p-6">
               <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
                 What commercial customers can expect
               </p>
@@ -139,7 +140,7 @@ export default function AboutPage() {
               d: "Coordinate supply and practical project support for commercial installation.",
             },
           ].map((s) => (
-            <div key={s.n} className="border border-hairline bg-white p-7">
+            <div key={s.n} className="reveal hover-lift border border-hairline bg-white p-7">
               <div className="h-1 w-12 bg-sbd-red" />
               <p className="mt-5 font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
                 Step {s.n}
@@ -159,7 +160,7 @@ export default function AboutPage() {
         />
         <div className="grid gap-6 lg:grid-cols-2">
           <CapabilityNote text={capabilityStatement} />
-          <div className="border border-hairline bg-white p-6">
+          <div className="reveal border border-hairline bg-white p-6">
             <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
               We will refer you elsewhere for
             </p>
@@ -181,6 +182,6 @@ export default function AboutPage() {
       </Section>
 
       <CtaBand />
-    </>
+    </Reveal>
   );
 }

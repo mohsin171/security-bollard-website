@@ -95,6 +95,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-CA" className={`${archivo.variable} ${inter.variable}`}>
       <body className="flex min-h-screen flex-col antialiased">
+      <noscript>
+        <style>{`.reveal { opacity: 1; transform: none; }`}</style>
+      </noscript>
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:bg-sbd-red focus:px-4 focus:py-2 focus:font-display focus:text-sm focus:font-bold focus:uppercase focus:text-white"

@@ -188,7 +188,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               <article
                 key={v.name}
                 id={variantAnchor(v)}
-                className="reveal hover-lift scroll-mt-28 border border-hairline bg-white shadow-[0_1px_2px_rgba(26,26,26,0.04)]"
+                className="reveal hover-lift scroll-mt-28 overflow-hidden border border-hairline bg-white shadow-[0_1px_2px_rgba(26,26,26,0.04)]"
               >
                 <div className="h-1 w-full bg-sbd-red" />
                 <div

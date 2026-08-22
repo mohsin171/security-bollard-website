@@ -69,15 +69,6 @@
     background: var(--color-sbd-red);
   }
 
-  .red-rule-wide::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 3px;
-    margin-top: 1rem;
-    background: var(--color-sbd-red);
-  }
-
   /* Hazard stripe — industrial-segment materials only, max 8mm tall.
      Brand Guidelines Section 6. */
   .hazard-stripe {
@@ -105,6 +96,25 @@
       height: min(calc(100svh - 7.4rem), calc(100vw / var(--art-ar)));
       min-height: 30rem;
     }
+  }
+
+  /* ---------- Soft corners ----------
+     Cards and panels get a small radius. Applied here, by the classes that
+     draw a card (a full hairline border, or the red left bar), so the whole
+     site stays consistent without repeating a radius in every file. Utilities
+     win over this layer, so an explicit rounded-full / rounded-3xl still
+     overrides it. Boxes with full-bleed children need `overflow-hidden` so the
+     child cannot square off the corner. */
+  .border.border-hairline,
+  .border-l-4.border-sbd-red {
+    border-radius: 0.625rem;
+  }
+
+  /* Inputs and small chips read better a touch tighter. */
+  input.border.border-hairline,
+  select.border.border-hairline,
+  textarea.border.border-hairline {
+    border-radius: 0.5rem;
   }
 
   .container-sbd {
@@ -203,6 +213,14 @@
     transform: translateY(22px);
     transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
       transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* If scripting is unavailable the observer never runs, so show everything. */
+  @media (scripting: none) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+    }
   }
 
   .reveal.is-visible {

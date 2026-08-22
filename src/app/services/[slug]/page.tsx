@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Reveal from "@/components/Reveal";
 import Image from "next/image";
 import Link from "next/link";
 import { services, getService } from "@/content/services";
@@ -37,7 +38,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   ];
 
   return (
-    <>
+    <Reveal>
       <JsonLd data={serviceSchema(service.name, service.metaDescription, `/services/${service.slug}`)} />
       <JsonLd data={breadcrumbSchema(crumbs)} />
 
@@ -130,7 +131,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <SectionHeading title="How it works" />
             <NumberedList items={service.steps} />
           </div>
-          <aside className="h-fit border border-hairline bg-fog p-6 lg:sticky lg:top-28">
+          <aside className="reveal h-fit border border-hairline bg-fog p-6 lg:sticky lg:top-28">
             <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
               Who this is for
             </p>
@@ -184,6 +185,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </Section>
 
       <CtaBand />
-    </>
+    </Reveal>
   );
 }

@@ -128,7 +128,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               intro="Every product page carries dimensions, material grade, finish and mounting method."
             />
           </div>
-          <div className="grid gap-px border border-hairline bg-hairline sm:grid-cols-2">
+          <div className="grid gap-px overflow-hidden border border-hairline bg-hairline sm:grid-cols-2">
             {guide.ranges.map((r, i) => (
               <Link
                 key={r.href}

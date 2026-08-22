@@ -1,4 +1,5 @@
 import QuoteForm from "@/components/QuoteForm";
+import Reveal from "@/components/Reveal";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema } from "@/components/JsonLd";
 import { site } from "@/content/site";
@@ -18,7 +19,7 @@ export default function RequestQuotePage() {
   ];
 
   return (
-    <>
+    <Reveal>
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <PageHeader
         eyebrow="Request a quote"
@@ -59,7 +60,7 @@ export default function RequestQuotePage() {
               </a>
             </div>
 
-            <div className="border border-hairline p-6">
+            <div className="reveal hover-lift border border-hairline p-6">
               <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
                 What you get back
               </p>
@@ -75,7 +76,7 @@ export default function RequestQuotePage() {
               </div>
             </div>
 
-            <div className="border border-hairline p-6">
+            <div className="reveal hover-lift border border-hairline p-6">
               <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
                 The most useful thing you can send
               </p>
@@ -88,6 +89,6 @@ export default function RequestQuotePage() {
           </aside>
         </div>
       </Section>
-    </>
+    </Reveal>
   );
 }

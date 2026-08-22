@@ -1,4 +1,5 @@
 import { buildMetadata } from "@/lib/seo";
+import Reveal from "@/components/Reveal";
 import { JsonLd, breadcrumbSchema, localBusinessSchema } from "@/components/JsonLd";
 import { site } from "@/content/site";
 import { PageHeader, Section, SectionHeading, Button, LinkCard, CheckList } from "@/components/ui";
@@ -17,7 +18,7 @@ export default function ContactPage() {
   ];
 
   return (
-    <>
+    <Reveal>
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <JsonLd data={localBusinessSchema} />
       <PageHeader
@@ -36,7 +37,7 @@ export default function ContactPage() {
       <Section>
         <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
           <div className="space-y-5">
-            <div className="border border-hairline bg-white">
+            <div className="reveal overflow-hidden border border-hairline bg-white">
               <div className="h-1 w-full bg-sbd-red" />
               <div className="p-7">
                 <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
@@ -52,7 +53,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="border border-hairline bg-white p-7">
+            <div className="reveal hover-lift border border-hairline bg-white p-7">
               <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
                 Email
               </p>
@@ -67,7 +68,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="border border-hairline bg-white p-7">
+            <div className="reveal hover-lift border border-hairline bg-white p-7">
               <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
                 Service area
               </p>
@@ -134,6 +135,6 @@ export default function ContactPage() {
           />
         </div>
       </Section>
-    </>
+    </Reveal>
   );
 }

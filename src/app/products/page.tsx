@@ -1,4 +1,5 @@
 import { products } from "@/content/products";
+import Reveal from "@/components/Reveal";
 import { categories } from "@/content/categories";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema } from "@/components/JsonLd";
@@ -22,7 +23,7 @@ export default function ProductsPage() {
   ];
 
   return (
-    <>
+    <Reveal>
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <PageHeader
         eyebrow="Commercial product portfolio"
@@ -39,7 +40,7 @@ export default function ProductsPage() {
       <Section>
         <div className="grid gap-5 sm:grid-cols-2">
           {products.map((p) => (
-            <article key={p.slug} className="flex flex-col border border-hairline bg-white">
+            <article key={p.slug} className="reveal hover-lift flex flex-col overflow-hidden border border-hairline bg-white">
               <div className="h-1 w-full bg-sbd-red" />
               <div className="flex flex-1 flex-col p-7">
                 <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
@@ -138,6 +139,6 @@ export default function ProductsPage() {
       </Section>
 
       <CtaBand />
-    </>
+    </Reveal>
   );
 }
