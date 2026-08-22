@@ -69,7 +69,7 @@ export default function HomePage() {
       >
         {/* Scene sits to the right; the artwork fades to white where the copy goes */}
         <Image
-          src="/home-hero-5.webp"
+          src="/home-hero-6.webp"
           alt="Stainless bollards with red bands, a bike rack and a decorative black bollard outside a Toronto commercial building at sunset"
           fill
           priority
