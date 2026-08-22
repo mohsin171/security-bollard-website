@@ -29,6 +29,37 @@ const nextConfig: NextConfig = {
         destination: "/products",
         permanent: true,
       },
+      // Datasheets recompressed Aug 2026 (-r2 -> -r3); keep shared links alive.
+      {
+        source: "/datasheets/SBD-SSBR01-datasheet-r2.pdf",
+        destination: "/datasheets/SBD-SSBR01-datasheet-r3.pdf",
+        permanent: true,
+      },
+      {
+        source: "/datasheets/SBD-UBR31601-datasheet-r2.pdf",
+        destination: "/datasheets/SBD-UBR31601-datasheet-r3.pdf",
+        permanent: true,
+      },
+      {
+        source: "/datasheets/SBD-CBS4W01-datasheet-r2.pdf",
+        destination: "/datasheets/SBD-CBS4W01-datasheet-r3.pdf",
+        permanent: true,
+      },
+      {
+        source: "/datasheets/SBD-UBRSS01-datasheet-r2.pdf",
+        destination: "/datasheets/SBD-UBRSS01-datasheet-r3.pdf",
+        permanent: true,
+      },
+      {
+        source: "/datasheets/SBD-BRBM01-datasheet-r2.pdf",
+        destination: "/datasheets/SBD-BRBM01-datasheet-r3.pdf",
+        permanent: true,
+      },
+      {
+        source: "/datasheets/SBD-FSB42Y-datasheet-r2.pdf",
+        destination: "/datasheets/SBD-FSB42Y-datasheet-r3.pdf",
+        permanent: true,
+      },
       // Renamed Aug 2026: Motorised Bollards -> Automatic Bollards.
       {
         source: "/products/motorised-bollards",

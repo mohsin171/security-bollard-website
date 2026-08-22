@@ -469,7 +469,7 @@ export const products: Product[] = [
       {
         name: "Flexible Spring Bollard — 42″",
         model: "SBD-FSB42Y",
-        datasheet: "/datasheets/SBD-FSB42Y-datasheet-r2.pdf",
+        datasheet: "/datasheets/SBD-FSB42Y-datasheet-r3.pdf",
         summary:
           "Steel post on a spring base. A vehicle clips it, the bollard lays over, and the spring stands it back up — no bent post to cut out and replace. Bolt-on base plate, so it goes down without a core drill.",
         image: {
@@ -955,7 +955,7 @@ export const products: Product[] = [
       {
         name: "Stainless Steel Bike Rack",
         model: "SBD-SSBR01",
-        datasheet: "/datasheets/SBD-SSBR01-datasheet-r2.pdf",
+        datasheet: "/datasheets/SBD-SSBR01-datasheet-r3.pdf",
         summary:
           "Built for durability, security and style. Integrated side loops give U-lock compatibility at two heights, and the heavy-duty 12-inch base plate provides exceptional stability. Specified for urban streets, parks, schools, businesses and public spaces where finish quality is part of the design intent.",
         image: { src: "/products/sbd-ssbr01-stainless.webp", alt: "SBD-SSBR01 stainless steel bike rack with integrated side loops" },
@@ -981,7 +981,7 @@ export const products: Product[] = [
       {
         name: "Double Moon Bike Rack Bollard",
         model: "SBD-BRBM01",
-        datasheet: "/datasheets/SBD-BRBM01-datasheet-r2.pdf",
+        datasheet: "/datasheets/SBD-BRBM01-datasheet-r3.pdf",
         summary:
           "A bollard and a bike rack in one footprint. The circular locking loops park two bicycles while the post itself works as vehicle access control \u2014 useful where a site needs both jobs done in a tight frontage. Assembles on site and mounts to a compact 120 mm base plate.",
         image: { src: "/products/sbd-brbm01-double-moon.webp", alt: "SBD-BRBM01 Double Moon bike rack bollard in powder-coated black" },
@@ -1006,7 +1006,7 @@ export const products: Product[] = [
       {
         name: "Stainless Steel U Bike Rack",
         model: "SBD-UBR31601",
-        datasheet: "/datasheets/SBD-UBR31601-datasheet-r2.pdf",
+        datasheet: "/datasheets/SBD-UBR31601-datasheet-r3.pdf",
         summary:
           "The minimalist U-shape in Grade 316 stainless \u2014 the highest corrosion resistance in the range, suited to heavy de-icing salt exposure. Two points of contact and U-lock capability in a clean form that blends into sidewalks, parks, campuses and commercial frontages.",
         image: { src: "/products/sbd-ubr31601-u-rack.webp", alt: "SBD-UBR31601 stainless steel U bike rack with flanged base plates" },
@@ -1030,7 +1030,7 @@ export const products: Product[] = [
       {
         name: "4-Way Bike Rack",
         model: "SBD-CBS4W01",
-        datasheet: "/datasheets/SBD-CBS4W01-datasheet-r2.pdf",
+        datasheet: "/datasheets/SBD-CBS4W01-datasheet-r3.pdf",
         summary:
           "The highest-capacity unit in the range: four U-shaped locking tubes around a heavy central post park up to eight bicycles in a single compact footprint. The efficient answer where a site plan calls for numbers, not just presence.",
         image: { src: "/products/sbd-cbs4w01-4way.webp", alt: "SBD-CBS4W01 4-Way bike rack with four U-shaped locking tubes" },
@@ -1053,7 +1053,7 @@ export const products: Product[] = [
       {
         name: "Round Bike Rack",
         model: "SBD-UBRSS01",
-        datasheet: "/datasheets/SBD-UBRSS01-datasheet-r2.pdf",
+        datasheet: "/datasheets/SBD-UBRSS01-datasheet-r3.pdf",
         summary:
           "Simple, sturdy and secure. The classic hoop offers the two points of contact and U-lock capability cyclists trust, with clean lines and all-steel construction that sits comfortably in architectural and landscape designs.",
         image: { src: "/products/sbd-ubrss01-round.webp", alt: "SBD-UBRSS01 round hoop bike rack with flanged base plates" },
