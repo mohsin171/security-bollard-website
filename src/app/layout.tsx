@@ -49,11 +49,11 @@ export const metadata: Metadata = {
   formatDetection: { telephone: true, address: false, email: true },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=2", sizes: "any" },
+      { url: "/favicon-v2.ico", sizes: "any" },
       { url: "/icon-2.png", type: "image/png", sizes: "512x512" },
     ],
     apple: [{ url: "/apple-icon-2.png", sizes: "180x180", type: "image/png" }],
-    shortcut: ["/favicon.ico?v=2"],
+    shortcut: ["/favicon-v2.ico"],
   },
   alternates: { canonical: site.url },
   openGraph: {
