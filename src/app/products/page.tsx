@@ -46,23 +46,35 @@ export default function ProductsPage() {
           {products.map((p) => (
             <article key={p.slug} className="reveal hover-lift flex flex-col overflow-hidden border border-hairline bg-white">
               <div className="h-1 w-full bg-sbd-red" />
-              {p.hero && (
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-fog">
-                  <Image
-                    src={p.hero.src}
-                    alt={p.hero.alt}
-                    fill
-                    sizes="(max-width: 640px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-500 hover:scale-[1.03]"
-                  />
-                </div>
-              )}
               <div className="flex flex-1 flex-col p-7">
-                <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
-                  {p.eyebrow}
-                </p>
-                <h2 className="mt-2 font-display text-2xl font-bold text-charcoal">{p.name}</h2>
-                <p className="mt-3 flex-1 text-slate-grey">{p.intro}</p>
+                {/* The product itself, not a scene: the first variant photo,
+                    shown whole rather than cropped. Falls back to the page
+                    hero for the categories that have no product shot yet. */}
+                <div className="flex items-start gap-5">
+                  {(() => {
+                    const shot = p.variants.find((v) => v.image)?.image;
+                    const pic = shot ?? p.hero;
+                    if (!pic) return null;
+                    return (
+                      <span className="relative block h-20 w-20 shrink-0 overflow-hidden rounded-lg border border-hairline bg-fog sm:h-24 sm:w-24">
+                        <Image
+                          src={pic.src}
+                          alt={pic.alt}
+                          fill
+                          sizes="96px"
+                          className={shot ? "object-contain p-1.5" : "object-cover"}
+                        />
+                      </span>
+                    );
+                  })()}
+                  <span className="block">
+                    <span className="block font-display text-xs font-bold uppercase tracking-[0.18em] text-slate-grey">
+                      {p.eyebrow}
+                    </span>
+                    <h2 className="mt-1.5 font-display text-2xl font-bold text-charcoal">{p.name}</h2>
+                  </span>
+                </div>
+                <p className="mt-4 flex-1 text-slate-grey">{p.intro}</p>
                 <ul className="mt-5 space-y-1.5 border-t border-hairline pt-5">
                   {p.variants.slice(0, 4).map((v) => (
                     <li key={v.name} className="flex gap-2.5 text-sm text-charcoal">
