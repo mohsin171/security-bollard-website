@@ -11,6 +11,7 @@ import Reveal from "@/components/Reveal";
 import DatasheetViewer from "@/components/DatasheetViewer";
 import ProductGallery from "@/components/ProductGallery";
 import CategoryPage from "@/components/CategoryPage";
+import { homeSegmentImages } from "@/content/homeCards";
 import {
   PageHeader, Section, SectionHeading, SpecTable, CheckList,
   FaqList, CtaBand, LinkCard, CapabilityNote, Button,
@@ -288,6 +289,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                     href={`/who-we-serve/${seg.slug}`}
                     title={seg.navLabel}
                     blurb={seg.headline}
+                    image={homeSegmentImages[seg.slug]}
+                    imageAlt={seg.name}
                   />
                 </div>
               );

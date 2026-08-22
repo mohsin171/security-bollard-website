@@ -3,6 +3,7 @@ import Reveal from "@/components/Reveal";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { segments, getSegment } from "@/content/segments";
+import { homeSegmentImages } from "@/content/homeCards";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/components/JsonLd";
 import {
@@ -185,7 +186,14 @@ export default async function SegmentPage({ params }: { params: Promise<{ slug: 
         <SectionHeading title="Other sectors we serve" />
         <div className="grid gap-5 sm:grid-cols-3">
           {others.map((s) => (
-            <LinkCard key={s.slug} href={`/who-we-serve/${s.slug}`} title={s.navLabel} blurb={s.headline} />
+            <LinkCard
+              key={s.slug}
+              href={`/who-we-serve/${s.slug}`}
+              title={s.navLabel}
+              blurb={s.headline}
+              image={homeSegmentImages[s.slug]}
+              imageAlt={s.name}
+            />
           ))}
         </div>
       </Section>
