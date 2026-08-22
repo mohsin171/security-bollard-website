@@ -53,17 +53,26 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       {photo && (
         <Section className="!pb-0">
           <Reveal>
-            {/* Held to max-w-4xl: the source art is modest, and stretching it
-                across the full container was a visible upscale. */}
-            <div className="reveal relative mx-auto aspect-[16/9] w-full max-w-4xl overflow-hidden border border-hairline">
-              <Image
-                src={photo}
-                alt={`Bollards protecting ${guide.name.toLowerCase()}`}
-                fill
-                priority
-                sizes="(max-width: 896px) 100vw, 896px"
-                className="object-cover"
+            {/* Same glowing card as the product and service heroes. */}
+            <div className="reveal relative mx-auto aspect-[16/9] w-full max-w-4xl">
+              <div
+                aria-hidden
+                className="absolute -inset-3 rounded-[1.75rem] bg-[radial-gradient(ellipse_at_center,rgba(200,16,46,0.3),transparent_70%)] blur-xl"
               />
+              <div className="relative h-full w-full overflow-hidden rounded-3xl border-2 border-sbd-red/70 shadow-[0_0_26px_rgba(200,16,46,0.35),0_14px_50px_rgba(26,26,26,0.18)]">
+                <Image
+                  src={photo}
+                  alt={`Bollards protecting ${guide.name.toLowerCase()}`}
+                  fill
+                  priority
+                  sizes="(max-width: 896px) 100vw, 896px"
+                  className="object-cover transition-transform duration-700 hover:scale-[1.03]"
+                />
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-charcoal/10"
+                />
+              </div>
             </div>
           </Reveal>
         </Section>
