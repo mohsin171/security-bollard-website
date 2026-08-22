@@ -138,7 +138,7 @@ export const nav: NavItem[] = [
         blurb: "Physical separation, not painted lines",
       },
       {
-        label: "Retail & Storefronts",
+        label: "Retail & Store Fronts",
         href: "/who-we-serve/retail-storefronts",
         blurb: "Standardised protection across locations",
       },

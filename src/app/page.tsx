@@ -31,7 +31,7 @@ const VULNERABLE_POINTS = [
     detail: "Found by a reversing trailer roughly twice a year.",
   },
   {
-    place: "The storefront glazing",
+    place: "The store front glazing",
     detail: "Nothing between it and the parking lot.",
   },
   {
@@ -318,7 +318,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Where bollards go"
               title="Eleven places a vehicle meets something expensive"
-              intro="Even a low-speed impact can write off a fuel pump, a transformer or a storefront window — and take the business offline while it is repaired. A bollard is the cheapest thing on site that stops that happening."
+              intro="Even a low-speed impact can write off a fuel pump, a transformer or a store front window — and take the business offline while it is repaired. A bollard is the cheapest thing on site that stops that happening."
             />
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

@@ -7,7 +7,7 @@ import { PageHeader, Section, SectionHeading, CtaBand, Button, LinkCard } from "
 export const metadata = buildMetadata({
   title: "Who We Serve",
   description:
-    "Commercial site protection for property managers and condos, warehouses and industrial sites, retail and storefronts, and contractors and architects across the GTA.",
+    "Commercial site protection for property managers and condos, warehouses and industrial sites, retail and store fronts, and contractors and architects across the GTA.",
   path: "/who-we-serve",
 });
 

@@ -65,7 +65,7 @@ export default function AboutPage() {
             <p>
               Every commercial site has the same handful of vulnerable points. The garage ramp
               corner that gets clipped every winter. The dock door that a reversing trailer finds
-              twice a year. The storefront glazing with nothing between it and the parking lot. The
+              twice a year. The store front glazing with nothing between it and the parking lot. The
               bike rack that was never installed, so bikes are chained to the accessibility railing.
             </p>
             <p>
@@ -101,7 +101,7 @@ export default function AboutPage() {
                   items={[
                     "Commercial-focused product selection for new construction, upgrades and replacement",
                     "Clear specifications to support estimating and procurement",
-                    "Solutions for storefronts, parking areas, sidewalks, loading zones and campuses",
+                    "Solutions for store fronts, parking areas, sidewalks, loading zones and campuses",
                     "Support from product selection through delivery and installation planning",
                   ]}
                 />

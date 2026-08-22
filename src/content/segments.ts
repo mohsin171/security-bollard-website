@@ -175,24 +175,24 @@ export const segments: Segment[] = [
   },
   {
     slug: "retail-storefronts",
-    name: "Retail & Storefronts",
-    navLabel: "Retail & Storefronts",
+    name: "Retail & Store Fronts",
+    navLabel: "Retail & Store Fronts",
     eyebrow: "Who we serve",
     hero: {
       src: "/who-we-serve/retail-storefronts-hero.webp",
-      alt: "A line of stainless bollards along the sidewalk in front of a retail storefront's glazing",
+      alt: "A line of stainless bollards along the sidewalk in front of a retail store front's glazing",
     },
     headline: "Protect the glazing, the entry and the people — the same way at every location",
     intro:
-      "One vehicle into a storefront costs more in downtime, glazing, inventory and insurance than a full bollard package across several sites. For multi-location operators the harder problem is consistency: getting the same protection specified, priced and installed the same way at forty stores without quoting each one from scratch.",
-    metaTitle: "Storefront Protection Bollards for Retail",
+      "One vehicle into a store front costs more in downtime, glazing, inventory and insurance than a full bollard package across several sites. For multi-location operators the harder problem is consistency: getting the same protection specified, priced and installed the same way at forty stores without quoting each one from scratch.",
+    metaTitle: "Store Front Protection Bollards for Retail",
     metaDescription:
-      "Storefront protection bollards for retail, pharmacy, cannabis, convenience and QSR operators across the GTA. Standardised per-site packages and phased rollouts.",
+      "Store Front protection bollards for retail, pharmacy, cannabis, convenience and QSR operators across the GTA. Standardised per-site packages and phased rollouts.",
     problems: [
       {
         title: "Glazing and entries are unprotected",
         detail:
-          "Storefront glass, entry vestibules, ATMs and propane cages sit directly in line with a parking lot and nothing in between.",
+          "Store Front glass, entry vestibules, ATMs and propane cages sit directly in line with a parking lot and nothing in between.",
       },
       {
         title: "Rollouts vary store to store",
@@ -211,7 +211,7 @@ export const segments: Segment[] = [
       },
     ],
     approach: [
-      "A standardised storefront protection package priced per location",
+      "A standardised store front protection package priced per location",
       "Phased rollout scheduling across regions and budget years",
       "One specification applied identically at every site",
       "Removable bollards where curbside pickup or patio access is required",

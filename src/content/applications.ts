@@ -19,7 +19,7 @@ export type Application = {
 
 export const applications: Application[] = [
   {
-    name: "Storefronts",
+    name: "Store Fronts",
     slug: "storefronts",
     image: "/applications/storefronts-5.webp",
     blurb: "Glazing, entrances, ATM and payment areas — where a low-speed nudge becomes a broken window.",

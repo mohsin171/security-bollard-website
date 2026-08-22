@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "bollard covers",
     "bollard supplier Ontario",
     "warehouse safety bollards",
-    "storefront protection bollards",
+    "store front protection bollards",
     "traffic barriers commercial",
     "removable bollards Toronto",
     "stainless steel bollards",

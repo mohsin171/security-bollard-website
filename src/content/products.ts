@@ -42,12 +42,12 @@ export const products: Product[] = [
     },
     headline: "Safety bollards for commercial sites",
     intro:
-      "A bollard does one job: put something solid between a vehicle and the thing you cannot afford to have hit. Storefront glazing, a dock door, a gas meter, an electrical panel, a pedestrian walkway. We supply fixed, removable, surface-mounted, stainless and decorative bollards for commercial properties across the GTA and Ontario.",
+      "A bollard does one job: put something solid between a vehicle and the thing you cannot afford to have hit. Store Front glazing, a dock door, a gas meter, an electrical panel, a pedestrian walkway. We supply fixed, removable, surface-mounted, stainless and decorative bollards for commercial properties across the GTA and Ontario.",
     metaTitle: "Commercial Safety Bollards Toronto",
     metaDescription:
       "Fixed, removable, surface-mount, stainless and yellow-black safety bollards for commercial sites across Toronto and the GTA. Quote within 24 hours.",
     applications: [
-      "Storefront and glazing protection at retail, pharmacy and cannabis locations",
+      "Store Front and glazing protection at retail, pharmacy and cannabis locations",
       "Loading dock corners, overhead door tracks and dock aprons",
       "Gas meters, electrical panels, transformers and fire risers",
       "Parking garage ramps, pillar corners and curb entries",
@@ -68,12 +68,12 @@ export const products: Product[] = [
           { label: "Options", value: "Reflective banding, protective cap, custom heights" },
         ],
         notes:
-          "Specify height and diameter against the vehicle type you are protecting against. Forklift aisles and dock aprons usually take a shorter, heavier unit than a storefront line.",
+          "Specify height and diameter against the vehicle type you are protecting against. Forklift aisles and dock aprons usually take a shorter, heavier unit than a store front line.",
       },
       {
         name: "Stainless Steel Bollard",
         summary:
-          "Where the bollard is visible to customers and the finish matters. Corrosion resistant, low maintenance, and appropriate for storefronts, plazas, building entrances and public-facing frontages.",
+          "Where the bollard is visible to customers and the finish matters. Corrosion resistant, low maintenance, and appropriate for store fronts, plazas, building entrances and public-facing frontages.",
         specs: [
           { label: "Material", value: "Grade 304 stainless steel" },
           { label: "Grade 316", value: "Available on request for coastal or de-icing salt exposure" },
@@ -182,7 +182,7 @@ export const products: Product[] = [
         model: "SBD-RSB4542Y",
         datasheet: "/datasheets/SBD-RSB4542Y-datasheet-r2.pdf",
         summary:
-          "The common commercial height — tall enough to be seen over a car hood, low enough not to obstruct sightlines. The default choice at storefronts, ramps and building approaches.",
+          "The common commercial height — tall enough to be seen over a car hood, low enough not to obstruct sightlines. The default choice at store fronts, ramps and building approaches.",
         image: {
           src: "/products/sbd-rsb-round-yellow.webp",
           alt: "SBD-RSB4542Y round yellow steel bollard with red reflective band and flanged base plate",
@@ -242,7 +242,7 @@ export const products: Product[] = [
       {
         question: "Which height should I order?",
         answer:
-          "36 inches for inside the building — aisle ends, racking, equipment — where the driver is seated on a forklift. 42 inches outdoors at storefronts, ramps and walkways, which is the common commercial standard. 48 inches where trucks rather than cars are the risk. If you are unsure, send a photo of the location and we will specify it.",
+          "36 inches for inside the building — aisle ends, racking, equipment — where the driver is seated on a forklift. 42 inches outdoors at store fronts, ramps and walkways, which is the common commercial standard. 48 inches where trucks rather than cars are the risk. If you are unsure, send a photo of the location and we will specify it.",
       },
       {
         question: "Round or square?",
@@ -278,12 +278,12 @@ export const products: Product[] = [
     },
     headline: "Stainless steel bollards",
     intro:
-      "Where the bollard is visible to customers and the finish is part of the design. Satin stainless in flat top and domed round profiles, corrosion resistant and low maintenance — appropriate for storefronts, plazas, building entrances and any frontage where a painted steel post would look like an afterthought.",
+      "Where the bollard is visible to customers and the finish is part of the design. Satin stainless in flat top and domed round profiles, corrosion resistant and low maintenance — appropriate for store fronts, plazas, building entrances and any frontage where a painted steel post would look like an afterthought.",
     metaTitle: "Stainless Steel Bollards Toronto",
     metaDescription:
       "Flat top and domed round satin stainless steel bollards from 4in x 36in to 6.6in x 48in, with red, yellow or black reflective bands. Toronto and the GTA.",
     applications: [
-      "Storefront and glazing protection at customer-facing locations",
+      "Store Front and glazing protection at customer-facing locations",
       "Building entrances, lobbies and porte-cochères",
       "Plazas, streetscapes and public realm frontages",
       "Hotels, clinics and pharmacies",

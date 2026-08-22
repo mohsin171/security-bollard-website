@@ -114,24 +114,24 @@ const QUOTE_NOTE = {
 export const guides: Guide[] = [
   {
     slug: "storefronts",
-    subtitle: "Protect Your Storefront, Customers & Entrances",
-    lede: "Security Bollard Direct supplies and installs commercial storefront bollards throughout the Greater Toronto Area, to help protect glazing, entrances, payment areas and the people using them.",
+    subtitle: "Protect Your Store Front, Customers & Entrances",
+    lede: "Security Bollard Direct supplies and installs commercial store front bollards throughout the Greater Toronto Area, to help protect glazing, entrances, payment areas and the people using them.",
     focus: {
-      title: "Storefront Glazing Protection Bollards",
+      title: "Store Front Glazing Protection Bollards",
       paras: [
         "Glazing is the single most expensive thing on a retail frontage and the least able to take a knock. A vehicle rolling forward at walking pace can put a window, a door frame and an automatic door mechanism out of service in one movement, and the replacement glass is rarely in stock.",
         "Properly positioned bollards create a physical stop between the parking area and the glass line, while keeping the entrance clear and the frontage looking like a shop rather than a compound.",
       ],
     },
     supply: "Security Bollard Direct provides bollard supply and professional installation for retail plazas, franchise locations, pharmacies, banks, restaurants and multi-site operators throughout the GTA. We can help determine the appropriate bollard type, size, placement and installation method for your frontage.",
-    name: "Storefronts",
+    name: "Store Fronts",
     eyebrow: "Retail & customer-facing",
-    title: "How bollards protect a storefront",
+    title: "How bollards protect a store front",
     intro:
-      "A storefront is a sheet of glass with a parking lot pointed at it. Most of the damage is not dramatic — a driver reaches for the accelerator instead of the brake at two miles an hour, and a window, a door frame or a payment terminal is gone.",
-    metaTitle: "Storefront Protection Bollards",
+      "A store front is a sheet of glass with a parking lot pointed at it. Most of the damage is not dramatic — a driver reaches for the accelerator instead of the brake at two miles an hour, and a window, a door frame or a payment terminal is gone.",
+    metaTitle: "Store Front Protection Bollards",
     metaDescription:
-      "How properly placed bollards protect storefront glazing, entrances and payment areas from low-speed vehicle impact. Supply and installation across the GTA.",
+      "How properly placed bollards protect store front glazing, entrances and payment areas from low-speed vehicle impact. Supply and installation across the GTA.",
     protects: [
       "Glazing and window frames along the shop line",
       "Entrance doors and automatic door mechanisms",
@@ -170,10 +170,10 @@ export const guides: Guide[] = [
     eyebrow: "Fuel retail",
     title: "How bollards protect a gas station",
     intro:
-      "Gas stations are exposed to vehicle movement every hour they are open, at close quarters, by drivers manoeuvring in tight spaces while distracted. Fuel dispensers, propane storage, storefronts, electrical equipment and pedestrian zones can all be damaged by a single low-speed collision.",
+      "Gas stations are exposed to vehicle movement every hour they are open, at close quarters, by drivers manoeuvring in tight spaces while distracted. Fuel dispensers, propane storage, store fronts, electrical equipment and pedestrian zones can all be damaged by a single low-speed collision.",
     metaTitle: "Gas Station Security Bollards",
     metaDescription:
-      "Protect fuel pumps, propane cages, storefronts and electrical equipment at gas stations with properly placed bollards. Supply and installation across the GTA.",
+      "Protect fuel pumps, propane cages, store fronts and electrical equipment at gas stations with properly placed bollards. Supply and installation across the GTA.",
     protects: [
       "Fuel pumps and dispensers",
       "Propane storage cages",
@@ -603,7 +603,7 @@ export const OPTION_NOTES: Record<string, string> = {
   "/products/galvanized-steel-bollards":
     "Designed for outdoor environments, galvanized bollards provide excellent corrosion resistance and long-term durability.",
   "/products/stainless-steel-bollards":
-    "A premium option combining protection with a clean, modern appearance. Suited to storefronts, entrances and customer-facing areas.",
+    "A premium option combining protection with a clean, modern appearance. Suited to store fronts, entrances and customer-facing areas.",
   "/products/flexible-bollards":
     "Spring-loaded posts that flex on impact and return to position, for lanes and turns where contact is routine.",
   "/products/removable-bollards":
