@@ -311,7 +311,7 @@ export function PageHeader({
             aria-hidden
             className={
               artwork
-                ? "absolute inset-0 bg-gradient-to-l from-white/68 via-white/88 to-white/96 lg:hidden"
+                ? "absolute inset-0 bg-gradient-to-l from-white/45 via-white/78 to-white/94 lg:hidden"
                 : lightPhoto
                   ? "absolute inset-0 bg-gradient-to-r from-white/95 via-white/75 to-white/20"
                   : "absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/80 to-charcoal/40"
