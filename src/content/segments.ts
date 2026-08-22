@@ -14,6 +14,8 @@ export type Segment = {
   faqs: { q: string; a: string }[];
   cta: { label: string; href: string };
   industrial?: boolean;
+  /** Optional hero photo, shown in a glowing card beside the copy. */
+  hero?: { src: string; alt: string };
 };
 
 export const segments: Segment[] = [
@@ -22,6 +24,10 @@ export const segments: Segment[] = [
     name: "Property Managers & Condominiums",
     navLabel: "Property Managers & Condos",
     eyebrow: "Who we serve",
+    hero: {
+      src: "/who-we-serve/property-management-hero.webp",
+      alt: "Lit stainless bollards guarding the glazed entrance of a condominium tower at dusk",
+    },
     headline: "Bent, rusted or missing bollards? One supplier for the whole portfolio.",
     intro:
       "You manage between eight and fifteen properties. A bollard at a garage ramp gets clipped, a resident complains that bikes are chained to the accessibility railing, and suddenly a $2,800 job needs three quotes and a board meeting. The job is not hard. Getting it quoted, approved and finished without it consuming a week of your time is the hard part.",
@@ -95,6 +101,10 @@ export const segments: Segment[] = [
     name: "Warehouses & Industrial Sites",
     navLabel: "Warehouses & Industrial",
     eyebrow: "Who we serve",
+    hero: {
+      src: "/who-we-serve/warehouse-industrial-hero.webp",
+      alt: "A yellow guard rail and impact bollard protecting a dock door and racking upright, with a forklift working alongside",
+    },
     headline: "Physical separation between forklifts and people — not just painted lines",
     intro:
       "Forklift damage is not an event, it is a line item. Dock doors, racking uprights, overhead door tracks, gas meters, electrical panels, eyewash stations and fire risers all take cumulative hits. A single sprinkler riser strike can shut a shift down. And when an auditor asks how pedestrians are separated from operating traffic, a painted line is not a control.",
@@ -168,6 +178,10 @@ export const segments: Segment[] = [
     name: "Retail & Storefronts",
     navLabel: "Retail & Storefronts",
     eyebrow: "Who we serve",
+    hero: {
+      src: "/who-we-serve/retail-storefronts-hero.webp",
+      alt: "A line of stainless bollards along the sidewalk in front of a retail storefront's glazing",
+    },
     headline: "Protect the glazing, the entry and the people — the same way at every location",
     intro:
       "One vehicle into a storefront costs more in downtime, glazing, inventory and insurance than a full bollard package across several sites. For multi-location operators the harder problem is consistency: getting the same protection specified, priced and installed the same way at forty stores without quoting each one from scratch.",
@@ -236,6 +250,10 @@ export const segments: Segment[] = [
     name: "Contractors & Architects",
     navLabel: "Contractors & Architects",
     eyebrow: "Who we serve",
+    hero: {
+      src: "/who-we-serve/contractors-hero.webp",
+      alt: "Black architectural bollards set along a landscaped plaza walkway beside an office building",
+    },
     headline: "Submittal-ready product data and lead times confirmed in writing",
     intro:
       "You are buying against a drawing and a deadline. What you need from a supplier is a submittal package that gets approved the first time, a lead time that holds, and a price that does not move between tender and delivery. What you do not need is marketing language.",
