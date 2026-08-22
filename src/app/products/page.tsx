@@ -2,7 +2,6 @@ import Image from "next/image";
 import { products } from "@/content/products";
 import Reveal from "@/components/Reveal";
 import { categories } from "@/content/categories";
-import { homeProductImages } from "@/content/homeCards";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, itemListSchema } from "@/components/JsonLd";
 import { capabilityStatement } from "@/content/site";
@@ -31,6 +30,21 @@ const PRODUCT_THUMBS: Record<string, { src: string; alt: string }> = {
   },
 };
 
+const CATEGORY_THUMBS: Record<string, { src: string; alt: string }> = {
+  "sign-bollards": {
+    src: "/products/sign-bollards-thumb.webp",
+    alt: "A stop sign mounted on a bollard at a commercial entrance",
+  },
+  "parking-protection": {
+    src: "/products/parking-protection-thumb.webp",
+    alt: "Black bollards with reflective bands along a parking lot island",
+  },
+  "public-city-safety": {
+    src: "/products/public-city-safety-thumb.webp",
+    alt: "Decorative black bollards on a paved plaza walkway",
+  },
+};
+
 export const metadata = buildMetadata({
   title: "Commercial Products",
   description:
@@ -38,6 +52,34 @@ export const metadata = buildMetadata({
   path: "/products",
   image: "/products-hero-4.webp",
 });
+
+/**
+ * The page lists products and the lighter category pages in one grid, in one
+ * card shape. A category has no variants or spec table yet, so its own
+ * applications stand in for the bullet list and the button says so.
+ */
+const entries = [
+  ...products.map((p) => ({
+    slug: p.slug,
+    eyebrow: p.eyebrow,
+    name: p.name,
+    intro: p.intro,
+    bullets: p.variants.slice(0, 4).map((v) => v.name),
+    thumb: p.variants.find((v) => v.image)?.image ?? PRODUCT_THUMBS[p.slug],
+    hero: p.hero,
+    cta: "View specifications",
+  })),
+  ...categories.map((c) => ({
+    slug: c.slug,
+    eyebrow: c.eyebrow,
+    name: c.name,
+    intro: c.intro,
+    bullets: c.applications.slice(0, 4),
+    thumb: CATEGORY_THUMBS[c.slug],
+    hero: undefined,
+    cta: "View range",
+  })),
+];
 
 export default function ProductsPage() {
   const crumbs = [
@@ -48,7 +90,7 @@ export default function ProductsPage() {
   return (
     <Reveal>
       <JsonLd data={breadcrumbSchema(crumbs)} />
-      <JsonLd data={itemListSchema("Commercial products", "/products", products.map((p) => ({ name: p.name, path: `/products/${p.slug}` })))} />
+      <JsonLd data={itemListSchema("Commercial products", "/products", entries.map((p) => ({ name: p.name, path: `/products/${p.slug}` })))} />
       <PageHeader
         eyebrow="Commercial product portfolio"
         title="Products built for commercial sites and Canadian winters"
@@ -63,7 +105,7 @@ export default function ProductsPage() {
 
       <Section>
         <div className="grid gap-5 sm:grid-cols-2">
-          {products.map((p) => (
+          {entries.map((p) => (
             <article key={p.slug} className="reveal hover-lift flex flex-col overflow-hidden border border-hairline bg-white">
               <div className="h-1 w-full bg-sbd-red" />
               <div className="flex flex-1 flex-col p-7">
@@ -72,7 +114,7 @@ export default function ProductsPage() {
                     hero for the categories that have no product shot yet. */}
                 <div className="flex items-start gap-5">
                   {(() => {
-                    const shot = p.variants.find((v) => v.image)?.image ?? PRODUCT_THUMBS[p.slug];
+                    const shot = p.thumb;
                     const pic = shot ?? p.hero;
                     if (!pic) return null;
                     return (
@@ -96,35 +138,20 @@ export default function ProductsPage() {
                 </div>
                 <p className="mt-4 flex-1 text-slate-grey">{p.intro}</p>
                 <ul className="mt-5 space-y-1.5 border-t border-hairline pt-5">
-                  {p.variants.slice(0, 4).map((v) => (
-                    <li key={v.name} className="flex gap-2.5 text-sm text-charcoal">
+                  {p.bullets.map((b) => (
+                    <li key={b} className="flex gap-2.5 text-sm text-charcoal">
                       <span aria-hidden className="mt-[0.5rem] h-1 w-2.5 shrink-0 bg-sbd-red" />
-                      {v.name}
+                      {b}
                     </li>
                   ))}
                 </ul>
                 <div className="mt-6">
                   <Button href={`/products/${p.slug}`} variant="outline">
-                    View specifications
+                    {p.cta}
                   </Button>
                 </div>
               </div>
             </article>
-          ))}
-        </div>
-
-        {/* Categories from categories.ts, published without spec tables yet */}
-        <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {categories.map((c) => (
-            <LinkCard
-              key={c.slug}
-              href={`/products/${c.slug}`}
-              eyebrow={c.eyebrow}
-              title={c.name}
-              blurb={c.intro.split(". ")[0] + "."}
-              image={homeProductImages[c.slug]}
-              imageAlt={c.name}
-            />
           ))}
         </div>
       </Section>
