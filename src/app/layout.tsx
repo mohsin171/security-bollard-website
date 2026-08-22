@@ -22,8 +22,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} | Commercial Bollards, Bike Racks & Site Protection in the GTA & Ontario`,
-    template: `%s | ${site.name}`,
+    default: `${site.name} | Commercial Bollards & Site Protection, GTA`,
+    template: `${site.name} | %s`,
   },
   description:
     "Commercial-grade safety bollards, bike racks, bollard covers and traffic barriers supplied across Toronto, the GTA and Ontario. Written quotes within 24 hours. Built for Safety. Made to Last.",
@@ -49,11 +49,11 @@ export const metadata: Metadata = {
   formatDetection: { telephone: true, address: false, email: true },
   icons: {
     icon: [
-      { url: "/favicon-v2.ico", sizes: "any" },
-      { url: "/icon-2.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon-v3.ico", sizes: "any" },
+      { url: "/icon-3.png", type: "image/png", sizes: "512x512" },
     ],
-    apple: [{ url: "/apple-icon-2.png", sizes: "180x180", type: "image/png" }],
-    shortcut: ["/favicon-v2.ico"],
+    apple: [{ url: "/apple-icon-3.png", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/favicon-v3.ico"],
   },
   alternates: { canonical: site.url },
   openGraph: {
