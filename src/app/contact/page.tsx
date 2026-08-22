@@ -25,6 +25,12 @@ export default function ContactPage() {
         title="Let's build a safer commercial space"
         intro="Practical products and responsive support for commercial properties, contractors and project teams across the GTA and Ontario."
         breadcrumbs={crumbs}
+        background={{
+          src: "/contact-hero.webp",
+          alt: "Stainless bollards with red bands lining the entrance of the Security Bollard Direct building at sunset",
+          tone: "artwork",
+          copy: "md",
+        }}
       />
 
       <Section>
