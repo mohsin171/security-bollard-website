@@ -28,7 +28,8 @@ export function Section({
   );
 }
 
-export function Eyebrow({ children, light = false }: { children: ReactNode; light?: boolean }) {
+// Internal: SectionHeading and PageHeader use this; nothing else imports it.
+function Eyebrow({ children, light = false }: { children: ReactNode; light?: boolean }) {
   return (
     <p
       className={`font-display text-xs font-bold uppercase tracking-[0.18em] ${

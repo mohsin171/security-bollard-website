@@ -16,7 +16,7 @@ export function buildMetadata({
   image?: string;
 }): Metadata {
   const url = `${site.url}${path === "/" ? "" : path}`;
-  const share = image ? `${site.url}${image}` : `${site.url}/og/sbd-og.png`;
+  const share = image ? `${site.url}${image}` : `${site.url}/og/sbd-og-2.png`;
   return {
     title,
     description,

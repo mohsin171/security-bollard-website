@@ -49,11 +49,11 @@ export const metadata: Metadata = {
   formatDetection: { telephone: true, address: false, email: true },
   icons: {
     icon: [
-      { url: "/favicon-v3.ico", sizes: "any" },
-      { url: "/icon-3.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon-v4.ico", sizes: "any" },
+      { url: "/icon-4.png", type: "image/png", sizes: "256x256" },
     ],
-    apple: [{ url: "/apple-icon-3.png", sizes: "180x180", type: "image/png" }],
-    shortcut: ["/favicon-v3.ico"],
+    apple: [{ url: "/apple-icon-4.png", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/favicon-v4.ico"],
   },
   alternates: { canonical: site.url },
   openGraph: {
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     description: site.description,
     images: [
       {
-        url: `${site.url}/og/sbd-og.png`,
+        url: `${site.url}/og/sbd-og-2.png`,
         width: 1200,
         height: 630,
         alt: `${site.name}, ${site.tagline}`,
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${site.name} | Commercial Bollards & Site Protection`,
     description: site.description,
-    images: [`${site.url}/og/sbd-og.png`],
+    images: [`${site.url}/og/sbd-og-2.png`],
   },
   robots: {
     index: true,
