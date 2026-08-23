@@ -9,7 +9,7 @@ export const metadata = buildMetadata({
   description:
     "Commercial site protection for property managers and condos, warehouses and industrial sites, retail and store fronts, and contractors.",
   path: "/who-we-serve",
-  image: "/who-we-serve-hero-5.webp",
+  image: "/who-we-serve-hero-6.webp",
 });
 
 const ALSO_SERVED = [
@@ -39,7 +39,7 @@ export default function WhoWeServePage() {
         intro="A property manager wants the problem gone without three phone calls. An EHS manager wants a numbered list for the next JHSC meeting. A contractor wants a submittal that gets approved first time. We have written a page for each of them."
         breadcrumbs={crumbs}
         background={{
-          src: "/who-we-serve-hero-5.webp",
+          src: "/who-we-serve-hero-6.webp",
           alt: "Stainless bollards with red bands and a bike rack along a downtown Toronto office frontage at sunset",
           tone: "artwork",
         }}

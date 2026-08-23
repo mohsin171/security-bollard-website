@@ -12,7 +12,7 @@ export const metadata = buildMetadata({
   description:
     "Security Bollard Direct supplies commercial-grade bollards, bike racks, barriers and covers across the GTA and Ontario, with 24-hour quoting.",
   path: "/about",
-  image: "/about-hero-6.webp",
+  image: "/about-hero-7.webp",
 });
 
 const VALUES = [
@@ -53,7 +53,7 @@ export default function AboutPage() {
         intro="Security Bollard Direct supplies and installs safety bollards, bike racks, traffic barriers and bollard covers for commercial properties across Toronto, the GTA and Ontario. We assess the spot, recommend hardware that suits the application, and put a written quote with a part number and a price in your inbox within 24 hours."
         breadcrumbs={crumbs}
         background={{
-          src: "/about-hero-6.webp",
+          src: "/about-hero-7.webp",
           alt: "A Security Bollard Direct truck loaded with stainless bollards outside the depot, with three colleagues reviewing a job on a tablet and the Toronto skyline behind",
           tone: "artwork",
           copy: "md",

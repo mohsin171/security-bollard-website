@@ -50,7 +50,7 @@ export const metadata = buildMetadata({
   description:
     "Commercial-grade bollards, bollard covers, bike racks and traffic barriers supplied across Toronto, the GTA and Ontario.",
   path: "/products",
-  image: "/products-hero-4.webp",
+  image: "/products-hero-5.webp",
 });
 
 /**
@@ -97,7 +97,7 @@ export default function ProductsPage() {
         intro="Every category, specified properly. Every product page carries dimensions, material grade, finish and mounting method: the information a facilities manager or an estimator actually needs before deciding."
         breadcrumbs={crumbs}
         background={{
-          src: "/products-hero-4.webp",
+          src: "/products-hero-5.webp",
           alt: "Stainless bollards with yellow bands guarding a row of loading dock doors at sunset",
           tone: "artwork",
         }}

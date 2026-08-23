@@ -9,7 +9,7 @@ export const metadata = buildMetadata({
   description:
     "Site assessment with 24-hour quotes, supply and coordinated installation, free warehouse safety walkthroughs, portfolio programs.",
   path: "/services",
-  image: "/services-hero-9.webp",
+  image: "/services-hero-10.webp",
 });
 
 export default function ServicesPage() {
@@ -28,7 +28,7 @@ export default function ServicesPage() {
         intro="Anyone can sell you a bollard. What makes a difference on a commercial site is how fast you get a quote, whether the product is right for the application, and whether the same supplier is still there when the same corner gets hit next winter."
         breadcrumbs={crumbs}
         background={{
-          src: "/services-hero-9.webp",
+          src: "/services-hero-10.webp",
           alt: "An installer bolting down a stainless bollard beside a rusted post being replaced, with a building frontage and loading docks behind",
           tone: "artwork",
         }}
