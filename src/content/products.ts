@@ -934,7 +934,7 @@ export const products: Product[] = [
     navLabel: "Bike Racks",
     eyebrow: "Bicycle parking",
     hero: {
-      src: "/products/bike-racks-hero-4.webp",
+      src: "/products/bike-racks-hero-5.webp",
       alt: "A row of stainless and black bike racks: post, round hoop, U and Double Moon, on a paved commercial forecourt at dusk",
     },
     headline: "Commercial and public bike racks",
