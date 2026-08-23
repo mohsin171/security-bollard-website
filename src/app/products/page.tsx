@@ -25,7 +25,7 @@ const PRODUCT_THUMBS: Record<string, { src: string; alt: string }> = {
     alt: "Decorative bollard cover with a domed cap and banded collar",
   },
   "traffic-access-barriers": {
-    src: "/products/traffic-access-barriers-thumb.webp",
+    src: "/products/traffic-access-barriers-thumb-2.webp",
     alt: "Barrier arm and card reader pedestal at a vehicle entrance",
   },
 };

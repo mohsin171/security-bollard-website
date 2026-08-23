@@ -1171,7 +1171,7 @@ export const products: Product[] = [
     navLabel: "Traffic & Access Barriers",
     eyebrow: "Access management",
     hero: {
-      src: "/products/traffic-access-barriers-hero.webp",
+      src: "/products/traffic-access-barriers-hero-2.webp",
       alt: "Red and white barrier arms across a vehicle entrance, closing the route to general traffic",
     },
     headline: "Traffic and access barriers",
