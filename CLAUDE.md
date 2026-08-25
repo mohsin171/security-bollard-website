@@ -5,7 +5,7 @@ bollards, bike racks, barriers and bollard covers. Next.js 15 App Router,
 TypeScript, Tailwind v4, Drizzle + Neon Postgres, Resend email, deployed on
 Vercel (auto-deploys on push to main).
 
-Live: security-bollard-website.vercel.app
+Live: securitybollarddirect.ca (Vercel; apex is primary, www 308-redirects to it)
 Repo: github.com/mohsin171/security-bollard-website
 
 ## Commands
