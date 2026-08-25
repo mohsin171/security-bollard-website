@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { Resend } from "resend";
-import { getDb, schema } from "@/lib/db";
 import { site } from "@/content/site";
 
 export const runtime = "nodejs";
@@ -30,6 +29,36 @@ const QuoteSchema = z.object({
 
 const clean = (v: FormDataEntryValue | null) => (typeof v === "string" ? v.trim() : "");
 
+/**
+ * Rate limit, per IP, in memory.
+ *
+ * The form is the only writable surface on the site, so an unthrottled endpoint
+ * means anyone can flood the inbox or burn the Resend quota. Serverless
+ * instances are reused between requests, so this catches the bursts that
+ * matter; it is not a distributed limiter, and a determined attacker spread
+ * across instances would get more through. Good enough for a quote form, and
+ * it costs nothing to run.
+ */
+const WINDOW_MS = 15 * 60 * 1000;
+const MAX_PER_WINDOW = 5;
+const hits = new Map<string, number[]>();
+
+function rateLimited(ip: string) {
+  const now = Date.now();
+  const recent = (hits.get(ip) ?? []).filter((t) => now - t < WINDOW_MS);
+  if (recent.length >= MAX_PER_WINDOW) {
+    hits.set(ip, recent);
+    return true;
+  }
+  recent.push(now);
+  hits.set(ip, recent);
+  if (hits.size > 5000) hits.clear();   // crude ceiling so memory cannot run away
+  return false;
+}
+
+/** Photos only. An email attachment is a poor place for arbitrary binaries. */
+const ALLOWED_PHOTO = /^image\/(jpeg|png|webp|gif|heic|heif)$/i;
+
 function row(label: string, value?: string) {
   if (!value) return "";
   return `<tr>
@@ -44,6 +73,20 @@ export async function POST(request: Request) {
     form = await request.formData();
   } catch {
     return NextResponse.json({ error: "Could not read the form data." }, { status: 400 });
+  }
+
+  const ip =
+    request.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
+    request.headers.get("x-real-ip") ||
+    "unknown";
+
+  if (rateLimited(ip)) {
+    return NextResponse.json(
+      {
+        error: `That is a lot of requests in a short time. Please call ${site.phone} and we will take the details directly.`,
+      },
+      { status: 429 }
+    );
   }
 
   // Honeypot
@@ -88,6 +131,12 @@ export async function POST(request: Request) {
   if (photo instanceof File && photo.size > 0) {
     if (photo.size > 10 * 1024 * 1024) {
       return NextResponse.json({ error: "That photo is larger than 10MB." }, { status: 400 });
+    }
+    if (photo.type && !ALLOWED_PHOTO.test(photo.type)) {
+      return NextResponse.json(
+        { error: "Please attach a photo (JPG, PNG, WEBP or HEIC)." },
+        { status: 400 }
+      );
     }
     const kb = photo.size / 1024;
     photoNote = `${photo.name} (${kb < 1024 ? `${Math.round(kb)}KB` : `${(kb / 1024).toFixed(1)}MB`})`;
@@ -161,40 +210,10 @@ export async function POST(request: Request) {
     console.warn("[quote] RESEND_API_KEY not set, logging submission instead:", d);
   }
 
-  // 2. Persist, if the database is configured.
-  let stored = false;
-  try {
-    const db = getDb();
-    if (db) {
-      await db.insert(schema.quotes).values({
-        name: d.name,
-        company: d.company || null,
-        email: d.email,
-        phone: d.phone || null,
-        siteType: d.siteType || null,
-        siteAddress: d.siteAddress || null,
-        protecting: d.protecting || null,
-        quantity: d.quantity || null,
-        locations: d.locations || null,
-        projectType: d.projectType || null,
-        surface: d.surface || null,
-        timeline: d.timeline || null,
-        installation: d.installation || null,
-        trigger: d.trigger || null,
-        message: d.message || null,
-        photoUrl: photoNote || null,
-        sourcePage: d.sourcePage || null,
-      });
-      stored = true;
-    }
-  } catch (err) {
-    console.error("[quote] database insert failed:", err);
-  }
-
   // Never tell a customer their enquiry was received when it went nowhere.
-  // If neither the email nor the database took it, say so and give them the
-  // phone number: a visible error is far cheaper than a lost lead.
-  if (!emailed && !stored) {
+  // Email is the only delivery channel, so if it failed, say so and give them
+  // the phone number: a visible error is far cheaper than a lost lead.
+  if (!emailed) {
     console.error(
       "[quote] DELIVERY FAILED: no channel accepted this submission.",
       { hasResendKey: Boolean(apiKey), to },

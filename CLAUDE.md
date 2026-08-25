@@ -2,7 +2,7 @@
 
 Marketing site for Security Bollard Direct (SBD), a GTA commercial supplier of
 bollards, bike racks, barriers and bollard covers. Next.js 15 App Router,
-TypeScript, Tailwind v4, Drizzle + Neon Postgres, Resend email, deployed on
+TypeScript, Tailwind v4, Resend email, deployed on
 Vercel (auto-deploys on push to main).
 
 Live: securitybollarddirect.ca (Vercel; apex is primary, www 308-redirects to it)
@@ -12,7 +12,6 @@ Repo: github.com/mohsin171/security-bollard-website
 
 - npm run dev — local dev
 - npm run build — production build. RUN THIS before every push.
-- npm run db:push — apply Drizzle schema to Neon (uses DATABASE_URL_UNPOOLED)
 
 Vercel blocks vulnerable Next.js versions; package.json pins "next": "^15.5.0".
 Do not pin an exact older version.
@@ -70,8 +69,6 @@ keep restrained, respect prefers-reduced-motion.
 - Vercel env vars: NEXT_PUBLIC_SITE_URL, RESEND_API_KEY,
   QUOTE_NOTIFICATION_EMAIL, QUOTE_FROM_EMAIL (Resend domain verification).
   Redeploy after adding.
-- Reconnect Neon integration; set Vercel function region iad1; run
-  npm run db:push to create the quotes table.
 - Photo upload storage (Vercel Blob or R2) — form validates photos but does
   not persist them yet.
 - GitHub 2FA before Aug 22, 2026.
