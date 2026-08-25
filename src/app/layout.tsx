@@ -54,7 +54,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon-v4.ico", sizes: "any" },
-      { url: "/icon-4.png", type: "image/png", sizes: "256x256" },
+      // Google Search picks a favicon from these; it documents a preference
+      // for squares that are multiples of 48.
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icon-96.png", type: "image/png", sizes: "96x96" },
     ],
     apple: [{ url: "/apple-icon-4.png", sizes: "180x180", type: "image/png" }],
     shortcut: ["/favicon-v4.ico"],
