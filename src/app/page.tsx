@@ -69,13 +69,13 @@ export default function HomePage() {
       >
         {/* Scene sits to the right; the artwork fades to white where the copy goes */}
         <Image
-          src="/home-hero-10.webp"
-          alt="Stainless bollards with red bands, a bike rack and a decorative black bollard outside a Toronto commercial building at sunset"
+          src="/home-hero-11.webp"
+          alt="A row of stainless steel bollards with red bands lining a city sidewalk"
           fill
           priority
           sizes="100vw"
           placeholder="blur"
-          blurDataURL={heroBlur["/home-hero-10.webp"]}
+          blurDataURL={heroBlur["/home-hero-11.webp"]}
           /* top-anchored: if the frame is ever shorter than the artwork, the
              crop comes off the pavement, never the maple leaf at the top */
           className="object-cover object-right-top"
