@@ -96,9 +96,6 @@ export default function HomePage() {
               <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-charcoal lg:text-slate-grey">
                 Bollards &middot; Bike racks &middot; Barriers &middot; Covers
               </p>
-              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" className="hidden shrink-0 text-sbd-red sm:block" aria-hidden>
-                <path d="M12 1.8l1.2 3.9 2.7-2-.6 3.5 3.4-1.2-1.7 3 3.9.9-3.1 2.1 2.4 2-4.2.3.8 2.5-3.4-1.3-.5 2.1-1.3-1.3v5.4h-.8v-5.4l-1.3 1.3-.5-2.1-3.4 1.3.8-2.5-4.2-.3 2.4-2L2.1 9.9l3.9-.9-1.7-3 3.4 1.2-.6-3.5 2.7 2L12 1.8Z" />
-              </svg>
             </div>
             <h1 className="hero-in hero-in-d1 mt-4 text-[length:var(--text-hero)] leading-[1.05] text-charcoal">
               Built to protect what matters.{" "}
