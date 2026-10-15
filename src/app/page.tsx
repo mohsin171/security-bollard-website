@@ -101,7 +101,7 @@ export default function HomePage() {
             </div>
             <h1 className="hero-in hero-in-d1 mt-4 text-[length:var(--text-hero)] leading-[1.05] text-charcoal">
               Built to protect what matters.{" "}
-              <span className="block text-sbd-red">Made for Canada.</span>
+              <span className="block text-sbd-red">Made to last.</span>
             </h1>
             <div className="hero-in hero-in-d1 mt-6 h-1 w-24 bg-sbd-red" />
             <p className="hero-in hero-in-d2 mt-6 max-w-lg text-lg text-charcoal lg:text-slate-grey">
